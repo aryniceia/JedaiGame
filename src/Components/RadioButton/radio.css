@@ -1,0 +1,16 @@
+/*Estilo personagens*/
+  .chars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    font-family: 'Chakra Petch';
+    color: white;
+    text-align: center;
+  }
+  .foto1, .foto2, .foto3, 
+  .foto4, .foto5, .foto6 {
+    width: 100px;
+    height: 100px;
+    transition: transform 250ms;
+  }

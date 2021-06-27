@@ -1,0 +1,35 @@
+.janela-info {
+    width: 550px;
+    height: 500px;
+    margin-left: 105px;
+    margin-top: -75px;
+}
+
+
+
+/*  Redimensionamento das Telas */
+@media only screen and (max-width: 1024px) {
+    .bar-top {
+      align-items: center;
+      width: 100%;
+    }
+  }
+@media only screen and (max-width: 720px) {
+    .bar-top {
+      width: 100%;
+    }
+    .bar-bot {
+      width: 100%;
+    }
+  }
+@media only screen and (max-height: 500px) {
+    .bar-top {
+      margin-top: 10%;
+      margin-bottom: -90%;
+    }
+
+    .janela-info {
+        width: 350px;
+        height: 300px;
+  }
+}

@@ -1,0 +1,61 @@
+.App {
+    text-align: center;
+  }
+  .App-header {
+    background-color: #3c183d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .background {
+    width: 650px;
+    height: 100vh;
+    background-image: url(../../img/background.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*.menu {
+    background: rgba(0, 0, 0, 0.456);
+    border-radius: 20px;
+    height: 70vh;
+    width: 380px;
+    margin-top: auto;
+    margin-bottom: -250px;
+  }*/
+  
+  .grama {
+    height: 20vh;
+    background-image: url(../../img/grass.svg);
+    width: 100%;
+    background-position: bottom;
+    background-size: cover;
+    margin-top: auto;
+  }
+  
+  /*.glass {
+    background-image: url(../../img/elements/glass.svg);
+    width: 125px;
+    height: 100px;
+    background-size: cover;
+    position: absolute;
+    top: 530px;
+    left: 360px;
+  }*/
+  
+  @media only screen and (max-width: 1024px) {
+    .background {
+      width: 100vw;
+    }
+    /*.menu {
+      align-items: center;
+      width: 70%;
+    }*/
+  }

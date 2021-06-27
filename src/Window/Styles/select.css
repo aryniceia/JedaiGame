@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap);
+
+/* Barras de fundo */
+  .bar-top {
+    background: rgba(0, 0, 0, 0.456);
+    border-radius: 20px;
+    height: 22vh;
+    width: 600px;
+    margin-top: 20px;
+  }
+  .bar-bot {
+    background: rgba(0, 0, 0, 0.456);
+    border-radius: 20px;
+    height: 42vh;
+    width: 600px;
+    margin-top: 20px;
+  }
+
+/* Estilo dos textos de cabeçalho */
+  .App-title {
+    font-family: 'Chakra Petch';
+    color: white;
+    text-shadow: 0.1em 0.1em #2B7735;
+    font-size: 30px;
+    transition: transform 250ms;
+    margin-top: 5px;
+  }
+  .App-subtitle {
+    font-family: 'Chakra Petch';
+    color: white;
+    text-shadow: 0.1em 0.1em #2B7735;
+    font-size: 30px;
+    transition: transform 250ms;
+  }
+  .App-title:hover, .App-subtitle:hover, .name1:hover, .name2:hover, .name3:hover, .name4:hover, 
+  .name5:hover, .name6:hover, .foto1:hover, .foto2:hover,.foto3:hover, .foto4:hover, .foto5:hover, .foto6:hover {
+    transform: translateY(-10px);
+  }
+
+/* Estilo inputs */
+  .username, .level, .time, .tabuleiro {
+    font-family: 'Chakra Petch';
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    padding: 6px;
+  }
+  .input {
+    font-family: 'Chakra Petch';
+    outline: none; 
+    border-radius: 15px;
+    border: none;
+  }
+
+
+
+/*Estilo dos botões*/
+  .buttons1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-top: 65px;
+    text-align: center;
+  }
+  .return, .detail, .random, .save, .delete {
+    font-family: 'Chakra Petch';
+    font-size: 20px;
+    color: white;
+    background: none;
+    border: none;
+    text-decoration: none;
+  }
+  .return:hover, .detail:hover, .random:hover, .save:hover, .delete:hover {
+    text-decoration: underline;
+    transform: translateY(-10px);
+  }
+
+/*  Redimensionamento das Telas */
+  @media only screen and (max-width: 1024px) {
+      .bar-top {
+        align-items: center;
+        width: 100%;
+      }
+    }
+  /*@media only screen and (max-width: 720px) {
+      .bar-top {
+        width: 50%;
+      }
+      .bar-bot {
+        width: 50%;
+      }
+    }*/
+  @media only screen and (max-height: 500px) {
+      .bar-top {
+        margin-top: 10%;
+        margin-bottom: -90%;
+      }
+    }
