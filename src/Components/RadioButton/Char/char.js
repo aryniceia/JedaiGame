@@ -25,4 +25,5 @@ function Char ({personagem, setPersonagem, charProps}) {
         </div>
     );
 }
+
 export default Char;

@@ -98,7 +98,7 @@ function Select () {
                         <Link route='detail' className='detail'>Detalhes</Link>
                         {/*<RandomButton onClick={save}></RandomButton>*/}
                         
-                        <button className="save" onClick={save} type='button'>Confirma</button>
+                        <button className="save" type='button' onClick={save} >Confirma</button>
                         <button className="delete" type='delete'onClick={delet}>Limpar Seleção</button> 
                     </div>
                 </div>
