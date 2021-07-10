@@ -18,7 +18,7 @@ function Select () {
         localStorage.setItem('jedai/time', time)
         localStorage.setItem('jedai/tabuleiro', tabuleiro)
         localStorage.setItem('jedai/personagem', personagem)
-        window.location.href='/test'
+        window.location.href='/game'
     }
     const delet = () => { 
         localStorage.setItem('jedai/username','')

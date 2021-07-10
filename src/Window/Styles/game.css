@@ -1,0 +1,33 @@
+.App {
+    text-align: center;
+  }
+  .App-header {
+    background-color: #3c183d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .background_game{
+    width: 700px;
+    height: 100vh;
+    background-image: url(../../img/background_game.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .background {
+      width: 100vw;
+    }
+    /*.menu {
+      align-items: center;
+      width: 70%;
+    }*/
+  }

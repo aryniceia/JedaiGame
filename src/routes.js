@@ -6,7 +6,7 @@ import Select from './Window/select';
 import Tutorial from './Window/tutorial';
 import Config from './Window/config';
 import Credit from './Window/credit';
-import Test from './Window/test';
+import Game from './Window/game';
 import Detail from './Window/detail';
 
 export default function Routes() {
@@ -17,7 +17,7 @@ export default function Routes() {
       <Route path="/tutorial" component={Tutorial}/>
       <Route path="/config" component={Config}/>
       <Route path="/credit" component={Credit}/>
-      <Route path="/test" component={Test}/>
+      <Route path="/game" component={Game}/>
       <Route path="/detail" component={Detail}/>
     </Router>
   );
