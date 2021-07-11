@@ -60,7 +60,7 @@ function Select () {
                         </div>
 
                         <div className="time">
-                            <label>Tempo de jogo:  </label>
+                            <label>Tempo de jogo: </label>
                             <select onChange={({target}) => 
                                 setTime(target.value)} value={time} 
                                 name="time" className="input" 
@@ -82,7 +82,7 @@ function Select () {
                                     <option disabled value="padrao">Selecione o tabuleiro...</option>
                                     <option value="0">Sabão</option>
                                     <option value="1">Ácido Graxo</option>
-                                    <option value="2">Biodisel</option>
+                                    <option value="2">Biodiesel</option>
                             </select>
                         </div> 
                     </div>
