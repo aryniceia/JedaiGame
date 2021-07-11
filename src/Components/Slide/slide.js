@@ -22,6 +22,7 @@ function Slide ({}) {
         {id: 6, title: 'item #6', src: Tucano}
     ]
 
+
     return (
         <Carousel className="carrossel">
             {items.map(item => (

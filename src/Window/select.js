@@ -36,7 +36,7 @@ function Select () {
                 <div className='bar-top'>
                     <div className='titles'>
                         <div className="username">
-                            <label >Nome de Usuário: </label>
+                            <label> Nome de Usuário: </label>
                             <input onChange={({target}) => 
                                 setName(target.value)} value={name} 
                                 placeholder="Exemplo: batata_fofinha" 
