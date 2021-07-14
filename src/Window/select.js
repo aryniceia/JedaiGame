@@ -54,8 +54,8 @@ function Select () {
                                     <option disabled value="padrao">Selecione o nível...</option>
                                     <option value="0">Fácil</option>
                                     <option value="1">Médio</option>
-                                    <option value="2">Reprovação</option>
-                                    <option value="3">Jubilator</option>
+                                    <option disabled value="2">Em breve... {/*Reprovação*/}</option>
+                                    <option disabled value="3">Em breve... {/*Jubilator*/}</option>
                             </select>
                         </div>
 
@@ -81,8 +81,8 @@ function Select () {
                                 required="required">
                                     <option disabled value="padrao">Selecione o tabuleiro...</option>
                                     <option value="0">Sabão</option>
-                                    <option value="1">Ácido Graxo</option>
-                                    <option value="2">Biodiesel</option>
+                                    <option disabled value="1">Em breve... {/*Ácido Graxo*/}</option>
+                                    <option disabled value="2">Em breve... {/*Biodiesel*/}</option>
                             </select>
                         </div> 
                     </div>

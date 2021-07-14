@@ -23,7 +23,6 @@
         justify-content: center;
     }
 /*-----------------------------------------------------------------------------------------------*/
-
 /*Barras */
   .cabeçalho {
       grid-area: cabeçalho;
@@ -54,6 +53,21 @@
     display: grid;
     grid-area: barra_lateral;
   }
+/*-----------------------------------------------------------------------------------------------*/
+/* Inputs */
+  .foto_char {
+    width: 100px;
+    height: 100px;
+    transition: transform 250ms;
+  }
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 1024px) {
     .background_game {

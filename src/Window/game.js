@@ -15,19 +15,16 @@ import Tucano from'../img/char/icon/tucano_perfil.png';
         2: "Difícil",
         3: "Jubilator"
     }
-
     const times = {
         0: "x5 rodadas",
         1: "x10 rodadas",
         2: "x20 rodadas"
     }
-
     const tabuleiros = {
         0: "Sabão",
         1: "Ácido Graxo",
         2: "Biodiesel"
     }
-
     const Personagens = {
         0: {
             name: "Capivara",
@@ -61,21 +58,24 @@ function Game () {
         <div className="App">
             <header className="App-header">
                 <div className="background_game">
-                    <section className="grid grid-template-areas-1"></section>
                         <div className="cabeçalho">cabeçalho</div>
                         <div className="barra_lateral">extração</div>
                         <div className="barra_inferior">player</div>
                 </div>
             </header>
-            
-            {localStorage.getItem('jedai/username')}
-            {levels[localStorage.getItem('jedai/level')]}
-            {times[localStorage.getItem('jedai/time')]}
-            {tabuleiros[localStorage.getItem('jedai/tabuleiro')]}
-            <img src={Personagens[localStorage.getItem('jedai/personagem')].url} />
 
-            {/*
-            {localStorage.getItem('jedai/level')}
+            <div className="inputs">
+                {localStorage.getItem('jedai/username')}
+                {levels[localStorage.getItem('jedai/level')]}
+                {times[localStorage.getItem('jedai/time')]}
+                {tabuleiros[localStorage.getItem('jedai/tabuleiro')]}
+
+                <div className="foto_char">
+                    <img src={Personagens[localStorage.getItem('jedai/personagem')].url}/>
+                </div>
+            </div>
+ 
+            {/*{localStorage.getItem('jedai/level')}
             {localStorage.getItem('jedai/time')}
             {localStorage.getItem('jedai/tabuleiro')}
             {localStorage.getItem('jedai/personagem')}*/}
