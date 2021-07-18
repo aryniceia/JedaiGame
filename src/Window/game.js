@@ -1,87 +1,160 @@
 import React from 'react';
-import './Styles/game.css';
+import Page from '../Components/Pages/page';
+import './Styles/credit.css'
 
-import Capivara from '../img/char/icon/capivara_perfil.png';
-import Guara from '../img/char/icon/guara_perfil.png';
-import Jacare from '../img/char/icon/jacare_perfil.png';
-import Mico from '../img/char/icon/mico_perfil.png';
-import Onca from'../img/char/icon/onca_perfil.png';
-import Tucano from'../img/char/icon/tucano_perfil.png';
 
-// Variáveis das inputs //
-    const levels = {
-        0: "Fácil",
-        1: "Médio",
-        2: "Difícil",
-        3: "Jubilator"
-    }
-    const times = {
-        0: "x5 rodadas",
-        1: "x10 rodadas",
-        2: "x20 rodadas"
-    }
-    const tabuleiros = {
-        0: "Sabão",
-        1: "Ácido Graxo",
-        2: "Biodiesel"
-    }
-    const Personagens = {
-        0: {
-            name: "Capivara",
-            url: Capivara
-        },
-        1: {
-            name: "Guará",
-            url: Guara
-        },
-        2: {
-            name: "Jacaré",
-            url: Jacare
-        },
-        3: {
-            name: "Mico",
-            url: Mico
-        },
-        4: {
-            name: "Onça",
-            url: Onca
-        },
-        5: {
-            name: "Tucano",
-            url: Tucano
-        }
-    }
-
-function Game () {
-
+function Jogo() {
+    
+    
+    function Proximo(){
+        window.Proximo()
+    };
+    function AdicionarH2O(){
+        window.AdicionarH2O()
+    };
+    function upgrade(){
+        window.upgrade()
+    };
+    function upgradeReator(){
+        window.upgradeReator()
+    };
+    function upgradePHmetro(){
+        window.upgradePHmetro()
+    };
+    function upgradeTermometro(){
+        window.upgradeTermometro()
+    };
+    function mestra(){
+        window.mestra()
+    };
+    function maismol(){
+        window.maismol()
+    };
+    function botaoEvento(){
+        window.botaoEvento()
+    };
+    function AdicionarTri(){
+        window.AdicionarTri()
+    };
+    function SubirPH(){
+        window.SubirPH()
+    };
+    function DiminuirPH(){
+        window.DiminuirPH()
+    };
+    function AumentarTemp(){
+        window.AumentarTemp()
+    };
+    function DiminuirTemp(){
+        window.DiminuirTemp()
+    };
+    function Expurgo(){
+        window.Expurgo()
+    };
+    function Decantar(){
+        window.Decantar()
+    };
+    function Filtro(){
+        window.Filtro()
+    };
+    function Facil(){
+        window.Facil()
+    };
+    function Medio(){
+        window.Medio()
+    };
+    function Dificil(){
+        window.Dificil()
+    };
+    function Impossivel(){
+        window.Impossivel()
+    };
+    
     return (
-        <div className="App">
-            <header className="App-header">
-                <div className="background_game">
-                        <div className="cabeçalho">cabeçalho</div>
-                        <div className="barra_lateral">extração</div>
-                        <div className="barra_inferior">player</div>
-                </div>
-            </header>
-
-            <div className="inputs">
-                {localStorage.getItem('jedai/username')}
-                {levels[localStorage.getItem('jedai/level')]}
-                {times[localStorage.getItem('jedai/time')]}
-                {tabuleiros[localStorage.getItem('jedai/tabuleiro')]}
-
-                <div className="foto_char">
-                    <img src={Personagens[localStorage.getItem('jedai/personagem')].url}/>
-                </div>
+        
+        <Page>
+            
+            <div className="jogo">
+               
+                <h1 id="acdin" >TESTE OK</h1>
+                
+                <span id="turno"></span>
             </div>
- 
-            {/*{localStorage.getItem('jedai/level')}
-            {localStorage.getItem('jedai/time')}
-            {localStorage.getItem('jedai/tabuleiro')}
-            {localStorage.getItem('jedai/personagem')}*/}
+    <div>           
+        <button onClick={Proximo}>Proximo turno</button>
+        <button onClick={upgrade}>Subir de nível</button>
+        <button onClick={upgradeReator}>Melhorar reator</button>
+        <button onClick={upgradePHmetro}>Melhorar pHmetro </button>
+        <button onClick={upgradeTermometro}>Melhorar termômetro </button>
+        {/*<button onClick={mestra}>Soma mestra</button>*/}
+        {/*<button onClick={maismol}>Mais 3 mols total</button>*/}
+        {/*<button onClick={botaoEvento}>Ligar/Desligar eventos</button>*/}
+        <p id="eventos"></p>
+        <div>
 
-        </div>    
+            <span id="nomeJogador"></span>
+            <p id="equacao">
+            
+            <span id="reagente01"></span> 
+            <span id="reagente02"></span> ⇌
+            <span id="produto01"></span> <span id="produto02"></span>
+            </p>
+            <p>
+            <button onClick={AdicionarH2O}>+ <span id="reagente001"></span></button>
+            <button onClick={AdicionarTri}>+ <span id="reagente002"></span></button>
+            </p>
+        </div>
+        
+        
+            
+        
+        <div>
+            
+                <p id="phtotal"></p> 
+                
+                <button onClick={SubirPH}>+PH</button>
+                <button onClick={DiminuirPH}>-PH</button>
+            
+                <p id="temperatura"></p>
+                <button id="temp+" onClick={AumentarTemp}>+Temperatura</button>
+                <button id="temp-" onClick={DiminuirTemp}>-Temperatura</button>
+            
+        </div>
+        <div>
+            <p id="probabilidade"></p>
+            <button id="expugar" onClick={Expurgo}>Expugar</button>
+            <button id="decantar" onClick={Decantar}>Decantar</button>
+            <button onClick={Filtro}>Filtro</button>
+        </div>
+        <div>
+        <p>Extração do ácido graxo (4 rodadas):</p>
+        <p id="extracao"></p>
+        <p>Extração por meio do Filtro (2 rodadas):</p>
+        <p id="extracaofiltro"></p>
+        <p id="totalextraido"></p>
+    </div>
+    <span id="trofeus"></span>
+    <p id="eventosProb"></p>
+    <p id="contagemeventos"></p>
+    <p>Nivel do Jogo: <span id="nivel"></span>
+        <button onclick={Facil}>Fácil</button>
+        <button onclick={Medio}>Médio</button>
+        <button onclick={Dificil}>Difícil</button>
+        <button onclick={Impossivel}>Impossível</button>
+    </p>
+    
+    
+</div>
+<div id="log">
+    <ul id="showLog">
+        <li>⭐⭐⭐⭐⭐Turno 1 ⭐⭐⭐⭐⭐</li>
+    </ul>
+</div>
+    
+        </Page>
+    
     );
+    
+    
 }
-
-export default Game;
+export default Jogo;
