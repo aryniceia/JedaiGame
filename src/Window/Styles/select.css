@@ -47,12 +47,14 @@
   }
   .input {
     font-family: 'Chakra Petch';
+    font-size: 12px;
     outline: none; 
-    border-radius: 15px;
+    border-radius: 20px;
     border: none;
   }
+/* Estilo dos menus select */
 
-
+ 
 
 /*Estilo dos botões*/
   .buttons1 {
