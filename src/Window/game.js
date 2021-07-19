@@ -1,6 +1,6 @@
 import React from 'react';
-import Page from '../Components/Pages/page';
-import './Styles/credit.css'
+import PageGame from '../Components/PagesGame/pages-game';
+
 
 function Jogo() {
     function Proximo(){
@@ -69,7 +69,7 @@ function Jogo() {
     
     
     return (
-        <Page>
+        <PageGame>
 
             <div className="jogo">
                 <h1 id="acdin" >TESTE OK</h1>
@@ -144,7 +144,7 @@ function Jogo() {
                     <li>⭐⭐⭐⭐⭐Turno 1 ⭐⭐⭐⭐⭐</li>
                 </ul>
             </div>
-        </Page>
+        </PageGame>
     );   
 }
 
