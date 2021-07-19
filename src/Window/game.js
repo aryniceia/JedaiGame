@@ -67,6 +67,7 @@ function Jogo() {
         window.Impossivel()
     };
     
+    
     return (
         <Page>
 
