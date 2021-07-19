@@ -53,7 +53,6 @@ import Tucano from'../img/char/icon/tucano_perfil.png';
     }
 
 function Game () {
-
     return (
         <div className="App">
             <header className="App-header">
