@@ -1,0 +1,93 @@
+/* Fundos */
+    .App {
+        text-align: center;
+    }
+    .App-header {
+      background-color: #3c183d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+/*-----------------------------------------------------------------------------------------------*/
+
+/* Repartições da tela */
+  .background_game {
+    display: grid;
+    /*grid-template-columns: 28fr 2fr 1fr;*/
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* Header */
+    .cabeçalho {
+      grid-column-start: 1; /*começa em 1 e termina em 4*/
+      grid-column-end: 4;
+      grid-row-start: 1;
+      /*grid-row-end: 3;*/
+      border-radius: 10px;
+      border: 6px solid;
+      border-color:#231F20;
+      height: 5vh;
+      width: 530px;
+    }
+    .barra_lateral { /* Coluna de extração */
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      border-radius: 10px;
+      border: 6px solid;
+      border-color:#231F20;
+      height:70vh;  
+      width:150px;  
+    }
+  /* Body */
+    .board, .Board {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      height: 397px;
+      width: 538px;
+      margin-top: -53px;
+    }
+  /* Footer */
+    .barra_inferior {
+      grid-column-start: 1; /*começa em 1 e termina em 4*/
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      border-radius: 10px;
+      border: 6px solid;
+      border-color:#231F20;
+      height:22vh; 
+      width:690px; 
+    }
+/*-----------------------------------------------------------------------------------------------*/
+
+/* Inputs */
+  .foto_char {
+    width: 100px;
+    height: 100px;
+    transition: transform 250ms;
+  }
+
+  @media only screen and (max-width: 1024px) {
+      .background_game {
+        width: 100vw;
+      }
+      .menu {
+        align-items: center;
+        width: 70%;
+      }
+    }
+  @media only screen and (max-width: 720px) {
+      .menu {
+        width: 85%;
+      }
+    }
+  @media only screen and (max-height: 500px) {
+      .menu {
+        margin-top: 10%;
+        margin-bottom: -90%;
+      }
+    }

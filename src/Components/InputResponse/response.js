@@ -1,12 +1,13 @@
 import React from 'react';
-import './Styles/game.css';
+import './response.css';
 
-import Capivara from '../img/char/icon/capivara_perfil.png';
-import Guara from '../img/char/icon/guara_perfil.png';
-import Jacare from '../img/char/icon/jacare_perfil.png';
-import Mico from '../img/char/icon/mico_perfil.png';
-import Onca from'../img/char/icon/onca_perfil.png';
-import Tucano from'../img/char/icon/tucano_perfil.png';
+import Capivara from '../../img/char/icon/capivara_perfil.png';
+import Guara from '../../img/char/icon/guara_perfil.png';
+import Jacare from '../../img/char/icon/jacare_perfil.png';
+import Mico from '../../img/char/icon/mico_perfil.png';
+import Onca from'../../img/char/icon/onca_perfil.png';
+import Tucano from'../../img/char/icon/tucano_perfil.png';
+import Board from '../../img/Lab_Final.png';
 
 // Variáveis das inputs //
     const levels = {
@@ -57,13 +58,17 @@ function Game () {
         <div className="App">
             <header className="App-header">
                 <div className="background_game">
-                        <div className="cabeçalho">Jogador: <span id="NomeDoJogador"></span></div>
-                        <div className="barra_lateral">extração</div>
-                        <div className="barra_inferior">player</div>
+                    <div className="cabeçalho">status <span id="NomeDoJogador"></span></div>
+                    <div className="board">
+                        <img className="Board" src={Board}></img>
+                        tabuleiro
+                    </div>
+                    <div className="barra_lateral">extração</div>
+                    <div className="barra_inferior">player</div>
                 </div>
             </header>
 
-            <div className="inputs">
+           {/* <div className="inputs">
                 {localStorage.getItem('jedai/username')}
                 {levels[localStorage.getItem('jedai/level')]}
                 {times[localStorage.getItem('jedai/time')]}
@@ -74,11 +79,10 @@ function Game () {
                 </div>
             </div>
  
-            {/*{localStorage.getItem('jedai/level')}
+            {localStorage.getItem('jedai/level')}
             {localStorage.getItem('jedai/time')}
             {localStorage.getItem('jedai/tabuleiro')}
             {localStorage.getItem('jedai/personagem')}*/}
-
         </div>    
     );
 }

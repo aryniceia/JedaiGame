@@ -7,22 +7,17 @@ function Home() {
   return (
     < Page> 
       <div className="menu">
+
         <div className="buttons">
-          < Link route='/select' className='play buttons'> 
-            Play
-          </Link>
+          < Link route='/select' className='play buttons'> Play</Link>
 
-          < Link route='/tutorial' className='tuto buttons'> 
-            Tutorial
-          </Link>
+          < Link route='/tutorial' className='tuto buttons'> Tutorial</Link>
 
-          < Link route='/config' className='config buttons'> 
+          {/*< Link route='/config' className='config buttons'> 
             Configuração
-          </Link>
+          </Link> EM BREVE :)*/}
 
-          < Link route='/credit' className='credit buttons'> 
-            Créditos
-          </Link>
+          < Link route='/credit' className='credit buttons'> Créditos</Link>
         </div>
       </div>
       {/*<div className="glass"></div>*/}
