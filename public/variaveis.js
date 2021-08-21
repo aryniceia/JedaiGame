@@ -2,8 +2,8 @@
 //import { func } from 'assert-plus';
 //import React from 'react';
 //import ReactDOM from 'react-dom';
-NomeJogador = localStorage.getItem('jedai/username')
-jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
+//NomeJogador = localStorage.getItem('jedai/username')
+//jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
 molsAnteriores = 0
 logContagem = 2
 logStatus = false
@@ -498,16 +498,16 @@ function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez
     
     //mudar o nome do h1
                 //variaveis que mudam de acordo com a reaçao
-    jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
+    //jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
 
-    rea1 = document.getElementById('reagente001').innerHTML = `${reagente1}`
-    rea2 = document.getElementById('reagente002').innerHTML = `${reagente2}`
+    rea1 = document.getElementById('reagente001').innerHTML = `${molReagente1} ${reagente1}`
+    rea2 = document.getElementById('reagente002').innerHTML = `${molReagente2} ${reagente2}`
     r1 = document.getElementById('reagente01').innerHTML = `${molReagente1} ${reagente1}`;
     p1 = document.getElementById('produto01').innerHTML = `${molProduto1} ${produto1}`;
     p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
     //mudar = document.getElementById('turno').innerHTML = `Esse é o turno ${turno} e você está no nível ${Faculdade}`;
-    acdin = document.getElementById('acdin').innerHTML = `Você tem ${acao} ações e ${dinheiro} ₵réditos`; // acdin = açao/dinheiro
+    acdin = document.getElementById('acdin').innerHTML = `💰${dinheiro}₵   ☕${acao}   🧪${molextraidos} mols   ⭐${turno}`; // acdin = açao/dinheiro
 
     //var mudar = document.querySelector('#turno').innerHTML = `Turno ${turno}`;
     //var level = document.querySelector('#faculdade').innerHTML = `Nível: ${Faculdade}`;

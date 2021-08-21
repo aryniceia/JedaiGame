@@ -89,7 +89,6 @@ function Game () {
                         <p id="eventos"></p>
                     
                         <div>
-                            <span id="nomeJogador"></span>
                             <p id="equacao">
                                 <span id="reagente01"></span> 
                                 <span id="reagente02"></span> ⇌
