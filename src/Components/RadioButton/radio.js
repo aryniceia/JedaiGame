@@ -17,9 +17,9 @@ function RadioButton ({personagem, setPersonagem}) {
                     {
                         id: 'char1',
                         value: 0,
-                        charName: "Capivara",
+                        charName: "Capi",
                         img: Capivara,
-                        charDescription: 'Capivara de jaleco',
+                        charDescription: 'Personagem antropomorfo de uma capivara usando roupas de laboratório.',
                         className: {
                             container: 'capi',
                             image: 'foto1'
@@ -36,7 +36,7 @@ function RadioButton ({personagem, setPersonagem}) {
                         value: 1,
                         charName: "Guará",
                         img: Guara,
-                        charDescription: 'Guará de jaleco',
+                        charDescription: 'Personagem antropomorfo de um lobo guará usando roupas de laboratório.',
                         className: {
                             container: 'guara',
                             image: 'foto2'
@@ -51,9 +51,9 @@ function RadioButton ({personagem, setPersonagem}) {
                     {
                         id: 'char3',
                         value: 2,
-                        charName: "Jacaré",
+                        charName: "Cuca",
                         img: Jacare,
-                        charDescription: 'Jacaré de jaleco',
+                        charDescription: 'Personagem antropomorfo de um jacaré usando roupas de laboratório.',
                         className: {
                             container: 'jacare',
                             image: 'foto3'
@@ -68,9 +68,9 @@ function RadioButton ({personagem, setPersonagem}) {
                     {
                         id: 'char4',
                         value: 3,
-                        charName: "Mico",
+                        charName: "Miquito",
                         img: Mico,
-                        charDescription: 'Mico de jaleco',
+                        charDescription: 'Personagem antropomorfo de um mico usando roupas de laboratório.',
                         className: {
                             container: 'mico',
                             image: 'foto4'
@@ -86,9 +86,9 @@ function RadioButton ({personagem, setPersonagem}) {
                     {
                         id: 'char5',
                         value: 4,
-                        charName: "Onça",
+                        charName: "Pintada",
                         img: Onca,
-                        charDescription: 'Onça de jaleco',
+                        charDescription: 'Personagem antropomorfo de uma onça pintada usando roupas de laboratório.',
                         className: {
                             container: 'onca',
                             image: 'foto5'
@@ -103,9 +103,9 @@ function RadioButton ({personagem, setPersonagem}) {
                     {
                         id: 'char6',
                         value: 5,
-                        charName: "Tucano",
+                        charName: "Tuca",
                         img: Tucano,
-                        charDescription: 'Tucano de jaleco',
+                        charDescription: 'Personagem antropomorfo de um tucano usando roupas de laboratório.',
                         className: {
                             container: 'tucano',
                             image: 'foto6'

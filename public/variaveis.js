@@ -70,8 +70,6 @@ tempAcao = 1; //custo da temperatura em açao
 filtrocost = 15;
 filtroAcao = 2;
 
-
-
 QualMol = null; //funçao utilizada para saber qual reagente sera aumentado
 //custo dos reagentes
 costReagente1 = 2; //custo do H2O como 2 dinheiros
@@ -166,7 +164,6 @@ ExtracaoRapida+ //negacao
 ModificacaoPH+ //negacao
 ModificacaoTemp //negacao
 
-
 function variaveisIniciais(){
     molsAnteriores = 0
     logContagem = 2
@@ -185,7 +182,6 @@ function variaveisIniciais(){
     //// Trofeus:
     objPrincipal = 100
     //adicionar os preços aqui
-    
     
     // variaveis que mudarão de acordo com cada tabuleiro:
     molReagente1 = 0;
@@ -232,8 +228,6 @@ function variaveisIniciais(){
     //filtro
     filtrocost = 15;
     filtroAcao = 2;
-    
-    
     
     QualMol = null; //funçao utilizada para saber qual reagente sera aumentado
     //custo dos reagentes
@@ -460,6 +454,7 @@ function Filtro(){
     }
     
 }
+
 function Expurgo(){//funcao para esvaziar o reator
     molReagente1 = molReagente2 = molProduto1 = molProduto2 = PH = temp = 0;
     //TaxaDeReacao(PH,temp);
@@ -499,44 +494,50 @@ atualizar();
 
 
 //ainda nao sei onde colocar
-function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez
+function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez------
     
     //mudar o nome do h1
                 //variaveis que mudam de acordo com a reaçao
-jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
+    jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
 
-rea1 = document.getElementById('reagente001').innerHTML = `${reagente1}`
-rea2 = document.getElementById('reagente002').innerHTML = `${reagente2}`
-r1 = document.getElementById('reagente01').innerHTML = `${molReagente1} ${reagente1}`;
-p1 = document.getElementById('produto01').innerHTML = `${molProduto1} ${produto1}`;
-p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
-r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
-//mudar = document.getElementById('turno').innerHTML = `Esse é o turno ${turno} e você está no nível ${Faculdade}`;
-acdin = document.getElementById('acdin').innerHTML = `Você tem ${acao} ações e ${dinheiro} ₵réditos`; // acdin = açao/dinheiro
-extracao = document.getElementById('extracao').innerHTML = `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4`;
-temperatura = document.getElementById('temperatura').innerHTML = `${temp} °C`;
-ShowPH = document.getElementById('phtotal').innerHTML = `${PH} PH`;
-ShowProb = document.getElementById('probabilidade').innerHTML = `${ProbDinamica} % de chance da reação ocorrer.`;   
-extracaofiltro = document.getElementById('extracaofiltro').innerHTML = `${filtrarR1} mols no estágio 1 | ${filtrarR2} mols no estágio 2`;
-extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraidos`;
-//var interacao = document.getElementById('p#eventosProb').innerHTML = `${evento}`
-//var contagemeventos1 = document.getElementById('p#contagemeventos').innerHTML = `${contagemeventos}`
-eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
-trofeus = document.getElementById('trofeus').innerHTML = 
-    `
-    Objetivo: ${nivelDoJogo} <br>
-    Trofeus adquiridos: <br>
-    Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "Mestre dos 11 🥇" : "Ainda não 😥"}<br>
-    Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "Doutor dos 22 🏆" : "Ainda não 😓"}<br>
-    Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "Impressionante 😲" : "Esse não vai ser fácil hein 🤯"}<br>
-    Chegar em probabilidade de 100%: ${Prob100 ? "Essa foi difícil mas conseguiu 🥳" : "Essa você consegue?"}<br>
-    Chegar em probabilidade de 0%: ${Prob0 ? "Uhul, conseguiu 😊" : "Ainda não chegou 🤨"}<br>
-    Nao fazer nenhuma modulaçao do PH: ${ModificacaoPH ? "Tente não fazer essa 😜" : "Infelizmente não foi dessa vez 😐"}<br>
-    Nao fazer nenhuma modulaçao da Temperatura: ${ModificacaoTemp ? "Não feito por enquanto 🤔" : "Não era para ter feito 😔"}<br>
-    Nao fazer nenhuma modulaçao do PH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto 🙂" : "Fez 😵‍💫"}<br>
-    Nao usar o método de extraçao rapida: ${ExtracaoRapida ? "Não usado por enquanto 😋" : "Usou #Fail 😣"}<br>
-    Nao fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda 😋" : "Poxa, infelizmente você fez 😡"}<br>
-    `
+    rea1 = document.getElementById('reagente001').innerHTML = `${reagente1}`
+    rea2 = document.getElementById('reagente002').innerHTML = `${reagente2}`
+    r1 = document.getElementById('reagente01').innerHTML = `${molReagente1} ${reagente1}`;
+    p1 = document.getElementById('produto01').innerHTML = `${molProduto1} ${produto1}`;
+    p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
+    r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
+    //mudar = document.getElementById('turno').innerHTML = `Esse é o turno ${turno} e você está no nível ${Faculdade}`;
+    acdin = document.getElementById('acdin').innerHTML = `Você tem ${acao} ações e ${dinheiro} ₵réditos`; // acdin = açao/dinheiro
+
+    //var mudar = document.querySelector('#turno').innerHTML = `Turno ${turno}`;
+    //var level = document.querySelector('#faculdade').innerHTML = `Nível: ${Faculdade}`;
+    //var acdin = document.querySelector('#acdin').innerHTML = `x ${acao}`; // acdin = açao/dinheiro
+    //var moeda = document.querySelector('#moeda').innerHTML = `x ${dinheiro}`;
+
+    extracao = document.getElementById('extracao').innerHTML = `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4`;
+    temperatura = document.getElementById('temperatura').innerHTML = `${temp} °C`;
+    ShowPH = document.getElementById('phtotal').innerHTML = `${PH} PH`;
+    ShowProb = document.getElementById('probabilidade').innerHTML = `${ProbDinamica} % de chance da reação ocorrer.`;   
+    extracaofiltro = document.getElementById('extracaofiltro').innerHTML = `${filtrarR1} mols no estágio 1 | ${filtrarR2} mols no estágio 2`;
+    extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraidos`;
+    //var interacao = document.getElementById('p#eventosProb').innerHTML = `${evento}`
+    //var contagemeventos1 = document.getElementById('p#contagemeventos').innerHTML = `${contagemeventos}`
+    eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
+    trofeus = document.getElementById('trofeus').innerHTML = 
+        `
+        Objetivo: ${nivelDoJogo} <br>
+        Trofeus adquiridos: <br>
+        Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "Mestre dos 11 🥇" : "Ainda não 😥"}<br>
+        Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "Doutor dos 22 🏆" : "Ainda não 😓"}<br>
+        Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "Impressionante 😲" : "Esse não vai ser fácil hein 🤯"}<br>
+        Chegar em probabilidade de 100%: ${Prob100 ? "Essa foi difícil mas conseguiu 🥳" : "Essa você consegue?"}<br>
+        Chegar em probabilidade de 0%: ${Prob0 ? "Uhul, conseguiu 😊" : "Ainda não chegou 🤨"}<br>
+        Nao fazer nenhuma modulaçao do PH: ${ModificacaoPH ? "Tente não fazer essa 😜" : "Infelizmente não foi dessa vez 😐"}<br>
+        Nao fazer nenhuma modulaçao da Temperatura: ${ModificacaoTemp ? "Não feito por enquanto 🤔" : "Não era para ter feito 😔"}<br>
+        Nao fazer nenhuma modulaçao do PH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto 🙂" : "Fez 😵‍💫"}<br>
+        Nao usar o método de extraçao rapida: ${ExtracaoRapida ? "Não usado por enquanto 😋" : "Usou #Fail 😣"}<br>
+        Nao fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda 😋" : "Poxa, infelizmente você fez 😡"}<br>
+        `
 }
 
 
@@ -712,7 +713,7 @@ function upgradeTermometro(){
 		tempMin -= 1; 
         NupgradeTemp = 1;
 		atualizar();
-        //aparecerLog(`Melhorou seu Termômetro`)
+        aparecerLog(`Melhorou seu Termômetro`)
 
 	}
 	else if (termometro == termometroMax){
@@ -1020,7 +1021,6 @@ function aparecerLog(logLine, linhaCor = false){
     //$target.animate({scrollTop: $target.height()});
     $target.scrollTop(9999999999999999999999999)
     
-
 }
 function mudancaDeMolsTotal(){
     if ( molextraidos != molsAnteriores){

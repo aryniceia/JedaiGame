@@ -1,8 +1,7 @@
-import RadioButton from '../Components/RadioButton/radio';
-import Link from '../Components/Link/link';
-//import RandomButton from '../Components/RandomButton/random';
 import React, { useState } from 'react';
 import Page from '../../src/Components/Pages/page';
+import RadioButton from '../Components/RadioButton/radio';
+import Link from '../Components/Link/link';
 import './Styles/select.css';
 
 function Select () {

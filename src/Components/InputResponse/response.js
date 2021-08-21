@@ -7,7 +7,13 @@ import Jacare from '../../img/char/icon/jacare_perfil.png';
 import Mico from '../../img/char/icon/mico_perfil.png';
 import Onca from'../../img/char/icon/onca_perfil.png';
 import Tucano from'../../img/char/icon/tucano_perfil.png';
-import Board from '../../img/Lab_Final.png';
+
+import CapivaraBody from '../../img/char/capivara.png';
+import GuaraBody from '../../img/char/guara.png';
+import JacareBody from '../../img/char/jacare.png';
+import MicoBody from '../../img/char/mico.png';
+import OncaBody from'../../img/char/onca.png';
+import TucanoBody from'../../img/char/tucano.png';
 
 // Variáveis das inputs //
     const levels = {
@@ -15,16 +21,6 @@ import Board from '../../img/Lab_Final.png';
         1: "Médio",
         2: "Difícil",
         3: "Jubilator"
-    }
-    const times = {
-        0: "x5 rodadas",
-        1: "x10 rodadas",
-        2: "x20 rodadas"
-    }
-    const tabuleiros = {
-        0: "Sabão",
-        1: "Ácido Graxo",
-        2: "Biodiesel"
     }
     const Personagens = {
         0: {
@@ -52,37 +48,177 @@ import Board from '../../img/Lab_Final.png';
             url: Tucano
         }
     }
+    const PersonagensBody = {
+        0: {
+            name: "Capivara",
+            url: CapivaraBody
+        },
+        1: {
+            name: "Guará",
+            url: GuaraBody
+        },
+        2: {
+            name: "Jacaré",
+            url: JacareBody
+        },
+        3: {
+            name: "Mico",
+            url: MicoBody
+        },
+        4: {
+            name: "Onça",
+            url: OncaBody
+        },
+        5: {
+            name: "Tucano",
+            url: TucanoBody
+        }
+    }
 
 function Game () {
+    function Proximo(){
+        window.Proximo()
+    };
+    function AdicionarH2O(){
+        window.AdicionarH2O()
+    };
+    function upgrade(){
+        window.upgrade()
+    };
+    function upgradeReator(){
+        window.upgradeReator()
+    };
+    function upgradePHmetro(){
+        window.upgradePHmetro()
+    };
+    function upgradeTermometro(){
+        window.upgradeTermometro()
+    };
+    function AdicionarTri(){
+        window.AdicionarTri()
+    };
+    function SubirPH(){
+        window.SubirPH()
+    };
+    function DiminuirPH(){
+        window.DiminuirPH()
+    };
+    function AumentarTemp(){
+        window.AumentarTemp()
+    };
+    function DiminuirTemp(){
+        window.DiminuirTemp()
+    };
+    function Expurgo(){
+        window.Expurgo()
+    };
+    function Decantar(){
+        window.Decantar()
+    };
+    function Filtro(){
+        window.Filtro()
+    };
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+    
     return (
         <div className="App">
             <header className="App-header">
                 <div className="background_game">
-                    <div className="cabeçalho">status <span id="NomeDoJogador"></span></div>
-                    <div className="board">
-                        <img className="Board" src={Board}></img>
-                        tabuleiro
+                    <div className="cabeçalho">
+                        <h1 id="acdin">saddas</h1>
+                        {/*<span id="NomeDoJogador"></span>*/}
                     </div>
-                    <div className="barra_lateral">extração</div>
-                    <div className="barra_inferior">player</div>
+
+                    <div className="board">
+                        <img className="profile-charBody" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
+                        <button className="agua" onClick={AdicionarH2O}>+ H2O</button>
+                        <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
+                        <div className="PopupHover">
+                            <div className="PH">!
+                                <span className="textPH">
+                                    <p id="phtotal"></p> 
+                                </span>
+                            </div>
+                            <div className="TEMP">!
+                                <span className="textTEMP">
+                                    <p id="temperatura"></p>
+                                </span>
+                            </div>
+                            <div className="AGUA">!
+                                <span className="textAGUA">
+                                    <p id="reagente001"></p>
+                                </span>
+                            </div>
+
+                            <div className="TRIGLI">!
+                                <span className="textTRIGLI">
+                                    <p id="reagente002"></p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="barra_lateral">
+                        <div className="extração">
+                            <p id="probabilidade"></p>
+                            <p>• Extração do ácido graxo (4 rodadas):</p>
+                            <p id="extracao"></p>
+                            <p>• Extração por meio do Filtro (2 rodadas):</p>
+                            <p id="extracaofiltro"></p>
+                            <p id="totalextraido"></p>
+                        </div>
+                    </div>
+
+                    <div className="barra_inferior">
+                        <div className="BotoesAcao">
+                            <div className="BotoesProfile">
+                                <button className="botoes" onClick={Proximo}>Turno</button>
+                                <button className="botoes" onClick={Expurgo}>Expugar</button>
+                                <button className="botoes">Ajuda</button>
+                                <button className="botoes" onClick={upgrade}>Nível</button>
+                                <button className="botoes" onClick={Decantar}>Decantar</button>
+                                <button className="botoes" onClick={Filtro}>Filtro</button>
+                            </div>
+
+                            <div className="popup" onClick={myFunction}>
+                                <span className="popuptext" id="myPopup" id="trofeus"></span>
+                            </div>
+                            
+                            <div className="melhorias">
+                                <button className="UpReator" onClick={upgradeReator} title="Melhoria do reator">+</button>
+                                <button className="UpPh" onClick={upgradePHmetro} title="Melhoria do pHmetro">+</button>
+                                <button className="UpTerm" onClick={upgradeTermometro} title="Melhoria do termômetro">+</button>
+                                <button className="MaisPh" onClick={SubirPH} title="Aumentar Ph">+</button>
+                                <button className="MenosPh" onClick={DiminuirPH} title="Diminuir PH">-</button>
+                                <button className="MaisTemp" id="temp+" onClick={AumentarTemp} title="Aumentar temperatura">+</button>
+                                <button className="MenosTemp" id="temp-" onClick={DiminuirTemp} title="Diminuir temperatura">-</button>
+                            </div>   
+                        </div>
+
+                        <div className="logProfile">
+                            <div id="log">
+                                <ul id="showLog">
+                                    <li>⭐⭐⭐ Turno 1 ⭐⭐⭐⭐</li>
+                                </ul>
+                            </div>
+                            <div className="barLog"></div>
+                        </div>
+
+                        <div className="profile"> {/* Barra com a foto do personagem */}
+                            <img className="profile-char" src={Personagens[localStorage.getItem('jedai/personagem')].url}/>
+                            <div className="bar"> {/* Barra com as info do personagem*/}
+                                <div className="usernameLevel">
+                                    user: {localStorage.getItem('jedai/username')}<br></br>
+                                    nível: {levels[localStorage.getItem('jedai/level')]} 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </header>
-
-           {/* <div className="inputs">
-                {localStorage.getItem('jedai/username')}
-                {levels[localStorage.getItem('jedai/level')]}
-                {times[localStorage.getItem('jedai/time')]}
-                {tabuleiros[localStorage.getItem('jedai/tabuleiro')]}
-
-                <div className="foto_char">
-                    <img src={Personagens[localStorage.getItem('jedai/personagem')].url}/>
-                </div>
-            </div>
- 
-            {localStorage.getItem('jedai/level')}
-            {localStorage.getItem('jedai/time')}
-            {localStorage.getItem('jedai/tabuleiro')}
-            {localStorage.getItem('jedai/personagem')}*/}
         </div>    
     );
 }

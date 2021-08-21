@@ -20,7 +20,6 @@ function Home() {
           < Link route='/credit' className='credit buttons'> Créditos</Link>
         </div>
       </div>
-      {/*<div className="glass"></div>*/}
     </Page>          
   );
 }

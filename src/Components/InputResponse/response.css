@@ -17,7 +17,7 @@
     /*grid-template-columns: 28fr 2fr 1fr;*/
     grid-template-columns: repeat(3, 1fr);
   }
-  /* Header */
+  /*HEADER*/
     .cabeçalho {
       grid-column-start: 1; /*começa em 1 e termina em 4*/
       grid-column-end: 4;
@@ -26,7 +26,7 @@
       border-radius: 10px;
       border: 6px solid;
       border-color:#231F20;
-      height: 5vh;
+      height: 66px;
       width: 530px;
     }
     .barra_lateral { /* Coluna de extração */
@@ -39,18 +39,328 @@
       border-color:#231F20;
       height:70vh;  
       width:150px;  
+      background-image: url(../../img/elements/formulas.svg);
+      background-size: contain;
     }
-  /* Body */
-    .board, .Board {
+    .formulas {
+      height:70vh;  
+      width:150px;
+    }
+    .extração{
+      font-family: 'Chakra Petch';
+      color: white;
+      text-align: left;
+      font-size: 15px;
+      padding: 6px;
+    }
+/*-----------------------------------------------------------------------------------------------*/
+  /*BODY*/
+    .board {
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 1;
-      grid-row-end: 4;
-      height: 397px;
+      grid-row-end: 70;
+      height: 391px;
       width: 538px;
-      margin-top: -53px;
+      margin-top: -99px;
+      background-image: url('../../img/Lab_Final.png');
+      background-size: contain;
+      background-repeat: no-repeat;
     }
-  /* Footer */
+    /*Botões*/
+      .agua{
+        width: 37px;
+        height: 20px;
+        border-radius: 5px;
+        border: none;
+        margin: 4px;
+        background-color: #EEC3BB;
+        font-family: 'Chakra Petch';
+        font-size: 9px;
+        color: white;
+        position: static;
+        margin-top: 300px;
+        margin-left: -467px;
+      }
+      .trigli {
+        width: 36px;
+        height: 20px;
+        border-radius: 5px;
+        border: none;
+        margin: 4px;
+        background-color: #EEC3BB;
+        font-family: 'Chakra Petch';
+        font-size: 8px;
+        color: white;
+        position: absolute;
+        top: 373px;
+        left: 95px;
+      }
+      .agua:hover, .trigli:hover {
+        background-color: blue;
+      }
+
+      /*PH*/
+        .MaisPh {
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;
+          border: none;
+          margin: 4px;
+          background-color: #EEC3BB;
+          font-family: 'Chakra Petch';
+          font-size: 9px;
+          color: white;
+        }
+        .MenosPh {
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;
+          border: none;
+          margin: 4px;
+          background-color: #EEC3BB;
+          font-family: 'Chakra Petch';
+          font-size: 9px;
+          color: white;
+        }
+      /*Temperatura*/
+        .MaisTemp{
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;
+          border: none;
+          margin: 4px;
+          background-color: #EEC3BB;
+          font-family: 'Chakra Petch';
+          font-size: 9px;
+          color: white;
+        }
+        .MenosTemp {
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;
+          border: none;
+          margin: 4px;
+          background-color: #EEC3BB;
+          font-family: 'Chakra Petch';
+          font-size: 9px;
+          color: white;
+        }
+      /*Melhorias*/
+        .UpReator {
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;
+          border: none;
+          margin: 4px;
+          background-color: #EEC3BB;
+          font-family: 'Chakra Petch';
+          font-size: 9px;
+          color: white;
+        }
+        .UpPh {
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;
+          border: none;
+          margin: 4px;
+          background-color: #EEC3BB;
+          font-family: 'Chakra Petch';
+          font-size: 9px;
+          color: white;
+        }
+        .UpTerm {
+          width: 20px;
+          height: 20px;
+          border-radius: 2px;
+          border: none;
+          margin: 4px;
+          background-color: #EEC3BB;
+          font-family: 'Chakra Petch';
+          font-size: 9px;
+          color: white;
+        }
+    /*Hover*/
+    .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, .UpTerm:hover {
+      background-color: #EA8D8D;
+    }
+
+    /*Pop Up com hover*/
+      /*PH Info*/
+        .PH { /*Posição*/
+          position: absolute;
+          top: 510px;
+          left: 388px;
+          color: white;
+          font-size: 30px;
+          background:rgb(190, 77, 77);
+          border-radius: 25px;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+        }
+        .PH .textPH {
+          visibility: hidden;
+          width: 120px;
+          background: rgb(190, 77, 77);
+          font-family:'Chakra Petch';
+          font-size: 20px;
+          color: white;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -60px;
+        } 
+        .PH .textPH::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgb(190, 77, 77) transparent transparent transparent;
+        }
+        .PH:hover .textPH {
+          visibility: visible;
+        }
+      /*Temperatura Info*/
+        .TEMP { /*Posição*/
+          position: absolute;
+          top: 611px;
+          left: 285px;
+          color: white;
+          font-size: 30px;
+          background:rgb(236, 214, 15);
+          border-radius: 25px;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+        }
+        .TEMP .textTEMP {
+          visibility: hidden;
+          width: 120px;
+          background: rgb(236, 214, 15);
+          font-family:'Chakra Petch';
+          font-size: 20px;
+          color: white;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -60px;
+        }  
+        .TEMP .textTEMP::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgb(236, 214, 15) transparent transparent transparent;
+        }
+        .TEMP:hover .textTEMP {
+            visibility: visible;
+        }
+      /*Água Info*/
+        .AGUA { /*Posição*/
+          position: absolute;
+          top: 464px;
+          left: 34px;
+          color: white;
+          font-size: 30px;
+          background:rgb(77, 164, 190);
+          border-radius: 25px;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+        }
+        .AGUA .textAGUA {
+          visibility: hidden;
+          width: 120px;
+          background: rgb(77, 164, 190);
+          font-family:'Chakra Petch';
+          font-size: 20px;
+          color: white;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -60px;
+        }  
+        .AGUA .textAGUA::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgb(77, 164, 190) transparent transparent transparent;
+        }
+        .AGUA:hover .textAGUA {
+          visibility: visible;
+        }
+      /*Triglicerídeo Info*/
+        .TRIGLI { /*Posição*/
+          position: absolute;
+          top: 510px;
+          left: 100px;
+          color: white;
+          font-size: 30px;
+          background:rgb(77, 190, 115);
+          border-radius: 25px;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+        }
+        .TRIGLI .textTRIGLI {
+          visibility: hidden;
+          width: 120px;
+          background: rgb(77, 190, 115);
+          font-family:'Chakra Petch';
+          font-size: 20px;
+          color: white;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -60px;
+        }  
+        .TRIGLI .textTRIGLI::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgb(77, 190, 115) transparent transparent transparent;
+        }
+        .TRIGLI:hover .textTRIGLI {
+          visibility: visible;
+        }
+
+/*-----------------------------------------------------------------------------------------------*/
+  /*FOOTER*/
     .barra_inferior {
       grid-column-start: 1; /*começa em 1 e termina em 4*/
       grid-column-end: 4;
@@ -59,35 +369,137 @@
       border-radius: 10px;
       border: 6px solid;
       border-color:#231F20;
-      height:22vh; 
-      width:690px; 
+      height: 26vh;
+      width: 688px;
+      display: flex;
     }
-/*-----------------------------------------------------------------------------------------------*/
-
-/* Inputs */
-  .foto_char {
-    width: 100px;
-    height: 100px;
-    transition: transform 250ms;
-  }
-
-  @media only screen and (max-width: 1024px) {
-      .background_game {
-        width: 100vw;
+    .footer-container {
+      display: flex;
+    }
+    /*Barra do personagem*/
+      .profile { /* Barra com a foto do personagem */
+        background: rgba(0, 0, 0, 0.456); 
+        border-radius: 20px;
+        height: 24vh;
+        width: 266px;
+        margin: auto 8px;
       }
-      .menu {
+      .bar { /* Barra com as info do personagem*/
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 8vh;
+        display: flex;
         align-items: center;
-        width: 70%;
       }
-    }
-  @media only screen and (max-width: 720px) {
-      .menu {
-        width: 85%;
+      .profile-char {
+        width: 95px;
+        margin-top: 5px;
+        transition: transform 250ms;
       }
-    }
-  @media only screen and (max-height: 500px) {
-      .menu {
-        margin-top: 10%;
-        margin-bottom: -90%;
+      .profile-charBody{
+        width: 95px;
+        margin-top: 5px;
+        transition: transform 250ms;
       }
+      .usernameLevel {
+        font-size: 15px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+      }
+    /*Barra de log*/
+      .logProfile {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 24vh;
+        width: 288px;
+        margin-top: 8px;
+        margin-right: 8px;
+        display: flex;
+        align-items: flex-end;
+      }
+      .barLog {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 8vh;
+        width: 288px;
+      }
+      #showLog{
+        color: white;
+        font-family: 'Chakra Petch';
+        font-size: 15px;
+      }
+
+    /* Botões de ação */
+      .BotoesAcao {
+        margin-top: 8px;
+        background-image: url(../../img/elements/formulas.svg);
+        background-size: cover;
+      }
+      .botoes {
+        width: 55px;
+        height: 35px;
+        border-radius: 5px;
+        border-color: #EEC3BB;
+        border-width: 0.1px;
+        margin: 4px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+      }
+
+      .botoes:hover, .popup:hover{
+        background-color: #EEC3BB;
+      }
+      .popup {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border-color: #EEC3BB;
+        border-width: 0.1px;
+        margin: 4px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        background-image: url('../../img/elements/trofeu.png');
+        background-size: contain;
     }
+    /*Fundo pop up info */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 400px;
+            background-color: rgb(141, 77, 190);
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+        }
+    /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+        } 
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s
+        }  
+    /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+        }
+/*-----------------------------------------------------------------------------------------------*/

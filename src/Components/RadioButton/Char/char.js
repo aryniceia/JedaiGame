@@ -1,4 +1,4 @@
-import './char.css';
+
 /*const charProps = {
     id: '',
     charName: "",

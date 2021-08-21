@@ -49,21 +49,11 @@
 
 .grama {
   height: 20vh;
-  background-image: url(./img/grass.svg);
+  background-image: url(./img/elements/grass.svg);
   width: 100%;
   background-position: bottom;
   background-size: cover;
   margin-top: auto;
-}
-
-.glass {
-  background-image: url(./img/elements/glass.svg);
-  width: 125px;
-  height: 100px;
-  background-size: cover;
-  position: absolute;
-  top: 530px;
-  left: 360px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -79,12 +69,6 @@
 @media only screen and (max-width: 720px) {
   .menu {
     width: 85%;
-  }
-  .glass {
-    position: absolute;
-    top: 560px;
-    left: -14px;
-
   }
 }
 
