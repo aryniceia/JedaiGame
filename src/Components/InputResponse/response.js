@@ -11,9 +11,12 @@ import Tucano from'../../img/char/icon/tucano_perfil.png';
 import CapivaraBody from '../../img/char/capivara.png';
 import GuaraBody from '../../img/char/guara.png';
 import JacareBody from '../../img/char/jacare.png';
-import MicoBody from '../../img/char/mico.png';
-import OncaBody from'../../img/char/onca.png';
-import TucanoBody from'../../img/char/tucano.png';
+import MicoBody from '../../img/char/body/mico.png';
+import OncaBody from'../../img/char/body/onca.png';
+import TucanoBody from'../../img/char/body/tucano.png';
+
+import ArrowL from'../../img/elements/arrowL.png';
+import ArrowR from'../../img/elements/arrowR.png';
 
 // Variáveis das inputs //
     const levels = {
@@ -122,20 +125,28 @@ function Game () {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
     }
+    function myFunction1() {
+        var popup = document.getElementById("helpPopup");
+        popup.classList.toggle("show");
+    }
     
     return (
         <div className="App">
             <header className="App-header">
                 <div className="background_game">
                     <div className="cabeçalho">
-                        <h1 id="acdin">saddas</h1>
-                        {/*<span id="NomeDoJogador"></span>*/}
+                        <h1 id="acdin">Se você viu essa mensagem, deu erro!</h1>
                     </div>
 
                     <div className="board">
                         <img className="profile-charBody" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
+                        
                         <button className="agua" onClick={AdicionarH2O}>+ H2O</button>
                         <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
+
+                        <button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>
+                        <button className="arrowRight"><img id="arrowR" src={ArrowR}/></button>
+
                         <div className="PopupHover">
                             <div className="PH">!
                                 <span className="textPH">
@@ -152,7 +163,6 @@ function Game () {
                                     <p id="reagente001"></p>
                                 </span>
                             </div>
-
                             <div className="TRIGLI">!
                                 <span className="textTRIGLI">
                                     <p id="reagente002"></p>
@@ -177,16 +187,25 @@ function Game () {
                             <div className="BotoesProfile">
                                 <button className="botoes" onClick={Proximo}>Turno</button>
                                 <button className="botoes" onClick={Expurgo}>Expugar</button>
-                                <button className="botoes">Ajuda</button>
+
+                                <button className="help" onClick={myFunction1}>Ajuda
+                                    <span className="helptext" id="helpPopup">
+                                        • 💰 dinheiro<br></br>
+                                        • ☕ ação <br></br>
+                                        • 🧪 mol <br></br>
+                                        • ⭐ turno <br></br>
+                                    </span>
+                                </button>
                                 <button className="botoes" onClick={upgrade}>Nível</button>
                                 <button className="botoes" onClick={Decantar}>Decantar</button>
                                 <button className="botoes" onClick={Filtro}>Filtro</button>
                             </div>
 
-                            <div className="popup" onClick={myFunction}>
-                                <span className="popuptext" id="myPopup" id="trofeus"></span>
-                            </div>
-                            
+                            <button className="popup" onClick={myFunction}>
+                                <span className="popuptext" id="myPopup">
+                                    <p id="trofeus"></p>
+                                </span>
+                            </button>
                             <div className="melhorias">
                                 <button className="UpReator" onClick={upgradeReator} title="Melhoria do reator">+</button>
                                 <button className="UpPh" onClick={upgradePHmetro} title="Melhoria do pHmetro">+</button>

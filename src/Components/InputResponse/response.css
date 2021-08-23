@@ -1,6 +1,6 @@
 /* Fundos */
     .App {
-        text-align: center;
+      text-align: center;
     }
     .App-header {
       background-color: #3c183d;
@@ -10,7 +10,6 @@
       justify-content: center;
     }
 /*-----------------------------------------------------------------------------------------------*/
-
 /* Repartições da tela */
   .background_game {
     display: grid;
@@ -53,6 +52,11 @@
       font-size: 15px;
       padding: 6px;
     }
+    #acdin {
+      font-family: 'Chakra Petch';
+      font-size: 25px;
+      color: white;
+    }
 /*-----------------------------------------------------------------------------------------------*/
   /*BODY*/
     .board {
@@ -62,9 +66,9 @@
       grid-row-end: 70;
       height: 391px;
       width: 538px;
-      margin-top: -99px;
+      margin-top: -105px;
       background-image: url('../../img/Lab_Final.png');
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
     }
     /*Botões*/
@@ -78,9 +82,9 @@
         font-family: 'Chakra Petch';
         font-size: 9px;
         color: white;
-        position: static;
-        margin-top: 300px;
-        margin-left: -467px;
+        position: absolute;
+        top: 300px;
+        left: 95px;
       }
       .trigli {
         width: 36px;
@@ -96,10 +100,28 @@
         top: 373px;
         left: 95px;
       }
+      .arrowLeft, .arrowRight {
+        background: none;
+        border: none;
+      }
+      #arrowL, #arrowR {
+        width: 25px;
+        margin-left: 210px;
+        margin-right: -126px;
+        margin-top: 94px;
+        background-color: rgba(255, 192, 203, 0);
+      }
       .agua:hover, .trigli:hover {
         background-color: blue;
       }
-
+      #arrowR:hover {
+        background-color: black;
+        border-radius: 20px;
+      }
+      #arrowL:hover {
+        background-color: black;
+        border-radius: 20px;
+      }
       /*PH*/
         .MaisPh {
           width: 20px;
@@ -180,10 +202,10 @@
           font-size: 9px;
           color: white;
         }
-    /*Hover*/
-    .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, .UpTerm:hover {
-      background-color: #EA8D8D;
-    }
+      /*Hover*/
+      .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, .UpTerm:hover {
+        background-color: #EA8D8D;
+      }
 
     /*Pop Up com hover*/
       /*PH Info*/
@@ -270,7 +292,7 @@
           border-color: rgb(236, 214, 15) transparent transparent transparent;
         }
         .TEMP:hover .textTEMP {
-            visibility: visible;
+          visibility: visible;
         }
       /*Água Info*/
         .AGUA { /*Posição*/
@@ -397,9 +419,9 @@
         transition: transform 250ms;
       }
       .profile-charBody{
-        width: 95px;
-        margin-top: 5px;
-        transition: transform 250ms;
+        width: 255px;
+        margin-left: 288px;
+        margin-top: 9px;
       }
       .usernameLevel {
         font-size: 15px;
@@ -429,7 +451,6 @@
         font-family: 'Chakra Petch';
         font-size: 15px;
       }
-
     /* Botões de ação */
       .BotoesAcao {
         margin-top: 8px;
@@ -447,59 +468,121 @@
         font-family: 'Chakra Petch';
         color: white;
       }
-
       .botoes:hover, .popup:hover{
         background-color: #EEC3BB;
       }
-      .popup {
-        width: 55px;
-        height: 55px;
-        border-radius: 30px;
-        border-color: #EEC3BB;
-        border-width: 0.1px;
-        margin: 4px;
-        background-color: #EA8D8D;
-        font-family: 'Chakra Petch';
-        color: white;
-        background-image: url('../../img/elements/trofeu.png');
-        background-size: contain;
-    }
-    /*Fundo pop up info */
-        .popup .popuptext {
+    /* Pop Up*/
+      /*Pop Up troféu */
+        .popup {
+          width: 55px;
+          height: 55px;
+          border-radius: 30px;
+          border-color: #EEC3BB;
+          border-width: 0.1px;
+          margin: 4px;
+          background-color: #EA8D8D;
+          font-family: 'Chakra Petch';
+          color: white;
+          background-image: url('../../img/elements/trofeu.png');
+          background-size: contain;
+          position: absolute;
+          display: inline-block;
+          cursor: pointer
+        }
+        /*Fundo pop up info */
+          .popup .popuptext {
             visibility: hidden;
-            width: 400px;
-            background-color: rgb(141, 77, 190);
-            color: #fff;
+            background-color: #ea8d8d;
             text-align: left;
-            border-radius: 6px;
-            padding: 8px 0;
+            height: -15px;
+            width: 355px;
+            margin-left: -410px;
+            color: #fff;
+            border-radius: 20px;
             position: absolute;
             z-index: 1;
             bottom: 125%;
-            left: 50%;
-            margin-left: -80px;
-        }
-    /* Popup arrow */
-        .popup .popuptext::after {
+            left: 600%;
+            padding: 10px;
+            line-height: 22px;
+          }
+        /* Popup arrow */
+          .popup .popuptext::after {
             content: "";
             position: absolute;
             top: 100%;
             left: 50%;
             margin-left: -5px;
-        } 
-    /* Toggle this class when clicking on the popup container (hide and show the popup) */
-        .popup .show {
+          } 
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+          .popup .popuptext.show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+          }  
+        /* Add animation (fade in the popup) */
+          @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+          }
+          @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+          }
+
+        /* Pop Up ajuda */
+          .help {
+            width: 55px;
+            height: 35px;
+            border-radius: 5px;
+            border-color: #EEC3BB;
+            border-width: 0.1px;
+            margin: 4px;
+            background-color: #EA8D8D;
+            font-family: 'Chakra Petch';
+            color: white;
+            position: absolute;
+            display: inline-block;
+            cursor: pointer;
+          }
+        /*Fundo pop up info */
+          .help .helptext {
+            visibility: hidden;
+            width: 128px;
+            height: 72px;
+            background-color: #ea8d8d;
+            color: #fff;
+            font-size: 20px;
+            text-align: left;
+            border-radius: 20px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 0px;
+            padding: 10px;
+            line-height: 22px;
+          }
+        /* Popup arrow */
+          .help .helptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+          } 
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+          .help .show {
             visibility: visible;
             -webkit-animation: fadeIn 1s;
             animation: fadeIn 1s
-        }  
-    /* Add animation (fade in the popup) */
-        @-webkit-keyframes fadeIn {
+          }  
+        /* Add animation (fade in the popup) */
+          @-webkit-keyframes fadeIn {
             from {opacity: 0;}
             to {opacity: 1;}
-        }
-        @keyframes fadeIn {
+          }
+          @keyframes fadeIn {
             from {opacity: 0;}
             to {opacity:1 ;}
-        }
+          }
 /*-----------------------------------------------------------------------------------------------*/

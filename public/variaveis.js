@@ -507,7 +507,7 @@ function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez
     p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
     //mudar = document.getElementById('turno').innerHTML = `Esse é o turno ${turno} e você está no nível ${Faculdade}`;
-    acdin = document.getElementById('acdin').innerHTML = `💰${dinheiro}₵   ☕${acao}   🧪${molextraidos} mols   ⭐${turno}`; // acdin = açao/dinheiro
+    acdin = document.getElementById('acdin').innerHTML = `💰 x${dinheiro}₵ ☕ x${acao} 🧪 x${molextraidos} mols ⭐x${turno} turnos`; // acdin = açao/dinheiro
 
     //var mudar = document.querySelector('#turno').innerHTML = `Turno ${turno}`;
     //var level = document.querySelector('#faculdade').innerHTML = `Nível: ${Faculdade}`;
@@ -525,18 +525,18 @@ function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez
     eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML = 
         `
-        Objetivo: ${nivelDoJogo} <br>
-        Trofeus adquiridos: <br>
-        Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "Mestre dos 11 🥇" : "Ainda não 😥"}<br>
-        Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "Doutor dos 22 🏆" : "Ainda não 😓"}<br>
-        Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "Impressionante 😲" : "Esse não vai ser fácil hein 🤯"}<br>
-        Chegar em probabilidade de 100%: ${Prob100 ? "Essa foi difícil mas conseguiu 🥳" : "Essa você consegue?"}<br>
-        Chegar em probabilidade de 0%: ${Prob0 ? "Uhul, conseguiu 😊" : "Ainda não chegou 🤨"}<br>
-        Nao fazer nenhuma modulaçao do PH: ${ModificacaoPH ? "Tente não fazer essa 😜" : "Infelizmente não foi dessa vez 😐"}<br>
-        Nao fazer nenhuma modulaçao da Temperatura: ${ModificacaoTemp ? "Não feito por enquanto 🤔" : "Não era para ter feito 😔"}<br>
-        Nao fazer nenhuma modulaçao do PH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto 🙂" : "Fez 😵‍💫"}<br>
-        Nao usar o método de extraçao rapida: ${ExtracaoRapida ? "Não usado por enquanto 😋" : "Usou #Fail 😣"}<br>
-        Nao fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda 😋" : "Poxa, infelizmente você fez 😡"}<br>
+        • Objetivo: ${nivelDoJogo} <br>
+        • Trofeus adquiridos: <br>
+        • Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "Mestre dos 11 🥇" : "Ainda não 😥"}<br>
+        • Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "Doutor dos 22 🏆" : "Ainda não 😓"}<br>
+        • Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "Impressionante 😲" : "Esse não vai ser fácil hein 🤯"}<br>
+        • Chegar em probabilidade de 100%: ${Prob100 ? "Essa foi difícil mas conseguiu 🥳" : "Essa você consegue?"}<br>
+        • Chegar em probabilidade de 0%: ${Prob0 ? "Uhul, conseguiu 😊" : "Ainda não chegou 🤨"}<br>
+        • Não fazer nenhuma modulação do PH: ${ModificacaoPH ? "Tente não fazer essa 😜" : "Infelizmente não foi dessa vez 😐"}<br>
+        • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "Não feito por enquanto 🤔" : "Não era para ter feito 😔"}<br>
+        • Não fazer nenhuma modulação do PH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto 🙂" : "Fez 😵‍💫"}<br>
+        • Não usar o método de extraçao rapida: ${ExtracaoRapida ? "Não usado por enquanto 😋" : "Usou #Fail 😣"}<br>
+        • Não fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda 😋" : "Poxa, infelizmente você fez 😡"}<br>
         `
 }
 
