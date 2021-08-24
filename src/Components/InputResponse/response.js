@@ -139,15 +139,16 @@ function Game () {
                     </div>
 
                     <div className="board">
-                        <img className="profile-charBody" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
-                        
-                        <button className="agua" onClick={AdicionarH2O}>+ H2O</button>
-                        <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
+                        <div className="border">
+                            <img className="profile-charBody" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
+                            
+                            <button className="agua" onClick={AdicionarH2O}>+ H2O</button>
+                            <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
 
-                        <button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>
-                        <button className="arrowRight"><img id="arrowR" src={ArrowR}/></button>
+                            <button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>
+                            <button className="arrowRight"><img id="arrowR" src={ArrowR}/></button>
 
-                        <div className="PopupHover">
+                            <div className="PopupHover">
                             <div className="PH">!
                                 <span className="textPH">
                                     <p id="phtotal"></p> 
@@ -168,6 +169,7 @@ function Game () {
                                     <p id="reagente002"></p>
                                 </span>
                             </div>
+                        </div>
                         </div>
                     </div>
 

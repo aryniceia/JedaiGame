@@ -71,6 +71,13 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
+    .border {
+      border: 6px solid;
+      border-color: #231F20;
+      height: 391px;
+      width: 532px;
+      margin-top: -6px; 
+    }
     /*Botões*/
       .agua{
         width: 37px;
@@ -420,7 +427,7 @@
       }
       .profile-charBody{
         width: 255px;
-        margin-left: 288px;
+        margin-left: 281px;
         margin-top: 9px;
       }
       .usernameLevel {
@@ -479,7 +486,8 @@
           border-radius: 30px;
           border-color: #EEC3BB;
           border-width: 0.1px;
-          margin: 4px;
+          margin-left: -86px;
+          margin-top: 20px;
           background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           color: white;

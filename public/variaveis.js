@@ -507,7 +507,12 @@ function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez
     p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
     //mudar = document.getElementById('turno').innerHTML = `Esse é o turno ${turno} e você está no nível ${Faculdade}`;
-    acdin = document.getElementById('acdin').innerHTML = `💰 x${dinheiro}₵ ☕ x${acao} 🧪 x${molextraidos} mols ⭐x${turno} turnos`; // acdin = açao/dinheiro
+    acdin = document.getElementById('acdin').innerHTML = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
+    
+    //dinheiro  = document.getElementById('acdin').innerHTML = `💰 ${dinheiro}₵`
+    //acao = document.getElementById('acdi').innerHTML = `☕ ${acao}`
+    //molextraidos = document.getElementById('acdin').innerHTML = `🧪 ${molextraidos} mols`
+    //turno = document.getElementById('acdin').innerHTML = `⭐ ${turno} turnos`
 
     //var mudar = document.querySelector('#turno').innerHTML = `Turno ${turno}`;
     //var level = document.querySelector('#faculdade').innerHTML = `Nível: ${Faculdade}`;
