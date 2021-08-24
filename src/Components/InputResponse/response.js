@@ -211,7 +211,7 @@ function Game () {
                             <div className="melhorias">
                                 <button className="UpReator" onClick={upgradeReator} title="Melhoria do reator">+</button>
                                 <button className="UpPh" onClick={upgradePHmetro} title="Melhoria do pHmetro">+</button>
-                                <button className="UpTerm" onClick={upgradeTermometro} title="Melhoria do termômetro">+</button>
+                                <button className="UpChapa" onClick={upgradeTermometro} title="Melhoria da chapa">+</button>
                                 <button className="MaisPh" onClick={SubirPH} title="Aumentar Ph">+</button>
                                 <button className="MenosPh" onClick={DiminuirPH} title="Diminuir PH">-</button>
                                 <button className="MaisTemp" id="temp+" onClick={AumentarTemp} title="Aumentar temperatura">+</button>

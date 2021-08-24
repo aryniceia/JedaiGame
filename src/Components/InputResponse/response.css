@@ -89,9 +89,9 @@
         font-family: 'Chakra Petch';
         font-size: 9px;
         color: white;
-        position: absolute;
-        top: 300px;
-        left: 95px;
+        position: fixed;
+        margin-top: 67px;
+        margin-left: -136px;
       }
       .trigli {
         width: 36px;
@@ -103,9 +103,9 @@
         font-family: 'Chakra Petch';
         font-size: 8px;
         color: white;
-        position: absolute;
-        top: 373px;
-        left: 95px;
+        position: fixed;
+        margin-top: 67px;
+        margin-left: -81px;
       }
       .arrowLeft, .arrowRight {
         background: none;
@@ -140,6 +140,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
+          position: fixed;
+          margin-top: -123px;
+          margin-left: 157px;
         }
         .MenosPh {
           width: 20px;
@@ -151,6 +154,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
+          position: fixed;
+          margin-top: -123px;
+          margin-left: 125px;
         }
       /*Temperatura*/
         .MaisTemp{
@@ -163,6 +169,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
+          position: fixed;
+          margin-top: -128px;
+          margin-left: 41px;
         }
         .MenosTemp {
           width: 20px;
@@ -174,6 +183,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
+          position: fixed;
+          margin-top: -128px;
+          margin-left: 13px;
         }
       /*Melhorias*/
         .UpReator {
@@ -186,6 +198,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
+          position: fixed;
+          margin-top: -288px;
+          margin-left: 65px;
         }
         .UpPh {
           width: 20px;
@@ -197,8 +212,11 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
+          position: fixed;
+          margin-top: -143px;
+          margin-left: 213px;
         }
-        .UpTerm {
+        .UpChapa {
           width: 20px;
           height: 20px;
           border-radius: 2px;
@@ -208,9 +226,12 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
+          position: fixed;
+          margin-top: -197px;
+          margin-left: 3px;
         }
       /*Hover*/
-      .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, .UpTerm:hover {
+      .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, .UpChapa:hover {
         background-color: #EA8D8D;
       }
 
