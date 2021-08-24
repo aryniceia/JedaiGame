@@ -217,9 +217,9 @@
     /*Pop Up com hover*/
       /*PH Info*/
         .PH { /*Posição*/
-          position: absolute;
-          top: 510px;
-          left: 388px;
+          position: fixed;
+          margin-top: -104px;
+          margin-left: 233px;
           color: white;
           font-size: 30px;
           background:rgb(190, 77, 77);
@@ -260,9 +260,9 @@
         }
       /*Temperatura Info*/
         .TEMP { /*Posição*/
-          position: absolute;
-          top: 611px;
-          left: 285px;
+          position: fixed;
+          margin-top: -29px;
+          margin-left: 163px;
           color: white;
           font-size: 30px;
           background:rgb(236, 214, 15);
@@ -303,9 +303,9 @@
         }
       /*Água Info*/
         .AGUA { /*Posição*/
-          position: absolute;
-          top: 464px;
-          left: 34px;
+          position: fixed;
+          margin-top: -193px;
+          margin-left: 19px;
           color: white;
           font-size: 30px;
           background:rgb(77, 164, 190);
@@ -346,9 +346,9 @@
         }
       /*Triglicerídeo Info*/
         .TRIGLI { /*Posição*/
-          position: absolute;
-          top: 510px;
-          left: 100px;
+          position: fixed;
+          margin-top: -168px;
+          margin-left: 67px;
           color: white;
           font-size: 30px;
           background:rgb(77, 190, 115);
