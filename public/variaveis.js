@@ -12,7 +12,7 @@ logLine = `Você começou o jogo.`
 dRdP = 0
 logList = []
 reagente1 = "Água"
-reagente2 = "Triacilglicerídeo"
+reagente2 = "Triglicerídeos"
 produto1 = "Glicerol"
 produto2 = "Ácido Graxo"
 fatorDeConversaoReagente2 = 3
@@ -172,7 +172,7 @@ function variaveisIniciais(){
     dRdP = 0
     logList = []
     reagente1 = "Água"
-    reagente2 = "Triacilglicerídeo"
+    reagente2 = "Triglicerídeos"
     produto1 = "Glicerol"
     produto2 = "Ácido Graxo"
     fatorDeConversaoReagente2 = 3
@@ -521,7 +521,7 @@ function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez
 
     extracao = document.getElementById('extracao').innerHTML = `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4`;
     temperatura = document.getElementById('temperatura').innerHTML = `${temp} °C`;
-    ShowPH = document.getElementById('phtotal').innerHTML = `${PH} PH`;
+    ShowPH = document.getElementById('phtotal').innerHTML = `${PH} pH`;
     ShowProb = document.getElementById('probabilidade').innerHTML = `${ProbDinamica} % de chance da reação ocorrer.`;   
     extracaofiltro = document.getElementById('extracaofiltro').innerHTML = `${filtrarR1} mols no estágio 1 | ${filtrarR2} mols no estágio 2`;
     extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraidos`;

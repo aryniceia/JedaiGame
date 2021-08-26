@@ -78,6 +78,18 @@
       width: 532px;
       margin-top: -6px; 
     }
+    .centrifuga {
+      width: 140px;
+      position: relative;
+      top: -238px;
+      left: -28px;
+    }
+    .filtroElement {
+      width: 205px;
+      position: relative;
+      top: -228px;
+      left: -57px;
+    }
     /*Botões*/
       .agua{
         width: 37px;
@@ -89,9 +101,9 @@
         font-family: 'Chakra Petch';
         font-size: 9px;
         color: white;
-        position: fixed;
-        margin-top: 67px;
-        margin-left: -136px;
+        position: relative;
+        top: -79px;
+        left: -389px;
       }
       .trigli {
         width: 36px;
@@ -103,9 +115,9 @@
         font-family: 'Chakra Petch';
         font-size: 8px;
         color: white;
-        position: fixed;
-        margin-top: 67px;
-        margin-left: -81px;
+        position: relative;
+        top: -78px;
+        left: -380px;
       }
       .arrowLeft, .arrowRight {
         background: none;
@@ -140,9 +152,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
-          position: fixed;
-          margin-top: -123px;
-          margin-left: 157px;
+          position: relative;
+          top: -125px;
+          left: 168px;
         }
         .MenosPh {
           width: 20px;
@@ -154,9 +166,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
-          position: fixed;
-          margin-top: -123px;
-          margin-left: 125px;
+          position: relative;
+          top: -125px;
+          left: 102px;
         }
       /*Temperatura*/
         .MaisTemp{
@@ -169,9 +181,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
-          position: fixed;
-          margin-top: -128px;
-          margin-left: 41px;
+          position: relative;
+          top: -130px;
+          left: -7px;
         }
         .MenosTemp {
           width: 20px;
@@ -183,9 +195,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
-          position: fixed;
-          margin-top: -128px;
-          margin-left: 13px;
+          position: relative;
+          top: -130px;
+          left: -59px;
         }
       /*Melhorias*/
         .UpReator {
@@ -198,9 +210,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
-          position: fixed;
-          margin-top: -288px;
-          margin-left: 65px;
+          position: relative;
+          top: -284px;
+          left: 157px;
         }
         .UpPh {
           width: 20px;
@@ -212,9 +224,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
-          position: fixed;
-          margin-top: -143px;
-          margin-left: 213px;
+          position: relative;
+          top: -147px;
+          left: 278px;
         }
         .UpChapa {
           width: 20px;
@@ -226,9 +238,9 @@
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
-          position: fixed;
-          margin-top: -197px;
-          margin-left: 3px;
+          position: relative;
+          top: -202px;
+          left: 42px;
         }
       /*Hover*/
       .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, .UpChapa:hover {
@@ -238,9 +250,6 @@
     /*Pop Up com hover*/
       /*PH Info*/
         .PH { /*Posição*/
-          position: fixed;
-          margin-top: -104px;
-          margin-left: 233px;
           color: white;
           font-size: 30px;
           background:rgb(190, 77, 77);
@@ -249,6 +258,9 @@
           height: 25px;
           line-height: 25px;
           text-align: center;
+          position: relative;
+          top: -164px;
+          left: 237px;
         }
         .PH .textPH {
           visibility: hidden;
@@ -281,9 +293,6 @@
         }
       /*Temperatura Info*/
         .TEMP { /*Posição*/
-          position: fixed;
-          margin-top: -29px;
-          margin-left: 163px;
           color: white;
           font-size: 30px;
           background:rgb(236, 214, 15);
@@ -292,6 +301,9 @@
           height: 25px;
           line-height: 25px;
           text-align: center;
+          position: relative;
+          top: -110px;
+          left: 165px;
         }
         .TEMP .textTEMP {
           visibility: hidden;
@@ -324,9 +336,6 @@
         }
       /*Água Info*/
         .AGUA { /*Posição*/
-          position: fixed;
-          margin-top: -193px;
-          margin-left: 19px;
           color: white;
           font-size: 30px;
           background:rgb(77, 164, 190);
@@ -335,6 +344,9 @@
           height: 25px;
           line-height: 25px;
           text-align: center;
+          position: relative;
+          top: -303px;
+          left: 20px;
         }
         .AGUA .textAGUA {
           visibility: hidden;
@@ -367,9 +379,6 @@
         }
       /*Triglicerídeo Info*/
         .TRIGLI { /*Posição*/
-          position: fixed;
-          margin-top: -168px;
-          margin-left: 67px;
           color: white;
           font-size: 30px;
           background:rgb(77, 190, 115);
@@ -378,6 +387,9 @@
           height: 25px;
           line-height: 25px;
           text-align: center;
+          position: relative;
+          top: -311px;
+          left: 69px;
         }
         .TRIGLI .textTRIGLI {
           visibility: hidden;

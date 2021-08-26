@@ -15,8 +15,10 @@ import MicoBody from '../../img/char/body/mico.png';
 import OncaBody from'../../img/char/body/onca.png';
 import TucanoBody from'../../img/char/body/tucano.png';
 
-import ArrowL from'../../img/elements/arrowL.png';
-import ArrowR from'../../img/elements/arrowR.png';
+import ArrowL from '../../img/elements/arrowL.png';
+import ArrowR from '../../img/elements/arrowR.png';
+import Centrifuga from '../../img/elements/centrifuga.png';
+import FiltroElement from '../../img/elements/filtro.png';
 
 // Variáveis das inputs //
     const levels = {
@@ -141,13 +143,13 @@ function Game () {
                     <div className="board">
                         <div className="border">
                             <img className="profile-charBody" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
+                            <img className="centrifuga" src={Centrifuga}></img>
+                            <img className="filtroElement" src={FiltroElement}></img>
                             
                             <button className="agua" onClick={AdicionarH2O}>+ H2O</button>
                             <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
-
-                            <button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>
-                            <button className="arrowRight"><img id="arrowR" src={ArrowR}/></button>
-
+                            {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>
+                            <button className="arrowRight"><img id="arrowR" src={ArrowR}/></button>*/}
                             <div className="PopupHover">
                             <div className="PH">!
                                 <span className="textPH">
@@ -212,8 +214,8 @@ function Game () {
                                 <button className="UpReator" onClick={upgradeReator} title="Melhoria do reator">+</button>
                                 <button className="UpPh" onClick={upgradePHmetro} title="Melhoria do pHmetro">+</button>
                                 <button className="UpChapa" onClick={upgradeTermometro} title="Melhoria da chapa">+</button>
-                                <button className="MaisPh" onClick={SubirPH} title="Aumentar Ph">+</button>
-                                <button className="MenosPh" onClick={DiminuirPH} title="Diminuir PH">-</button>
+                                <button className="MaisPh" onClick={SubirPH} title="Aumentar pH">+</button>
+                                <button className="MenosPh" onClick={DiminuirPH} title="Diminuir pH">-</button>
                                 <button className="MaisTemp" id="temp+" onClick={AumentarTemp} title="Aumentar temperatura">+</button>
                                 <button className="MenosTemp" id="temp-" onClick={DiminuirTemp} title="Diminuir temperatura">-</button>
                             </div>   
