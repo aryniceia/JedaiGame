@@ -20,16 +20,21 @@ function Select () {
         window.location.href='/game'
     }
     const delet = () => { 
-        localStorage.setItem('jedai/username','')
-        localStorage.setItem('jedai/level','')
-        localStorage.setItem('jedai/time','')
-        localStorage.setItem('jedai/tabuleiro','')
-        localStorage.setItem('jedai/personagem', '')
+        setName('')
+        localStorage.removeItem('jedai/username')
+        setLevel('padrao')
+        localStorage.removeItem('jedai/level')
+        setTime('padrao')
+        localStorage.removeItem('jedai/time')
+        setTabuleiro('padrao')
+        localStorage.removeItem('jedai/tabuleiro')
+        setPersonagem('')
+        localStorage.removeItem('jedai/personagem')
     }
 
     return (
         <Page>
-            <form>
+            <form action="/game" onSubmit={save} >
                 <h1 className='App-title'>Login</h1>
 
                 <div className='bar-top'>
@@ -39,8 +44,10 @@ function Select () {
                             <input onChange={({target}) => 
                                 setName(target.value)} value={name} 
                                 placeholder="Exemplo: batata_fofinha" 
-                                className="input" type="string" 
-                                required="required">
+                                className="input" 
+                                maxLength="14"
+                                type="string" 
+                                required>
                             </input>
                         </div>
 
@@ -49,7 +56,7 @@ function Select () {
                             <select onChange={({target}) => 
                                 setLevel(target.value)} value={level} 
                                 name="level" className="input" 
-                                id="level" required="required">
+                                id="level" required>
                                     <option disabled value="padrao">Selecione o nível...</option>
                                     <option value="0">Fácil</option>
                                     <option value="1">Médio</option>
@@ -63,7 +70,7 @@ function Select () {
                             <select onChange={({target}) => 
                                 setTime(target.value)} value={time} 
                                 name="time" className="input" 
-                                id="time" required="required">
+                                id="time" required>
                                     <option disabled value="padrao">Selecione o tempo de jogo...</option>
                                     <option value="0">x5 rodadas</option>
                                     <option value="1">x10 rodadas</option>
@@ -77,14 +84,13 @@ function Select () {
                                 setTabuleiro(target.value)} 
                                 value={tabuleiro} name="tabuleiro" 
                                 className="input" id="tabuleiro" 
-                                required="required">
+                                required>
                                     <option disabled value="padrao">Selecione o tabuleiro...</option>
                                     <option value="0">Sabão</option>
                                     <option disabled value="1">Ácido Graxo (Em breve...) {/*Ácido Graxo*/}</option>
                                     <option disabled value="2">Biodisel (Em breve...) {/*Biodiesel*/}</option>
                             </select>
-                        </div> 
-                        
+                        </div>  
                     </div>
                 </div>
                 
@@ -92,17 +98,14 @@ function Select () {
 
                 <div className='bar-bot'>
                     <RadioButton personagem={personagem} setPersonagem={setPersonagem}/> {/*Nessa linha é setado do component radio */}
-                    
                     <div className='buttons1'>
-                        <Link route="/" className='return'> Voltar</Link>
+                        <Link route="/" className='return'>Voltar</Link>
                         <Link route='detail' className='detail'>Detalhes</Link>
                         {/*<RandomButton onClick={save}></RandomButton>*/}
-                        
-                        <button className="save" type='button' onClick={save} >Confirma</button>
-                        <button className="delete" type='delete'onClick={delet}>Limpar Seleção</button> 
+                        <input className="save" type='submit' value="Confirma" />
+                        <button className="delete" type='button' onClick={delet}>Limpar Seleção</button> 
                     </div>
                 </div>
-                
             </form> 
         </Page>
     );

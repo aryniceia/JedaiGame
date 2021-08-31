@@ -10,7 +10,7 @@
   }
   .foto1, .foto2, .foto3, 
   .foto4, .foto5, .foto6 {
-    width: 100px;
-    height: 100px;
+    width: 80x;
+    height: 80px;
     transition: transform 250ms;
   }

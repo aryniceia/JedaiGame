@@ -151,27 +151,37 @@ function Game () {
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>
                             <button className="arrowRight"><img id="arrowR" src={ArrowR}/></button>*/}
                             <div className="PopupHover">
-                            <div className="PH">!
-                                <span className="textPH">
-                                    <p id="phtotal"></p> 
-                                </span>
+                                <div className="PH">!
+                                    <span className="textPH">
+                                        <p id="phtotal"></p> 
+                                    </span>
+                                </div>
+                                <div className="TEMP">!
+                                    <span className="textTEMP">
+                                        <p id="temperatura"></p>
+                                    </span>
+                                </div>
+                                <div className="AGUA">!
+                                    <span className="textAGUA">
+                                        <p id="reagente001"></p>
+                                    </span>
+                                </div>
+                                <div className="TRIGLI">!
+                                    <span className="textTRIGLI">
+                                        <p id="reagente002"></p>
+                                    </span>
+                                </div>
+
+                                <div className="REATOR">!
+                                    <span className="textREATOR">
+                                        <p id="equacao">
+                                            <span id="reagente01"></span><br></br>
+                                            <span id="reagente02"></span> ⇌ <span id="produto01"></span><br></br>
+                                            <span id="produto02"></span>
+                                        </p>
+                                    </span>
+                                </div>
                             </div>
-                            <div className="TEMP">!
-                                <span className="textTEMP">
-                                    <p id="temperatura"></p>
-                                </span>
-                            </div>
-                            <div className="AGUA">!
-                                <span className="textAGUA">
-                                    <p id="reagente001"></p>
-                                </span>
-                            </div>
-                            <div className="TRIGLI">!
-                                <span className="textTRIGLI">
-                                    <p id="reagente002"></p>
-                                </span>
-                            </div>
-                        </div>
                         </div>
                     </div>
 

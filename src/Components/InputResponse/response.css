@@ -83,12 +83,17 @@
       position: relative;
       top: -238px;
       left: -28px;
+      transition: transform 250ms;
     }
     .filtroElement {
       width: 205px;
       position: relative;
       top: -228px;
       left: -57px;
+      transition: transform 250ms;
+    }
+    .centrifuga:hover, .filtroElement:hover {
+      transform: translateY(-10px);
     }
     /*Botões*/
       .agua{
@@ -129,9 +134,6 @@
         margin-right: -126px;
         margin-top: 94px;
         background-color: rgba(255, 192, 203, 0);
-      }
-      .agua:hover, .trigli:hover {
-        background-color: blue;
       }
       #arrowR:hover {
         background-color: black;
@@ -243,7 +245,8 @@
           left: 42px;
         }
       /*Hover*/
-      .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, .UpChapa:hover {
+      .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, 
+      .UpChapa:hover, .agua:hover, .trigli:hover {
         background-color: #EA8D8D;
       }
 
@@ -420,6 +423,49 @@
         .TRIGLI:hover .textTRIGLI {
           visibility: visible;
         }
+      /*REATOR IInfo*/
+        .REATOR { /*Posição*/
+          color: white;
+          font-size: 30px;
+          background:rgb(241, 139, 55);
+          border-radius: 25px;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+          position: relative;
+          top: -362px;
+          left: 163px;
+        }
+        .REATOR .textREATOR {
+          visibility: hidden;
+          width: 200px;
+          background: rgb(241, 139, 55);
+          font-family:'Chakra Petch';
+          font-size: 15px;
+          color: white;
+          text-align: left;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -60px;
+        }  
+        .REATOR .REATOR::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgb(241, 139, 55) transparent transparent transparent;
+        }
+        .REATOR:hover .textREATOR {
+          visibility: visible;
+        }
 
 /*-----------------------------------------------------------------------------------------------*/
   /*FOOTER*/
@@ -457,11 +503,18 @@
         width: 95px;
         margin-top: 5px;
         transition: transform 250ms;
+      }      
+      .profile-char:hover {
+        transform: translateY(-10px);
       }
       .profile-charBody{
         width: 255px;
         margin-left: 281px;
         margin-top: 9px;
+        transition: transform 250ms;
+      }
+      .profile-charBody:hover {
+        transform: translateX(-3px);
       }
       .usernameLevel {
         font-size: 15px;
@@ -589,19 +642,19 @@
         /*Fundo pop up info */
           .help .helptext {
             visibility: hidden;
-            width: 128px;
-            height: 72px;
+            width: 93px;
+            height: 79px;
             background-color: #ea8d8d;
             color: #fff;
-            font-size: 20px;
+            font-size: 15px;
             text-align: left;
             border-radius: 20px;
             position: absolute;
             z-index: 1;
             bottom: 125%;
-            left: 0px;
-            padding: 10px;
-            line-height: 22px;
+            left: -13px;
+            padding: 23px;
+            line-height: 22px;;
           }
         /* Popup arrow */
           .help .helptext::after {
