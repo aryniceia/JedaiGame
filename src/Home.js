@@ -6,17 +6,15 @@ import './Home.css';
 function Home() {
   return (
     < Page> 
-      <div className="menu">
+      <h1 className="TitleGame">Química Animal</h1>
 
+      <div className="menu">
         <div className="buttons">
           < Link route='/select' className='play buttons'> Play</Link>
-
           < Link route='/tutorial' className='tuto buttons'> Tutorial</Link>
-
           {/*< Link route='/config' className='config buttons'> 
             Configuração
           </Link> EM BREVE :)*/}
-
           < Link route='/credit' className='credit buttons'> Créditos</Link>
         </div>
       </div>

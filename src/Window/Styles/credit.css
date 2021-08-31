@@ -7,15 +7,37 @@
     font-size: 30px;
     transition: transform 250ms;
 }
-
-.App-title:hover {
+.App-title:hover, .left:hover {
     transform: translateY(-10px);
+}
+
+.marquee{
+    height: 400px;
+    align-items: center;
+    display: flex;
+}
+
+.box{
+    background: rgba(0, 0, 0, 0.456);
+    border-radius: 20px;
+    height: 400px;
+    width: 288px;
 }
 
 .Text {
     font-family: 'Chakra Petch';
     color: white;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
+    text-align: center;
+    background: image url(../../img/elements/formulas.svg);
+}
+
+.eel {
+    width: 100px;
+}
+
+.left {
+    width: 72px;
+    margin-top: 20px;
+    margin-left: -501px;
+    transition: transform 250ms;
 }

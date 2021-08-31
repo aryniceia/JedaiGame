@@ -11,6 +11,17 @@
   justify-content: center;
 }
 
+.TitleGame {
+  font-family: 'Chakra Petch';
+  color: white;
+  text-shadow: 0.1em 0.1em #2B7735;
+  font-size: 50px;
+  transition: transform 250ms;
+  margin-top: 10px;
+}
+.TitleGame:hover {
+  transform: translateY(-10px);
+}
 .background {
   width: 650px;
   height: 100vh;
@@ -27,10 +38,10 @@
 .menu {
   background: rgba(0, 0, 0, 0.456);
   border-radius: 20px;
-  height: 60vh;
+  height: 70vh;
   width: 380px;
   margin-top: auto;
-  margin-bottom: -260px;
+  margin-bottom: -218px;
 }
 
 .buttons {
