@@ -361,7 +361,7 @@ function DiminuirTemp(){ //botao para diminuir a temperatura
 }
 
 function AdicionarH2O(){ //funcao para adicionar agua por meio do botao
-    if(molSoma < molMaxReator){ //teste de quantidade de mols no reator
+    if(molSoma <= molMaxReator){ //teste de quantidade de mols no reator
         QualMol = 1;
         GrupoPHRT = GrupoReagentes;
         fraseLog = `Você comprou ${reagente1}`
@@ -369,7 +369,7 @@ function AdicionarH2O(){ //funcao para adicionar agua por meio do botao
     }
 }
 function AdicionarTri(){ 
-    if(molSoma < molMaxReator){ //teste de quantidade de mols no reator
+    if(molSoma <= molMaxReator){ //teste de quantidade de mols no reator
         QualMol = 0;
         GrupoPHRT = GrupoReagentes;
         fraseLog = `Você comprou ${reagente2}`
@@ -416,7 +416,7 @@ function Proximo(){ //funcao para passar turno
     GameOver()  
     //probabilidadedRdP()
     // ProbabilidadeVolta()
-    aparecerLog(`⭐⭐⭐⭐⭐Turno ${turno}⭐⭐⭐⭐⭐`)
+    aparecerLog(`⭐Turno ${turno}⭐`)
     probc()
     eventosAleatorios()
     atualizar()
@@ -479,24 +479,19 @@ function probabilidade(a){ // a é a probabilidade dinamica
 }
 
 let ProbInicial = 50; //probabilidade inicial fixa
-TaxaDeReacao(PH,temp); //probabilidade que vai mudar sempre
+//TaxaDeReacao(PH,temp); //probabilidade que vai mudar sempre
 //nao consigo pensar agora algo mais inteligente que fazer o NivelAtual receber NivelIC
 NivelAtual = NivelIC;
 atualizar();
 //funçao que calcula a taxa de reaçao
-    function TaxaDeReacao(PHa,tempa){
     
-    ProbDinamica = ProbInicial + PHa * (5/2) + tempa * (5/2) + dRdP * 5;
-    if (ProbDinamica >= 100){
-        ProbDinamica = 100
-    }
-    }
 //FUNÇÕES DE PROBABILIDADE FIM ---------------------
 
 
 //ainda nao sei onde colocar
 function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez------
-    molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2
+    molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
+    
     //mudar o nome do h1
                 //variaveis que mudam de acordo com a reaçao
     //jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
@@ -616,8 +611,8 @@ function UsarReagentes(QualReagente){ //funcao para retirar os valores dos reage
 function retirarAcaoDinheiro(din, ac){ //essa funçao vai ser a unica que vai tirar dinheiro e ação
     dinheiro -= din;
     acao -= ac;  
-    TaxaDeReacao(PH,temp);
-    probc()
+    //TaxaDeReacao(PH,temp);
+    probc();
     atualizar();
 }
 //FUNÇÕES DE NÍVEL E UPGRADE INÍCIO ---------------------
@@ -965,7 +960,7 @@ function probc() {
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH + (molReagente2 - 1)*5 +(molReagente1 - 3)*5 - molProduto1*20
             }else{
                 //f2
-                ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH + (molReagente2 - 1)*5 +(molReagente1 - 3)*5
+                ProbDinamica = ProbInicial - (5*Math.abs(temp)) - (5*PH) + ((molReagente2 - 1)*5) +((molReagente1 - 3)*5)
             }
         }else{ //y > 3 false
             if( molProduto1 >= 1){

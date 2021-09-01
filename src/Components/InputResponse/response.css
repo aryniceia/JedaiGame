@@ -523,7 +523,7 @@
         margin-left: 18px;
       }
     /*Barra de log*/
-      .logProfile {
+      #log {
         background: rgba(0, 0, 0, 0.456);
         border-radius: 20px;
         height: 24vh;
@@ -540,9 +540,15 @@
         width: 288px;
       }
       #showLog{
+        overflow: auto;
         color: white;
         font-family: 'Chakra Petch';
         font-size: 15px;
+        display: flex;
+        flex-direction:column;
+        margin-top: 50px;
+        height: 260px;
+        width: 230px;
       }
     /* Botões de ação */
       .BotoesAcao {

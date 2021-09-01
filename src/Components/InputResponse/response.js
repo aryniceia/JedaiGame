@@ -231,10 +231,10 @@ function Game () {
                             </div>   
                         </div>
 
-                        <div className="logProfile">
-                            <div id="log">
+                        <div id="log">
+                            <div>
                                 <ul id="showLog">
-                                    <li>⭐⭐⭐ Turno 1 ⭐⭐⭐⭐</li>
+                                    <li>⭐Turno 1 ⭐</li>
                                 </ul>
                             </div>
                             <div className="barLog"></div>
