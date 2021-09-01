@@ -397,6 +397,7 @@ function Proximo(){ //funcao para passar turno
 		}
     }
     //trmasformar isso em funcao
+    molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2
     acao = 2
     molsAnteriores = molextraidos
     molextraidos += decantarR4 + filtrarR2
@@ -495,7 +496,7 @@ atualizar();
 
 //ainda nao sei onde colocar
 function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez------
-    
+    molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2
     //mudar o nome do h1
                 //variaveis que mudam de acordo com a reaçao
     //jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
