@@ -4,6 +4,7 @@ import './Styles/credit.css';
 import Link from '../Components/Link/link';
 import Eel from '../img/logos/eelusp.png';
 import Jedai from '../img/logos/jedai.png';
+import Mamute from '../img/logos/mamute.png';
 import Arrow from '../img/elements/arrowL.png';
 
 function Credit () {
@@ -42,6 +43,8 @@ function Credit () {
                 <Link route="/" className='volta'>
                     <img className="left" title="Voltar" src={Arrow}></img>
                 </Link>
+                <a href="https://bio.site/CEiphe" target="_blank"> {/*target="_blank" serve para o link abrir em uma nova aba*/}
+                    <img title="Nos siga nas redes sociais!"alt="Logo do projeto Mamutes na Ciência" className="mamute"src={Mamute}></img></a>
             </div>    
         </Page>
     );

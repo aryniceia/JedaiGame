@@ -7,7 +7,7 @@
     font-size: 30px;
     transition: transform 250ms;
 }
-.App-title:hover, .left:hover {
+.App-title:hover, .left:hover, .mamute:hover {
     transform: translateY(-10px);
 }
 
@@ -39,7 +39,13 @@
 }
 .left {
     width: 72px;
-    margin-top: 20px;
+    margin-top: 38px;
     margin-left: -501px;
+    transition: transform 250ms;
+}.mamute {
+    width: 100px;
+    position: absolute;
+    margin-left: 166px;
+    margin-top: 20px;
     transition: transform 250ms;
 }
