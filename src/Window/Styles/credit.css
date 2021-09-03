@@ -20,8 +20,8 @@
 .box{
     background: rgba(0, 0, 0, 0.456);
     border-radius: 20px;
-    height: 400px;
-    width: 288px;
+    height: 560px;
+    width: 320px;
 }
 
 .Text {
@@ -34,7 +34,9 @@
 .eel {
     width: 100px;
 }
-
+.jedai {
+    width: 100px;
+}
 .left {
     width: 72px;
     margin-top: 20px;

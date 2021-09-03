@@ -234,10 +234,10 @@ function Game () {
                         <div id="log">
                             <div>
                                 <ul id="showLog">
-                                    <li>⭐Turno 1 ⭐</li>
+                                    <li>⭐Turno 1⭐</li>
                                 </ul>
+                                {/*<div className="barLog"></div>*/}
                             </div>
-                            <div className="barLog"></div>
                         </div>
 
                         <div className="profile"> {/* Barra com a foto do personagem */}

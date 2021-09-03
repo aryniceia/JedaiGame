@@ -3,7 +3,7 @@ import Tela from '../Components/TelaGame/tela';
 import InputResponse from '../Components/InputResponse/response';
 
 function Game () {
-    function Proximo(){
+    {/*function Proximo(){
         window.Proximo()
     };
     function AdicionarH2O(){
@@ -65,7 +65,7 @@ function Game () {
     };
     function Impossivel(){
         window.Impossivel()
-    };
+    };*/}
     
     return (
         <Tela>
@@ -129,8 +129,8 @@ function Game () {
                         </div>*/}
 
                         <span id="trofeus"></span>
-                        <p id="eventosProb"></p>
-                        <p id="contagemeventos"></p>
+                        {/*<p id="eventosProb"></p>
+                        <p id="contagemeventos"></p>*/}
                         
                         {/*<p>Nivel do Jogo: <span id="nivel"></span>
                             <button onclick={Facil}>Fácil</button>

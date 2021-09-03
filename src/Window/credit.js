@@ -3,6 +3,7 @@ import Page from '../../src/Components/Pages/page';
 import './Styles/credit.css';
 import Link from '../Components/Link/link';
 import Eel from '../img/logos/eelusp.png';
+import Jedai from '../img/logos/jedai.png';
 import Arrow from '../img/elements/arrowL.png';
 
 function Credit () {
@@ -19,8 +20,8 @@ function Credit () {
 
                             Desenvolvedores: <br></br><br></br>
 
-                            Aryane Nicéia Pereira Amâncio <br></br>
-                            Vitalson Lorran Viana Carvalhal <br></br><br></br>
+                            Front-end: Aryane Nicéia Pereira Amâncio <br></br>
+                            Back-end: Vitalson Lorran Viana Carvalhal <br></br><br></br>
 
                             Professoras orientadoras: <br></br><br></br>
 
@@ -30,7 +31,10 @@ function Credit () {
 
                             ESCOLA DE ENGENHARIA DE LORENA  - USP <br></br><br></br>
 
-                            <img className="eel" src={Eel}></img>
+                            <img className="eel" alt="Logo da Esola de Engenharia de Lorena - USP" src={Eel}></img> <br></br><br></br>
+                            <img className="jedai" alt="Logo do projeto JEDAI" src={Jedai}></img><br></br><br></br>
+
+                            Obrigade e bom jogo!
                         </div>   
                     </div>
                 </marquee>
