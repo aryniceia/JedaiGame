@@ -15,7 +15,6 @@ import MicoBody from '../../img/char/body/mico.png';
 import OncaBody from'../../img/char/body/onca.png';
 import TucanoBody from'../../img/char/body/tucano.png';
 
-import ArrowL from '../../img/elements/arrowL.png';
 import ArrowR from '../../img/elements/arrowR.png';
 import Centrifuga from '../../img/elements/centrifuga.png';
 import FiltroElement from '../../img/elements/filtro.png';
@@ -142,14 +141,14 @@ function Game () {
 
                     <div className="board">
                         <div className="border">
-                            <img className="profile-charBody" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
-                            <img className="centrifuga" src={Centrifuga}></img>
-                            <img className="filtroElement" src={FiltroElement}></img>
+                            <img className="profile-charBody" alt="inserir o nome do personagem" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
+                            <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
+                            <img alt="Imagem de um filtro de laboratório" className="filtroElement" src={FiltroElement}></img>
                             
                             <button className="agua" onClick={AdicionarH2O}>+ H2O</button>
                             <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
-                            {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>
-                            <button className="arrowRight"><img id="arrowR" src={ArrowR}/></button>*/}
+                            {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
+                            <button className="arrowRight"><img alt="Imagem do botão de seta" id="arrowR" src={ArrowR}/></button>
                             <div className="PopupHover">
                                 <div className="PH">!
                                     <span className="textPH">
@@ -215,7 +214,7 @@ function Game () {
                                 <button className="botoes" onClick={Filtro}>Filtro</button>
                             </div>
 
-                            <button className="popup" onClick={myFunction}>
+                            <button className="popup" title="Troféu" onClick={myFunction}>
                                 <span className="popuptext" id="myPopup">
                                     <p id="trofeus"></p>
                                 </span>
@@ -241,7 +240,7 @@ function Game () {
                         </div>
 
                         <div className="profile"> {/* Barra com a foto do personagem */}
-                            <img className="profile-char" src={Personagens[localStorage.getItem('jedai/personagem')].url}/>
+                            <img alt="add alt aqui" className="profile-char" src={Personagens[localStorage.getItem('jedai/personagem')].url}/>
                             <div className="bar"> {/* Barra com as info do personagem*/}
                                 <div className="usernameLevel">
                                     user: {localStorage.getItem('jedai/username')}<br></br>

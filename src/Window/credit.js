@@ -41,10 +41,10 @@ function Credit () {
                 </marquee>
 
                 <Link route="/" className='volta'>
-                    <img className="left" title="Voltar" src={Arrow}></img>
+                    <img alt="Botão de seta para voltar" className="left" title="Voltar" src={Arrow}></img>
                 </Link>
-                <a href="https://bio.site/CEiphe" target="_blank"> {/*target="_blank" serve para o link abrir em uma nova aba*/}
-                    <img title="Nos siga nas redes sociais!"alt="Logo do projeto Mamutes na Ciência" className="mamute"src={Mamute}></img></a>
+                <a href="https://bio.site/CEiphe" target="_blank" rel="noreferrer"> {/*target="_blank" serve para o link abrir em uma nova aba*/}
+                    <img title="Nos siga nas redes sociais!" alt="Logo do projeto Mamutes na Ciência" className="mamute"src={Mamute}></img></a>
             </div>    
         </Page>
     );

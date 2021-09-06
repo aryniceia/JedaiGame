@@ -1,14 +1,14 @@
 /* Fundos */
-    .App {
-      text-align: center;
-    }
-    .App-header {
-      background-color: #3c183d;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+  .App {
+    text-align: center;
+  }
+  .App-header {
+    background-color: #3c183d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 /*-----------------------------------------------------------------------------------------------*/
 /* Repartições da tela */
   .background_game {
@@ -16,6 +16,7 @@
     /*grid-template-columns: 28fr 2fr 1fr;*/
     grid-template-columns: repeat(1, 1fr);
   }
+
   /*HEADER*/
     .cabeçalho {
       grid-column-start: 1; /*começa em 1 e termina em 4*/
@@ -124,22 +125,18 @@
         top: -78px;
         left: -380px;
       }
-      .arrowLeft, .arrowRight {
+      .arrowRight {
         background: none;
         border: none;
       }
-      #arrowL, #arrowR {
+      #arrowR {
         width: 25px;
-        margin-left: 210px;
-        margin-right: -126px;
-        margin-top: 94px;
+        position: absolute;
+        margin-left: -14px;
+        margin-top: -75px;
         background-color: rgba(255, 192, 203, 0);
       }
       #arrowR:hover {
-        background-color: black;
-        border-radius: 20px;
-      }
-      #arrowL:hover {
         background-color: black;
         border-radius: 20px;
       }
@@ -466,7 +463,6 @@
         .REATOR:hover .textREATOR {
           visibility: visible;
         }
-
 /*-----------------------------------------------------------------------------------------------*/
   /*FOOTER*/
     .barra_inferior {
