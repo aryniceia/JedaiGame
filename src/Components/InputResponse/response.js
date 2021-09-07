@@ -18,6 +18,7 @@ import TucanoBody from'../../img/char/body/tucano.png';
 import ArrowR from '../../img/elements/arrowR.png';
 import Centrifuga from '../../img/elements/centrifuga.png';
 import FiltroElement from '../../img/elements/filtro.png';
+import Caderno from '../../img/sabao_caderno.png';
 
 // Variáveis das inputs //
     const levels = {
@@ -130,6 +131,10 @@ function Game () {
         var popup = document.getElementById("helpPopup");
         popup.classList.toggle("show");
     }
+    function myFunction2() {
+        var popup = document.getElementById("cadernoPopup");
+        popup.classList.toggle("show");
+    }
     
     return (
         <div className="App">
@@ -148,7 +153,14 @@ function Game () {
                             <button className="agua" onClick={AdicionarH2O}>+ H2O</button>
                             <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
-                            <button className="arrowRight"><img alt="Imagem do botão de seta" id="arrowR" src={ArrowR}/></button>
+
+                            <button className="arrowRight" onClick={myFunction2}>
+                                <img alt="Imagem do botão de seta" id="arrowR" src={ArrowR}/>
+                                <span className="cadernotext" id="cadernoPopup">
+                                    <img alt="Imagem do cardeno com instruções da extração de sabão" id="caderno" src={Caderno}></img>
+                                </span>
+                            </button>
+                        
                             <div className="PopupHover">
                                 <div className="PH">!
                                     <span className="textPH">

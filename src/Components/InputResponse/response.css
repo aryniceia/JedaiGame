@@ -103,7 +103,7 @@
         border-radius: 5px;
         border: none;
         margin: 4px;
-        background-color: #EEC3BB;
+        background-color: #EA8D8D;
         font-family: 'Chakra Petch';
         font-size: 9px;
         color: white;
@@ -117,28 +117,13 @@
         border-radius: 5px;
         border: none;
         margin: 4px;
-        background-color: #EEC3BB;
+        background-color: #EA8D8D;
         font-family: 'Chakra Petch';
         font-size: 8px;
         color: white;
         position: relative;
         top: -78px;
         left: -380px;
-      }
-      .arrowRight {
-        background: none;
-        border: none;
-      }
-      #arrowR {
-        width: 25px;
-        position: absolute;
-        margin-left: -14px;
-        margin-top: -75px;
-        background-color: rgba(255, 192, 203, 0);
-      }
-      #arrowR:hover {
-        background-color: black;
-        border-radius: 20px;
       }
       /*PH*/
         .MaisPh {
@@ -147,7 +132,7 @@
           border-radius: 2px;
           border: none;
           margin: 4px;
-          background-color: #EEC3BB;
+          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
@@ -161,7 +146,7 @@
           border-radius: 2px;
           border: none;
           margin: 4px;
-          background-color: #EEC3BB;
+          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
@@ -176,7 +161,7 @@
           border-radius: 2px;
           border: none;
           margin: 4px;
-          background-color: #EEC3BB;
+          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
@@ -190,7 +175,7 @@
           border-radius: 2px;
           border: none;
           margin: 4px;
-          background-color: #EEC3BB;
+          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
@@ -205,7 +190,7 @@
           border-radius: 2px;
           border: none;
           margin: 4px;
-          background-color: #EEC3BB;
+          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
@@ -219,7 +204,7 @@
           border-radius: 2px;
           border: none;
           margin: 4px;
-          background-color: #EEC3BB;
+          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
@@ -233,7 +218,7 @@
           border-radius: 2px;
           border: none;
           margin: 4px;
-          background-color: #EEC3BB;
+          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           font-size: 9px;
           color: white;
@@ -244,7 +229,7 @@
       /*Hover*/
       .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, 
       .UpChapa:hover, .agua:hover, .trigli:hover {
-        background-color: #EA8D8D;
+        background-color: #790808;
       }
 
     /*Pop Up com hover*/
@@ -552,17 +537,15 @@
         background-size: cover;
       }
       .botoes {
-        width: 55px;
         height: 35px;
         border-radius: 5px;
-        border-color: #EEC3BB;
-        border-width: 0.1px;
+        border: 0.01px solid #6d486f;
         margin: 4px;
         background-color: #EA8D8D;
         font-family: 'Chakra Petch';
-        color: white;
+        color: #ffffff;
       }
-      .botoes:hover, .popup:hover{
+      .botoes:hover, .popup:hover, .help:hover{
         background-color: #EEC3BB;
       }
     /* Pop Up*/
@@ -625,59 +608,121 @@
             to {opacity:1 ;}
           }
 
-        /* Pop Up ajuda */
-          .help {
-            width: 55px;
-            height: 35px;
-            border-radius: 5px;
-            border-color: #EEC3BB;
-            border-width: 0.1px;
-            margin: 4px;
-            background-color: #EA8D8D;
-            font-family: 'Chakra Petch';
-            color: white;
-            position: absolute;
-            display: inline-block;
-            cursor: pointer;
-          }
-        /*Fundo pop up info */
-          .help .helptext {
-            visibility: hidden;
-            width: 93px;
-            height: 79px;
-            background-color: #ea8d8d;
-            color: #fff;
-            font-size: 15px;
-            text-align: left;
-            border-radius: 20px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: -13px;
-            padding: 23px;
-            line-height: 22px;;
-          }
-        /* Popup arrow */
-          .help .helptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-          } 
-        /* Toggle this class when clicking on the popup container (hide and show the popup) */
-          .help .show {
-            visibility: visible;
-            -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s
-          }  
-        /* Add animation (fade in the popup) */
-          @-webkit-keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-          }
-          @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity:1 ;}
-          }
+      /* Pop Up ajuda */
+        .help {
+          width: 55px;
+          height: 35px;
+          border-radius: 5px;
+          border: 0.01px solid #6d486f;
+          margin: 4px;
+          background-color: #EA8D8D;
+          font-family: 'Chakra Petch';
+          color: white;
+          position: absolute;
+          display: inline-block;
+          cursor: pointer;
+        }
+      /*Fundo pop up info */
+        .help .helptext {
+          visibility: hidden;
+          width: 93px;
+          height: 79px;
+          background-color: #ea8d8d;
+          color: #fff;
+          font-size: 15px;
+          text-align: left;
+          border-radius: 20px;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: -13px;
+          padding: 23px;
+          line-height: 22px;;
+        }
+      /* Popup arrow */
+        .help .helptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+        } 
+      /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .help .show {
+          visibility: visible;
+          -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s
+        }  
+      /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity: 1;}
+        }
+        @keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity:1 ;}
+        }
+
+      /* Pop Up Caderno */
+        .arrowRight {
+          width: 55px;
+          height: 35px;
+          position: absolute;
+          display: inline-block;
+          cursor: pointer;
+        }
+      /*Fundo pop up info */
+        .arrowRight .cadernotext {
+          visibility: hidden;
+          width: 557px;
+          height: 389.55px;
+          background-color: #ea8d8d;
+          border-radius: 6px;
+          position: absolute;
+          z-index: 1;
+          bottom: -228%;
+          left: -300px;
+          padding: 10px;
+        }
+      /* Popup arrow */
+        .arrowRight .cadernotext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+        } 
+      /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .arrowRight .show {
+          visibility: visible;
+          -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s
+        }  
+      /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity: 1;}
+        }
+        @keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity:1 ;}
+        }
+        .arrowRight {
+          background: none;
+          border: none;
+        }
+        #arrowR {
+          width: 30px;
+          position: absolute;
+          margin-left: -42px;
+          margin-top: 74px;
+          background-color: rgba(255, 192, 203, 0);
+        }
+        #arrowR:hover {
+          background-color: rgb(235, 163, 163);
+          border-radius: 20px;
+        }
+        #caderno {
+          width: 557px;
+        }
 /*-----------------------------------------------------------------------------------------------*/
