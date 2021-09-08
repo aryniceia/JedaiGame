@@ -726,6 +726,8 @@ function upgradeTermometro(){
 	}
 }
 function Facil(){
+    //limiteTurnos sairá
+
     objPrincipal = 18 //Quantidade de mols que precisa extrair
     botaoEventoOnOFF = false
     JogoNivel = 1 
