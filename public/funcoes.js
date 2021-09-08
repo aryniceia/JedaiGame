@@ -106,17 +106,21 @@ function probc() {
             if(molProduto1 >= 1){ //z
                 //f1
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH + (molReagente2 - 1)*5 +(molReagente1 - 3)*5 - molProduto1*20
+                console.log("f1  " + ProbDinamica)
             }else{
                 //f2
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH + (molReagente2 - 1)*5 +(molReagente1 - 3)*5
+                console.log("f2  " + ProbDinamica)
             }
         }else{ //y > 3 false
             if( molProduto1 >= 1){
                 //f3
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH + (molReagente2 - 1)*5 - molProduto1*20
+                console.log("f3  " + ProbDinamica)
             }else{
                 //f4
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH + (molReagente2 - 1)*5
+                console.log("f4  " + ProbDinamica)
             }
         }
     }else{ //x > 1 false
@@ -124,17 +128,21 @@ function probc() {
             if(molProduto1 >=1){
                 //f5
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH + (molReagente1 - 3)*5 -molProduto1*20
+                console.log("f5  " + ProbDinamica)
             }else{
                 //f6
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH + (molReagente1 - 3)*5
+                console.log("f6  " + ProbDinamica)
             }
         }else{ //z > 3 false
             if(molProduto1 >=1){
                 //f7
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH - molProduto1*20
+                console.log("f7  " + ProbDinamica)
             }else{
                 //f8
                 ProbDinamica = ProbInicial - 5*Math.abs(temp) - 5*PH
+                console.log("f8  " + ProbDinamica)
             }
         }
     }
@@ -177,7 +185,4 @@ function mudancaDeMolsTotal(){
     }
 }
 
-function teste(){
-    mostrar = document.getElementById('option#value')
-    console.log(mostrar)
-}
+

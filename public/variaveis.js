@@ -479,6 +479,7 @@ function probabilidade(a){ // a é a probabilidade dinamica
 }
 
 let ProbInicial = 50; //probabilidade inicial fixa
+ProbDinamica = ProbInicial
 //TaxaDeReacao(PH,temp); //probabilidade que vai mudar sempre
 //nao consigo pensar agora algo mais inteligente que fazer o NivelAtual receber NivelIC
 NivelAtual = NivelIC;
