@@ -146,7 +146,7 @@ function probc() {
             }
         }
     }
-    //atualizar()
+    atualizar()
 }
 /*
 *Sobre a função //aparecerLog()
@@ -186,3 +186,7 @@ function mudancaDeMolsTotal(){
 }
 
 
+function teste() {
+    dinheiro = 200
+    acao = 200
+}

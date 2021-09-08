@@ -458,8 +458,7 @@ function Filtro(){
 
 function Expurgo(){//funcao para esvaziar o reator
     molReagente1 = molReagente2 = molProduto1 = molProduto2 = PH = temp = 0;
-    //TaxaDeReacao(PH,temp);
-    //window.probc()
+    probc()
     aparecerLog(`Você jogou fora todos os reagentes e produtos.`)
     atualizar();
 }
@@ -492,7 +491,6 @@ atualizar();
 //ainda nao sei onde colocar
 function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez------
     molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
-    
     //mudar o nome do h1
                 //variaveis que mudam de acordo com a reaçao
     //jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
@@ -595,6 +593,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida){ // para generalizar o custo 
         aparecerLog(`Nao pode ser comprado, lhe falta acao ou ₵réditos.`, true)
     }
     fraseLog = false
+    probc()
 }
 
 function UsarReagentes(QualReagente){ //funcao para retirar os valores dos reagentes
@@ -611,8 +610,7 @@ function UsarReagentes(QualReagente){ //funcao para retirar os valores dos reage
 
 function retirarAcaoDinheiro(din, ac){ //essa funçao vai ser a unica que vai tirar dinheiro e ação
     dinheiro -= din;
-    acao -= ac;  
-    //TaxaDeReacao(PH,temp);
+    acao -= ac;
     probc();
     atualizar();
 }
@@ -953,6 +951,7 @@ function QuaisTrofeus(){
     Nao fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda" : "Poxa, infelizmente você fez"}<br>
     `
 }
+/** 
 function probc() {
     if(molReagente2 > 1){ //x
         if(molReagente1 >= 3){ //y
@@ -992,7 +991,7 @@ function probc() {
         }
     }
     atualizar()
-}
+}**/
 /*
 *Sobre a função aparecerLog()
  *  a função mostra uma lista com conteudo das coisas que aconteceram com o jogador
