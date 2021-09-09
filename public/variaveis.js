@@ -713,12 +713,12 @@ function upgradeTermometro(){
 		tempMin -= 1; 
         NupgradeTemp = 1;
 		atualizar();
-        aparecerLog(`Melhorou seu Termômetro`)
+        aparecerLog(`Melhorou sua chapa térmica`)
 
 	}
 	else if (termometro == termometroMax){
         logteste = true
-		aparecerLog(`O seu termômetro já está no nível máximo.`);
+		aparecerLog(`A sua chapa térmica já está no nível máximo.`);
 	}
 	else {
         logteste = true
