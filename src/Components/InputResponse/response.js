@@ -8,9 +8,9 @@ import Mico from '../../img/char/icon/mico_perfil.png';
 import Onca from'../../img/char/icon/onca_perfil.png';
 import Tucano from'../../img/char/icon/tucano_perfil.png';
 
-import CapivaraBody from '../../img/char/capivara.png';
-import GuaraBody from '../../img/char/guara.png';
-import JacareBody from '../../img/char/jacare.png';
+import CapivaraBody from '../../img/char/body/capivara.png';
+import GuaraBody from '../../img/char/body/guara.png';
+import JacareBody from '../../img/char/body/jacare.png';
 import MicoBody from '../../img/char/body/mico.png';
 import OncaBody from'../../img/char/body/onca.png';
 import TucanoBody from'../../img/char/body/tucano.png';

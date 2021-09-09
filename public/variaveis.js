@@ -333,14 +333,14 @@ function SubirPH(){ //versao 2 do botao subirPH
     GrupoPHRT = GrupoPH; //definindo qual grupo pertence
     PHsinal = 1; //sinal positivo indica que o PH vai aumentar
     ModificacaoPH = 0;
-    fraseLog = `Subiu PH`
+    fraseLog = `Subiu pH`
     acaoDinheiro(PHcost, PHAcao); // indica a funcao o custo do PH e quantas acoes ele consome
 }
 function DiminuirPH(){ //botao para diminuir ph
     GrupoPHRT = GrupoPH; //definindo qual grupo pertence
     PHsinal = -1; //sinal negativo indica que PH desce
     ModificacaoPH = 0;
-    fraseLog = `Diminuiu PH`
+    fraseLog = `Diminuiu pH`
     acaoDinheiro(PHcost, PHAcao);
 }
 
@@ -532,9 +532,9 @@ function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez
         • Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "Impressionante 😲" : "Esse não vai ser fácil hein 🤯"}<br>
         • Chegar em probabilidade de 100%: ${Prob100 ? "Essa foi difícil mas conseguiu 🥳" : "Essa você consegue?"}<br>
         • Chegar em probabilidade de 0%: ${Prob0 ? "Uhul, conseguiu 😊" : "Ainda não chegou 🤨"}<br>
-        • Não fazer nenhuma modulação do PH: ${ModificacaoPH ? "Tente não fazer essa 😜" : "Infelizmente não foi dessa vez 😐"}<br>
+        • Não fazer nenhuma modulação do pH: ${ModificacaoPH ? "Tente não fazer essa 😜" : "Infelizmente não foi dessa vez 😐"}<br>
         • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "Não feito por enquanto 🤔" : "Não era para ter feito 😔"}<br>
-        • Não fazer nenhuma modulação do PH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto 🙂" : "Fez 😵‍💫"}<br>
+        • Não fazer nenhuma modulação do pH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto 🙂" : "Fez 😵‍💫"}<br>
         • Não usar o método de extraçao rapida: ${ExtracaoRapida ? "Não usado por enquanto 😋" : "Usou #Fail 😣"}<br>
         • Não fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda 😋" : "Poxa, infelizmente você fez 😡"}<br>
         `
@@ -692,7 +692,7 @@ function upgradePHmetro(){
 		PHmin -= 1; 
         NupgradePH = 1;
 		atualizar();
-        aparecerLog(`Melhorou seu Peagâmetro`)
+        aparecerLog(`Melhorou seu pHmetro`)
 	}
 	else if (PHmetro == PHmetroMax){
         
@@ -785,7 +785,7 @@ function eventosAleatorios(){
                 GrupoPHRT = GrupoTemp
                 contagemeventos += 1
                 acaoDinheiro(0, 0)
-                aparecerLog(`Eventos aleatórios: Você perdeu temperatura e PH`)
+                aparecerLog(`Eventos aleatórios: Você perdeu temperatura e pH`)
             }
             else{
                 dinheiro -= 5
@@ -946,9 +946,9 @@ function QuaisTrofeus(){
     Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "Impressionante 'O'" : "Esse não vai ser fácil hein"}<br>
     Chegar em probabilidade de 100%: ${Prob100 ? "Essa foi difícil mas conseguiu" : "Essa você consegue?"}<br>
     Chegar em probabilidade de 0%: ${Prob0 ? "Uhul, conseguiu" : "Ainda não chegou"}<br>
-    Nao fazer nenhuma modulaçao do PH: ${ModificacaoPH ? "Tente não fazer essa" : "Infelizmente não foi dessa vez"}<br>
+    Nao fazer nenhuma modulaçao do pH: ${ModificacaoPH ? "Tente não fazer essa" : "Infelizmente não foi dessa vez"}<br>
     Nao fazer nenhuma modulaçao da Temperatura: ${ModificacaoTemp ? "Não feito por enquanto" : "Não era para ter feito 😔"}<br>
-    Nao fazer nenhuma modulaçao do PH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto" : "Fez :("}<br>
+    Nao fazer nenhuma modulaçao do pH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto" : "Fez :("}<br>
     Nao usar o método de extraçao rapida: ${ExtracaoRapida ? "Não usado por enquanto" : "Usou #Fail"}<br>
     Nao fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda" : "Poxa, infelizmente você fez"}<br>
     `
