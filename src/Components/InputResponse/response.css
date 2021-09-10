@@ -98,154 +98,155 @@
     }
     /*Botões*/
       .agua{
-        width: 37px;
-        height: 20px;
-        border-radius: 5px;
-        border: none;
-        margin: 4px;
-        background-color: #EA8D8D;
         font-family: 'Chakra Petch';
         font-size: 9px;
         color: white;
+        background-color: #ea8d8d;
+        border: 0.01px solid #6d486f;
+        border-radius: 5px;
+        width: 40px;
+        height: 20px;
         position: relative;
         top: -79px;
         left: -389px;
       }
       .trigli {
-        width: 36px;
-        height: 20px;
-        border-radius: 5px;
-        border: none;
-        margin: 4px;
-        background-color: #EA8D8D;
         font-family: 'Chakra Petch';
-        font-size: 8px;
+        font-size: 9px;
         color: white;
+        background-color: #ea8d8d;
+        border: 0.01px solid #6d486f;
+        border-radius: 5px;
+        width: 40px;
+        height: 20px;
         position: relative;
-        top: -78px;
+        top: -79px;
         left: -380px;
       }
       /*PH*/
         .MaisPh {
-          width: 20px;
-          height: 20px;
-          border-radius: 2px;
-          border: none;
-          margin: 4px;
-          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
-          font-size: 9px;
+          font-size: 25px;
           color: white;
+          line-height: 12.5px;
+          background-color: #BF3F64;
+          border: none;
+          border-radius: 15px;
+          width: 25px;
+          height: 25px;
           position: relative;
-          top: -125px;
-          left: 168px;
+          top: -130px;
+          left: 165px;
         }
         .MenosPh {
-          width: 20px;
-          height: 20px;
-          border-radius: 2px;
-          border: none;
-          margin: 4px;
-          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
-          font-size: 9px;
+          font-size: 25px;
           color: white;
+          line-height: 12.5px;
+          background-color: #DBC032;
+          border: none;
+          border-radius: 15px;
+          width: 25px;
+          height: 25px;
           position: relative;
-          top: -125px;
-          left: 102px;
+          top: -130px;
+          left: 109px;
         }
       /*Temperatura*/
         .MaisTemp{
-          width: 20px;
-          height: 20px;
-          border-radius: 2px;
-          border: none;
-          margin: 4px;
-          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
-          font-size: 9px;
+          font-size: 25px;
           color: white;
+          line-height: 12.5px;
+          background-color: #BF3F64;
+          border: none;
+          border-radius: 15px;
+          width: 25px;
+          height: 25px;
           position: relative;
           top: -130px;
-          left: -7px;
+          left: 2px;
         }
         .MenosTemp {
-          width: 20px;
-          height: 20px;
-          border-radius: 2px;
-          border: none;
-          margin: 4px;
-          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
-          font-size: 9px;
+          font-size: 25px;
           color: white;
+          line-height: 12.5px;
+          background-color: #DBC032;
+          border: none;
+          border-radius: 15px;
+          width: 25px;
+          height: 25px;
           position: relative;
           top: -130px;
-          left: -59px;
+          left: -49px;
         }
       /*Melhorias*/
         .UpReator {
-          width: 20px;
-          height: 20px;
-          border-radius: 2px;
-          border: none;
-          margin: 4px;
-          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
-          font-size: 9px;
+          font-size: 25px;
           color: white;
+          line-height: 12.5px;
+          background-color: #bf3f64;
+          border: none;
+          border-radius: 15px;
+          width: 25px;
+          height: 25px;
           position: relative;
-          top: -284px;
-          left: 157px;
+          top: -280px;
+          left: 145px;
         }
         .UpPh {
-          width: 20px;
-          height: 20px;
-          border-radius: 2px;
-          border: none;
-          margin: 4px;
-          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
-          font-size: 9px;
+          font-size: 25px;
           color: white;
+          line-height: 12.5px;
+          background-color: #bf3f64;
+          border: none;
+          border-radius: 15px;
+          width: 25px;
+          height: 25px;
           position: relative;
-          top: -147px;
-          left: 278px;
+          top: -155px;
+          left: 270px;
         }
         .UpChapa {
-          width: 20px;
-          height: 20px;
-          border-radius: 2px;
-          border: none;
-          margin: 4px;
-          background-color: #EA8D8D;
           font-family: 'Chakra Petch';
-          font-size: 9px;
+          font-size: 25px;
           color: white;
+          line-height: 12.5px;
+          background-color: #bf3f64;
+          border: none;
+          border-radius: 15px;
+          width: 25px;
+          height: 25px;
           position: relative;
-          top: -202px;
-          left: 42px;
+          top: -201px;
+          left: 35px;
         }
       /*Hover*/
-      .MaisPh:hover, .MenosPh:hover, .MaisTemp:hover, .MenosTemp:hover, .UpReator:hover, .UpPh:hover, 
+      .MaisPh:hover,  .MaisTemp:hover, .UpReator:hover, .UpPh:hover, 
       .UpChapa:hover, .agua:hover, .trigli:hover {
-        background-color: #790808;
+        background-color: rgb(202, 19, 19);
+      }
+      .MenosPh:hover, .MenosTemp:hover {
+        background-color: #f1e42c;
       }
 
     /*Pop Up com hover*/
       /*PH Info*/
         .PH { /*Posição*/
-          color: white;
+          font-family: 'Chakra Petch';
           font-size: 30px;
-          background:rgb(190, 77, 77);
+          color: white;
+          line-height: 25px;
+          background: #6831bb;
           border-radius: 25px;
           width: 25px;
           height: 25px;
-          line-height: 25px;
-          text-align: center;
           position: relative;
-          top: -164px;
-          left: 237px;
+          top: -158px;
+          left: 236px;
         }
         .PH .textPH {
           visibility: hidden;
@@ -278,17 +279,17 @@
         }
       /*Temperatura Info*/
         .TEMP { /*Posição*/
-          color: white;
+          font-family: 'Chakra Petch';
           font-size: 30px;
-          background:rgb(236, 214, 15);
+          color: white;
+          line-height: 25px;
+          background: #6831bb;
           border-radius: 25px;
           width: 25px;
           height: 25px;
-          line-height: 25px;
-          text-align: center;
           position: relative;
-          top: -110px;
-          left: 165px;
+          top: -138px;
+          left: 162px;
         }
         .TEMP .textTEMP {
           visibility: hidden;
@@ -321,16 +322,16 @@
         }
       /*Água Info*/
         .AGUA { /*Posição*/
-          color: white;
+          font-family: 'Chakra Petch';
           font-size: 30px;
-          background:rgb(77, 164, 190);
+          color: white;
+          line-height: 25px;
+          background: #6831bb;
           border-radius: 25px;
           width: 25px;
           height: 25px;
-          line-height: 25px;
-          text-align: center;
           position: relative;
-          top: -303px;
+          top: -300px;
           left: 20px;
         }
         .AGUA .textAGUA {
@@ -364,17 +365,17 @@
         }
       /*Triglicerídeo Info*/
         .TRIGLI { /*Posição*/
-          color: white;
+          font-family: 'Chakra Petch';
           font-size: 30px;
-          background:rgb(77, 190, 115);
+          color: white;
+          line-height: 25px;
+          background: #6831bb;
           border-radius: 25px;
           width: 25px;
           height: 25px;
-          line-height: 25px;
-          text-align: center;
           position: relative;
-          top: -311px;
-          left: 69px;
+          top: -300px;
+          left: 67px;
         }
         .TRIGLI .textTRIGLI {
           visibility: hidden;
@@ -407,17 +408,17 @@
         }
       /*REATOR IInfo*/
         .REATOR { /*Posição*/
-          color: white;
+          font-family: 'Chakra Petch';
           font-size: 30px;
-          background:rgb(241, 139, 55);
+          color: white;
+          line-height: 25px;
+          background: #6831bb;
           border-radius: 25px;
           width: 25px;
           height: 25px;
-          line-height: 25px;
-          text-align: center;
           position: relative;
           top: -362px;
-          left: 163px;
+          left: 161px;
         }
         .REATOR .textREATOR {
           visibility: hidden;
@@ -447,6 +448,9 @@
         }
         .REATOR:hover .textREATOR {
           visibility: visible;
+        }
+        .PH:hover, .TEMP:hover, .AGUA:hover, .TRIGLI:hover, .REATOR:hover {
+          background: #9a5cf7;
         }
 /*-----------------------------------------------------------------------------------------------*/
   /*FOOTER*/
