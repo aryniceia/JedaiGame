@@ -514,27 +514,15 @@ function atualizar(){ //funcao para atualizar todas as informacoes de uma so vez
     p1 = document.getElementById('produto01').innerHTML = `${molProduto1} ${produto1}`;
     p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
-    //mudar = document.getElementById('turno').innerHTML = `Esse é o turno ${turno} e você está no nível ${Faculdade}`;
     acdin = document.getElementById('acdin').innerHTML = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
     
-    //dinheiro  = document.getElementById('acdin').innerHTML = `💰 ${dinheiro}₵`
-    //acao = document.getElementById('acdi').innerHTML = `☕ ${acao}`
-    //molextraidos = document.getElementById('acdin').innerHTML = `🧪 ${molextraidos} mols`
-    //turno = document.getElementById('acdin').innerHTML = `⭐ ${turno} turnos`
-
-    //var mudar = document.querySelector('#turno').innerHTML = `Turno ${turno}`;
-    //var level = document.querySelector('#faculdade').innerHTML = `Nível: ${Faculdade}`;
-    //var acdin = document.querySelector('#acdin').innerHTML = `x ${acao}`; // acdin = açao/dinheiro
-    //var moeda = document.querySelector('#moeda').innerHTML = `x ${dinheiro}`;
 
     extracao = document.getElementById('extracao').innerHTML = `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4`;
-    temperatura = document.getElementById('temperatura').innerHTML = `${temp} °C`;
-    ShowPH = document.getElementById('phtotal').innerHTML = `${PH} pH`;
+    temperatura = document.getElementById('temperatura').innerHTML = `${300 + 10*temp} K`;
+    ShowPH = document.getElementById('phtotal').innerHTML = `${7 + PH/2} pH`;
     ShowProb = document.getElementById('probabilidade').innerHTML = `${ProbDinamica} % de chance da reação ocorrer.`;   
     extracaofiltro = document.getElementById('extracaofiltro').innerHTML = `${filtrarR1} mols no estágio 1 | ${filtrarR2} mols no estágio 2`;
     extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraidos`;
-    //var interacao = document.getElementById('p#eventosProb').innerHTML = `${evento}`
-    //var contagemeventos1 = document.getElementById('p#contagemeventos').innerHTML = `${contagemeventos}`
     eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML = 
         `
