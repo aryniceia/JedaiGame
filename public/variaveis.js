@@ -4,6 +4,7 @@
 //import ReactDOM from 'react-dom';
 //NomeJogador = localStorage.getItem('jedai/username')
 //jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
+equilibrio = true // perguntando se a reação permite conversão
 molsAnteriores = 0
 logContagem = 2
 logStatus = false
@@ -15,8 +16,8 @@ reagente1 = "Água"
 reagente2 = "Triglicerídeos"
 produto1 = "Glicerol"
 produto2 = "Ácido Graxo"
-fatorDeConversaoReagente2 = 3
-fatorDeConversaoReagente1 = 1
+fatorDeConversaoReagente1 = 3
+fatorDeConversaoReagente2 = 1
 // PH & Temperatura (olhar o PHSinal)
 //Manter esses valores maximos em PH e Temp
 //// Trofeus:
@@ -171,12 +172,12 @@ function variaveisIniciais(){
     logLine = `Você começou o jogo.`
     dRdP = 0
     logList = []
-    reagente1 = "Água"
-    reagente2 = "Triglicerídeos"
-    produto1 = "Glicerol"
-    produto2 = "Ácido Graxo"
-    fatorDeConversaoReagente2 = 3
-    fatorDeConversaoReagente1 = 1
+    reagente1 = "Água" //3
+    reagente2 = "Triglicerídeos" //1
+    produto1 = "Glicerol" //1
+    produto2 = "Ácido Graxo" //3
+    fatorDeConversaoReagente1 = 3
+    fatorDeConversaoReagente2 = 1
     // PH & Temperatura (olhar o PHSinal)
     //Manter esses valores maximos em PH e Temp
     //// Trofeus:
@@ -380,23 +381,34 @@ function AdicionarTri(){
 
 //botoes adicionais
 function Proximo(){ //funcao para passar turno
-	if(molReagente2 >= fatorDeConversaoReagente1 && molReagente1 >= fatorDeConversaoReagente2){
-        probabilidade(ProbDinamica) //ira executar a funcao para saber se a reacao ira ocorrer
-		if(resultado == 1){
+    if((molReagente2 >= fatorDeConversaoReagente2 && molReagente1 >= fatorDeConversaoReagente1) || (molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2)){
+		probabilidade(ProbDinamica) //ira executar a funcao para saber se a reacao ira ocorrer
+		if(resultado == 1 && molReagente2 >= fatorDeConversaoReagente2 && molReagente1 >= fatorDeConversaoReagente1){
             logteste = true
 		    aparecerLog(`Reagentes foram convertidos em produtos!`)
-		    molProduto1 += fatorDeConversaoReagente1
-            molProduto2 += fatorDeConversaoReagente2
-            molReagente1 -= fatorDeConversaoReagente2 // Duvida se vira 0 ou nao
-            molReagente2 -= fatorDeConversaoReagente1 // Idem
-            
+		    molProduto1 += fatorDeConversaoReagente2
+            molProduto2 += fatorDeConversaoReagente1
+            molReagente1 -= fatorDeConversaoReagente1 // Duvida se vira 0 ou nao
+            molReagente2 -= fatorDeConversaoReagente2 // Idem
 		}
-		else if (resultado == 0){
-            logteste = true //apagar todos logteste
-		    aparecerLog(`Reagentes não foram convertidos em produtos!`)
+		else if (resultado == 0 && molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2){
+			if(!equilibrio){
+			aparecerLog(`Reagentes não foram convertidos em produtos!`)
+            console.log("nao era para aparecer isso!!!!!!")
+		    }else if(equilibrio) {
+				if(molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2){
+		    		aparecerLog(`Produtos foram convertidos em reagentes!`)
+		    		molProduto1 -= fatorDeConversaoReagente2
+            	    molProduto2 -= fatorDeConversaoReagente1
+            	    molReagente1 += fatorDeConversaoReagente1 // Duvida se vira 0 ou nao
+           	    	molReagente2 += fatorDeConversaoReagente2 // Idem
+           	    }else{
+                    aparecerLog(`Reagentes não foram convertidos em produtos!`)
+                    console.log("ok")
+                }
+		    }
 		}
     }
-    //trmasformar isso em funcao
     molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2
     acao = 2
     molsAnteriores = molextraidos
@@ -423,7 +435,7 @@ function Proximo(){ //funcao para passar turno
 }
 //AÇÕES DE CONVERTER OS MOLS INÍCIO ----------------------
 function Decantar(){ //funcao para ir para a extracao longa
-	if(molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1){
+	if(molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2){
         decantarR1 += molProduto2
 		molProduto2 = 0
         molProduto1 = 0
@@ -440,14 +452,14 @@ function Decantar(){ //funcao para ir para a extracao longa
     }     
 }
 function Filtro(){
-    if((molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) && (NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)){ // Leia-se: se tiver reagentes suficientes e nivel adequado
+    if((molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) && (NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)){ // Leia-se: se tiver reagentes suficientes e nivel adequado
         GrupoPHRT = GrupoFiltro
         ExtracaoRapida = 1
         acaoDinheiro(filtrocost, filtroAcao)
         aparecerLog(`Entrou em processo de filtragem.`)
         
     }
-    else if ((molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) && !(NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)){
+    else if ((molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) && !(NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)){
         logteste = true
         aparecerLog(`Você não tem habilidade suficiente para usar o filtro`, true)
     }else{
@@ -475,6 +487,7 @@ function probabilidade(a){ // a é a probabilidade dinamica
     else{ //caso o resultado seja desfavoravel
         resultado = 0
     }
+    console.log(resultado)
 }
 
 let ProbInicial = 50; //probabilidade inicial fixa
