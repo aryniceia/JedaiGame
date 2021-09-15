@@ -577,7 +577,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida){ // para generalizar o custo 
         else if ((GrupoPHRT == GrupoPH) && (PH < PHmax && PH > PHmin) || (PH == PHmax && PHsinal == -1 || PH == PHmin && PHsinal == 1)){ //verificando se pertence ao grupo PH e se pode comprar (entre 4 e -4) (mesma coisa do temperatura)
             PH += PHsinal; 
             retirarAcaoDinheiro(ValorRecebido, AcaoRecebida);
-            //if (fraseLog){aparecerLog(fraseLog)}
+            if (fraseLog){aparecerLog(fraseLog)}
         }
         else if (GrupoPHRT == GrupoFiltro){
             filtrarR1 = molProduto2;
