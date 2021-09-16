@@ -72,9 +72,9 @@ function Select () {
                                 name="time" className="input" 
                                 id="time" required>
                                     <option disabled value="padrao">Selecione o tempo de jogo...</option>
-                                    <option value="0">x5 rodadas</option>
-                                    <option value="1">x10 rodadas</option>
-                                    <option value="2">x20 rodadas</option>
+                                    <option value="0">x20 rodadas</option>
+                                    <option value="1">x30 rodadas</option>
+                                    <option value="2">x50 rodadas</option>
                             </select>
                         </div>
 
@@ -86,9 +86,9 @@ function Select () {
                                 className="input" id="tabuleiro" 
                                 required>
                                     <option disabled value="padrao">Selecione o tabuleiro...</option>
-                                    <option value="0">Sabão</option>
-                                    <option disabled value="1">Ácido Graxo (Em breve...) {/*Ácido Graxo*/}</option>
-                                    <option disabled value="2">Biodisel (Em breve...) {/*Biodiesel*/}</option>
+                                    <option disabled value="0">Sabão (Em breve...) </option>
+                                    <option value="1">Ácido Graxo</option>
+                                    <option disabled value="2">Biodisel (Em breve...)</option>
                             </select>
                         </div>  
                     </div>

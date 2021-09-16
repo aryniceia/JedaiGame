@@ -591,7 +591,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida){ // para generalizar o custo 
     }
     else{
         logteste = true
-        aparecerLog(`Nao pode ser comprado, lhe falta acao ou ₵réditos.`, true)
+        aparecerLog(`Você não tem ações ou ₵réditos suficientes para efetuar essa compra.`, true)
     }
     fraseLog = false
     probc()
