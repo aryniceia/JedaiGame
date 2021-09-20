@@ -15,7 +15,6 @@ import MicoBody from '../../img/char/body/mico.png';
 import OncaBody from'../../img/char/body/onca.png';
 import TucanoBody from'../../img/char/body/tucano.png';
 
-import ArrowR from '../../img/elements/arrowR.png';
 import Centrifuga from '../../img/elements/centrifuga.png';
 import FiltroElement from '../../img/elements/filtro.png';
 import Caderno from '../../img/sabao_caderno.png';
@@ -155,7 +154,6 @@ function Game () {
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
 
                             <button className="arrowRight" onClick={myFunction2}>
-                                <img alt="Imagem do botão de seta" id="arrowR" src={ArrowR}/>
                                 <span className="cadernotext" id="cadernoPopup">
                                     <img alt="Imagem do cardeno com instruções da extração de sabão" id="caderno" src={Caderno}></img>
                                 </span>
@@ -212,7 +210,6 @@ function Game () {
                             <div className="BotoesProfile">
                                 <button className="botoes" onClick={Proximo}>Turno</button>
                                 <button className="botoes" onClick={Expurgo}>Expugar</button>
-
                                 <button className="help" onClick={myFunction1}>Ajuda
                                     <span className="helptext" id="helpPopup">
                                         • 💰 dinheiro<br></br>

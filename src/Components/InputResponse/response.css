@@ -108,7 +108,7 @@
         height: 20px;
         position: relative;
         top: -79px;
-        left: -389px;
+        left: -370px;
       }
       .trigli {
         font-family: 'Chakra Petch';
@@ -121,7 +121,7 @@
         height: 20px;
         position: relative;
         top: -79px;
-        left: -380px;
+        left: -360px;
       }
       /*PH*/
         .MaisPh {
@@ -245,7 +245,7 @@
           width: 25px;
           height: 25px;
           position: relative;
-          top: -158px;
+          top: -174px;
           left: 236px;
         }
         .PH .textPH {
@@ -288,8 +288,8 @@
           width: 25px;
           height: 25px;
           position: relative;
-          top: -138px;
-          left: 162px;
+          top: -160px;
+          left: 160px;
         }
         .TEMP .textTEMP {
           visibility: hidden;
@@ -331,7 +331,7 @@
           width: 25px;
           height: 25px;
           position: relative;
-          top: -300px;
+          top: -310px;
           left: 20px;
         }
         .AGUA .textAGUA {
@@ -374,7 +374,7 @@
           width: 25px;
           height: 25px;
           position: relative;
-          top: -300px;
+          top: -315px;
           left: 67px;
         }
         .TRIGLI .textTRIGLI {
@@ -417,7 +417,7 @@
           width: 25px;
           height: 25px;
           position: relative;
-          top: -362px;
+          top: -378px;
           left: 161px;
         }
         .REATOR .textREATOR {
@@ -558,18 +558,17 @@
           width: 55px;
           height: 55px;
           border-radius: 30px;
-          border-color: #EEC3BB;
-          border-width: 0.1px;
-          margin-left: -86px;
-          margin-top: 20px;
+          border: 0.01px solid #6d486f;
           background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           color: white;
           background-image: url('../../img/elements/trofeu.png');
           background-size: contain;
-          position: absolute;
           display: inline-block;
-          cursor: pointer
+          cursor: pointer;
+          position: absolute;
+          margin-top: 20px;
+          margin-left: -92px;
         }
         /*Fundo pop up info */
           .popup .popuptext {
@@ -615,22 +614,23 @@
       /* Pop Up ajuda */
         .help {
           width: 55px;
-          height: 35px;
-          border-radius: 5px;
+          height: 55px;
+          border-radius: 30px;
           border: 0.01px solid #6d486f;
           margin: 4px;
           background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           color: white;
-          position: absolute;
           display: inline-block;
           cursor: pointer;
+          position: absolute;
+          margin-top: 106px;
         }
       /*Fundo pop up info */
         .help .helptext {
           visibility: hidden;
-          width: 93px;
-          height: 79px;
+          width: 85px;
+          height: 85px;
           background-color: #ea8d8d;
           color: #fff;
           font-size: 15px;
@@ -638,10 +638,10 @@
           border-radius: 20px;
           position: absolute;
           z-index: 1;
-          bottom: 125%;
-          left: -13px;
-          padding: 23px;
-          line-height: 22px;;
+          bottom: 72%;
+          left: 50px;
+          padding: 20px;
+          line-height: 22px;
         }
       /* Popup arrow */
         .help .helptext::after {
@@ -669,11 +669,17 @@
 
       /* Pop Up Caderno */
         .arrowRight {
-          width: 55px;
-          height: 35px;
-          position: absolute;
+          width: 40px;
+          height: 40px;
+          border: none;
+          background: none;
+          background-image: url('../../img/elements/arrowR.png');
+          background-size: contain;
           display: inline-block;
           cursor: pointer;
+          position: relative;
+          top: -61px;
+          left: -3px;
         }
       /*Fundo pop up info */
         .arrowRight .cadernotext {
@@ -710,21 +716,6 @@
         @keyframes fadeIn {
           from {opacity: 0;}
           to {opacity:1 ;}
-        }
-        .arrowRight {
-          background: none;
-          border: none;
-        }
-        #arrowR {
-          width: 30px;
-          position: absolute;
-          margin-left: -42px;
-          margin-top: 74px;
-          background-color: rgba(255, 192, 203, 0);
-        }
-        #arrowR:hover {
-          background-color: rgb(235, 163, 163);
-          border-radius: 20px;
         }
         #caderno {
           width: 557px;
