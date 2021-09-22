@@ -4,6 +4,9 @@ import RadioButton from '../Components/RadioButton/radio';
 import Link from '../Components/Link/link';
 import './Styles/select.css';
 
+function confirmacao(){
+    window.confirmacao()
+}
 function Select () {
     const [name, setName] = useState(localStorage.getItem('jedai/username') || '')
     const [level, setLevel] = useState(localStorage.getItem('jedai/level') || 'padrao') //useState é uma função que manipula estados :3
@@ -58,10 +61,10 @@ function Select () {
                                 name="level" className="input" 
                                 id="level" required>
                                     <option disabled value="padrao">Selecione o nível...</option>
-                                    <option value="0">Fácil</option>
-                                    <option value="1">Médio</option>
-                                    <option disabled value="2">Difícil (Em breve...) {/*Reprovação*/}</option>
-                                    <option disabled value="3">Impossível (Em breve...) {/*Jubilator*/}</option>
+                                    <option value="1">Fácil</option>
+                                    <option value="2">Médio</option>
+                                    <option value="3">Difícil{/*Reprovação*/}</option>
+                                    <option value="4">Impossível{/*Jubilator*/}</option>
                             </select>
                         </div>
 
@@ -72,9 +75,9 @@ function Select () {
                                 name="time" className="input" 
                                 id="time" required>
                                     <option disabled value="padrao">Selecione o tempo de jogo...</option>
-                                    <option value="0">x20 rodadas</option>
-                                    <option value="1">x30 rodadas</option>
-                                    <option value="2">x50 rodadas</option>
+                                    <option value="20">x20 rodadas</option>
+                                    <option value="30">x30 rodadas</option>
+                                    <option value="50">x50 rodadas</option>
                             </select>
                         </div>
 
@@ -86,9 +89,9 @@ function Select () {
                                 className="input" id="tabuleiro" 
                                 required>
                                     <option disabled value="padrao">Selecione o tabuleiro...</option>
-                                    <option disabled value="0">Sabão (Em breve...) </option>
-                                    <option value="1">Ácido Graxo</option>
-                                    <option disabled value="2">Biodisel (Em breve...)</option>
+                                    <option value="1">Sabão</option>
+                                    <option value="2">Ácido Graxo</option>
+                                    <option value="3">Biodisel</option>
                             </select>
                         </div>  
                     </div>
@@ -102,7 +105,7 @@ function Select () {
                         <Link route="/" className='return'>Voltar</Link>
                         <Link route='detail' className='detail'>Detalhes</Link>
                         {/*<RandomButton onClick={save}></RandomButton>*/}
-                        <input className="save" type='submit' value="Confirma" />
+                        <input className="save" type='submit' value="Confirma" onClick={confirmacao}/>
                         <button className="delete" type='button' onClick={delet}>Limpar Seleção</button> 
                     </div>
                 </div>

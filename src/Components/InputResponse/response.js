@@ -122,6 +122,9 @@ function Game () {
     function Filtro(){
         window.Filtro()
     };
+    function confirmacao(){
+        window.confirmacao()
+    }
     function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
@@ -185,7 +188,7 @@ function Game () {
                                     <span className="textREATOR">
                                         <p id="equacao">
                                             <span id="reagente01"></span><br></br>
-                                            <span id="reagente02"></span> ⇌ <span id="produto01"></span><br></br>
+                                            <span id="reagente02"></span> <span id="reversivel"></span> <span id="produto01"></span><br></br>
                                             <span id="produto02"></span>
                                         </p>
                                     </span>
