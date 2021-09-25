@@ -226,7 +226,7 @@
         }
       /*Hover*/
       .MaisPh:hover,  .MaisTemp:hover, .UpReator:hover, .UpPh:hover, 
-      .UpChapa:hover, .agua:hover, .trigli:hover {
+      .UpChapa:hover {
         background-color: rgb(202, 19, 19);
       }
       .MenosPh:hover, .MenosTemp:hover {
@@ -549,8 +549,8 @@
         font-family: 'Chakra Petch';
         color: #ffffff;
       }
-      .botoes:hover, .popup:hover, .help:hover{
-        background-color: #EEC3BB;
+      .botoes:hover, .popup:hover, .help:hover, .agua:hover, .trigli:hover{
+        background-color: #663D3D;
       }
     /* Pop Up*/
       /*Pop Up troféu */
