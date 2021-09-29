@@ -455,7 +455,7 @@ function Proximo() { //funcao para passar turno
     GameOver()
 
     aparecerLog(`⭐Turno ${turno}⭐`)
-    probc()
+    qualProbabilidade()
     eventosAleatorios()
     atualizar()
 }
@@ -496,7 +496,7 @@ function Filtro() {
 
 function Expurgo() {//funcao para esvaziar o reator
     molReagente1 = molReagente2 = molProduto1 = molProduto2 = PH = temp = 0;
-    probc()
+    qualProbabilidade()
     aparecerLog(`Você jogou fora todos os reagentes e produtos.`)
     atualizar();
 }
@@ -522,7 +522,20 @@ ProbDinamica = ProbInicial
 NivelAtual = NivelIC;
 atualizar();
 //funçao que calcula a taxa de reaçao
-
+function TaxaDeReacao(PHa,tempa){
+    
+    ProbDinamica = ProbInicial + PHa * 5 + tempa * 5;
+    if (ProbDinamica >= 100){
+        ProbDinamica = 100
+    }
+}
+function qualProbabilidade(){ //funcao para definir qual funcao de probabilidade sera executada
+    if (equilibrio){
+        probc()
+    }else{
+        TaxaDeReacao(PH, temp)
+    }
+}
 //FUNÇÕES DE PROBABILIDADE FIM ---------------------
 
 
@@ -619,7 +632,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
 
         aparecerLog(`Você não tem ações ou ₵réditos suficientes para efetuar essa compra.`, true)
     }
-    probc()
+    qualProbabilidade()
 }
 
 function UsarReagentes(QualReagente) { //funcao para retirar os valores dos reagentes
@@ -638,7 +651,7 @@ function retirarAcaoDinheiro(din, ac) { //essa funçao vai ser a unica que vai t
     dinheiro -= din;
     acao -= ac;
     GrupoPHRT = false
-    probc();
+    qualProbabilidade();
     atualizar();
 }
 //FUNÇÕES DE NÍVEL E UPGRADE INÍCIO ---------------------
@@ -929,6 +942,13 @@ function GameOver() {
         }
     }
 
+}
+
+function FimDeJogo(){
+    alert(`Resultado do Jogo:
+    Turnos: ${turno}
+     
+    `)
 }
 function QuaisTrofeus() {
     trofeusAdquiridos =
