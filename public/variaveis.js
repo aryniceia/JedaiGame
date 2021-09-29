@@ -1099,6 +1099,6 @@ function teste() {
 //localStorage.getItem('jedai/tabuleiro')
 
 
-//acertar probabilidade
+//acertar probabilidade *resolvido*
 //quebrar loop game over (alert)
 //troufeus
