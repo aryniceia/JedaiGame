@@ -1047,15 +1047,15 @@ if (JogoNivel == 2) {
 if (JogoNivel == 3) {
     objPrincipal = 39
     botaoEventoOnOFF = true
-    nivelDoJogo = `Fazer 40 mols com 3 troufeus em ${tempoDeJogo} turnos`
-    aparecerLog(`Fazer 40 mols com 3 troufeus em ${tempoDeJogo} turnos`)
+    nivelDoJogo = `Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`
+    aparecerLog(`Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`)
     atualizar()
 }
 if (JogoNivel == 4) {
     objPrincipal = 48
     botaoEventoOnOFF = true
-    nivelDoJogo = `Fazer 50 mols e 2 troufeus dificeis em ${tempoDeJogo} turnos`
-    aparecerLog(`Fazer 50 mols e 2 troufeus dificeis em ${tempoDeJogo} turnos`)
+    nivelDoJogo = `Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`
+    aparecerLog(`Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`)
     atualizar()
 }
 
@@ -1081,4 +1081,4 @@ function teste() {
 
 //acertar probabilidade
 //quebrar loop game over (alert)
-//trofeus
+//troufeus
