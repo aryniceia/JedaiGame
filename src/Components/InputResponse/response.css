@@ -506,6 +506,7 @@
         color: white;
         font-family: 'Chakra Petch';
         margin-left: 18px;
+        text-align: left;
       }
     /*Barra de log*/
       #log {
