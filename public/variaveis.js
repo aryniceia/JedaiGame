@@ -553,7 +553,7 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
     acdin = document.getElementById('acdin').innerHTML = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
-
+    NivelGame = document.getElementById('nivelAtual').innerHTML = `${Faculdade}`
 
     extracao = document.getElementById('extracao').innerHTML = `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4`;
     temperatura = document.getElementById('temperatura').innerHTML = `${300 + 10 * temp} K`;

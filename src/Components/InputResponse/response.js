@@ -256,7 +256,8 @@ function Game () {
                             <div className="bar"> {/* Barra com as info do personagem*/}
                                 <div className="usernameLevel">
                                     user: {localStorage.getItem('jedai/username')}<br></br>
-                                    nível: {levels[localStorage.getItem('jedai/level')]} 
+                                    nível: {/*{levels[localStorage.getItem('jedai/level')]} */}<span id='nivelAtual'></span>
+                                    
                                 </div>
                             </div>
                         </div>
