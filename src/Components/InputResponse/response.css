@@ -379,7 +379,8 @@
         }
         .TRIGLI .textTRIGLI {
           visibility: hidden;
-          width: 120px;
+          width: 150px;
+          line-height: 20px;
           background: rgb(77, 190, 115);
           font-family:'Chakra Petch';
           font-size: 20px;
@@ -427,7 +428,7 @@
           font-family:'Chakra Petch';
           font-size: 15px;
           color: white;
-          text-align: left;
+          text-align: center;
           border-radius: 6px;
           padding: 5px 0;
           position: absolute;
@@ -449,6 +450,7 @@
         .REATOR:hover .textREATOR {
           visibility: visible;
         }
+        
         .PH:hover, .TEMP:hover, .AGUA:hover, .TRIGLI:hover, .REATOR:hover {
           background: #9a5cf7;
         }

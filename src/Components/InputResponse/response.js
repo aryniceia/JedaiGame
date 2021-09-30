@@ -17,7 +17,7 @@ import TucanoBody from'../../img/char/body/tucano.png';
 
 import Centrifuga from '../../img/elements/centrifuga.png';
 import FiltroElement from '../../img/elements/filtro.png';
-import Caderno from '../../img/sabao_caderno.png';
+import Caderno from '../../img/graxo_caderno.png';
 
 // Variáveis das inputs //
     const levels = {
@@ -156,9 +156,9 @@ function Game () {
                             <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
 
-                            <button className="arrowRight" onClick={myFunction2}>
+                            <button className="arrowRight" title="Consulte seu caderno!" onClick={myFunction2}>
                                 <span className="cadernotext" id="cadernoPopup">
-                                    <img alt="Imagem do cardeno com instruções da extração de sabão" id="caderno" src={Caderno}></img>
+                                    <img alt="Imagem do cardeno com instruções da extração de Ácido Graxo" id="caderno" src={Caderno}></img>
                                 </span>
                             </button>
                         

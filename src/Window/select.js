@@ -63,8 +63,8 @@ function Select () {
                                     <option disabled value="padrao">Selecione o nível...</option>
                                     <option value="1">Fácil</option>
                                     <option value="2">Médio</option>
-                                    <option value="3">Difícil{/*Reprovação*/}</option>
-                                    <option value="4">Impossível{/*Jubilator*/}</option>
+                                    <option value="3">Reprovação</option>
+                                    <option value="4">Jubilator</option>
                             </select>
                         </div>
 
