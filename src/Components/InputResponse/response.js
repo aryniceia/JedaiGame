@@ -27,53 +27,53 @@ import Caderno from '../../img/graxo_caderno.png';
         3: "Jubilator"
     }*/
     const Personagens = {
-        0: {
+        1: {
             name: "Capivara",
             url: Capivara
         },
-        1: {
+        2: {
             name: "Guará",
             url: Guara
         },
-        2: {
+        3: {
             name: "Jacaré",
             url: Jacare
         },
-        3: {
+        4: {
             name: "Mico",
             url: Mico
         },
-        4: {
+        5: {
             name: "Onça",
             url: Onca
         },
-        5: {
+        6: {
             name: "Tucano",
             url: Tucano
         }
     }
     const PersonagensBody = {
-        0: {
+        1: {
             name: "Capivara",
             url: CapivaraBody
         },
-        1: {
+        2: {
             name: "Guará",
             url: GuaraBody
         },
-        2: {
+        3: {
             name: "Jacaré",
             url: JacareBody
         },
-        3: {
+        4: {
             name: "Mico",
             url: MicoBody
         },
-        4: {
+        5: {
             name: "Onça",
             url: OncaBody
         },
-        5: {
+        6: {
             name: "Tucano",
             url: TucanoBody
         }

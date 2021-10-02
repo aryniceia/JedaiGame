@@ -16,7 +16,7 @@ function RadioButton ({personagem, setPersonagem}) {
                 charProps={
                     {
                         id: 'char1',
-                        value: 0,
+                        value: 1,
                         charName: "Capi",
                         img: Capivara,
                         charDescription: 'Personagem antropomorfo de uma capivara usando roupas de laboratório.',
@@ -33,7 +33,7 @@ function RadioButton ({personagem, setPersonagem}) {
                 charProps={
                     {
                         id: 'char2',
-                        value: 1,
+                        value: 2,
                         charName: "Guará",
                         img: Guara,
                         charDescription: 'Personagem antropomorfo de um lobo guará usando roupas de laboratório.',
@@ -50,7 +50,7 @@ function RadioButton ({personagem, setPersonagem}) {
                 charProps={
                     {
                         id: 'char3',
-                        value: 2,
+                        value: 3,
                         charName: "Cuca",
                         img: Jacare,
                         charDescription: 'Personagem antropomorfo de um jacaré usando roupas de laboratório.',
@@ -67,7 +67,7 @@ function RadioButton ({personagem, setPersonagem}) {
                 charProps={
                     {
                         id: 'char4',
-                        value: 3,
+                        value: 4,
                         charName: "Miquito",
                         img: Mico,
                         charDescription: 'Personagem antropomorfo de um mico usando roupas de laboratório.',
@@ -85,7 +85,7 @@ function RadioButton ({personagem, setPersonagem}) {
                 charProps={
                     {
                         id: 'char5',
-                        value: 4,
+                        value: 5,
                         charName: "Pintada",
                         img: Onca,
                         charDescription: 'Personagem antropomorfo de uma onça pintada usando roupas de laboratório.',
@@ -102,7 +102,7 @@ function RadioButton ({personagem, setPersonagem}) {
                 charProps={
                     {
                         id: 'char6',
-                        value: 5,
+                        value: 6,
                         charName: "Tuca",
                         img: Tucano,
                         charDescription: 'Personagem antropomorfo de um tucano usando roupas de laboratório.',

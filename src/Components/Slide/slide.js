@@ -13,13 +13,13 @@ import Tucano from '../../img/char/tucano.png';
 
 function Slide ({}) { 
     const items = [
-        {id: 0, title: 'Capi', src: Capivara},
-        {id: 1, title: 'Guará', src: Guara},
-        {id: 2, title: 'Cuca', src: Jacare},
-        {id: 3, title: 'Prof. Dr. Mamutão', src: Mamute},
-        {id: 4, title: 'Miquito', src: Mico},        
-        {id: 5, title: 'Pintada', src: Onca},
-        {id: 6, title: 'Tuca', src: Tucano}
+        {id: 1, title: 'Capi', src: Capivara},
+        {id: 2, title: 'Guará', src: Guara},
+        {id: 3, title: 'Cuca', src: Jacare},
+        {id: 4, title: 'Prof. Dr. Mamutão', src: Mamute},
+        {id: 5, title: 'Miquito', src: Mico},        
+        {id: 6, title: 'Pintada', src: Onca},
+        {id: 7, title: 'Tuca', src: Tucano}
     ]
 
     return (
