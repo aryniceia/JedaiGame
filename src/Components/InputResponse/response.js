@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './response.css';
 
 import Capivara from '../../img/char/icon/capivara_perfil.png';
@@ -20,12 +20,12 @@ import FiltroElement from '../../img/elements/filtro.png';
 import Caderno from '../../img/graxo_caderno.png';
 
 // Variáveis das inputs //
-    const levels = {
+    /*const levels = {
         0: "Fácil",
         1: "Médio",
         2: "Difícil",
         3: "Jubilator"
-    }
+    }*/
     const Personagens = {
         0: {
             name: "Capivara",
@@ -124,20 +124,41 @@ function Game () {
     };
     function confirmacao(){
         window.confirmacao()
-    }
+    };
     function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
-    }
+    };
     function myFunction1() {
         var popup = document.getElementById("helpPopup");
         popup.classList.toggle("show");
-    }
+    };
     function myFunction2() {
         var popup = document.getElementById("cadernoPopup");
-        popup.classList.toggle("show");
-    }
+        popup.classList.toggle("show"); //toggle = alterna as classes
+    };
+    function escFunction (event) {
+        if(event.keyCode === 27) {
+
+            var popupTrofeu = document.getElementById("myPopup");
+            popupTrofeu.classList.remove("show"); // remove = remove a classe
+
+            var popupAjuda = document.getElementById("helpPopup");
+            popupAjuda.classList.remove("show");
+
+            var popupCaderno = document.getElementById("cadernoPopup");
+            popupCaderno.classList.remove("show");
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
     
+        return () => {
+          document.removeEventListener("keydown", escFunction, false);
+        };
+      }, []);
+
     return (
         <div className="App">
             <header className="App-header">
