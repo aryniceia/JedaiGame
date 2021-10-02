@@ -142,6 +142,7 @@ function Game () {
         <div className="App">
             <header className="App-header">
                 <div className="background_game">
+
                     <div className="cabeçalho">
                         <h1 id="acdin">Se você viu essa mensagem, deu erro!</h1>
                     </div>
