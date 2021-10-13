@@ -58,10 +58,13 @@ molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
 let acao = 2;
 turno = 1;
 //Nível do jogador:
+jogoTerminado = false
 NivelAtual = 0;
 NivelIC = 1;
 NivelMestrado = 2;
 NivelDoutorado = 3;
+NivelMestradoBoolean = false
+NivelDoutoradoBoolean = false
 molMestrado = 9;
 molDoutorado = 15;
 Faculdade = `Iniciação Científica`;
@@ -150,17 +153,17 @@ termometroMax = 3;
 //trofeus e conquistas
 Mestrado11turnos = 0    //dificil        Modificacao esta em Trofeus()
 Doutorado22turnos = 0   //dificil        Modificacao esta em Trofeus()
-TerminarJogoIC = 0      //dificil
-Prob100 = 0        //Modificacao esta em Trofeus()
-Prob0 = 0        //Modificacao esta em Trofeus()
-ExtracaoRapida = 1 //NEGACAO
-ModificacaoPH = 1 //NEGACAO
-ModificacaoTemp = 1 //NEGACAO
-ModificacaoTempPH = 1    // NEGACAO dificil        Modificacao esta em Trofeus()
+TerminarJogoIC = false      //dificil
+Prob100 = false        //Modificacao esta em Trofeus()
+Prob0 = false        //Modificacao esta em Trofeus()
+ExtracaoRapida = true //NEGACAO
+ModificacaoPH = true //NEGACAO
+ModificacaoTemp = true //NEGACAO
+ModificacaoTempPH = true    // NEGACAO dificil        Modificacao esta em Trofeus()
 //        Modificacao esta em Trofeus():
-NupgradePH = 0
-NupgradeTemp = 0
-NupgradeReator = 0
+NupgradePH = false
+NupgradeTemp = false
+NupgradeReator = false
 NupgradeEquipamentos = 1  //NEGACAO dificil
 //Procastinador
 trofeusAdquiridos = ``
@@ -168,23 +171,23 @@ nivelDoJogo = ``
 
 //Game Over:
 JogoNivel = localStorage.getItem('jedai/level');
-SomaDificil/* Maior que 1*/ = Mestrado11turnos +
-    Doutorado22turnos +
-    TerminarJogoIC;
-SomaDificilNegacao =
-    ModificacaoTempPH + //Negacao
-    NupgradeEquipamentos; //negacao
+// SomaDificil/* Maior que 1*/ = Mestrado11turnos +
+//     Doutorado22turnos +
+//     TerminarJogoIC;
+// SomaDificilNegacao =
+//     ModificacaoTempPH + //Negacao
+//     NupgradeEquipamentos; //negacao
 
-SomaFacil = Prob100 +
-    Prob0 +
-    NupgradePH +
-    NupgradeReator +
-    NupgradeTemp;
+// SomaFacil = Prob100 +
+//     Prob0 +
+//     NupgradePH +
+//     NupgradeReator +
+//     NupgradeTemp;
 
-SomaFacilNegacao =
-    ExtracaoRapida + //negacao
-    ModificacaoPH + //negacao
-    ModificacaoTemp //negacao
+// SomaFacilNegacao =
+//     ExtracaoRapida + //negacao
+//     ModificacaoPH + //negacao
+//     ModificacaoTemp //negacao
 
 function variaveisIniciais() {
     //equilibrio = true // perguntando se a reação permite conversão
@@ -223,6 +226,8 @@ function variaveisIniciais() {
     NivelIC = 1;
     NivelMestrado = 2;
     NivelDoutorado = 3;
+    NivelMestradoBoolean = true
+    NivelDoutoradoBoolean = true
     molMestrado = 9;
     molDoutorado = 15;
     Faculdade = `Iniciação Científica`;
@@ -311,9 +316,9 @@ function variaveisIniciais() {
     //trofeus e conquistas
     Mestrado11turnos = 0    //dificil        Modificacao esta em Trofeus()
     Doutorado22turnos = 0   //dificil        Modificacao esta em Trofeus()
-    TerminarJogoIC = 0      //dificil
-    Prob100 = 0        //Modificacao esta em Trofeus()
-    Prob0 = 0        //Modificacao esta em Trofeus()
+    TerminarJogoIC = false      //dificil
+    Prob100 = false        //Modificacao esta em Trofeus()
+    Prob0 = false        //Modificacao esta em Trofeus()
     ExtracaoRapida = 1 //NEGACAO
     ModificacaoPH = 1 //NEGACAO
     ModificacaoTemp = 1 //NEGACAO
@@ -329,23 +334,23 @@ function variaveisIniciais() {
 
     //Game Over:
     JogoNivel = localStorage.getItem('jedai/level');
-    SomaDificil/* Maior que 1*/ = Mestrado11turnos +
-        Doutorado22turnos +
-        TerminarJogoIC;
-    SomaDificilNegacao =
-        ModificacaoTempPH + //Negacao
-        NupgradeEquipamentos; //negacao
+    // SomaDificil/* Maior que 1*/ = Mestrado11turnos +
+    //     Doutorado22turnos +
+    //     TerminarJogoIC;
+    // SomaDificilNegacao =
+    //     ModificacaoTempPH + //Negacao
+    //     NupgradeEquipamentos; //negacao
 
-    SomaFacil = Prob100 +
-        Prob0 +
-        NupgradePH +
-        NupgradeReator +
-        NupgradeTemp;
+    // SomaFacil = Prob100 +
+    //     Prob0 +
+    //     NupgradePH +
+    //     NupgradeReator +
+    //     NupgradeTemp;
 
-    SomaFacilNegacao =
-        ExtracaoRapida + //negacao
-        ModificacaoPH + //negacao
-        ModificacaoTemp //negacao
+    // SomaFacilNegacao =
+    //     ExtracaoRapida + //negacao
+    //     ModificacaoPH + //negacao
+    //     ModificacaoTemp //negacao
 
     atualizar()
 }
@@ -446,14 +451,14 @@ function Proximo() { //funcao para passar turno
     decantarR1 = 0
     filtrarR2 = filtrarR1
     filtrarR1 = 0
-    //NivelJogador()
+    NivelJogador()
     if (dinheiro <= dinheiroMax - mesada) { dinheiro += mesada }//limite para nao ultrapassar de 30 dinheiros
     else { dinheiro = dinheiroMax }
     turno += 1 //para saber quantos turnos se tem
 
-    //Trofeus()
     GameOver()
-
+    Trofeus()
+    
     aparecerLog(`⭐Turno ${turno}⭐`)
     qualProbabilidade()
     eventosAleatorios()
@@ -483,7 +488,8 @@ function Filtro() {
         ExtracaoRapida = 1
         acaoDinheiro(filtrocost, filtroAcao)
         aparecerLog(`Entrou em processo de filtragem.`)
-
+        ExtracaoRapida = false
+        Trofeus()
     }
     else if ((molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) && !(NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)) {
 
@@ -528,6 +534,7 @@ function TaxaDeReacao(PHa,tempa){
     if (ProbDinamica >= 100){
         ProbDinamica = 100
     }
+    Trofeus()
 }
 function qualProbabilidade(){ //funcao para definir qual funcao de probabilidade sera executada
     if (equilibrio){
@@ -713,6 +720,7 @@ function upgradeReator() {
         retirarAcaoDinheiro(reatorCost, reatorAcao);
         molMaxReator += 4;
         NupgradeReator = 1;
+        Trofeus()
         atualizar();
         aparecerLog(`Melhorou seu Reator`)
 
@@ -737,6 +745,7 @@ function upgradePHmetro() {
         PHmax += 1;
         PHmin -= 1;
         NupgradePH = 1;
+        Trofeus()
         atualizar();
         aparecerLog(`Melhorou seu pHmetro`)
     }
@@ -758,6 +767,7 @@ function upgradeTermometro() {
         tempMax += 1;
         tempMin -= 1;
         NupgradeTemp = 1;
+        Trofeus()
         atualizar();
         aparecerLog(`Melhorou sua chapa térmica`)
 
@@ -865,42 +875,58 @@ function testelogica() {
 function Trofeus() {
 
     //Mestrado em 11 Turnos
-    if (NivelAtual == NivelMestrado && turno <= 11) {
-        Mestrado11turnos = 1
-    }
+    if (turno <= 11) {
+        if (NivelAtual >= NivelMestrado) {
+            Mestrado11turnos = true
+            TrofeusClass.mestre11 = true
+            console.log(TrofeusClass.mestre11)
+        }
+    } 
     //Doutorado em 22 turnos
-    if (NivelAtual == NivelDoutorado && turno <= 22) {
-        Doutorado22turnos = 1
+    if (turno <= 22) {
+        if (NivelAtual >= NivelDoutorado){
+            Doutorado22turnos = true
+            TrofeusClass.doutor22 = true
+        }
     }
     //Chegar em 100% de probabilidade
+    // Problema: Probabilidade dinamica muda sempre que é mudado algo no Ph e Temp
+    // Verificar sempre quando muda a chance da reacao ocorrer
     if (ProbDinamica >= 100) {
-        Prob100 = 1
+        Prob100 = true
     }
     //Chegar em 0% de probabilidade
-    if (Prob0 <= 0) {
-        Prob0 = 1
+    if (ProbDinamica <= 0) {
+        Prob0 = true
     }
     //Aqui significa que vc modificou Temperatura e PH
-    if (ModificacaoTemp == 1 || ModificacaoPH == 1) {
-        ModificacaoTempPH = 1
+    if (!ModificacaoTemp || !ModificacaoPH) {
+        ModificacaoTempPH = false
     }
     //Aqui diz que vc fez upgrade de algum equipamento
     if (NupgradeTemp == 1 || NupgradeReator == 1 || NupgradePH == 1) {
-        NupgradeEquipamentos = 1
+        NupgradeEquipamentos = false
     }
-
+    if (jogoTerminado) {
+        if (NivelAtual == NivelIC){
+            TerminarJogoIC = true
+        }
+    }
+    atualizar()
 }
 
 
 function GameOver() {
-    if (turno == tempoDeJogo) { //em 20 turnos
+    if (turno == tempoDeJogo) { //em X turnos
+        jogoTerminado = true
+        Trofeus()
         if (JogoNivel == 1) {
             if (molextraidos >= objPrincipal) { //fazer 18 mols em 20 turnos
                 aparecerLog(`O jogo acabou! Você ganhou no nível fácil.`)
-                variaveisIniciais()
+                //variaveisIniciais()
             } else {
                 aparecerLog(`O jogo acabou! Você perdeu no nivel facil.`)
-                variaveisIniciais()
+                //variaveisIniciais()
             }
 
         }
@@ -950,23 +976,20 @@ function FimDeJogo(){
      
     `)
 }
-function QuaisTrofeus() {
-    trofeusAdquiridos =
-        `
-    Objetivo: ${nivelDoJogo} <br>
-    Trofeus adquiridos: <br>
-    Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "Mestre dos onze" : "Ainda não"}<br>
-    Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "Doutor dos 22" : "Ainda não"}<br>
-    Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "Impressionante 'O'" : "Esse não vai ser fácil hein"}<br>
-    Chegar em probabilidade de 100%: ${Prob100 ? "Essa foi difícil mas conseguiu" : "Essa você consegue?"}<br>
-    Chegar em probabilidade de 0%: ${Prob0 ? "Uhul, conseguiu" : "Ainda não chegou"}<br>
-    Nao fazer nenhuma modulaçao do pH: ${ModificacaoPH ? "Tente não fazer essa" : "Infelizmente não foi dessa vez"}<br>
-    Nao fazer nenhuma modulaçao da Temperatura: ${ModificacaoTemp ? "Não feito por enquanto" : "Não era para ter feito 😔"}<br>
-    Nao fazer nenhuma modulaçao do pH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto" : "Fez :("}<br>
-    Nao usar o método de extraçao rapida: ${ExtracaoRapida ? "Não usado por enquanto" : "Usou #Fail"}<br>
-    Nao fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda" : "Poxa, infelizmente você fez"}<br>
-    `
+
+class TrofeusClass {
+    mestre11 = false
+    doutor22 = false
+    terJGIC = false
+    ProbabilidadeEm100 = false
+    ProbabilidadeEm0 = false
+    NaoModificarPH = true
+    NaoModificarTemp = true
+    NaoModificarPHeTemp = true
+    NaoUsarMetodoExtracaoRapida = true
+    NaoFazerUpgrade = true
 }
+TrofeusJogador = TrofeusClass()
 /*
 *Sobre a função aparecerLog()
  *  a função mostra uma lista com conteudo das coisas que aconteceram com o jogador
@@ -1041,6 +1064,7 @@ function probc() {
             }
         }
     }
+    Trofeus()
     atualizar()
 }
 
@@ -1100,5 +1124,25 @@ function teste() {
 
 
 //acertar probabilidade *resolvido*
-//quebrar loop game over (alert)
-//troufeus
+//quebrar loop game over (alert) *depende do front*
+//troufeus *aparentemente resolvido*
+//resolver iniciacao cientifica *resolvido*
+
+/*
+//trofeus ja resolvidos:
+ mestre com 11 turnos
+ doutor com 22 turnos
+ chegar em 100%
+ chegar em 0%
+ nao mudar temp
+ nao mudar ph
+ terminar o jogo com ic
+nao mudar temp e ph
+nao usar o metodo de extracao rapida
+nao fazer nenhum upgrade de equipamento
+
+
+
+
+// falta resolver:
+*/
