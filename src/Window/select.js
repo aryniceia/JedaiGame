@@ -16,8 +16,7 @@ function Select () {
     const [hasLevel, setHasLevel]  = useState(!!localStorage.getItem('jedai/level'))
     const [hasTime, setHasTime] = useState(!!localStorage.getItem('jedai/time'))
     const [hasTabuleiro, setHasTabuleiro] = useState(!!localStorage.getItem('jedai/tabuleiro'))
-
-
+    
 
     const save = () => {
         if ((hasName && hasLevel &&  hasTime && hasTabuleiro)) {
@@ -46,8 +45,8 @@ function Select () {
         localStorage.removeItem('jedai/tabuleiro')
         setHasTabuleiro(false)
 
-        setPersonagem('')
-        localStorage.removeItem('jedai/personagem')
+        /*setPersonagem('')
+        localStorage.removeItem('jedai/personagem')*/
     }
 
     useEffect(() => {

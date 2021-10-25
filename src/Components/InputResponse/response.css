@@ -730,3 +730,23 @@
         }
 
 /*-----------------------------------------------------------------------------------------------*/
+
+/*  Redimensionamento das Telas 
+@media only screen and (max-width: 1024px) {
+  .cabeçalho {
+    align-items: center;
+    width: 100%;
+  }
+  .board {
+    align-items: center;
+    width: 100%;
+  }
+  .barra_lateral {
+    align-items: center;
+    width: 100%;
+  }
+  .barra_inferior {
+    align-items: center;
+    width: 100%;
+  }
+}*/
