@@ -1,3 +1,39 @@
+// class PersonagensDefault {
+//     constructor(ProbInicial, molDoutorado, molMestrado, dinheiro, acao){
+//     this._ProbInicial = ProbInicial
+//     this._molMestrado = molMestrado
+//     this._molDoutorado = molDoutorado
+//     this._dinheiro = dinheiro
+//     this._acao = acao
+//     }
+// }
+// class Capi extends PersonagensDefault {
+//     constructor(ProbInicial, molDoutorado, molMestrado, dinheiro, acao, vantagem, desvantagem, name){
+//         super(ProbInicial)
+//         super(molMestrado)
+//         super(molDoutorado)
+//         super(dinheiro)
+//         super(acao)
+//         this._name = name
+//         this._vantagem = vantagem
+//         this._desvantagem = desvantagem
+//     }
+// }
+// // var personagem = new Capi(20, 10, 5, 222)
+// var character = new Capi('10', '20', '13', '40', '6', '4', '534', '24234')
+class Person {
+    constructor(name){
+        this._name = name
+    }
+}
+class Developer extends Person {
+    constructor(name, idade){
+        super(name)
+        this._idade = idade
+    }
+}
+var desenvolvedor = Developer('Lorran', 25)
+
 //DECLARAÇÃO DE VARIAVEIS INÍCIO -----------------
 //import { func } from 'assert-plus';
 //import React from 'react';
@@ -1124,7 +1160,7 @@ function teste() {
 //localStorage.getItem('jedai/level') variavel de nivel
 //localStorage.getItem('jedai/time') variavel de rodadas de jogo
 //localStorage.getItem('jedai/tabuleiro')
-
+//localStorage.getItem('jedai/personagem')
 
 //acertar probabilidade *resolvido*
 //quebrar loop game over (alert) *depende do front*
