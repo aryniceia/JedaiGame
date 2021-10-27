@@ -21,6 +21,7 @@ if (tabuleiro == 1) {
     produto2 = "Biodiesel"
     equilibrio = 0
     reversivel = document.getElementById('reversivel').innerHTML = `→`
+    //centrifuga
 }
 if (tabuleiro == 2) {
     reagente1 = "Água"
@@ -29,6 +30,7 @@ if (tabuleiro == 2) {
     produto2 = "Ácido Graxo"
     equilibrio = 1
     reversivel = document.getElementById('reversivel').innerHTML = `⇌`
+    //centrifuga
 }
 if (tabuleiro == 3) {
     reagente1 = "Hidróxido de Sódio"
@@ -37,6 +39,7 @@ if (tabuleiro == 3) {
     produto2 = "Sal de Ácido Graxo"
     equilibrio = 0
     reversivel = document.getElementById('reversivel').innerHTML = `→`
+    //filtro
 }
 fatorDeConversaoReagente1 = 3
 fatorDeConversaoReagente2 = 1
@@ -67,7 +70,7 @@ NivelMestradoBoolean = false
 NivelDoutoradoBoolean = false
 molMestrado = 9;
 molDoutorado = 15;
-Faculdade = `IC`;
+Faculdade = `Iniciação Científica`;
 //Teste A B Grupo A sao dos reagentes, grupo B PH  e C Temperatura
 GrupoReagentes = 1; //A = Reagentes
 GrupoPH = 2; //B = PH
@@ -230,7 +233,7 @@ function variaveisIniciais() {
     NivelDoutoradoBoolean = true
     molMestrado = 9;
     molDoutorado = 15;
-    Faculdade = `IC`;
+    Faculdade = `Iniciação Científica`;
     //Teste A B Grupo A sao dos reagentes, grupo B PH  e C Temperatura
     GrupoReagentes = 1; //A = Reagentes
     GrupoPH = 2; //B = PH
@@ -363,7 +366,7 @@ function SubirPH() { //versao 2 do botao subirPH
     GrupoPHRT = GrupoPH; //definindo qual grupo pertence
     PHsinal = 1; //sinal positivo indica que o PH vai aumentar
     ModificacaoPH = 0;
-    fraseLog = `Aumentou pH`
+    fraseLog = `Subiu pH`
     acaoDinheiro(PHcost, PHAcao); // indica a funcao o custo do PH e quantas acoes ele consome
 
 }
@@ -1129,20 +1132,16 @@ function teste() {
 //resolver iniciacao cientifica *resolvido*
 
 /*
-//trofeus ja resolvidos:
- mestre com 11 turnos
- doutor com 22 turnos
- chegar em 100%
- chegar em 0%
- nao mudar temp
- nao mudar ph
- terminar o jogo com ic
-nao mudar temp e ph
-nao usar o metodo de extracao rapida
-nao fazer nenhum upgrade de equipamento
-
-
-
 
 // falta resolver:
 */
+function botaoConfirmar(){
+    personagem = localStorage.getItem('jedai/personagem')
+    console.log(personagem)
+    testedepersonagens = 1
+    mudarStatus()
+}
+function mudarStatus(){
+    testedepersonagens = 1
+    console.log(testedepersonagens)
+}
