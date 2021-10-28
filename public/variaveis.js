@@ -70,7 +70,7 @@ NivelMestradoBoolean = false
 NivelDoutoradoBoolean = false
 molMestrado = 9;
 molDoutorado = 15;
-Faculdade = `Iniciação Científica`;
+Faculdade = `IC`;
 //Teste A B Grupo A sao dos reagentes, grupo B PH  e C Temperatura
 GrupoReagentes = 1; //A = Reagentes
 GrupoPH = 2; //B = PH
@@ -233,7 +233,7 @@ function variaveisIniciais() {
     NivelDoutoradoBoolean = true
     molMestrado = 9;
     molDoutorado = 15;
-    Faculdade = `Iniciação Científica`;
+    Faculdade = `IC`;
     //Teste A B Grupo A sao dos reagentes, grupo B PH  e C Temperatura
     GrupoReagentes = 1; //A = Reagentes
     GrupoPH = 2; //B = PH

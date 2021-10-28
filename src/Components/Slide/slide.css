@@ -1,12 +1,11 @@
 .image-char {
-    width: 80px;
-}
-
-.janela-info {
-    width: 100%;
+    width: 600px;
+    position: absolute;
+    margin-top: 113px;
+    margin-left: -313px;
 }
 
 .carrossel >  div >  div { 
-    width: 500px;
-
+    width: 600px;
+    height: 592px;
 }

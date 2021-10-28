@@ -122,9 +122,9 @@ function Game () {
     function Filtro(){
         window.Filtro()
     };
-    function confirmacao(){
+    /*function confirmacao(){
         window.confirmacao()
-    };
+    };*/
     function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
@@ -277,8 +277,8 @@ function Game () {
                             <img alt="add alt aqui" className="profile-char" src={Personagens[localStorage.getItem('jedai/personagem')].url}/>
                             <div className="bar"> {/* Barra com as info do personagem*/}
                                 <div className="usernameLevel">
-                                    user: {localStorage.getItem('jedai/username')}<br></br>
-                                    nível: <span id='nivelAtual'></span>{/*{levels[localStorage.getItem('jedai/level')]} */}
+                                    • user: {localStorage.getItem('jedai/username')}<br></br>
+                                    • nível: <span id='nivelAtual'></span>{/*{levels[localStorage.getItem('jedai/level')]} */}
                                 </div>
                             </div>
                         </div>
