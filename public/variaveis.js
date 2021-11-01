@@ -21,18 +21,8 @@
 // }
 // // var personagem = new Capi(20, 10, 5, 222)
 // var character = new Capi('10', '20', '13', '40', '6', '4', '534', '24234')
-class Person {
-    constructor(name){
-        this._name = name
-    }
-}
-class Developer extends Person {
-    constructor(name, idade){
-        super(name)
-        this._idade = idade
-    }
-}
-var desenvolvedor = Developer('Lorran', 25)
+
+// var desenvolvedor = Developer('Lorran', 25)
 
 //DECLARAÇÃO DE VARIAVEIS INÍCIO -----------------
 //import { func } from 'assert-plus';
@@ -1028,7 +1018,7 @@ class TrofeusClass {
     NaoUsarMetodoExtracaoRapida = true
     NaoFazerUpgrade = true
 }
-TrofeusJogador = TrofeusClass()
+// TrofeusJogador = TrofeusClass()
 /*
 *Sobre a função aparecerLog()
  *  a função mostra uma lista com conteudo das coisas que aconteceram com o jogador
@@ -1155,7 +1145,6 @@ function teste() {
 
 
 
-
 //o arquivo que estou trabalhando é o select.js
 //localStorage.getItem('jedai/level') variavel de nivel
 //localStorage.getItem('jedai/time') variavel de rodadas de jogo
@@ -1171,13 +1160,9 @@ function teste() {
 
 // falta resolver:
 */
-function botaoConfirmar(){
-    personagem = localStorage.getItem('jedai/personagem')
-    console.log(personagem)
-    testedepersonagens = 1
-    mudarStatus()
-}
-function mudarStatus(){
-    testedepersonagens = 1
-    console.log(testedepersonagens)
-}
+
+
+// function mudarStatus(){
+//     testedepersonagens = 1
+//     console.log(testedepersonagens)
+// }

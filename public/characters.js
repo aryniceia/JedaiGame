@@ -42,4 +42,63 @@ compra de triacilglicerideo $$$ e Acao
 Acao 
 
 */
+// personagem = 0
+window.onload = botaoConfirmar
+function botaoConfirmar(){
+    numeroDoPersonagem = localStorage.getItem('jedai/personagem')
+    console.log("ok1")
+    var personagem = new PersonagemDefault(1, 2, 3, 4, 5)
 
+    // var personagem = new PersonagemDefault(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+    console.log(personagem.acao)
+}
+class PersonagemDefault {
+    constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
+        this.ProbInicial = ProbInicial
+        this.molMestrado = molMestrado
+        this.molDoutorado = molDoutorado
+        this.dinheiro = dinheiro
+        this.acao = acao
+    }
+}
+class TestandoEsseKCT {
+    constructor(name) {
+        this.name = name
+    }
+    
+}
+// var personagem = TestandoEsseKCT("Lorran")
+// class Capi extends PersonagemDefault {
+//     constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
+//         // ProbInicial = 40
+//         super(ProbInicial)
+//         super(molMestrado)
+//         super(molDoutorado)
+//         super(dinheiro)
+//         super(acao)
+//         // super(ProbInicial)
+//         // super(this.molMestrado)
+        
+//     }
+// }
+class Guara extends PersonagemDefault {
+
+}
+class Cuca extends PersonagemDefault {
+
+}
+class Miquito extends PersonagemDefault {
+
+}
+class Pintada extends PersonagemDefault {
+
+}
+class Tuca extends PersonagemDefault {
+
+}
+// class Developer extends Person {
+//     constructor(name, idade){
+//         super(name)
+//         this._idade = idade
+//     }
+// }
