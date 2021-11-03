@@ -1,11 +1,14 @@
-.image-char {
-    width: 600px;
-    position: absolute;
-    margin-top: 113px;
-    margin-left: -313px;
-}
+@import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap);
 
+.image-char {
+    width: 30px;
+    height: 30px;
+}
+.textInfo {
+    color: white;  
+    font-family: 'Chakra Petch';
+}
 .carrossel >  div >  div { 
-    width: 600px;
-    height: 592px;
+    width: 520px;
+    height: 590px;
 }

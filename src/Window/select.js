@@ -17,7 +17,6 @@ function Select () {
     const [hasTime, setHasTime] = useState(!!localStorage.getItem('jedai/time'))
     const [hasTabuleiro, setHasTabuleiro] = useState(!!localStorage.getItem('jedai/tabuleiro'))
     
-
     const save = () => {
         if ((hasName && hasLevel &&  hasTime && hasTabuleiro)) {
             localStorage.setItem('jedai/username', name)

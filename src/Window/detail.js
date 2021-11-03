@@ -10,7 +10,6 @@ function Detail () {
             <div className='Detail'>
                 <h1 className='App-title'>Detalhes</h1>
                 <Slide></Slide>
-
             </div>
         </Page>
     );
