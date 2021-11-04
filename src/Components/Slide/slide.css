@@ -1,14 +1,53 @@
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap);
 
 .image-char {
-    width: 30px;
-    height: 30px;
+    width: 300px;
 }
 .textInfo {
     color: white;  
     font-family: 'Chakra Petch';
 }
-.carrossel >  div >  div { 
+/*.carrossel >  div >  div { 
     width: 520px;
     height: 590px;
+}*/
+.left {
+    width: 72px;
+    margin-top: 38px;
+    margin-left: -501px;
+    transition: transform 250ms;
 }
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+  }
+  
+.slide {
+    display: inline-block;
+    height: 453px;
+    width: 500px;
+    border-radius: 40px;
+}
+
+/* Buttons */
+    .slideshowDots {
+        text-align: center;
+    }
+    .slideshowDot {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 15px 7px 0px;
+        background-color: #c4c4c4;
+    }
+    .slideshowDot.active {
+        background-color: #6a0dad;
+    }

@@ -19,6 +19,7 @@ export default function Routes() {
       <Route path="/credit" component={Credit}/>
       <Route path="/game" component={Game}/>
       <Route path="/detail" component={Detail}/>
+      {/*<Route path="/gameover" component={Over}/>*/}
     </Router>
   );
 }

@@ -47,7 +47,6 @@ function Select () {
         /*setPersonagem('')
         localStorage.removeItem('jedai/personagem')*/
     }
-
     useEffect(() => {
         if (name !== '') {setHasName(true)}
         if (level !== 'padrao') {setHasLevel(true)}
@@ -116,9 +115,9 @@ function Select () {
                                 className="input" id="tabuleiro" 
                                 required>
                                     <option disabled value="padrao">Selecione o tabuleiro...</option>
-                                    <option value="1">Sabão</option>
+                                    <option value="1">Biodisel</option>
                                     <option value="2">Ácido Graxo</option>
-                                    <option value="3">Biodisel</option>
+                                    <option value="3">Sabão</option>
                             </select>
                             {(!hasTabuleiro) && <span style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
                         </div>  

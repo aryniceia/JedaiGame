@@ -17,7 +17,10 @@ import TucanoBody from'../../img/char/body/tucano.png';
 
 import Centrifuga from '../../img/elements/centrifuga.png';
 import FiltroElement from '../../img/elements/filtro.png';
-import Caderno from '../../img/graxo_caderno.png';
+
+import Acido from '../../img/graxo_caderno.png';
+import Sabao from '../../img/sabao_caderno.png';
+import Bio from '../../img/biodiesel_caderno.png';
 
 // Variáveis das inputs //
     /*const levels = {
@@ -78,6 +81,21 @@ import Caderno from '../../img/graxo_caderno.png';
             url: TucanoBody
         }
     }
+    const Caderno = {
+        1: {
+            name: "Bioediesel",
+            url: Bio
+        },
+        2: {
+            name: "Ácido Graxo",
+            url: Acido
+        },
+
+        3: {
+            name: "Sabão",
+            url: Sabao
+        },
+    }
 
 function Game () {
     function Proximo(){
@@ -134,7 +152,7 @@ function Game () {
         popup.classList.toggle("show");
     };
     function myFunction2() {
-        var popup = document.getElementById("cadernoPopup");
+        var popup = document.getElementById('cadernoPopup');
         popup.classList.toggle("show"); //toggle = alterna as classes
     };
     function escFunction (event) {
@@ -180,7 +198,7 @@ function Game () {
 
                             <button className="arrowRight" title="Consulte seu caderno!" onClick={myFunction2}>
                                 <span className="cadernotext" id="cadernoPopup">
-                                    <img alt="Imagem do cardeno com instruções da extração de Ácido Graxo" id="caderno" src={Caderno}></img>
+                                    <img alt="Imagem do cardeno com instruções da extração de Ácido Graxo" id="caderno" src={Caderno[localStorage.getItem('jedai/tabuleiro')].url}/>
                                 </span>
                             </button>
                         
