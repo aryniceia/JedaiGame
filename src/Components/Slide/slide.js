@@ -67,7 +67,6 @@ function Slideshow() {
             style={{ backgroundColor }}
           >
               <img className="image-char" src={backgroundColor} />
-              <h1></h1>
           </div>
         ))}
     </div>
