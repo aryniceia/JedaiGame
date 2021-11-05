@@ -3,7 +3,6 @@ import Page from '../../src/Components/Pages/page';
 import Slide from '../Components/Slide/slide';
 import './Styles/detail.css';
 
-
 function Detail () {
     return (
         <Page>

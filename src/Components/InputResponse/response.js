@@ -168,6 +168,9 @@ function Game () {
             popupCaderno.classList.remove("show");
         }
     };
+   /* function GameOver() {
+        window.GameOver
+    }*/
 
     useEffect(() => {
         document.addEventListener("keydown", escFunction, false);

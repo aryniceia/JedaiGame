@@ -1,11 +1,16 @@
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap);
 
 .image-char {
-    width: 300px;
+    width: 310px;
+    position: absolute;
+    margin-top: 166px;
+    margin-left: -60px;
 }
 .textInfo {
     color: white;  
     font-family: 'Chakra Petch';
+    text-align: initial;
+    word-break: break-word;
 }
 /*.carrossel >  div >  div { 
     width: 520px;
@@ -30,7 +35,7 @@
   
 .slide {
     display: inline-block;
-    height: 457px;
+    height: 460px;
     width: 500px;
     border-radius: 40px;
 }

@@ -976,7 +976,6 @@ function GameOver() {
 function FimDeJogo(){
     alert(`Resultado do Jogo:
     Turnos: ${turno}
-     
     `)
 }
 
