@@ -75,7 +75,7 @@ function Select () {
                                 type="string" 
                                 required>
                             </input>
-                            {(!hasName) && <span style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
+                            {(!hasName) && <span className='campo' style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
                         </div>
 
                         <div className="level">
@@ -90,7 +90,7 @@ function Select () {
                                     <option value="3">Reprovação</option>
                                     <option value="4">Jubilator</option>
                             </select>
-                            {(!hasLevel) && <span style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
+                            {(!hasLevel) && <span className='campo' style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
                         </div>
 
                         <div className="time">
@@ -104,7 +104,7 @@ function Select () {
                                     <option value="30">x30 rodadas</option>
                                     <option value="50">x50 rodadas</option>
                             </select>
-                            {(!hasTime) && <span style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
+                            {(!hasTime) && <span className='campo' style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
                         </div>
 
                         <div className="tabuleiro">
@@ -119,7 +119,7 @@ function Select () {
                                     <option value="2">Ácido Graxo</option>
                                     <option value="3">Sabão</option>
                             </select>
-                            {(!hasTabuleiro) && <span style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
+                            {(!hasTabuleiro) && <span className='campo' style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
                         </div>  
                     </div>
                 </div>

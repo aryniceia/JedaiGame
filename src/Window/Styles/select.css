@@ -4,7 +4,7 @@
   .bar-top {
     background: rgba(0, 0, 0, 0.456);
     border-radius: 20px;
-    height: 24vh;
+    height: 23vh;
     width: 600px;
     margin-top: 20px;
   }
@@ -45,9 +45,12 @@
     font-size: 18px;
     padding: 6px;
   }
+  .campo {
+    font-size: 14px;
+  }
   .input {
     font-family: 'Chakra Petch';
-    font-size: 12.5px;
+    font-size: 14.5px;
     outline: none; 
     border-radius: 20px;
     border: none;
@@ -67,7 +70,8 @@
     font-family: 'Chakra Petch';
     font-size: 25px;
     color: white;
-    background: none;
+    background: #00000063;
+    border-radius: 20px;
     border: none;
     text-decoration: none;
     text-align: center;
