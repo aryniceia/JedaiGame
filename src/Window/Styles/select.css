@@ -4,7 +4,7 @@
   .bar-top {
     background: rgba(0, 0, 0, 0.456);
     border-radius: 20px;
-    height: 22vh;
+    height: 24vh;
     width: 600px;
     margin-top: 20px;
   }
@@ -42,19 +42,18 @@
     font-family: 'Chakra Petch';
     color: white;
     text-align: left;
-    font-size: 15px;
+    font-size: 18px;
     padding: 6px;
   }
   .input {
     font-family: 'Chakra Petch';
-    font-size: 12px;
+    font-size: 12.5px;
     outline: none; 
     border-radius: 20px;
     border: none;
   }
 /* Estilo dos menus select */
 
- 
 
 /*Estilo dos botões*/
   .buttons1 {
@@ -66,11 +65,12 @@
   }
   .return, .detail, .random, .save, .delete {
     font-family: 'Chakra Petch';
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     background: none;
     border: none;
     text-decoration: none;
+    text-align: center;
   }
   .return:hover, .detail:hover, .random:hover, .save:hover, .delete:hover {
     text-decoration: underline;

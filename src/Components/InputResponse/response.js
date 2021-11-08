@@ -152,7 +152,7 @@ function Game () {
         popup.classList.toggle("show");
     };
     function myFunction2() {
-        var popup = document.getElementById('cadernoPopup');
+        var popup = document.getElementById("cadernoPopup");
         popup.classList.toggle("show"); //toggle = alterna as classes
     };
     function escFunction (event) {
@@ -168,10 +168,6 @@ function Game () {
             popupCaderno.classList.remove("show");
         }
     };
-   /* function GameOver() {
-        window.GameOver
-    }*/
-
     useEffect(() => {
         document.addEventListener("keydown", escFunction, false);
     
@@ -179,6 +175,10 @@ function Game () {
           document.removeEventListener("keydown", escFunction, false);
         };
       }, []);
+
+    /* function GameOver() {
+        window.GameOver
+    }*/
 
     return (
         <div className="App">
@@ -201,7 +201,7 @@ function Game () {
 
                             <button className="arrowRight" title="Consulte seu caderno!" onClick={myFunction2}>
                                 <span className="cadernotext" id="cadernoPopup">
-                                    <img alt="Imagem do cardeno com instruções da extração de Ácido Graxo" id="caderno" src={Caderno[localStorage.getItem('jedai/tabuleiro')].url}/>
+                                    <img alt="Imagem do cardeno com instruções das repectivas extrações" id="caderno" src={Caderno[localStorage.getItem('jedai/tabuleiro')].url}/>
                                 </span>
                             </button>
                         

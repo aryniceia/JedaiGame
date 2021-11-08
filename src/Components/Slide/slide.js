@@ -35,7 +35,7 @@ const items = [
             src: Mamute, colors: '#FF6846'},
 
     {id: 5, title: '🧪 Miquito', idade:'🧬 Idade: 21 anos', altura:'📏 Altura: 1,60m', peso:'⚖️ Peso: 55kg ', 
-            descricao:'📜 Bio:Não se conhece alguém que seja mais rápido para montar uma coluna de separação ou limpar o rotaevaporador. Pena que quase sempre tem que recomeçar seus experimentos, porque esqueceu algum reagente ou de acertar algum parâmetro.',
+            descricao:'📜 Bio: Não se conhece alguém que seja mais rápido para montar uma coluna de separação ou limpar o rotaevaporador. Pena que quase sempre tem que recomeçar seus experimentos, porque esqueceu algum reagente ou de acertar algum parâmetro.',
             src: Mico, colors: '#6B638C'},  
 
     {id: 6, title: '🧪 Pintada', idade:'🧬 Idade: 19 anos', altura:'📏 Altura: 1,70m ', peso:'⚖️ Peso: 60kg ',
