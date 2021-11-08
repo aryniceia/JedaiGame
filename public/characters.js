@@ -43,15 +43,6 @@ Acao
 
 */
 // personagem = 0
-window.onload = botaoConfirmar
-function botaoConfirmar(){
-    numeroDoPersonagem = localStorage.getItem('jedai/personagem')
-    console.log("ok1")
-    var personagem = new PersonagemDefault(1, 2, 3, 4, 5)
-
-    // var personagem = new PersonagemDefault(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
-    console.log(personagem.acao)
-}
 class PersonagemDefault {
     constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
         this.ProbInicial = ProbInicial
@@ -61,44 +52,69 @@ class PersonagemDefault {
         this.acao = acao
     }
 }
-class TestandoEsseKCT {
-    constructor(name) {
-        this.name = name
+
+class Capi extends PersonagemDefault {
+    constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
+        super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
     }
-    
 }
-// var personagem = TestandoEsseKCT("Lorran")
-// class Capi extends PersonagemDefault {
-//     constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
-//         // ProbInicial = 40
-//         super(ProbInicial)
-//         super(molMestrado)
-//         super(molDoutorado)
-//         super(dinheiro)
-//         super(acao)
-//         // super(ProbInicial)
-//         // super(this.molMestrado)
-        
-//     }
-// }
-class Guara extends PersonagemDefault {
+    class Guara extends PersonagemDefault {
+        constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
+            super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+        }
+    }
+    class Cuca extends PersonagemDefault {
+        constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
+            super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+        }
+    }
+    class Miquito extends PersonagemDefault {
+        constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
+            super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+        }
+    }
+    class Pintada extends PersonagemDefault {
+        constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
+            super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+        }
+    }
+    class Tuca extends PersonagemDefault {
+        constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
+            super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+        }
+    }
+    numeroDoPersonagem = parseInt(localStorage.getItem('jedai/personagem'))
+    if (numeroDoPersonagem == 1){
+        var personagem = new Capi(6, 7, 8, 9, 10)
+    }else if (numeroDoPersonagem == 2){
+        var personagem = new Guara()
+    }else if (numeroDoPersonagem == 3){
+        var personagem = new Cuca()
+    }else if (numeroDoPersonagem == 4){
+        var personagem = new Miquito()
+    }else if (numeroDoPersonagem == 5){
+        var personagem = new Pintada()
+    }else if (numeroDoPersonagem == 6){
+        var personagem = new Tuca()
+    }else {
+        console.log('error!')
+    }
 
-}
-class Cuca extends PersonagemDefault {
 
-}
-class Miquito extends PersonagemDefault {
-
-}
-class Pintada extends PersonagemDefault {
-
-}
-class Tuca extends PersonagemDefault {
-
-}
-// class Developer extends Person {
-//     constructor(name, idade){
-//         super(name)
-//         this._idade = idade
-//     }
-// }
+    //motivo de nao ter usado  switch: nao funciona
+    // switch (numeroDoPersonagem){
+    //     case 1:
+    //         var personagem = new Capi(6, 7, 8, 9, 10)
+    //     case 2:
+    //         var personagem = new Guara()
+    //     case 3:
+    //         var personagem = new Cuca()
+    //     case 4:
+    //         var personagem = new Miquito()
+    //     case 5:
+    //         var personagem = new Pintada()
+    //     case 6:
+    //         var personagem = new Tuca()
+    //     default:
+    //         console.log('error!')
+    // }
