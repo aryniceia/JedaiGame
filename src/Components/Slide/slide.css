@@ -4,13 +4,53 @@
     width: 310px;
     position: absolute;
     margin-top: 166px;
-    margin-left: -60px;
+    margin-left: 233px;
 }
 .textInfo {
     color: white;  
     font-family: 'Chakra Petch';
     text-align: initial;
-    word-break: break-word;
+    margin-top: -102px;
+}
+.titleCapi {
+    color: white;  
+    font-family: 'Chakra Petch';
+    text-align: initial;
+    margin-top: 18px;
+}
+.ageCapi, .heighCapi, .weightCapi {
+    color: white;  
+    font-family: 'Chakra Petch';
+    text-align: initial;
+    margin-top: -12px;
+}
+
+.age {
+    color: white;  
+    font-family: 'Chakra Petch';
+    text-align: initial;
+    white-space: pre-wrap;
+    margin-top: -96px;
+}
+.heigh {
+    color: white;  
+    font-family: 'Chakra Petch';
+    text-align: initial;
+    margin-top: -86px;
+}
+.weight {
+    color: white;  
+    font-family: 'Chakra Petch';
+    text-align: initial;
+    margin-top: -76px;
+}
+.bio {
+    font-family: 'Chakra Petch';
+    color: white;
+    white-space: pre-wrap;
+    text-align: initial;
+    margin-left: 20px;
+    margin-top: -13px;
 }
 /*.carrossel >  div >  div { 
     width: 520px;
@@ -34,7 +74,7 @@
   }
   
 .slide {
-    display: inline-block;
+    display: inline-grid;
     height: 460px;
     width: 500px;
     border-radius: 40px;
