@@ -102,10 +102,10 @@ filtroAcao = 2;
 QualMol = null; //funçao utilizada para saber qual reagente sera aumentado
 //custo dos reagentes
 costReagente1 = 2; //custo do H2O como 2 dinheiros
-costReagente2 = 5; //custo do Triglicerideos como 5
+costReagente2 = personagem.costReagente2; //custo do Triglicerideos como 5
 //açao que os reagentes irao gastar podendo ser modificados facilmente por aqui
 acaoReagente1 = 1; //numero de açoes para comprar H2O
-acaoReagente2 = 1; //
+acaoReagente2 = personagem.acaoReagente2; //
 
 //Método de extração longo
 decantarR1 = 0;
@@ -266,10 +266,10 @@ function variaveisIniciais() {
     QualMol = null; //funçao utilizada para saber qual reagente sera aumentado
     //custo dos reagentes
     costReagente1 = 2; //custo do H2O como 2 dinheiros
-    costReagente2 = 5; //custo do Triglicerideos como 5
+    costReagente2 = personagem.costReagente2; //custo do Triglicerideos como 5
     //açao que os reagentes irao gastar podendo ser modificados facilmente por aqui
     acaoReagente1 = 1; //numero de açoes para comprar H2O
-    acaoReagente2 = 1; //
+    acaoReagente2 = personagem.acaoReagente2; //
 
     //Método de extração longo
     decantarR1 = 0;
@@ -657,7 +657,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
 function UsarReagentes(QualReagente) { //funcao para retirar os valores dos reagentes
 
     if (QualReagente == 0) {
-        molReagente2 += 1;
+        molReagente2 += personagem.molReagente2;
         atualizar()
     }
     else if (QualReagente == 1) {
@@ -676,20 +676,20 @@ function retirarAcaoDinheiro(din, ac) { //essa funçao vai ser a unica que vai t
 //FUNÇÕES DE NÍVEL E UPGRADE INÍCIO ---------------------
 function NivelJogador() {
     if (NivelAtual == NivelIC) {
-        mesada = 10
+        mesada = 10 // -> 13
         acao = 2
-        dinheiroMax = 30
+        dinheiroMax = 30 // -> 35
     }
     else if (NivelAtual == NivelMestrado) {
-        mesada = 15
+        mesada = 15 // -> 20
         acao = 4
-        dinheiroMax = 35
+        dinheiroMax = 35 // -> 40
         Faculdade = `Mestrado`
     }
     else if (NivelAtual == NivelDoutorado) {
-        mesada = 20
+        mesada = 20 // -> 26
         acao = 6
-        dinheiroMax = 40
+        dinheiroMax = 40 // -> 45
         Faculdade = `Doutorado`
     }
 }
