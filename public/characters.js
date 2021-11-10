@@ -12,31 +12,31 @@
  * 5 - Pintada
  * 6- Tuca
     Miquito:
-        Vantagem: suas colunas de extração demoram um turno a menos;
+        ✅Vantagem: suas colunas de extração demoram um turno a menos;
         Desvantagem: Probabilidade inicial = 30
     Cuca:
-        Vantagem: Rápida para se formar ->  molMestrado = 6,  molDoutorado = 12
+        ✅Vantagem: Rápida para se formar ->  molMestrado = 6,  molDoutorado = 12
         Desvantagem: custo para melhoria dos equipamentos e uso da coluna rápida +2, 
     Tuca:
         Vantagem: 30% a mais de dinheiro por turno
-        Desvantagem: sua colunas de extração normal demora um turno a mais.
+        ✅Desvantagem: sua colunas de extração normal demora um turno a mais.
     Pintada:
-        Vantagem: Probabilidade inicial = 60
+        ✅Vantagem: Probabilidade inicial = 60
         Desvantagem: recebe 20% a menos de dinheiro por turno.
     Guará:
         Vantagem: Toda compra de triacilglicerídeo vem com 2 mols
         Desvantagem: Toda compra de triacilglicerídeo custa 2 ações
     Capi:
-        Vantagem: 1 ação a mais por turno
-        Desvantagem: Demora mais para se formar ->  molMestrado = 12, mol, molDoutorado = 18
+        ✅Vantagem: 1 ação a mais por turno
+        ✅Desvantagem: Demora mais para se formar ->  molMestrado = 12, mol, molDoutorado = 18
 
 
 
-Colunas de extracao 
+Colunas de extracao ✅
 Probabilidade Inicial ✅
 molMestrado ✅
 molDoutorado ✅
-Melhoria de equipamentos e uso da coluna rapida
+Melhoria de equipamentos e uso da coluna rapida✅
 dinheiro por turno  ✅
 compra de triacilglicerideo $$$ e Acao
 Acao 
@@ -50,6 +50,20 @@ class PersonagemDefault {
         this.molDoutorado = 15
         this.dinheiro = 10
         this.acao = 2
+        this.decantarR1 = 0;
+        this.decantarR2 = 0;
+        this.decantarR3 = 0;
+        this.decantarR4 = 0
+        this.decantarR5 = 0
+    }
+    decantar() {
+        molextraidos += decantarR4 + filtrarR2
+        decantarR4 = decantarR3
+        decantarR3 = decantarR2
+        decantarR2 = decantarR1
+        decantarR1 = 0
+        filtrarR2 = filtrarR1
+        filtrarR1 = 0
     }
 }
 
@@ -76,7 +90,20 @@ class Capi extends PersonagemDefault {
     class Miquito extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
             super(molMestrado, molDoutorado, dinheiro, acao)
+            this.decantarR1 = 0;
+            this.decantarR2 = 0;
+            this.decantarR3 = 0;
             this.ProbInicial = 30
+        }
+        decantar(){
+            molextraidos += decantarR3 + filtrarR2
+            decantarR3 = decantarR2
+            decantarR2 = decantarR1
+            decantarR1 = 0
+            filtrarR2 = filtrarR1
+            filtrarR1 = 0
+            console.log("decantarMiquito")
+            console.log(this.decantarR1, this.decantarR2, this.decantarR3, this.decantarR4)
         }
     }
     class Pintada extends PersonagemDefault {
@@ -89,10 +116,22 @@ class Capi extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
             super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
         }
+        decantar(){
+            molextraidos += decantarR5 + filtrarR2
+            decantarR5 = decantarR4
+            decantarR4 = decantarR3
+            decantarR3 = decantarR2
+            decantarR2 = decantarR1
+            decantarR1 = 0
+            filtrarR2 = filtrarR1
+            filtrarR1 = 0 
+            console.log("passou no Tuca")
+
+        }
     }
     numeroDoPersonagem = parseInt(localStorage.getItem('jedai/personagem'))
     if (numeroDoPersonagem == 1){
-        var personagem = new Capi(6, 7, 8, 9, 10)
+        var personagem = new Capi()
     }else if (numeroDoPersonagem == 2){
         var personagem = new Guara()
     }else if (numeroDoPersonagem == 3){

@@ -1,29 +1,3 @@
-// class PersonagensDefault {
-//     constructor(ProbInicial, molDoutorado, molMestrado, dinheiro, acao){
-//     this._ProbInicial = ProbInicial
-//     this._molMestrado = molMestrado
-//     this._molDoutorado = molDoutorado
-//     this._dinheiro = dinheiro
-//     this._acao = acao
-//     }
-// }
-// class Capi extends PersonagensDefault {
-//     constructor(ProbInicial, molDoutorado, molMestrado, dinheiro, acao, vantagem, desvantagem, name){
-//         super(ProbInicial)
-//         super(molMestrado)
-//         super(molDoutorado)
-//         super(dinheiro)
-//         super(acao)
-//         this._name = name
-//         this._vantagem = vantagem
-//         this._desvantagem = desvantagem
-//     }
-// }
-// // var personagem = new Capi(20, 10, 5, 222)
-// var character = new Capi('10', '20', '13', '40', '6', '4', '534', '24234')
-
-// var desenvolvedor = Developer('Lorran', 25)
-
 //DECLARAÇÃO DE VARIAVEIS INÍCIO -----------------
 //import { func } from 'assert-plus';
 //import React from 'react';
@@ -84,7 +58,7 @@ molProduto2 = 0;
 molMaxReator = 8; //antigo molMaxR1/R2
 molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
 
-let acao = 2;
+acao = personagem.acao;
 turno = 1;
 //Nível do jogador:
 jogoTerminado = false
@@ -138,6 +112,7 @@ decantarR1 = 0;
 decantarR2 = 0;
 decantarR3 = 0;
 decantarR4 = 0;
+decantarR5 = 0
 
 //Método de extração curto
 filtrarR1 = 0;
@@ -248,7 +223,7 @@ function variaveisIniciais() {
     molMaxReator = 8; //antigo molMaxR1/R2
     molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
 
-    let acao = 2;
+    acao = acaoPersonagem;
     turno = 1;
     //Nível do jogador:
     NivelAtual = 0;
@@ -301,6 +276,7 @@ function variaveisIniciais() {
     decantarR2 = 0;
     decantarR3 = 0;
     decantarR4 = 0;
+    decantarR5 = 0
 
     //Método de extração curto
     filtrarR1 = 0;
@@ -385,7 +361,7 @@ function variaveisIniciais() {
 }
 
 //DECLARAÇÃO DE VARIÁVEIS FIM -----------------------
-acao = personagem.acao
+acaoPersonagem = personagem.acao
 ProbInicial = personagem.ProbInicial
 molMestrado = personagem.molMestrado
 molDoutorado = personagem.molDoutorado
@@ -474,47 +450,22 @@ function Proximo() { //funcao para passar turno
         }
     }
     molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2
-    acao = 2
     molsAnteriores = molextraidos
-    molextraidos += decantarR4 + filtrarR2
-    //mudancaDeMolsTotal()
     
-    if (numeroDoPersonagem == 4){
-        molextraidos += decantarR3 + filtrarR2
-        decantarR3 = decantarR2
-        decantarR2 = decantarR1
-        decantarR1 = 0
-        filtrarR2 = filtrarR1
-        filtrarR1 = 0
-    }else if(numeroDoPersonagem == 6){
-        molextraidos += decantarR5 + filtrarR2
-        decantarR5 = decantarR4
-        decantarR4 = decantarR3
-        decantarR3 = decantarR2
-        decantarR2 = decantarR1
-        decantarR1 = 0
-        filtrarR2 = filtrarR1
-        filtrarR1 = 0 
-    }
-    else{
-        decantarR4 = decantarR3
-        decantarR3 = decantarR2
-        decantarR2 = decantarR1
-        decantarR1 = 0
-        filtrarR2 = filtrarR1
-        filtrarR1 = 0
-    }
+    //mudancaDeMolsTotal()
+    personagem.decantar()
     NivelJogador()
     if (dinheiro <= dinheiroMax - mesada) { dinheiro += mesada }//limite para nao ultrapassar de 30 dinheiros
     else { dinheiro = dinheiroMax }
     turno += 1 //para saber quantos turnos se tem
-
+    
     GameOver()
     Trofeus()
     
     aparecerLog(`⭐Turno ${turno}⭐`)
     qualProbabilidade()
     eventosAleatorios()
+    acao = acaoPersonagem
     atualizar()
 }
 //AÇÕES DE CONVERTER OS MOLS INÍCIO ----------------------
@@ -574,7 +525,7 @@ function probabilidade(a) { // a é a probabilidade dinamica
     }
 }
 
-var ProbInicial = 50; //probabilidade inicial fixa
+// var ProbInicial = 50; //probabilidade inicial fixa
 
 
 ProbDinamica = ProbInicial
@@ -599,8 +550,14 @@ function qualProbabilidade(){ //funcao para definir qual funcao de probabilidade
     }
 }
 //FUNÇÕES DE PROBABILIDADE FIM ---------------------
-
-
+function extracaoPersonagem (){
+if (numeroDoPersonagem == 4){
+    return `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3`
+}else if (numeroDoPersonagem == 6){
+    return `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4 | ${decantarR5} mols no estágio 5`
+}else {
+    return `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4`
+}}
 //ainda nao sei onde colocar
 function atualizar() { //funcao para atualizar todas as informacoes de uma so vez------
     molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
@@ -617,7 +574,7 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     acdin = document.getElementById('acdin').innerHTML = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
     NivelGame = document.getElementById('nivelAtual').innerHTML = `${Faculdade}`
 
-    extracao = document.getElementById('extracao').innerHTML = `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4`;
+    extracao = document.getElementById('extracao').innerHTML = extracaoPersonagem();
     temperatura = document.getElementById('temperatura').innerHTML = `${300 + 10 * temp} K`;
     ShowPH = document.getElementById('phtotal').innerHTML = `${7 + PH / 2} pH`;
     ShowProb = document.getElementById('probabilidade').innerHTML = `${ProbDinamica} % de chance da reação ocorrer.`;
