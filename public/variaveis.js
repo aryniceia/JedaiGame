@@ -385,7 +385,11 @@ function variaveisIniciais() {
 }
 
 //DECLARAÇÃO DE VARIÁVEIS FIM -----------------------
-
+acao = personagem.acao
+ProbInicial = personagem.ProbInicial
+molMestrado = personagem.molMestrado
+molDoutorado = personagem.molDoutorado
+dinheiro = personagem.dinheiro
 //AÇÕES DE COMPRAR INÍCIO-----------------
 //funcoes que mexem na probabilidade
 function SubirPH() { //versao 2 do botao subirPH
@@ -474,12 +478,32 @@ function Proximo() { //funcao para passar turno
     molsAnteriores = molextraidos
     molextraidos += decantarR4 + filtrarR2
     //mudancaDeMolsTotal()
-    decantarR4 = decantarR3
-    decantarR3 = decantarR2
-    decantarR2 = decantarR1
-    decantarR1 = 0
-    filtrarR2 = filtrarR1
-    filtrarR1 = 0
+    
+    if (numeroDoPersonagem == 4){
+        molextraidos += decantarR3 + filtrarR2
+        decantarR3 = decantarR2
+        decantarR2 = decantarR1
+        decantarR1 = 0
+        filtrarR2 = filtrarR1
+        filtrarR1 = 0
+    }else if(numeroDoPersonagem == 6){
+        molextraidos += decantarR5 + filtrarR2
+        decantarR5 = decantarR4
+        decantarR4 = decantarR3
+        decantarR3 = decantarR2
+        decantarR2 = decantarR1
+        decantarR1 = 0
+        filtrarR2 = filtrarR1
+        filtrarR1 = 0 
+    }
+    else{
+        decantarR4 = decantarR3
+        decantarR3 = decantarR2
+        decantarR2 = decantarR1
+        decantarR1 = 0
+        filtrarR2 = filtrarR1
+        filtrarR1 = 0
+    }
     NivelJogador()
     if (dinheiro <= dinheiroMax - mesada) { dinheiro += mesada }//limite para nao ultrapassar de 30 dinheiros
     else { dinheiro = dinheiroMax }
@@ -550,7 +574,9 @@ function probabilidade(a) { // a é a probabilidade dinamica
     }
 }
 
-let ProbInicial = 50; //probabilidade inicial fixa
+var ProbInicial = 50; //probabilidade inicial fixa
+
+
 ProbDinamica = ProbInicial
 //TaxaDeReacao(PH,temp); //probabilidade que vai mudar sempre
 //nao consigo pensar agora algo mais inteligente que fazer o NivelAtual receber NivelIC

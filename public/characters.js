@@ -19,7 +19,7 @@
         Desvantagem: custo para melhoria dos equipamentos e uso da coluna rápida +2, 
     Tuca:
         Vantagem: 30% a mais de dinheiro por turno
-        Desvantagem: sua coluna de extração normal demora um turno a mais.
+        Desvantagem: sua colunas de extração normal demora um turno a mais.
     Pintada:
         Vantagem: Probabilidade inicial = 60
         Desvantagem: recebe 20% a menos de dinheiro por turno.
@@ -44,18 +44,21 @@ Acao
 */
 // personagem = 0
 class PersonagemDefault {
-    constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
-        this.ProbInicial = ProbInicial
-        this.molMestrado = molMestrado
-        this.molDoutorado = molDoutorado
-        this.dinheiro = dinheiro
-        this.acao = acao
+    constructor(){
+        this.ProbInicial = 50
+        this.molMestrado = 9
+        this.molDoutorado = 15
+        this.dinheiro = 10
+        this.acao = 2
     }
 }
 
 class Capi extends PersonagemDefault {
     constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
-        super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+        super(ProbInicial, dinheiro)
+        this.acao = 3
+        this.molMestrado = 12
+        this.molDoutorado = 18
     }
 }
     class Guara extends PersonagemDefault {
@@ -65,17 +68,21 @@ class Capi extends PersonagemDefault {
     }
     class Cuca extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
-            super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+            super(ProbInicial, dinheiro, acao)
+            this.molMestrado = 6
+            this.molDoutorado = 12
         }
     }
     class Miquito extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
-            super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+            super(molMestrado, molDoutorado, dinheiro, acao)
+            this.ProbInicial = 30
         }
     }
     class Pintada extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
-            super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+            super(molMestrado, molDoutorado, dinheiro, acao)
+            this.ProbInicial = 60
         }
     }
     class Tuca extends PersonagemDefault {
