@@ -1,98 +1,184 @@
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap);
 
-.image-char {
-    width: 310px;
-    position: absolute;
-    margin-top: 166px;
-    margin-left: 233px;
-}
-.textInfo {
-    color: white;  
-    font-family: 'Chakra Petch';
-    text-align: initial;
-    margin-top: -102px;
-}
-.titleCapi {
-    color: white;  
-    font-family: 'Chakra Petch';
-    text-align: initial;
-    margin-top: 18px;
-}
-.ageCapi, .heighCapi, .weightCapi {
-    color: white;  
-    font-family: 'Chakra Petch';
-    text-align: initial;
-    margin-top: -12px;
-}
-
-.age {
-    color: white;  
-    font-family: 'Chakra Petch';
-    text-align: initial;
-    white-space: pre-wrap;
-    margin-top: -96px;
-}
-.heigh {
-    color: white;  
-    font-family: 'Chakra Petch';
-    text-align: initial;
-    margin-top: -86px;
-}
-.weight {
-    color: white;  
-    font-family: 'Chakra Petch';
-    text-align: initial;
-    margin-top: -76px;
-}
-.bio {
-    font-family: 'Chakra Petch';
-    color: white;
-    white-space: pre-wrap;
-    text-align: initial;
-    margin-left: 20px;
-    margin-top: -13px;
-}
-/*.carrossel >  div >  div { 
-    width: 520px;
-    height: 590px;
-}*/
-.left {
-    width: 72px;
-    margin-top: 38px;
-    margin-left: -501px;
-    transition: transform 250ms;
-}
-.slideshow {
-    margin: 0 auto;
-    overflow: hidden;
-    max-width: 500px;
-  }
-  
-  .slideshowSlider {
-    white-space: nowrap;
-    transition: ease 1000ms;
-  }
-  
-.slide {
-    display: inline-grid;
-    height: 460px;
-    width: 500px;
-    border-radius: 40px;
-}
-
-/* Buttons */
-    .slideshowDots {
-        text-align: center;
+/* Imagem dos personagens */
+    .image-char, .imageJacare {
+        width: 310px;
+        position: absolute;
+        margin-top: 166px;
+        margin-left: 216px;
+        transition: transform 250ms;
     }
-    .slideshowDot {
-        display: inline-block;
-        height: 10px;
-        width: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-        margin: 15px 7px 0px;
-        background-color: #c4c4c4;
+    /*Imagens específicas dos personagens para alinhamento individual */
+        .imageCapi, .imageGuara {
+            width: 310px;
+            position: absolute;
+            margin-top: 166px;
+            margin-left: 233px;
+            transition: transform 250ms;
+        }
+        .imageMico {
+            width: 310px;
+            position: absolute;
+            margin-top: 166px;
+            margin-left: 220px;
+            transition: transform 250ms;
+        }
+    
+    .image-char:hover, .imageCapi:hover, .imageGuara:hover, .imageMico:hover, .imageJacare:hover, .left-one:hover {
+        transform: translateX(-10px);
     }
-    .slideshowDot.active {
-        background-color: #6a0dad;
+/*-----------------------------------------------------------------------------------------------------*/
+
+/* Informação dos Personagens*/
+    /* Nome*/
+        .textInfo {
+            font-family: 'Chakra Petch';
+            color: white;  
+            font-size: 18px;
+            text-align: initial;
+            margin-top: -244px;
+        }
+        .titleCapi {
+            font-family: 'Chakra Petch';
+            color: white;  
+            font-size: 18px;
+            text-align: initial;
+            margin-top: 18px;
+        }
+        .titleMamute {
+            font-family: 'Chakra Petch';
+            color: white;  
+            font-size: 18px;
+            text-align: initial;
+            margin-top: -52px;
+        }
+    
+    /* Idade, altura, peso biografia */
+        .age {  
+            font-family: 'Chakra Petch';
+            color: white;
+            font-size: 18px;
+            text-align: initial;
+            white-space: pre-wrap;
+            margin-top: -224px;
+        }
+        .heigh { 
+            font-family: 'Chakra Petch';
+            color: white; 
+            font-size: 18px;
+            text-align: initial;
+            margin-top: -204px;
+        }
+        .weight { 
+            font-family: 'Chakra Petch';
+            color: white; 
+            font-size: 18px;
+            text-align: initial;
+            margin-top: -184px;
+        }
+        .bio {
+            font-family: 'Chakra Petch';
+            color: white;
+            font-size: 18px;
+            white-space: pre-wrap;
+            text-align: initial;
+            margin-left: 20px;
+            margin-top: -140px;
+        }
+
+    /*Informações específicas*/
+        /* Capivara */
+            .ageCapi, .heighCapi, .weightCapi {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -12px;
+            }
+            .bioCapi {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-left: 20px;
+                margin-top: 0px;
+            }
+        /* Mamute */
+            .ageMamute {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -16px;
+            }
+            .heighMamute {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -8px;
+            }
+            .weightMamute {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -10px;
+            }
+            .bioMamute {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-left: 20px;
+                margin-top: -3px;
+            }
+/*-----------------------------------------------------------------------------------------------------*/
+
+/* Propriedades do slider */
+    .slideshow {
+        margin: 0 auto;
+        overflow: hidden;
+        max-width: 500px;
+    }
+    .slideshowSlider {
+        white-space: nowrap;
+        transition: ease 1000ms;
+    }
+    .slide {
+        display: inline-grid;
+        height: 460px;
+        width: 496px;
+        border-radius: 40px;
+        border: solid 2px #231F20;
+    }
+
+    /* Botões do slide */
+        .slideshowDots {
+            text-align: center;
+        }
+        .slideshowDot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 15px 7px 0px;
+            background-color: #c4c4c4;
+        }
+        .slideshowDot.active {
+            background-color: #6a0dad;
+        }
+/*-----------------------------------------------------------------------------------------------------*/
+
+/* Botão de voltar */
+    .left-one {
+        width: 55px;
+        position: relative;
+        margin-top: -50px;
+        left: -289px;
+        transition: transform 250ms;
     }
