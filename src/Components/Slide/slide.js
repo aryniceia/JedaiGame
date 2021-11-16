@@ -71,6 +71,7 @@ function Slideshow() {
 
   return (
     <Link>
+      
       <div className="slideshow">
         <div
           className="slideshowSlider"
@@ -124,10 +125,11 @@ function Slideshow() {
           ))}
         </div>
       </div>
-      
-      <Link route="/" className='volta'>
+
+      <Link route="/select" className='volta'>
         <img alt="Botão de seta para voltar" className="left-one" title="Voltar" src={Arrow}></img>
       </Link>
+      {/*<div className="window"></div> //Caixa contendo barra para acrescentar nos detalhes*/}
     </Link>
   );
 }

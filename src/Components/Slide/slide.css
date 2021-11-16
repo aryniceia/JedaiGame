@@ -148,6 +148,13 @@
         white-space: nowrap;
         transition: ease 1000ms;
     }
+    .window {
+        width: 496px;
+        height: 40px;
+        border-radius: 40px;
+        background-color: white;
+        margin-top: -521px;
+    }
     .slide {
         display: inline-grid;
         height: 460px;
