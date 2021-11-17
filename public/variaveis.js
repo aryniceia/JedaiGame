@@ -676,18 +676,18 @@ function retirarAcaoDinheiro(din, ac) { //essa funçao vai ser a unica que vai t
 //FUNÇÕES DE NÍVEL E UPGRADE INÍCIO ---------------------
 function NivelJogador() {
     if (NivelAtual == NivelIC) {
-        mesada = 10 // -> 13
+        mesada = personagem.mesada // -> 13
         acao = 2
         dinheiroMax = 30 // -> 35
     }
     else if (NivelAtual == NivelMestrado) {
-        mesada = 15 // -> 20
+        mesada = personagem.mesadaMestrado // -> 18
         acao = 4
         dinheiroMax = 35 // -> 40
         Faculdade = `Mestrado`
     }
     else if (NivelAtual == NivelDoutorado) {
-        mesada = 20 // -> 26
+        mesada = personagem.mesadaDoutorado // -> 25
         acao = 6
         dinheiroMax = 40 // -> 45
         Faculdade = `Doutorado`

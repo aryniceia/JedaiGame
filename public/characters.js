@@ -18,11 +18,11 @@
         ✅ Vantagem: Rápida para se formar ->  molMestrado = 6,  molDoutorado = 12
         Desvantagem: custo para melhoria dos equipamentos (2 C mais caro) e uso da coluna rápida +2 (filtrocost e filtroacao + 2), 
     Tuca:
-        Vantagem: 30% a mais de dinheiro por turno
+        ✅ Vantagem: 30% a mais de dinheiro por turno
         ✅ Desvantagem: sua colunas de extração normal demora um turno a mais.
     Pintada:
         ✅ Vantagem: Probabilidade inicial = 60
-        Desvantagem: recebe 20% a menos de dinheiro por turno.
+        ✅ Desvantagem: recebe 20% a menos de dinheiro por turno.
     Guará:
         ✅ Vantagem: Toda compra de triacilglicerídeo vem com 2 mols
         ✅ Desvantagem: Toda compra de triacilglicerídeo custa 2 ações
@@ -58,6 +58,9 @@ class PersonagemDefault {
         this.costReagente2 = 5
         this.acaoReagente2 = 1
         this.molReagente2 = 1
+        this.mesada = 10
+        this.mesadaMestrado = 15
+        this.mesadaDoutorado = 20
     }
     decantar() {
         molextraidos += decantarR4 + filtrarR2
@@ -115,11 +118,17 @@ class Capi extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
             super(molMestrado, molDoutorado, dinheiro, acao)
             this.ProbInicial = 60
+            this.mesada = 7
+            this.mesadaMestrado = 12
+            this.mesadaDoutorado = 15
         }
     }
     class Tuca extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
             super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
+            this.mesada = 13
+            this.mesadaMestrado = 18
+            this.mesadaDoutorado = 25
         }
         decantar(){
             molextraidos += decantarR5 + filtrarR2
