@@ -16,6 +16,7 @@ function Home() {
             Configuração
           </Link> EM BREVE :)*/}
           < Link route='/credit' className='credit buttons'> Créditos</Link>
+
         </div>
       </div>
     </Page>          
