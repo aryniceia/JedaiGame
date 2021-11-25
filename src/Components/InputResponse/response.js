@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import './response.css';
 import Link from '../Link/link';
+import Modal from '../../Components/Modal/modal';
 
 import Capivara from '../../img/char/icon/capivara_perfil.png';
 import Guara from '../../img/char/icon/guara_perfil.png';
@@ -306,7 +307,12 @@ function Game () {
                             </div>
                         </div>
 
-                        < Link route='/gameover' className='gameover'>Game Over test</Link>
+                        <Modal>
+                            <button>Game over</button>
+                        </Modal>
+                  
+
+                        {/*< Link route='/gameover' className='gameover'>Game Over test</Link>*/}
                     </div>
                 </div>
             </header>

@@ -1,14 +1,27 @@
 import React from 'react';
+import { Modal } from 'react-bootstrap';
 import Page from '../../src/Components/Pages/page';
 import './Styles/gameover.css';
 
-import Modal from 'react-bootstrap/Modal'
-import ModalHeader from 'react-bootstrap/esm/ModalHeader';
-import { ModalFooter, ModalTitle, ModalBody   } from 'react-bootstrap';
-     
+
+
+//import Modal from 'react-bootstrap/Modal'
+
+function Over () {
+    return (
+        <Page>
+            <Modal>
+                <div className='Config'>
+                    <h1 className='App-title'>Game Over :(</h1>
+                </div>
+            </Modal>
+        </Page>
+    );
+}
 
 export default Over;
-function Over () {
+
+/*function Over () {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -40,9 +53,9 @@ function Over () {
                         </Modal>
                     </>
                 </div>            
-            </Page>
-        );
-    
-    }
+        </Page>
+    ); 
+}
 
   render(<Example />);
+  export default Over;*/
