@@ -354,7 +354,7 @@ function variaveisIniciais() {
 
     atualizar()
 }
-
+$('btn btn-primary').hide()
 //DECLARAÇÃO DE VARIÁVEIS FIM -----------------------
 
 //AÇÕES DE COMPRAR INÍCIO-----------------
@@ -1146,3 +1146,11 @@ function mudarStatus(){
     console.log(testedepersonagens)
 }
 //btn btn-primary
+
+//facil com o aleatorio ligado, corrigir!!!!
+//trofeus
+//nivel final (ic)
+//nivel do maquinario do status da reacao
+
+//criar uma pontuacao que seja uma somatoria ponderada dos mols extraidos
+//trofeus obtidos e nivel atingido

@@ -8,11 +8,10 @@ export default function Modal() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const zerarTudo = () => window.variaveisIniciais();
-
   return (
-      <>
+    <>
         <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
+          Status
         </Button>
   
         <BsModal show={show} onHide={handleClose}>
