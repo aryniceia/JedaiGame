@@ -2,14 +2,14 @@
 import { useState } from 'react';
 import { Button, Modal as BsModal } from 'react-bootstrap';
 
-
 export default function Modal() {
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
   
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-  
-    return (
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const zerarTudo = () => window.variaveisIniciais();
+
+  return (
       <>
         <Button variant="primary" onClick={handleShow}>
           Launch demo modal
@@ -17,17 +17,22 @@ export default function Modal() {
   
         <BsModal show={show} onHide={handleClose}>
           <BsModal.Header closeButton>
-            <BsModal.Title>Modal heading</BsModal.Title>
+            <BsModal.Title>Estatísticas finais 📊:</BsModal.Title>
           </BsModal.Header>
 
-          <BsModal.Body>Woohoo, you're reading this text in a modal!</BsModal.Body>
+          <BsModal.Body>
+            Mols extraidos: {window.molextraidos} <br/>
+            Turnos: {window.turno} <br/>
+            Dinheiro: {window.dinheiro} Não faço ideia do pq nao funciona
+
+          </BsModal.Body>
 
           <BsModal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
+            <Button variant="primary" onClick={zerarTudo}>
+              Zerar Tudo
             </Button>
           </BsModal.Footer>
         </BsModal>

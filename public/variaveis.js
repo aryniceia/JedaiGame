@@ -1,9 +1,5 @@
+const botaoFinalizar = document.getElementsByClassName('btn btn-primary')[0]
 //DECLARAÇÃO DE VARIAVEIS INÍCIO -----------------
-//import { func } from 'assert-plus';
-//import React from 'react';
-//import ReactDOM from 'react-dom';
-//NomeJogador = localStorage.getItem('jedai/username')
-//jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
 tabuleiro = parseInt(localStorage.getItem('jedai/tabuleiro'))
 tempoDeJogo = parseInt(localStorage.getItem('jedai/time'))
 //equilibrio = true // perguntando se a reação permite conversão
@@ -191,8 +187,9 @@ JogoNivel = localStorage.getItem('jedai/level');
 //     ExtracaoRapida + //negacao
 //     ModificacaoPH + //negacao
 //     ModificacaoTemp //negacao
-
+const soundEfectOk = new Audio ('confirmation.wav')
 function variaveisIniciais() {
+    soundEfectOk.play()
     //equilibrio = true // perguntando se a reação permite conversão
     molsAnteriores = 0
     logContagem = 2
@@ -416,6 +413,8 @@ function AdicionarTri() {
 
 //botoes adicionais
 function Proximo() { //funcao para passar turno
+    // localStorage.setItem('jedai/teste') = 1
+
     if ((molReagente2 >= fatorDeConversaoReagente2 && molReagente1 >= fatorDeConversaoReagente1) || (molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2)) {
         probabilidade(ProbDinamica) //ira executar a funcao para saber se a reacao ira ocorrer
         if (resultado == 1 && molReagente2 >= fatorDeConversaoReagente2 && molReagente1 >= fatorDeConversaoReagente1) {
@@ -926,9 +925,11 @@ function GameOver() {
         if (JogoNivel == 1) {
             if (molextraidos >= objPrincipal) { //fazer 18 mols em 20 turnos
                 aparecerLog(`O jogo acabou! Você ganhou no nível fácil.`)
+                botaoFinalizar.click()
                 //variaveisIniciais()
             } else {
                 aparecerLog(`O jogo acabou! Você perdeu no nivel facil.`)
+                botaoFinalizar.click()
                 //variaveisIniciais()
             }
 
@@ -1144,3 +1145,4 @@ function mudarStatus(){
     testedepersonagens = 1
     console.log(testedepersonagens)
 }
+//btn btn-primary

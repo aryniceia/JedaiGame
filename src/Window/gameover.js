@@ -20,42 +20,4 @@ function Over () {
 }
 
 export default Over;
-
-/*function Over () {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    return (    
-        <Page>
-            <div className='Over'>
-                <h1 className='App-title'>Game Over :(</h1>
-                    <>
-                        <Button variant="primary" onClick={handleShow}>
-                            Launch demo modal
-                        </Button>
-
-                        <Modal show={show} onHide={handleClose}>
-                            <Modal.Header closeButton>
-                                <Modal.Title>Modal heading</Modal.Title>
-                            </Modal.Header>
-
-                            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button>
-
-                                <Button variant="primary" onClick={handleClose}>
-                                    Save Changes
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </>
-                </div>            
-        </Page>
-    ); 
-}
-
-  render(<Example />);
-  export default Over;*/
+//esta tela pode ser modificada em /components/Modal/modal.js
