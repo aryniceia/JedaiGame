@@ -43,3 +43,16 @@
 </html>
 <script type="text/javascript" src="variaveis.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js" ></script>
+<script>
+  async function getContent(){
+    try {
+      const response = await fetch('http://localhost:3001/')
+      const data = await response.json
+    } catch (error) {
+      console.error(error)
+    }
+    getContent()
+
+  }
+</script>
