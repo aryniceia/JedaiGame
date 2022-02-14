@@ -969,14 +969,15 @@ function GameOver() {
                 variaveisIniciais()
             }
         }
+        FimDeJogo()
     }
-
 }
 
 function FimDeJogo(){
     alert(`Resultado do Jogo:
     Turnos: ${turno}
     `)
+    variaveisIniciais()
 }
 
 class TrofeusClass {
