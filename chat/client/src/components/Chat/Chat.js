@@ -37,7 +37,7 @@ const Chat = ({ location }) => {
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
 
-    const ENDPOINT = 'https://react-chat-app-project.herokuapp.com/'; //mudar isso aqui, precisa SER NOSSO
+    const ENDPOINT = 'https://react-chat-app-project.herokuapp.com/';
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);

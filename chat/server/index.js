@@ -7,7 +7,7 @@ const cors = require('cors'); //we used cors since heroku is used for backend, n
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require ('./users.js');
 
-const PORT = process.env.PORT || 3001;  //5000 is for local to try it out
+const PORT = process.env.PORT || 3002;  //5000 is for local to try it out
 const router = require('./router'); //since we created our router and router, we can require router
 
 const app = express();
