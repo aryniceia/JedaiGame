@@ -75,7 +75,7 @@
     .border {
       border: 6px solid;
       border-color: #231F20;
-      height: 391px;
+      height: 389px;
       width: 532px;
       margin-top: -6px; 
     }
@@ -543,6 +543,20 @@
         background-image: url(../../img/elements/formulas.svg);
         background-size: cover;
       }
+      .gameover {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        margin: 79px;
+        position: absolute;
+        margin-top: 108px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        display: inline-block;
+      }
+
       .botoes {
         height: 35px;
         border-radius: 5px;
@@ -552,7 +566,7 @@
         font-family: 'Chakra Petch';
         color: #ffffff;
       }
-      .botoes:hover, .popup:hover, .help:hover, .agua:hover, .trigli:hover{
+      .botoes:hover, .popup:hover, .help:hover, .agua:hover, .trigli:hover, .gameover:hover{
         background-color: #663D3D;
       }
     /* Pop Up*/
@@ -570,7 +584,7 @@
           display: inline-block;
           cursor: pointer;
           position: absolute;
-          margin-top: 20px;
+          margin-top: 15px;
           margin-left: -92px;
         }
         /*Fundo pop up info */
@@ -621,13 +635,13 @@
           border-radius: 30px;
           border: 0.01px solid #6d486f;
           margin: 4px;
+          position: absolute;
+          margin-top: 100px;
           background-color: #EA8D8D;
           font-family: 'Chakra Petch';
           color: white;
           display: inline-block;
           cursor: pointer;
-          position: absolute;
-          margin-top: 106px;
         }
       /*Fundo pop up info */
         .help .helptext {

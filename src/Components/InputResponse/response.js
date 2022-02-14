@@ -179,6 +179,12 @@ function Game () {
     /* function GameOver() {
         window.GameOver
     }*/
+    
+    function alertar () {
+        alert ("Estatísticas finais 📊" + "\n\n• Mol: " + window.molextraidos 
+                + "\n• Turno: " + window.turno + "\n• Dinheiro: " + window.dinheiro + 
+                "\n• Nível: " + window.NivelAtual)         
+    }
 
     return (
         <div className="App">
@@ -303,6 +309,9 @@ function Game () {
                                 </div>
                             </div>
                         </div>
+
+                        <button className="gameover" type="button" onClick={alertar}>Teste</button>
+                       
                     </div>
                 </div>
             </header>

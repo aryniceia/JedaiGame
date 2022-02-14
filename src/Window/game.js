@@ -85,8 +85,8 @@ function Game () {
                         <button onClick={upgradeTermometro}>Melhorar termômetro </button>
                         <button onClick={mestra}>Soma mestra</button>
                         <button onClick={maismol}>Mais 3 mols total</button>
-                        <button onClick={botaoEvento}>Ligar/Desligar eventos</button>*/}
-                        <p id="eventos"></p>
+                        <button onClick={botaoEvento}>Ligar/Desligar eventos</button>
+                        <p id="eventos"></p>*/}
                     
                         <div>
                            {/*<p id="equacao">
