@@ -629,6 +629,21 @@
           position: absolute;
           margin-top: 106px;
         }
+        .chat {
+          width: 55px;
+          height: 55px;
+          border-radius: 30px;
+          border: 0.01px solid #6d486f;
+          margin: 4px;
+          background-color: #EA8D8D;
+          font-family: 'Chakra Petch';
+          color: white;
+          display: inline-block;
+          cursor: pointer;
+          position: absolute;
+          margin-top: 106px;
+        }
+        
       /*Fundo pop up info */
         .help .helptext {
           visibility: hidden;

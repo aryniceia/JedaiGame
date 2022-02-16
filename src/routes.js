@@ -8,6 +8,7 @@ import Config from './Window/config';
 import Credit from './Window/credit';
 import Game from './Window/game';
 import Detail from './Window/detail';
+import Chat from './Window/chat';
 
 export default function Routes() {
   return (
@@ -19,6 +20,7 @@ export default function Routes() {
       <Route path="/credit" component={Credit}/>
       <Route path="/game" component={Game}/>
       <Route path="/detail" component={Detail}/>
+      <Route path="/chat" component={Chat}/>
       {/*<Route path="/gameover" component={Over}/>*/}
     </Router>
   );

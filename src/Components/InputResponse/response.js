@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import './response.css';
+import Link from '../Link/link';
 
 import Capivara from '../../img/char/icon/capivara_perfil.png';
 import Guara from '../../img/char/icon/guara_perfil.png';
@@ -155,6 +156,11 @@ function Game () {
         var popup = document.getElementById("cadernoPopup");
         popup.classList.toggle("show"); //toggle = alterna as classes
     };
+    function myFunction3() {
+        var popup = '';
+        popup.classList.toggle("show");
+
+    };
     function escFunction (event) {
         if(event.keyCode === 27) {
 
@@ -303,6 +309,10 @@ function Game () {
                                 </div>
                             </div>
                         </div>
+
+                        {/*<button className="chat" onClick={myFunction3}>Chat
+                        </button>*/}
+                        < Link route='/chat' className=''>ISSO AQUI É UM BOTÃO</Link>
                     </div>
                 </div>
             </header>
