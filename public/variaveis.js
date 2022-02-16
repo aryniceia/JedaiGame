@@ -1004,7 +1004,6 @@ function FimDeJogo() {
         • ⭐ Turnos: ${turno}
         • 🧪 Mol: ${molextraidos}
         • 💰 Dinheiro: ${dinheiro} ₵  \n\n Gostou do jogo? Então avalie, sua opinião é muito importante!
-        
     `)
     if (avaliacao == true) {
         window.open("https://forms.gle/idu625JeWDG4sS6G8", "_blank");

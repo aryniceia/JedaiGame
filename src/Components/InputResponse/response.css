@@ -99,7 +99,7 @@
     /*Botões*/
       .agua{
         font-family: 'Chakra Petch';
-        font-size: 9px;
+        font-size: 13px;
         color: white;
         background-color: #ea8d8d;
         border: 0.01px solid #6d486f;
@@ -112,7 +112,7 @@
       }
       .trigli {
         font-family: 'Chakra Petch';
-        font-size: 9px;
+        font-size: 13px;
         color: white;
         background-color: #ea8d8d;
         border: 0.01px solid #6d486f;
@@ -187,21 +187,21 @@
           font-size: 25px;
           color: white;
           line-height: 12.5px;
-          background-color: #bf3f64;
+          background-color: #5ce039;
           border: none;
           border-radius: 15px;
           width: 25px;
           height: 25px;
           position: relative;
           top: -280px;
-          left: 145px;
+          left: 139px;
         }
         .UpPh {
           font-family: 'Chakra Petch';
           font-size: 25px;
           color: white;
           line-height: 12.5px;
-          background-color: #bf3f64;
+          background-color: #5ce039;
           border: none;
           border-radius: 15px;
           width: 25px;
@@ -215,7 +215,7 @@
           font-size: 25px;
           color: white;
           line-height: 12.5px;
-          background-color: #bf3f64;
+          background-color: #5ce039;
           border: none;
           border-radius: 15px;
           width: 25px;
@@ -225,9 +225,12 @@
           left: 35px;
         }
       /*Hover*/
-      .MaisPh:hover,  .MaisTemp:hover, .UpReator:hover, .UpPh:hover, 
-      .UpChapa:hover {
+      .MaisPh:hover,  .MaisTemp:hover {
         background-color: rgb(202, 19, 19);
+      }
+      .UpReator:hover, .UpPh:hover, 
+      .UpChapa:hover {
+        background-color:#1a460e ;
       }
       .MenosPh:hover, .MenosTemp:hover {
         background-color: #f1e42c;
