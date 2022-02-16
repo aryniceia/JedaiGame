@@ -616,7 +616,10 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
 
             retirarAcaoDinheiro(ValorRecebido, AcaoRecebida);
             UsarReagentes(QualMol);
-            aparecerLog(fraseLog)
+            //erro false
+            if (fraseLog != false){
+                    aparecerLog(fraseLog)
+                }
         }
         //esses dois else if verificam se o grupo eh do PH ou temperatura, verifica se a variavel esta entre os maximos ou minimos
         //se tiver no maximo e tiver colocando pra baixo ele passa e o inverso da no mesmo
@@ -625,13 +628,19 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
 
             temp += tempSinal;
             retirarAcaoDinheiro(ValorRecebido, AcaoRecebida);
-            aparecerLog(fraseLog)
+            //erro false
+            if (fraseLog != false){
+                    aparecerLog(fraseLog)
+                }
 
         }
         else if ((GrupoPHRT == GrupoPH) && (PH < PHmax && PH > PHmin) || (PH == PHmax && PHsinal == -1 || PH == PHmin && PHsinal == 1)) { //verificando se pertence ao grupo PH e se pode comprar (entre 4 e -4) (mesma coisa do temperatura)
             PH += PHsinal;
             retirarAcaoDinheiro(ValorRecebido, AcaoRecebida);
-            aparecerLog(fraseLog)
+            //erro false
+            if (fraseLog != false){
+                    aparecerLog(fraseLog)
+                }
         }
         else if (GrupoPHRT == GrupoFiltro) {
             filtrarR1 = molProduto2;
@@ -1029,9 +1038,6 @@ TrofeusJogador = TrofeusClass()
 logList = [] // apenas para aparecer no console
 
 function aparecerLog(logLine, linhaCor = false) {
-    if (logLine == false){
-        console.log(logLine)
-    }
     listaLog = document.getElementById('showLog')
 
     logList.push(logLine)
