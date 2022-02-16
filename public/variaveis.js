@@ -21,8 +21,8 @@ if (tabuleiro === 1) {
     produto2 = "Biodiesel"
     equilibrio = 0
     reversivel = document.getElementById('reversivel').innerHTML = `→`
-    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = reagente1
-    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = reagente2
+    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
+    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "da centrifuga"
     refinar = "centrifugação"
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
@@ -36,8 +36,8 @@ if (tabuleiro === 2) {
     produto2 = "Ácido Graxo"
     equilibrio = 1
     reversivel = document.getElementById('reversivel').innerHTML = `⇌`
-    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = reagente1
-    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = reagente2
+    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
+    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "da centrifuga"
     refinar = "centrifugação"
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
@@ -51,8 +51,8 @@ if (tabuleiro === 3) {
     produto2 = "Sal de Ácido Graxo"
     equilibrio = 0
     reversivel = document.getElementById('reversivel').innerHTML = `→`
-    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = reagente1
-    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = reagente2
+    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
+    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "do filtro"
     refinar = "filtragem"
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Filtrar"
