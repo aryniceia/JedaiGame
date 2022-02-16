@@ -11,34 +11,52 @@ molsAnteriores = 0
 logContagem = 2
 logStatus = false
 listaLog = document.getElementById('showLog')
-logLine = `Você começou o jogo.`
+// logLine = `Você começou o jogo.`
 dRdP = 0
 logList = []
-if (tabuleiro == 1) {
+if (tabuleiro === 1) {
     reagente1 = "Etanol"
     reagente2 = "Triacilglicerídeo"
     produto1 = "Glicerol"
     produto2 = "Biodiesel"
     equilibrio = 0
     reversivel = document.getElementById('reversivel').innerHTML = `→`
+    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = reagente1
+    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = reagente2
+    maquinario = document.getElementById('maquinario').innerHTML = "da centrifuga"
+    refinar = "centrifugação"
+    filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
+    equipamento = "centrifugar"
     //centrifuga
 }
-if (tabuleiro == 2) {
+if (tabuleiro === 2) {
     reagente1 = "Água"
     reagente2 = "Triacilglicerídeo"
     produto1 = "Glicerol"
     produto2 = "Ácido Graxo"
     equilibrio = 1
     reversivel = document.getElementById('reversivel').innerHTML = `⇌`
+    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = reagente1
+    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = reagente2
+    maquinario = document.getElementById('maquinario').innerHTML = "da centrifuga"
+    refinar = "centrifugação"
+    filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
+    equipamento = "centrifugar"
     //centrifuga
 }
-if (tabuleiro == 3) {
+if (tabuleiro === 3) {
     reagente1 = "Hidróxido de Sódio"
     reagente2 = "Triacilglicerídeo"
     produto1 = "Glicerol"
     produto2 = "Sal de Ácido Graxo"
     equilibrio = 0
     reversivel = document.getElementById('reversivel').innerHTML = `→`
+    nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = reagente1
+    nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = reagente2
+    maquinario = document.getElementById('maquinario').innerHTML = "do filtro"
+    refinar = "filtragem"
+    filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Filtrar"
+    equipamento = "filtrar"
     //filtro
 }
 fatorDeConversaoReagente1 = 3
@@ -477,7 +495,6 @@ function Decantar() { //funcao para ir para a extracao longa
         molReagente2 = 0
         PH = 0
         temp = parseInt(temp / 2); //a temperatura vai para a metade inteira
-        //logLine = `Entrou em processo de decantação.`
 
         aparecerLog(`Entrou em processo de decantação.`)
         atualizar()
@@ -490,7 +507,7 @@ function Filtro() {
         GrupoPHRT = GrupoFiltro
         ExtracaoRapida = 1
         acaoDinheiro(filtrocost, filtroAcao)
-        aparecerLog(`Entrou em processo de filtragem.`)
+        aparecerLog(`Entrou em processo de ${refinar}.`)
         ExtracaoRapida = false
         Trofeus()
     }
@@ -498,7 +515,7 @@ function Filtro() {
 
         aparecerLog(`Você não tem habilidade suficiente para usar o filtro`, true)
     } else {
-        aparecerLog(`Você não pode filtrar.`, true)
+        aparecerLog(`Você não pode ${equipamento}.`, true)
     }
 
 }
@@ -1012,10 +1029,12 @@ TrofeusJogador = TrofeusClass()
 logList = [] // apenas para aparecer no console
 
 function aparecerLog(logLine, linhaCor = false) {
+    if (logLine == false){
+        console.log(logLine)
+    }
     listaLog = document.getElementById('showLog')
 
     logList.push(logLine)
-    //console.log(logList)
     console.log(logLine)
     itemLog = document.createElement('li') //cria uma linha na lista
     itemLog.setAttribute("id", `logContagem${logContagem}`)

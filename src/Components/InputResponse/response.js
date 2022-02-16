@@ -201,8 +201,8 @@ function Game () {
                             <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
                             <img alt="Imagem de um filtro de laboratório" className="filtroElement" src={FiltroElement}></img>
                             
-                            <button className="agua" onClick={AdicionarH2O}>+ H2O</button>
-                            <button className="trigli" onClick={AdicionarTri}>+ Trigli</button>
+                            <button className="agua" onClick={AdicionarH2O}><span id="primeiro-reagente"></span></button>
+                            <button className="trigli" onClick={AdicionarTri}><span id="segundo-reagente"></span></button>
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
 
                             <button className="arrowRight" title="Consulte seu caderno!" onClick={myFunction2}>
@@ -251,7 +251,7 @@ function Game () {
                             <p id="probabilidade"></p>
                             <p>• Extração do ácido graxo (4 rodadas):</p>
                             <p id="extracao"></p>
-                            <p>• Extração por meio do Filtro (2 rodadas):</p>
+                            <p>• Extração por meio <span id='maquinario'></span> (2 rodadas):</p>
                             <p id="extracaofiltro"></p>
                             <p id="totalextraido"></p>
                         </div>
@@ -272,7 +272,7 @@ function Game () {
                                 </button>
                                 <button className="botoes" onClick={upgrade}>Nível</button>
                                 <button className="botoes" onClick={Decantar}>Decantar</button>
-                                <button className="botoes" onClick={Filtro}>Filtro</button>
+                                <button className="botoes" onClick={Filtro}><span id='filtrar-centrifugar'></span></button>
                             </div>
 
                             <button className="popup" title="Troféu" onClick={myFunction}>
