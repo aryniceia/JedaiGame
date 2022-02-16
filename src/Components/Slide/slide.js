@@ -86,7 +86,7 @@ function Slideshow() {
                 <img className="image-char" src={backgroundColor.src} />
                 <img className="imageCapi" src={backgroundColor.src1} /> {/*Foto apenas da capivara */}
                 <img className="imageGuara" src={backgroundColor.src2} /> {/*Foto apenas da lobo guará*/}
-                <img className="imageJacare" title="Vacina, gostoso demais!" src={backgroundColor.src3} /> {/*Foto apenas do jacaré*/}
+                <img className="imageJacare" src={backgroundColor.src3} /> {/*Foto apenas do jacaré*/}
                 <img className="imageMico" src={backgroundColor.src5} /> {/*Foto apenas do mico*/}
 
                 {/*Informações específicas*/}
