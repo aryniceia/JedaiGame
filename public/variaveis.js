@@ -928,7 +928,7 @@ function GameOver() {
                 aparecerLog(`O jogo acabou! Você ganhou no nível fácil.`)
                 //variaveisIniciais()
             } else {
-                aparecerLog(`O jogo acabou! Você perdeu no nivel facil.`)
+                aparecerLog(`O jogo acabou! Você perdeu no nível fácil.`)
                 //variaveisIniciais()
             }
 
@@ -941,7 +941,7 @@ function GameOver() {
             }
             else {
 
-                aparecerLog(`O jogo acabou! Você perdeu no nivel medio.`)
+                aparecerLog(`O jogo acabou! Você perdeu no nível médio.`)
                 variaveisIniciais()
             }
         }
@@ -953,7 +953,7 @@ function GameOver() {
             }
             else {
 
-                aparecerLog(`O jogo acabou! Você perdeu no nivel dificil.`)
+                aparecerLog(`O jogo acabou! Você perdeu no nível difícil.`)
                 variaveisIniciais()
             }
         }
@@ -965,7 +965,7 @@ function GameOver() {
             }
             else {
 
-                aparecerLog(`O jogo acabou! Você perdeu no nivel impossivel.`)
+                aparecerLog(`O jogo acabou! Você perdeu no nível impossível.`)
                 variaveisIniciais()
             }
         }
@@ -974,8 +974,11 @@ function GameOver() {
 }
 
 function FimDeJogo(){
-    alert(`Resultado do Jogo:
-    Turnos: ${turno}
+    alert(`Sua pesquisa acabou ${localStorage.getItem('jedai/username')}, tente novamente :( \n\nResultados do Jogo:
+        • ⭐ Turnos: ${turno}
+        • 🧪 Mol: ${molextraidos}
+        • 💰 Dinheiro: ${dinheiro} \n\n Gostou do jogo? Então avalie, sua opinião é muito importante!
+      
     `)
     variaveisIniciais()
 }
