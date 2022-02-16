@@ -973,13 +973,21 @@ function GameOver() {
     }
 }
 
-function FimDeJogo(){
-    alert(`Sua pesquisa acabou ${localStorage.getItem('jedai/username')}, tente novamente :( \n\nResultados do Jogo:
+function FimDeJogo() {
+    var avaliacao = confirm(`Sua pesquisa acabou ${localStorage.getItem('jedai/username')}, tente novamente :( \n\nResultados do Jogo:
         • ⭐ Turnos: ${turno}
         • 🧪 Mol: ${molextraidos}
-        • 💰 Dinheiro: ${dinheiro} \n\n Gostou do jogo? Então avalie, sua opinião é muito importante!
-      
+        • 💰 Dinheiro: ${dinheiro} ₵  \n\n Gostou do jogo? Então avalie, sua opinião é muito importante!
+        
     `)
+    if (avaliacao == true) {
+        window.open("https://forms.gle/idu625JeWDG4sS6G8", "_blank");
+    } 
+    else {
+        window.location.href="./select"
+        alert("Eba! Vamos recomeçar sua pesquisa.")
+    }
+    
     variaveisIniciais()
 }
 
