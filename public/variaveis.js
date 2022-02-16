@@ -1011,7 +1011,7 @@ function FimDeJogo() {
     } 
     else {
         window.location.href="./select"
-        alert("Eba! Vamos recomeçar sua pesquisa.")
+        alert("Não desanime, vamos retomar a sua pesquisa!")
     }
     
     variaveisIniciais()
