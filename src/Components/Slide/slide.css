@@ -12,7 +12,7 @@
         .imageCapi, .imageGuara {
             width: 310px;
             position: absolute;
-            margin-top: 166px;
+            margin-top: 147px;
             margin-left: 233px;
             transition: transform 250ms;
         }
@@ -30,88 +30,105 @@
 /*-----------------------------------------------------------------------------------------------------*/
 
 /* Informação dos Personagens*/
-    /* Nome*/
-        .textInfo {
-            font-family: 'Chakra Petch';
-            color: white;  
-            font-size: 18px;
-            text-align: initial;
-            margin-top: -244px;
-        }
-        .titleCapi {
-            font-family: 'Chakra Petch';
-            color: white;  
-            font-size: 18px;
-            text-align: initial;
-            margin-top: 18px;
-        }
-        .titleMamute {
-            font-family: 'Chakra Petch';
-            color: white;  
-            font-size: 18px;
-            text-align: initial;
-            margin-top: -52px;
-        }
-    
-    /* Idade, altura, peso biografia */
-        .age {  
-            font-family: 'Chakra Petch';
-            color: white;
-            font-size: 18px;
-            text-align: initial;
-            white-space: pre-wrap;
-            margin-top: -224px;
-        }
-        .heigh { 
-            font-family: 'Chakra Petch';
-            color: white; 
-            font-size: 18px;
-            text-align: initial;
-            margin-top: -204px;
-        }
-        .weight { 
-            font-family: 'Chakra Petch';
-            color: white; 
-            font-size: 18px;
-            text-align: initial;
-            margin-top: -184px;
-        }
-        .bio {
-            font-family: 'Chakra Petch';
-            color: white;
-            font-size: 18px;
-            white-space: pre-wrap;
-            text-align: initial;
-            margin-left: 20px;
-            margin-top: -140px;
-        }
-
-    /*Informações específicas*/
         /* Capivara */
-            .ageCapi, .heighCapi, .weightCapi {
+            .titleCapi {
+                font-family: 'Chakra Petch';
+                color: white;  
+                font-size: 18px;
+                text-align: initial;
+                margin-top: 18px;
+            }
+            .ageCapi, .heighCapi, .weightCapi{
                 font-family: 'Chakra Petch';
                 color: white;
                 font-size: 18px;
                 text-align: initial;
                 margin-top: -12px;
             }
-            .bioCapi {
+            .advantageCapi {
+                font-family: 'Chakra Petch';
+                color: white;
+                white-space: pre-wrap;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -135px;
+                margin-left: 173px;
+            }
+            .disadvantageCapi {
                 font-family: 'Chakra Petch';
                 color: white;
                 font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -77px;
+                margin-left: 173px;
+            }
+            .bioCapi {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 16.5px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-left: 20px;
+                margin-top: 0px;
+            }
+        /*Guará*/
+            .titleGuara {
+                font-family: 'Chakra Petch';
+                color: white;  
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -43px;
+            }
+            .ageGuara, .heighGuara, .weightGuara {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -12px;
+            }
+            .advantageGuara {
+                font-family: 'Chakra Petch';
+                color: white;
+                white-space: pre-wrap;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -136px;
+                margin-left: 173px;
+            } 
+            .disadvantageGuara {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -60px;
+                margin-left: 173px;
+            }
+            .bioGuara {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 16px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-left: 20px;
                 margin-top: 0px;
             }
         /* Mamute */
+            .titleMamute {
+                font-family: 'Chakra Petch';
+                color: white;  
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -90px;
+            }
             .ageMamute {
                 font-family: 'Chakra Petch';
                 color: white;
                 font-size: 18px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-top: -16px;
+                margin-top: -60px;
             }
             .heighMamute {
                 font-family: 'Chakra Petch';
@@ -130,11 +147,236 @@
             .bioMamute {
                 font-family: 'Chakra Petch';
                 color: white;
+                font-size: 17px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-left: 20px;
+                margin-top: -3px;
+            }
+        /* Miquito */ 
+            .titleMiquito {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -121px;
+            }
+            .ageMiquito {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -88px;
+            }
+            .heighMiquito {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -55px;
+            }
+            .weightMiquito {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -23px;
+            }
+            .advantageMiquito {
+                font-family: 'Chakra Petch';
+                color: white;
+                white-space: pre-wrap;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -142px;
+                margin-left: 198px;
+            } 
+            .disadvantageMiquito {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -78px;
+                margin-left: 198px;
+            }
+            .bioMiquito{
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-left: 20px;
+                margin-top: 13px;
+            }
+        /* Pintada */
+            .titlePintada {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -156px;
+            }
+            .agePintada {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -123px;
+            }
+            .heighPintada {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -90px;
+            }
+            .weightPintada {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -56px;
+            }
+            .advantagePintada {
+                font-family: 'Chakra Petch';
+                color: white;
+                white-space: pre-wrap;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -155px;
+                margin-left: 198px;
+            } 
+            .disadvantagePintada {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -108px;
+                margin-left: 198px;
+            }
+            .bioPintada{
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-left: 20px;
+                margin-top: 13px;
+            }
+        /* Tuca */
+            .titleTuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -170px;
+            }
+            .ageTuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -140px;
+            }
+            .heighTuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -110px;
+            }
+            .weightTuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -80px;
+            }
+            .advantageTuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                white-space: pre-wrap;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -170px;
+                margin-left: 246px;
+            } 
+            .disadvantageTuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -140px;
+                margin-left: 246px;
+            }
+            .bioTuca{
+                font-family: 'Chakra Petch';
+                color: white;
                 font-size: 18px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-left: 20px;
                 margin-top: -3px;
+            }
+        /* Cuca */
+            .titleCuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -170px;
+            }
+            .ageCuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -140px;
+            }
+            .heighCuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -110px;
+            }
+            .weightCuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -80px;
+            }
+            .advantageCuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                white-space: pre-wrap;
+                font-size: 18px;
+                text-align: initial;
+                margin-top: -170px;
+                margin-left: 198px;
+            } 
+            .disadvantageCuca {
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -100px;
+                margin-left: 198px;
+            }
+            .bioCuca{
+                font-family: 'Chakra Petch';
+                color: white;
+                font-size: 18px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-left: 20px;
+                margin-top: -26px;
             }
 /*-----------------------------------------------------------------------------------------------------*/
 
@@ -162,7 +404,6 @@
         border-radius: 40px;
         border: solid 2px #231F20;
     }
-
     /* Botões do slide */
         .slideshowDots {
             text-align: center;
