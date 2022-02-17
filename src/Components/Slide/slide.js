@@ -14,7 +14,7 @@ import Onca from '../../img/char/onca.png';
 import Tucano from '../../img/char/tucano.png';
 
 
-const delay = 10000000;
+const delay = 10000;
 const items = [
   {id: 1, titleCapi: '🧪 Capi (ela/dela)', idadeCapi: '🧬 Idade: 28 anos', 
           alturaCapi: '📏 Altura: 1,65 m', pesoCapi: '⚖️ Peso: 70 kg', 
