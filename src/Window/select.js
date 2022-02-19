@@ -3,7 +3,14 @@ import Page from '../../src/Components/Pages/page';
 import RadioButton from '../Components/RadioButton/radio';
 import Link from '../Components/Link/link';
 import './Styles/select.css';
+import testHover from '../sound/buttonHover.mp3';
 
+/* Hover Sound Effect */
+    function hoverSound  (){
+    let teste = new Audio(testHover);
+    //teste.src = 'https://www.soundjay.com/buttons/sounds/button-20.mp3';
+    teste.play();
+}
 
 function Select () {
     const [name, setName] = useState(localStorage.getItem('jedai/username') || '')
@@ -128,7 +135,7 @@ function Select () {
 
                 <div className='bar-bot'>
                     <RadioButton personagem={personagem} setPersonagem={setPersonagem}/> {/*Nessa linha é setado do component radio */}
-                    <div className='buttons1'>
+                    <div onMouseOver={hoverSound} className='buttons1'>
                         <Link route="/" className='return'>Voltar</Link>
                         <Link route='detail' className='detail'>Detalhes</Link>
                         {/*<RandomButton onClick={save}></RandomButton>*/}

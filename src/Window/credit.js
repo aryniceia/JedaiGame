@@ -7,6 +7,14 @@ import Jedai from '../img/logos/jedai.png';
 import Mamute from '../img/logos/mamute.png';
 import Arrow from '../img/elements/arrowL.png';
 
+import testHover from '../sound/buttonHover.mp3';
+/* Hover Sound Effect */
+    function hoverSound  (){
+        let teste = new Audio(testHover);
+        //teste.src = 'https://www.soundjay.com/buttons/sounds/button-20.mp3';
+        teste.play();
+    }
+
 function Credit () {
     return (
         <Page>
@@ -39,12 +47,13 @@ function Credit () {
                         </div>   
                     </div>
                 </marquee>
-
-                <Link route="/" className='volta'>
-                    <img alt="Botão de seta para voltar" className="left" title="Voltar" src={Arrow}></img>
-                </Link>
-                <a href="https://bio.site/CEiphe" target="_blank" rel="noreferrer"> {/*target="_blank" serve para o link abrir em uma nova aba*/}
-                    <img title="Nos siga nas redes sociais!" alt="Logo do projeto Mamutes na Ciência" className="mamute"src={Mamute}></img></a>
+                <div onMouseOver={hoverSound}>
+                    <Link route="/" className='volta'>
+                        <img alt="Botão de seta para voltar" className="left" title="Voltar" src={Arrow}></img>
+                    </Link>
+                    <a href="https://bio.site/CEiphe" target="_blank" rel="noreferrer"> {/*target="_blank" serve para o link abrir em uma nova aba*/}
+                        <img title="Nos siga nas redes sociais!" alt="Logo do projeto Mamutes na Ciência" className="mamute"src={Mamute}></img></a>
+                </div>
             </div>    
         </Page>
     );

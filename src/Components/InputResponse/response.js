@@ -22,6 +22,9 @@ import Acido from '../../img/graxo_caderno.png';
 import Sabao from '../../img/sabao_caderno.png';
 import Bio from '../../img/biodiesel_caderno.png';
 
+import Sound from '../../sound/clickSound.mp3';
+import HoverSound from '../../sound/buttonHover.mp3';
+
 // Variáveis das inputs //
     /*const levels = {
         0: "Fácil",
@@ -185,6 +188,23 @@ function Game () {
                 + "\n• Turno: " + window.turno + "\n• Dinheiro: " + window.dinheiro + 
                 "\n• Nível: " + window.NivelAtual)         
     }
+    /* Sound Effect */
+        /* Click button */
+            /*function PlaySound(){
+                let audio = new Audio(Sound);
+                audio.play();
+            }
+            function iniciar () {
+                PlaySound();
+                setInterval(function(){ //add um intervalo de tempo para o som poder tocar
+                //window.location.href='/select'
+                }, 1000) 
+            }*/
+         /* Hover Sound Effect */
+            function hoverSound  () {
+                let teste = new Audio(HoverSound);
+                teste.play();
+            }
 
     return (
         <div className="App">
@@ -201,17 +221,17 @@ function Game () {
                             <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
                             <img alt="Imagem de um filtro de laboratório" className="filtroElement" src={FiltroElement}></img>
                             
-                            <button className="agua" onClick={AdicionarH2O}><span id="primeiro-reagente"></span></button>
-                            <button className="trigli" onClick={AdicionarTri}><span id="segundo-reagente"></span></button>
+                            <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
+                            <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
 
-                            <button className="arrowRight" title="Consulte seu caderno!" onClick={myFunction2}>
+                            <button className="arrowRight" title="Consulte seu caderno!" onMouseOver={hoverSound} onClick={myFunction2}>
                                 <span className="cadernotext" id="cadernoPopup">
                                     <img alt="Imagem do cardeno com instruções das repectivas extrações" id="caderno" src={Caderno[localStorage.getItem('jedai/tabuleiro')].url}/>
                                 </span>
                             </button>
                         
-                            <div className="PopupHover">
+                            <div className="PopupHover" onMouseOver={hoverSound}>
                                 <div className="PH">!
                                     <span className="textPH">
                                         <p id="phtotal"></p> 
@@ -259,7 +279,7 @@ function Game () {
 
                     <div className="barra_inferior">
                         <div className="BotoesAcao">
-                            <div className="BotoesProfile">
+                            <div onMouseOver={hoverSound} className="BotoesProfile">
                                 <button className="botoes" onClick={Proximo}>Turno</button>
                                 <button className="botoes" onClick={Expurgo}>Expugar</button>
                                 <button className="help" onClick={myFunction1}>Ajuda
@@ -270,17 +290,17 @@ function Game () {
                                         • ⭐ turno <br></br>
                                     </span>
                                 </button>
-                                <button className="botoes" onClick={upgrade}>Nível</button>
-                                <button className="botoes" onClick={Decantar}>Decantar</button>
-                                <button className="botoes" onClick={Filtro}><span id='filtrar-centrifugar'></span></button>
+                                <button onMouseOver={hoverSound} className="botoes" onClick={upgrade}>Nível</button>
+                                <button onMouseOver={hoverSound} className="botoes" onClick={Decantar}>Decantar</button>
+                                <button onMouseOver={hoverSound} className="botoes" onClick={Filtro}><span id='filtrar-centrifugar'></span></button>
                             </div>
 
-                            <button className="popup" title="Troféu" onClick={myFunction}>
+                            <button className="popup" title="Troféu" onMouseOver={hoverSound} onClick={myFunction}>
                                 <span className="popuptext" id="myPopup">
                                     <p id="trofeus"></p>
                                 </span>
                             </button>
-                            <div className="melhorias">
+                            <div onMouseOver={hoverSound} className="melhorias">
                                 <button className="UpReator" onClick={upgradeReator} title="Melhoria do reator">+</button>
                                 <button className="UpPh" onClick={upgradePHmetro} title="Melhoria do pHmetro">+</button>
                                 <button className="UpChapa" onClick={upgradeTermometro} title="Melhoria da chapa">+</button>

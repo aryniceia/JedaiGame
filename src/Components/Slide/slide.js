@@ -3,6 +3,7 @@ import React from 'react';
 import Link from '../../Components/Link/link';
 import Arrow from '../../img/elements/arrowL.png';
 import './slide.css'
+import testHover from '../../sound/buttonHover.mp3' //som do hover
 
 //Importações das imagens dos personagens//
 import Capivara from '../../img/char/capivara.png';
@@ -13,6 +14,12 @@ import Mico from '../../img/char/mico.png';
 import Onca from '../../img/char/onca.png';
 import Tucano from '../../img/char/tucano.png';
 
+/* Hover Sound Effect */
+  function hoverSound  () {
+    let teste = new Audio(testHover);
+    //teste.src = 'https://www.soundjay.com/buttons/sounds/button-20.mp3';
+    teste.play();
+  }
 
 const delay = 10000;
 const items = [
@@ -187,10 +194,12 @@ function Slideshow() {
           ))}
         </div>
       </div>
-
-      <Link route="/select" className='volta'>
-        <img alt="Botão de seta para voltar" className="left-one" title="Voltar" src={Arrow}></img>
-      </Link>
+      
+      <div onMouseOver={hoverSound}>
+        <Link route="/select"  className='volta'>
+          <img alt="Botão de seta para voltar" className="left-one" title="Voltar" src={Arrow}></img>
+        </Link>
+      </div>
       {/*<div className="window"></div> //Caixa contendo barra para acrescentar nos detalhes*/}
     </Link>
   );
