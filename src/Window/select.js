@@ -115,7 +115,7 @@ function Select () {
                         </div>
 
                         <div className="tabuleiro">
-                            <label>*Escolha o tabuleiro: </label>
+                            <label>*Escolha a reação: </label>
                             <select onChange={({target}) => 
                                 setTabuleiro(target.value)} 
                                 value={tabuleiro} name="tabuleiro" 

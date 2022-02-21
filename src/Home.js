@@ -36,7 +36,7 @@ function Home() {
 
       <div className="menu">
         <div onClick={iniciar} onMouseOver={hoverSound} className="buttons">
-          <button>teste</button>
+         { /*<button>teste</button>*/}
           < Link route='/select' className='play buttons' onClick={() => iniciar()}>Play</Link>
           < Link route='/tutorial' className='tuto buttons'> Tutorial</Link>
           {/*< Link route='/config' className='config buttons'> 
