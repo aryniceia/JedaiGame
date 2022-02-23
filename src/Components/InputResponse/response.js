@@ -270,9 +270,13 @@ function Game () {
                         <div className="extração">
                             <p id="probabilidade"></p>
                             <p>• Extração do ácido graxo (4 rodadas):</p>
-                            <p id="extracao"></p>
+                            <p id="extracaoR1"></p>
+                            <p id="extracaoR2"></p>
+                            <p id="extracaoR3"></p>
+                            <p id="extracaoR4"></p>
                             <p>• Extração por meio <span id='maquinario'></span> (2 rodadas):</p>
-                            <p id="extracaofiltro"></p>
+                            <p id="extracaoFiltro1"></p>
+                            <p id="extracaoFiltro2"></p>
                             <p id="totalextraido"></p>
                         </div>
                     </div>

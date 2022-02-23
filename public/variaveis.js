@@ -135,6 +135,15 @@ decantarR4 = 0;
 filtrarR1 = 0;
 filtrarR2 = 0;
 
+extracaoR1 = `${decantarR1} mols no estágio 1 | `
+extracaoR2 = `${decantarR2} mols no estágio 2 | `
+extracaoR3 = `${decantarR3} mols no estágio 3 | `
+extracaoR4 = `${decantarR4} mols no estágio 4 |`
+
+extracaoFiltro1 = `${filtrarR1} mols no estágio 1 | `
+extracaoFiltro2 = `${filtrarR2} mols no estágio 2 |`
+
+
 molextraidos = 0;
 
 rodada = 0;
@@ -472,6 +481,15 @@ function Proximo() { //funcao para passar turno
     decantarR1 = 0
     filtrarR2 = filtrarR1
     filtrarR1 = 0
+    
+    
+    extracaoR2 = `${decantarR2} mols no estágio 2 | `
+    extracaoR3 = `${decantarR3} mols no estágio 3 | `
+    extracaoR4 = `${decantarR4} mols no estágio 4 |`
+
+    extracaoFiltro2 = `${filtrarR2} mols no estágio 2 |`
+
+
     NivelJogador()
     if (dinheiro <= dinheiroMax - mesada) { dinheiro += mesada }//limite para nao ultrapassar de 30 dinheiros
     else { dinheiro = dinheiroMax }
@@ -489,6 +507,7 @@ function Proximo() { //funcao para passar turno
 function Decantar() { //funcao para ir para a extracao longa
     if (molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) {
         decantarR1 += molProduto2
+        
         molProduto2 = 0
         molProduto1 = 0
         molReagente1 = 0
@@ -581,12 +600,31 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
     acdin = document.getElementById('acdin').innerHTML = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
     NivelGame = document.getElementById('nivelAtual').innerHTML = `${Faculdade}`
+    extracaoR1 = `${decantarR1} mols no estágio 1 | `
+    extracaoFiltro1 = `${filtrarR1} mols no estágio 1 | `
+    decantarCor(decantarR1, 'extracaoR1')
+    decantarCor(decantarR2, 'extracaoR2')
+    decantarCor(decantarR3, 'extracaoR3')
+    decantarCor(decantarR4, 'extracaoR4')
 
-    extracao = document.getElementById('extracao').innerHTML = `${decantarR1} mols no estágio 1 | ${decantarR2} mols no estágio 2 | ${decantarR3} mols no estágio 3 | ${decantarR4} mols no estágio 4`;
+    
+    document.getElementById('extracaoR1').innerHTML = extracaoR1
+    document.getElementById('extracaoR2').innerHTML = extracaoR2
+    document.getElementById('extracaoR3').innerHTML = extracaoR3
+    document.getElementById('extracaoR4').innerHTML = extracaoR4
+    
     temperatura = document.getElementById('temperatura').innerHTML = `${300 + 10 * temp} K`;
     ShowPH = document.getElementById('phtotal').innerHTML = `${7 + PH / 2} pH`;
     ShowProb = document.getElementById('probabilidade').innerHTML = `${ProbDinamica} % de chance da reação ocorrer.`;
-    extracaofiltro = document.getElementById('extracaofiltro').innerHTML = `${filtrarR1} mols no estágio 1 | ${filtrarR2} mols no estágio 2`;
+    
+    decantarCor(filtrarR1, 'extracaoFiltro1')
+    decantarCor(filtrarR2, 'extracaoFiltro2')
+
+    // extracaofiltro = document.getElementById('extracaofiltro').innerHTML = `${filtrarR1} mols no estágio 1 | ${filtrarR2} mols no estágio 2`;
+    document.getElementById('extracaoFiltro1').innerHTML = extracaoFiltro1
+    document.getElementById('extracaoFiltro2').innerHTML = extracaoFiltro2
+    
+    
     extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraidos`;
     //eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML =
@@ -1179,4 +1217,11 @@ function botaoConfirmar(){
 function mudarStatus(){
     testedepersonagens = 1
     console.log(testedepersonagens)
+}
+function decantarCor(decantarColorido, qualID) {
+    if (decantarColorido) {
+        document.getElementById(`${qualID}`).style.color = 'red'
+    }else{ 
+        document.getElementById(`${qualID}`).style.color = 'white'
+    }
 }
