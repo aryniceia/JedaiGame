@@ -1225,3 +1225,6 @@ function decantarCor(decantarColorido, qualID) {
         document.getElementById(`${qualID}`).style.color = 'white'
     }
 }
+
+
+//desligar botao eventos aletaorios no nivel facil
