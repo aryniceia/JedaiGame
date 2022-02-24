@@ -35,9 +35,9 @@ function Home() {
       <h1 className="TitleGame">Química Animal</h1>
 
       <div className="menu">
-        <div onClick={iniciar} onMouseOver={hoverSound} className="buttons">
+        <div onMouseOver={hoverSound} className="buttons">
          { /*<button>teste</button>*/}
-          < Link route='/select' className='play buttons' onClick={() => iniciar()}>Play</Link>
+          < Link route='/select' className='play buttons'>Play</Link>
           < Link route='/tutorial' className='tuto buttons'> Tutorial</Link>
           {/*< Link route='/config' className='config buttons'> 
             Configuração

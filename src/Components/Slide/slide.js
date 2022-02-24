@@ -21,19 +21,19 @@ import Tucano from '../../img/char/tucano.png';
     teste.play();
   }
 
-const delay = 10000;
+const delay = 1000000000;
 const items = [
   {id: 1, titleCapi: '🧪 Capi (ela/dela)', idadeCapi: '🧬 Idade: 28 anos', 
           alturaCapi: '📏 Altura: 1,65 m', pesoCapi: '⚖️ Peso: 70 kg', 
-          vantagemCapi: '✅ Talento precoce, precisa de menos \n tempo para se formar.',
-          desvantagemCapi: '❎ Afobada para comprar recursos, sempre paga mais caro.',
-          descricaoCapi: '📜 Bio: Dona de diversos apelidos: Carpincha, \n Beque, Trombuda, Cachapu, Cunum e Cubu,\n ela está sempre comendo alguma \n coisa no laboratório, a despeito das inúme- \n -ras broncas que já tomou. Calma e \n prestativa, prefere realizar seus \n experimentos à tarde. É a veterana que já \n devia ter se formado, mas que ninguém quer \n que vá embora. Todes precisam de \n sua ajuda para alguma coisa.', 
+          vantagemCapi: '✅ Eficiente, faz mais \n em menos tempo.',
+          desvantagemCapi: '❎ Sem stress para se formar, mesmo que demore mais.',
+          descricaoCapi: '📜 Bio: Dona de diversos apelidos: Carpincha, \n Beque, Trombuda, Cachapu, Cunum e Cubu,\n ela está sempre comendo alguma \n coisa no laboratório, a despeito das inúme- \n -ras broncas que já tomou. Calma e \n prestativa, prefere realizar seus \n experimentos à tarde. É a veterana que já \n devia ter se formado, mas que ninguém \n quer que vá embora. Todes precisam de \n sua ajuda para alguma coisa.', 
           src1: Capivara, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 2, titleGuara: '🧪 Guará (elu/delu)', idadeGuara:'🧬 Idade: 20 anos', alturaGuara:'📏 Altura: 1,90 m ', 
           pesoGuara:'⚖️ Peso: 80 kg',
-          vantagemGuara:'✅ Suas reações acontecem com maior probabilidade.',
-          desvantagemGuara :'❎  O valor de sua bolsa de estudos precisa ser reajustado.',
+          vantagemGuara:'✅ Seu triacilglicerídeo é mais puro.',
+          desvantagemGuara :'❎ Purificar reagentes dá mais trabalho.',
           descricaoGuara:'📜 Bio: Figura excêntrica, sempre de \n casaco, capuz e fones de ouvido. \n Fica quieto na delu, curtindo o frio \n polar do ar condicionado, enquanto \n pacientemente purifica \n recursivamente todos os reagentes \n para seus experimentos. Jamais toque \n em suas vidrarias, meticulosamente \n limpas e guardadas de um jeito \n que só elu consegue.', 
           src2: Guara, colors: 'RGBA(211,141,181,0.97)'},
 
@@ -45,15 +45,15 @@ const items = [
 
   {id: 5, titleMiquito: '🧪 Miquito (ele/dele)', idadeMiquito:'🧬 Idade: 21 anos', 
           alturaMiquito:'📏 Altura: 1,60 m', pesoMiquito:'⚖️ Peso: 55 kg ', 
-          vantagemMiquito:'✅ Suas colunas de extração demoram um turno a menos.',
-          desvantagemMiquito:'❎ Probabilidade inicial = 30.',
+          vantagemMiquito:'✅ Suas extrações são mais rápidas.',
+          desvantagemMiquito:'❎ Suas reações acontecem com menor probabilidade.',
           descricaoMiquito:'📜 Bio: Não se conhece alguém \n que seja mais rápido para montar \n uma coluna de separação ou limpar \n o rotaevaporador. Pena que quase \n sempre tem que recomeçar seus \n experimentos, porque esqueceu \n algum reagente ou de acertar \n algum parâmetro.',
           src5: Mico, colors: 'RGBA(211,141,181,0.97)'},  
 
   {id: 6, titlePintada: '🧪 Pintada (elu/delu)', idadePintada:'🧬 Idade: 19 anos', 
           alturaPintada:'📏 Altura: 1,70 m ', pesoPintada:'⚖️ Peso: 60 kg ',
-          vantagemPintada:'✅ Probabilidade inicial = 60.',
-          desvantagemPintada:'❎ Recebe 20% a menos de dinheiro por turno.',
+          vantagemPintada:'✅ Suas reações acontecem com maior probabilidade.',
+          desvantagemPintada:'❎ O valor de sua bolsa precisa ser reajustado.',
           descricaoPintada:'📜 Bio: É e mais nove alune do \n laboratório. Ainda não sabe muito \n bem o que fazer da vida, então se \n dedica a várias entidades, à \n atlética e começou recentemente \n uma IC. Com tanta coisa para fazer \n e uma graduação exigente, quase \n nunca está no laboratório, mas \n dizem que leva jeito para coisa,\n porque tudo o que toca dá certo.',
           src: Onca, colors: 'RGBA(211,141,181,0.97)'},
 
@@ -66,8 +66,8 @@ const items = [
 
   {id: 3, titleCuca: '🧪 Cuca (ela/dela)', idadeCuca:'🧬 Idade: 23 anos', 
           alturaCuca:'📏 Altura: 1,75 m ', pesoCuca:'⚖️ Peso: 69 kg',
-          vantagemCuca:'✅ Rápida para se formar ->  molMestrado = 6,  molDoutorado = 12.',
-          desvantagemCuca:'❎ Custo para melhoria dos equipamentos e uso da coluna rápida +2',
+          vantagemCuca:'✅ Talento precoce, precisa de menos tempo para se formar.',
+          desvantagemCuca:'❎ Afobada para comprar recursos, sempre paga mais caro.',
           descricaoCuca:'📜 Bio: Sempre com um \n livro  na mão e uma curio- \n sidade científica bem \n  aleatória para compartilhar. \n  É a ela que você recorre quando \n Mestre Mamu não está \n por perto para tirar a sua dúvida. \n Não vê a hora de terminar a \n  graduação para poder passar \n  mais tempo no laboratório.',
           src3: Jacare, colors: 'RGBA(211,141,181,0.97)'},
 ];

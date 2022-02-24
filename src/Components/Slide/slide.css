@@ -12,8 +12,8 @@
         .imageCapi, .imageGuara {
             width: 310px;
             position: absolute;
-            margin-top: 147px;
-            margin-left: 233px;
+            margin-top: 165px;
+            margin-left: 250px;
             transition: transform 250ms;
         }
         .imageMico {
@@ -102,7 +102,7 @@
                 font-size: 18px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-top: -60px;
+                margin-top: -90px;
                 margin-left: 173px;
             }
             .bioGuara {
@@ -198,7 +198,7 @@
                 font-size: 18px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-top: -78px;
+                margin-top: -90px;
                 margin-left: 198px;
             }
             .bioMiquito{
@@ -254,7 +254,7 @@
                 font-size: 18px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-top: -108px;
+                margin-top: -90px;
                 margin-left: 198px;
             }
             .bioPintada{
