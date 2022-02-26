@@ -17,7 +17,7 @@ function Select () {
     const [level, setLevel] = useState(localStorage.getItem('jedai/level') || 'padrao') //useState é uma função que manipula estados :3
     const [time, setTime] = useState(localStorage.getItem('jedai/time') || 'padrao')
     const [tabuleiro, setTabuleiro] = useState(localStorage.getItem('jedai/tabuleiro') || 'padrao')
-    const [personagem, setPersonagem] = useState(localStorage.getItem('jedai/personagem') || 1)
+    const [personagem, setPersonagem] = useState(localStorage.getItem('jedai/personagem') || 6)
 
     const [hasName, setHasName]  = useState(!!localStorage.getItem('jedai/username'))
     const [hasLevel, setHasLevel]  = useState(!!localStorage.getItem('jedai/level'))

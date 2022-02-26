@@ -23,7 +23,7 @@ if (tabuleiro === 1) {
     reversivel = document.getElementById('reversivel').innerHTML = `→`
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
-    maquinario = document.getElementById('maquinario').innerHTML = "da centrifuga"
+    maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
     refinar = "centrifugação"
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
     equipamento = "centrifugar"
@@ -625,7 +625,7 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     document.getElementById('extracaoFiltro2').innerHTML = extracaoFiltro2
     
     
-    extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraidos`;
+    extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraídos`;
     //eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML =
         `

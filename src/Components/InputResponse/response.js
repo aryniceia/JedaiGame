@@ -257,8 +257,8 @@ function Game () {
                                     <span className="textREATOR">
                                         <p id="equacao">
                                             <span id="reagente01"></span><br></br>
-                                            <span id="reagente02"></span> <span id="reversivel"></span> <span id="produto01"></span><br></br>
-                                            <span id="produto02"></span>
+                                            <span id="reagente02"></span> <span id="reversivel"></span><br></br><span id="produto01"></span><br></br>
+                                            <span id="produto02"></span> 
                                         </p>
                                     </span>
                                 </div>
@@ -269,7 +269,7 @@ function Game () {
                     <div className="barra_lateral">
                         <div className="extração">
                             <p id="probabilidade"></p>
-                            <p>• Extração do ácido graxo (4 rodadas):</p>
+                            <p>• Extração do <span id="produto2"></span> (4 rodadas):</p>
                             <p id="extracaoR1"></p>
                             <p id="extracaoR2"></p>
                             <p id="extracaoR3"></p>
@@ -280,6 +280,7 @@ function Game () {
                             <p id="totalextraido"></p>
                         </div>
                     </div>
+                    
 
                     <div className="barra_inferior">
                         <div className="BotoesAcao">
