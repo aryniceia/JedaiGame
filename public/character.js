@@ -13,17 +13,17 @@
  * 6- Tuca
     Miquito:
         ✅ Vantagem: suas colunas de extração demoram um turno a menos;
-        Desvantagem: Probabilidade inicial = 30
+        ✅ Desvantagem: Probabilidade inicial = 30
     Cuca:
         ✅ Vantagem: Rápida para se formar ->  molMestrado = 6,  molDoutorado = 12
         Desvantagem: custo para melhoria dos equipamentos (2 C mais caro) e uso da coluna rápida +2 (filtrocost e filtroacao + 2), 
-    Tuca:
+    Tuca: ISENTAO
         ✅ Vantagem: 30% a mais de dinheiro por turno
         ✅ Desvantagem: sua colunas de extração normal demora um turno a mais.
     Pintada:
         ✅ Vantagem: Probabilidade inicial = 60
         ✅ Desvantagem: recebe 20% a menos de dinheiro por turno.
-    Guará:
+    Guará: RESOLVER (dificil)
         ✅ Vantagem: Toda compra de triacilglicerídeo vem com 2 mols
         ✅ Desvantagem: Toda compra de triacilglicerídeo custa 2 ações
     Capi:
@@ -42,7 +42,7 @@ compra de triacilglicerideo $$$ e Acao
 Acao 
 
 */
-// personagem = 0
+// personagem = new PersonagemDefault()
 class PersonagemDefault {
     constructor(){
         this.ProbInicial = 50
