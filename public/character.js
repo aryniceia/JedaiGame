@@ -103,7 +103,7 @@ class Capi extends PersonagemDefault {
             this.decantarR3 = 0;
             this.ProbInicial = 30
         }
-        decantar(){
+        decantarPersonagem(){
             molextraidos += decantarR3 + filtrarR2
             decantarR3 = decantarR2
             decantarR2 = decantarR1
@@ -126,22 +126,22 @@ class Capi extends PersonagemDefault {
     class Tuca extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
             super(ProbInicial, molMestrado, molDoutorado, dinheiro, acao)
-            this.mesada = 13
-            this.mesadaMestrado = 18
-            this.mesadaDoutorado = 25
+            // this.mesada = 13
+            // this.mesadaMestrado = 18
+            // this.mesadaDoutorado = 25
         }
-        decantar(){
-            molextraidos += decantarR5 + filtrarR2
-            decantarR5 = decantarR4
-            decantarR4 = decantarR3
-            decantarR3 = decantarR2
-            decantarR2 = decantarR1
-            decantarR1 = 0
-            filtrarR2 = filtrarR1
-            filtrarR1 = 0 
-            console.log("passou no Tuca")
+        // decantar(){
+        //     molextraidos += decantarR5 + filtrarR2
+        //     decantarR5 = decantarR4
+        //     decantarR4 = decantarR3
+        //     decantarR3 = decantarR2
+        //     decantarR2 = decantarR1
+        //     decantarR1 = 0
+        //     filtrarR2 = filtrarR1
+        //     filtrarR1 = 0 
+        //     console.log("passou no Tuca")
 
-        }
+        // }
     }
     numeroDoPersonagem = parseInt(localStorage.getItem('jedai/personagem'))
     if (numeroDoPersonagem == 1){
@@ -178,3 +178,6 @@ class Capi extends PersonagemDefault {
     //     default:
     //         console.log('error!')
     // }
+
+
+    //verificar se ProbDinamica esta tudo ok

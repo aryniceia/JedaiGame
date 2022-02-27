@@ -97,7 +97,7 @@ GrupoFiltro = 4;
 GrupoPHRT = 0;
 //Dinheiro
 let dinheiro = 10; //inicio do dinheiro
-mesada = 10; //dinheiro ganho cada vez que passa o turno
+// mesada = 10; //dinheiro ganho cada vez que passa o turno
 dinheiroMax = 30; //nao pode superar esse valor
 
 //PH
@@ -269,7 +269,7 @@ function variaveisIniciais() {
     GrupoPHRT = 0;
     //Dinheiro
     let dinheiro = 10; //inicio do dinheiro
-    mesada = 10; //dinheiro ganho cada vez que passa o turno
+    // mesada = 10; //dinheiro ganho cada vez que passa o turno
     dinheiroMax = 30; //nao pode superar esse valor
 
     //PH
@@ -473,14 +473,14 @@ function Proximo() { //funcao para passar turno
     molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2
     // acao = personagem.acao
     molsAnteriores = molextraidos
-    molextraidos += decantarR4 + filtrarR2
-    //mudancaDeMolsTotal()
-    decantarR4 = decantarR3
-    decantarR3 = decantarR2
-    decantarR2 = decantarR1
-    decantarR1 = 0
-    filtrarR2 = filtrarR1
-    filtrarR1 = 0
+    personagem.decantarPersonagem()
+    // molextraidos += decantarR4 + filtrarR2
+    // decantarR4 = decantarR3
+    // decantarR3 = decantarR2
+    // decantarR2 = decantarR1
+    // decantarR1 = 0
+    // filtrarR2 = filtrarR1
+    // filtrarR1 = 0
     
     
     extracaoR2 = `${decantarR2} mols no estágio 2 | `
@@ -560,7 +560,7 @@ function probabilidade(a) { // a é a probabilidade dinamica
     }
 }
 
-let ProbInicial = 50; //probabilidade inicial fixa
+let ProbInicial = 0; //probabilidade inicial fixa
 ProbDinamica = ProbInicial
 //TaxaDeReacao(PH,temp); //probabilidade que vai mudar sempre
 //nao consigo pensar agora algo mais inteligente que fazer o NivelAtual receber NivelIC
@@ -569,7 +569,7 @@ atualizar();
 //funçao que calcula a taxa de reaçao
 function TaxaDeReacao(PHa,tempa){
     
-    ProbDinamica = ProbInicial + PHa * 5 + tempa * 5;
+    ProbDinamica = personagem.ProbInicial + PHa * 5 + tempa * 5;
     if (ProbDinamica >= 100){
         ProbDinamica = 100
     }
@@ -605,14 +605,16 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     decantarCor(decantarR1, 'extracaoR1')
     decantarCor(decantarR2, 'extracaoR2')
     decantarCor(decantarR3, 'extracaoR3')
-    decantarCor(decantarR4, 'extracaoR4')
+    if (localStorage.getItem('jedai/personagem') != '4'){
+    decantarCor(decantarR4, 'extracaoR4')}
 
     
     document.getElementById('extracaoR1').innerHTML = extracaoR1
     document.getElementById('extracaoR2').innerHTML = extracaoR2
     document.getElementById('extracaoR3').innerHTML = extracaoR3
+    if (localStorage.getItem('jedai/personagem') != '4'){
     document.getElementById('extracaoR4').innerHTML = extracaoR4
-    
+    }
     temperatura = document.getElementById('temperatura').innerHTML = `${300 + 10 * temp} K`;
     ShowPH = document.getElementById('phtotal').innerHTML = `${7 + PH / 2} pH`;
     ShowProb = document.getElementById('probabilidade').innerHTML = `${ProbDinamica} % de chance da reação ocorrer.`;
@@ -688,7 +690,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
             PH = 0;
             molReagente1 = 0;
             molReagente2 = 0;
-            ProbDinamica = ProbInicial;
+            ProbDinamica = personagem.ProbInicial;
             retirarAcaoDinheiro(ValorRecebido, AcaoRecebida);
         }
 
@@ -731,27 +733,27 @@ function retirarAcaoDinheiro(din, ac) { //essa funçao vai ser a unica que vai t
 //FUNÇÕES DE NÍVEL E UPGRADE INÍCIO ---------------------
 function NivelJogador() {
     if (NivelAtual == NivelIC) {
-        mesada = 10
-        acao = 2
+        mesada = personagem.mesada
+        acao = personagem.acao
         dinheiroMax = 30
     }
     else if (NivelAtual == NivelMestrado) {
-        mesada = 15
+        mesada = personagem.mesadaMestrado
         acao = 4
         dinheiroMax = 35
         Faculdade = `Mestrado`
     }
     else if (NivelAtual == NivelDoutorado) {
-        mesada = 20
+        mesada = personagem.mesadaDoutorado
         acao = 6
         dinheiroMax = 40
         Faculdade = `Doutorado`
     }
 }
 function upgrade() {
-    if (NivelAtual == NivelIC && molextraidos >= molMestrado) {
+    if (NivelAtual == NivelIC && molextraidos >= personagem.molMestrado) {
         NivelAtual = NivelMestrado;
-        molextraidos -= molMestrado;
+        molextraidos -= personagem.molMestrado;
         PHmax = 4;
         PHmin = -4;
         tempMax = 4;
@@ -761,9 +763,9 @@ function upgrade() {
         aparecerLog(`Você passou de nível, agora é ${Faculdade}`);
 
     }
-    else if (NivelAtual == NivelMestrado && molextraidos >= molDoutorado) {
+    else if (NivelAtual == NivelMestrado && molextraidos >= personagem.molDoutorado) {
         NivelAtual = NivelDoutorado;
-        molextraidos -= molDoutorado;
+        molextraidos -= personagem.molDoutorado;
         PHmin = -5;
         PHmax = 5;
         tempMax = 5;
@@ -1109,36 +1111,36 @@ function probc() {
         if (molReagente1 >= 3) { //y
             if (molProduto1 >= 1) { //z
                 //f1
-                ProbDinamica = ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente2 - 1) * 5 + (molReagente1 - 3) * 5 - molProduto1 * 20
+                ProbDinamica = personagem.ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente2 - 1) * 5 + (molReagente1 - 3) * 5 - molProduto1 * 20
             } else {
                 //f2
-                ProbDinamica = ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente2 - 1) * 5 + (molReagente1 - 3) * 5
+                ProbDinamica = personagem.ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente2 - 1) * 5 + (molReagente1 - 3) * 5
             }
         } else { //y > 3 false
             if (molProduto1 >= 1) {
                 //f3
-                ProbDinamica = ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente2 - 1) * 5 - molProduto1 * 20
+                ProbDinamica = personagem.ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente2 - 1) * 5 - molProduto1 * 20
             } else {
                 //f4
-                ProbDinamica = ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente2 - 1) * 5
+                ProbDinamica = personagem.ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente2 - 1) * 5
             }
         }
     } else { //x > 1 false
         if (molReagente1 > 3) {
             if (molProduto1 >= 1) {
                 //f5
-                ProbDinamica = ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente1 - 3) * 5 - molProduto1 * 20
+                ProbDinamica = personagem.ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente1 - 3) * 5 - molProduto1 * 20
             } else {
                 //f6
-                ProbDinamica = ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente1 - 3) * 5
+                ProbDinamica = personagem.ProbInicial - 5 * Math.abs(temp) - 5 * PH + (molReagente1 - 3) * 5
             }
         } else { //z > 3 false
             if (molProduto1 >= 1) {
                 //f7
-                ProbDinamica = ProbInicial - 5 * Math.abs(temp) - 5 * PH - molProduto1 * 20
+                ProbDinamica = personagem.ProbInicial - 5 * Math.abs(temp) - 5 * PH - molProduto1 * 20
             } else {
                 //f8
-                ProbDinamica = ProbInicial - 5 * Math.abs(temp) - 5 * PH
+                ProbDinamica = personagem.ProbInicial - 5 * Math.abs(temp) - 5 * PH
             }
         }
     }
