@@ -184,9 +184,11 @@ function Game () {
     }*/
     
     function alertar () {
-        alert ("Estatísticas finais 📊" + "\n\n• Mol: " + window.molextraidos 
-                + "\n• Turno: " + window.turno + "\n• Dinheiro: " + window.dinheiro + 
-                "\n• Nível: " + window.NivelAtual)         
+        alert (`Estatísticas finais 📊
+        • Mol: ${window.molextraidos}
+        • Turno: ${window.turno} ${document.turno}
+        • Dinheiro: ${window.dinheiro}
+        • Nível: ${window.NivelAtual}`)         
     }
     /* Sound Effect */
         /* Click button */

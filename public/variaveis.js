@@ -993,52 +993,49 @@ function Trofeus() {
 
 function GameOver() {
     if (turno == tempoDeJogo) { //em X turnos
+        verificacaoDeNivel()
         jogoTerminado = true
         Trofeus()
         if (JogoNivel == 1) {
             if (molextraidos >= objPrincipal) { //fazer 18 mols em 20 turnos
-                aparecerLog(`O jogo acabou! Você ganhou no nível fácil.`)
+                fraseFimDeJogo = `Você ganhou no nível fácil.`
+                aparecerLog(fraseFimDeJogo)
                 //variaveisIniciais()
             } else {
-                aparecerLog(`O jogo acabou! Você perdeu no nível fácil.`)
-                //variaveisIniciais()
+                fraseFimDeJogo = `Você perdeu no nível fácil.`
+                aparecerLog(fraseFimDeJogo)                //variaveisIniciais()
             }
 
         }
         if (JogoNivel == 2) {
             if (molextraidos >= objPrincipal && (SomaDificil + SomaFacil || SomaDificilNegacao + SomaFacilNegacao > 0)) { // fazer ao menos 30 mols com 1 trofeu
-
-                aparecerLog(`O jogo acabou! Você ganhou no nível médio.`)
-                variaveisIniciais()
+                fraseFimDeJogo = `Você ganhou no nível médio.`
+                aparecerLog(fraseFimDeJogo)
             }
             else {
-
-                aparecerLog(`O jogo acabou! Você perdeu no nível médio.`)
-                variaveisIniciais()
+                fraseFimDeJogo = `Você perdeu no nível médio.`
+                aparecerLog(fraseFimDeJogo)
             }
         }
         if (JogoNivel == 3) {
             if (molextraidos >= objPrincipal && (SomaFacil + SomaDificil >= 3 || SomaDificilNegacao + SomaFacilNegacao <= 2)) { //fazer 40 mols com 3 trofeus
-
-                aparecerLog(`O jogo acabou! Você ganhou no nível difícil.`)
-                variaveisIniciais()
+                fraseFimDeJogo = `Você ganhou no nível difícil.`
+                aparecerLog(fraseFimDeJogo)
             }
             else {
-
-                aparecerLog(`O jogo acabou! Você perdeu no nível difícil.`)
-                variaveisIniciais()
+                fraseFimDeJogo = `Você perdeu no nível difícil.`
+                aparecerLog(fraseFimDeJogo)
             }
         }
         if (JogoNivel == 4) {
             if (molextraidos >= objPrincipal && (SomaDificil >= 2 || SomaDificilNegacao <= 3)) { //fazer 50 mols e ao menos 2 trofeus 
-
-                aparecerLog(`O jogo acabou! Você ganhou no nível impossível.`)
-                variaveisIniciais()
+                fraseFimDeJogo = `Você ganhou no nível impossível.`
+                aparecerLog(fraseFimDeJogo)
             }
             else {
-
-                aparecerLog(`O jogo acabou! Você perdeu no nível impossível.`)
-                variaveisIniciais()
+                fraseFimDeJogo = `Você perdeu no nível impossível.`
+                aparecerLog(fraseFimDeJogo)
+                
             }
         }
         FimDeJogo()
@@ -1046,13 +1043,21 @@ function GameOver() {
 }
 
 function FimDeJogo() {
-    var avaliacao = confirm(`Sua pesquisa acabou ${localStorage.getItem('jedai/username')}, tente novamente :( \n\nResultados do Jogo:
+    var avaliacao = confirm(`
+        Sua pesquisa acabou ${localStorage.getItem('jedai/username')}.
+
+        ${fraseFimDeJogo}
+
+        Resultados do Jogo:
         • ⭐ Turnos: ${turno}
         • 🧪 Mol: ${molextraidos}
-        • 💰 Dinheiro: ${dinheiro} ₵  \n\n Gostou do jogo? Então avalie, sua opinião é muito importante!
+        • 💰 Dinheiro: ${dinheiro} ₵
+        
+        Gostou do jogo? Então avalie, sua opinião é muito importante!
     `)
     if (avaliacao == true) {
         window.open("https://forms.gle/idu625JeWDG4sS6G8", "_blank");
+        window.location.href="./select"
     } 
     else {
         window.location.href="./select"
@@ -1158,36 +1163,34 @@ function confirmacao() {
     console.log(JogoNivel)
 }
 
-if (JogoNivel == 1) {
+function verificacaoDeNivel(){
+     if (JogoNivel == 1) {
     objPrincipal = 18 //Quantidade de mols que precisa extrair
     botaoEventoOnOFF = false
     botaoEvento()
     nivelDoJogo = `Fazer 18 mols em ${tempoDeJogo} turnos`
     aparecerLog(`Fazer 18 mols em ${tempoDeJogo} turnos`)
     atualizar()
-}
-if (JogoNivel == 2) {
+}else if (JogoNivel == 2) {
     objPrincipal = 30
     botaoEventoOnOFF = true
     nivelDoJogo = `Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`
     aparecerLog(`Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`)
     atualizar()
-}
-if (JogoNivel == 3) {
+}else if (JogoNivel == 3) {
     objPrincipal = 39
     botaoEventoOnOFF = true
     nivelDoJogo = `Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`
     aparecerLog(`Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`)
     atualizar()
-}
-if (JogoNivel == 4) {
+}else if (JogoNivel == 4) {
     objPrincipal = 48
     botaoEventoOnOFF = true
     nivelDoJogo = `Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`
     aparecerLog(`Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`)
     atualizar()
 }
-
+}
 function loop() {
     while (true) {
         Proximo()
