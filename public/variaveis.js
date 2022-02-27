@@ -436,7 +436,7 @@ function AdicionarTri() {
         QualMol = 0;
         GrupoPHRT = GrupoReagentes;
         fraseLog = `Você comprou ${reagente2}`
-        acaoDinheiro(costReagente2, acaoReagente2);
+        acaoDinheiro(costReagente2, personagem.acaoReagente2);
     }
 }
 //AÇÕES DE COMPRAR FIM-----------------
@@ -470,7 +470,7 @@ function Proximo() { //funcao para passar turno
             }
         }
     }
-    molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2
+    molSoma = molReagente1 + molReagente2 + molProduto1 + molProduto2
     // acao = personagem.acao
     molsAnteriores = molextraidos
     personagem.decantarPersonagem()
@@ -525,7 +525,7 @@ function Filtro() {
     if ((molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) && (NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)) { // Leia-se: se tiver reagentes suficientes e nivel adequado
         GrupoPHRT = GrupoFiltro
         ExtracaoRapida = 1
-        acaoDinheiro(filtrocost, filtroAcao)
+        acaoDinheiro(personagem.filtrocost, personagem.filtroAcao)
         aparecerLog(`Entrou em processo de ${refinar}.`)
         ExtracaoRapida = false
         Trofeus()
@@ -714,7 +714,11 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
 function UsarReagentes(QualReagente) { //funcao para retirar os valores dos reagentes
 
     if (QualReagente == 0) {
-        molReagente2 += 1;
+        if(localStorage.getItem('jedai/personagem') == '2'){
+            molReagente2 += 2;
+        } else{
+            molReagente2 += 1;
+        }
         atualizar()
     }
     else if (QualReagente == 1) {
@@ -807,10 +811,10 @@ function upgradeReator() {
 }
 
 function upgradePHmetro() {
-    if (PHmetro < PHmetroMax && acao >= PHmetroAcao && dinheiro >= PHmetroCost) {
+    if (PHmetro < PHmetroMax && acao >= PHmetroAcao && dinheiro >= personagem.PHmetroCost) {
         PHmetro += 1;
         acao -= PHmetroAcao;
-        dinheiro -= PHmetroCost;
+        dinheiro -= personagem.PHmetroCost;
         PHmax += 1;
         PHmin -= 1;
         NupgradePH = 1;
@@ -829,10 +833,10 @@ function upgradePHmetro() {
 }
 
 function upgradeTermometro() {
-    if (termometro < termometroMax && acao >= termometroAcao && dinheiro >= termometroCost) {
+    if (termometro < termometroMax && acao >= termometroAcao && dinheiro >= personagem.termometroCost) {
         termometro += 1;
         acao -= termometroAcao;
-        dinheiro -= termometroCost;
+        dinheiro -= personagem.termometroCost;
         tempMax += 1;
         tempMin -= 1;
         NupgradeTemp = 1;
@@ -1234,3 +1238,4 @@ function decantarCor(decantarColorido, qualID) {
 
 //desligar botao eventos aletaorios no nivel facil
 //localStorage.getItem('jedai/level') nivel do jogo
+//localStorage.getItem('jedai/personagem')

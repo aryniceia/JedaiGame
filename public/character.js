@@ -14,19 +14,19 @@
     Miquito:
         ✅ Vantagem: suas colunas de extração demoram um turno a menos;
         ✅ Desvantagem: Probabilidade inicial = 30
-    Cuca:
+    Cuca:Resolvido
         ✅ Vantagem: Rápida para se formar ->  molMestrado = 6,  molDoutorado = 12
         Desvantagem: custo para melhoria dos equipamentos (2 C mais caro) e uso da coluna rápida +2 (filtrocost e filtroacao + 2), 
     Tuca: ISENTAO
         ✅ Vantagem: 30% a mais de dinheiro por turno
         ✅ Desvantagem: sua colunas de extração normal demora um turno a mais.
-    Pintada:
+    Pintada:Resolvido
         ✅ Vantagem: Probabilidade inicial = 60
         ✅ Desvantagem: recebe 20% a menos de dinheiro por turno.
-    Guará: RESOLVER (dificil)
+    Guará: Resolvido
         ✅ Vantagem: Toda compra de triacilglicerídeo vem com 2 mols
         ✅ Desvantagem: Toda compra de triacilglicerídeo custa 2 ações
-    Capi:
+    Capi: Resolvido
         ✅ Vantagem: 1 ação a mais por turno
         ✅ Desvantagem: Demora mais para se formar ->  molMestrado = 12, mol, molDoutorado = 18
 
@@ -61,6 +61,10 @@ class PersonagemDefault {
         this.mesada = 10
         this.mesadaMestrado = 15
         this.mesadaDoutorado = 20
+        this.PHmetroCost = 3
+        this.termometroCost = 3
+        this.filtrocost = 15
+        this.filtroAcao = 2
     }
     decantarPersonagem() {
         molextraidos += decantarR4 + filtrarR2
@@ -93,6 +97,10 @@ class Capi extends PersonagemDefault {
             super(ProbInicial, dinheiro, acao)
             this.molMestrado = 6
             this.molDoutorado = 12
+            this.PHmetroCost = 5
+            this.termometroCost = 5
+            this.filtrocost = 20
+            this.filtroAcao = 4
         }
     }
     class Miquito extends PersonagemDefault {
