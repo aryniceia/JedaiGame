@@ -471,7 +471,7 @@ function Proximo() { //funcao para passar turno
         }
     }
     molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2
-    acao = 2
+    // acao = personagem.acao
     molsAnteriores = molextraidos
     molextraidos += decantarR4 + filtrarR2
     //mudancaDeMolsTotal()
@@ -852,7 +852,9 @@ function upgradeTermometro() {
 
 
 function eventosAleatorios() {
-
+    if (localStorage.getItem('jedai/level') == '1') {
+        botaoEventoOnOFF = false
+    }
     if (botaoEventoOnOFF) {
         evento = Math.floor(Math.random() * 100);
         if (evento <= 30) {
@@ -1153,6 +1155,7 @@ function confirmacao() {
 if (JogoNivel == 1) {
     objPrincipal = 18 //Quantidade de mols que precisa extrair
     botaoEventoOnOFF = false
+    botaoEvento()
     nivelDoJogo = `Fazer 18 mols em ${tempoDeJogo} turnos`
     aparecerLog(`Fazer 18 mols em ${tempoDeJogo} turnos`)
     atualizar()
@@ -1228,3 +1231,4 @@ function decantarCor(decantarColorido, qualID) {
 
 
 //desligar botao eventos aletaorios no nivel facil
+//localStorage.getItem('jedai/level') nivel do jogo

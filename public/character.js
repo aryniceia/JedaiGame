@@ -62,7 +62,7 @@ class PersonagemDefault {
         this.mesadaMestrado = 15
         this.mesadaDoutorado = 20
     }
-    decantar() {
+    decantarPersonagem() {
         molextraidos += decantarR4 + filtrarR2
         decantarR4 = decantarR3
         decantarR3 = decantarR2
