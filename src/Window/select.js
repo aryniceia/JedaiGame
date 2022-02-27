@@ -92,10 +92,10 @@ function Select () {
                                 name="level" className="input" 
                                 id="level" required>
                                     <option disabled value="padrao">Selecione o nível...</option>
-                                    <option value="1">Fácil</option>
-                                    <option value="2">Médio</option>
-                                    <option value="3">Reprovação</option>
-                                    <option value="4">Jubilator</option>
+                                    <option value="1">Fácil (18 mols)</option>
+                                    <option value="2">Médio (30 mols e 1 troféu)</option>
+                                    <option value="3">Reprovação (40 mols e 3 troféus)</option>
+                                    <option value="4">Jubilator (50 mols e 2 troféus difíceis)</option>
                             </select>
                             {(!hasLevel) && <span className='campo' style={{color: 'white'}}> *Campo ainda não preenchido :(</span>}
                         </div>
