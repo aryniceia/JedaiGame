@@ -38,7 +38,7 @@ if (tabuleiro === 2) {
     reversivel = document.getElementById('reversivel').innerHTML = `⇌`
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
-    maquinario = document.getElementById('maquinario').innerHTML = "da centrifuga"
+    maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
     refinar = "centrifugação"
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
     equipamento = "centrifugar"
@@ -74,7 +74,7 @@ molReagente2 = 0;
 molProduto1 = 0;
 molProduto2 = 0;
 molMaxReator = 8; //antigo molMaxR1/R2
-molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
+molSoma = molReagente1 + molReagente2 + molProduto1 + molProduto2;
 
 let acao = 2;
 turno = 1;
