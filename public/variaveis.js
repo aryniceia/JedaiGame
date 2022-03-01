@@ -1079,7 +1079,7 @@ function FimDeJogo() {
     } 
     else {
         window.location.href="./select"
-        alert("Não desanime, vamos retomar a sua pesquisa!")
+        alert("Vamos retomar a sua pesquisa!")
     }
     
     variaveisIniciais()
