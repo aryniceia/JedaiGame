@@ -298,7 +298,7 @@ function Game () {
                                     </span>
                                 </button>
                                 <button onMouseOver={hoverSound} className="botoes" onClick={upgrade}>Nível</button>
-                                <button onMouseOver={hoverSound} className="botoes" onClick={Decantar}>Decantar</button>
+                                <button onMouseOver={hoverSound} className="botoes" onClick={Decantar}><span id='decantar-precipitar'></span></button>
                                 <button onMouseOver={hoverSound} className="botoes" onClick={Filtro}><span id='filtrar-centrifugar'></span></button>
                             </div>
 

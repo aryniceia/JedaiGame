@@ -26,6 +26,7 @@ if (tabuleiro === 1) {
     maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
     refinar = "centrifugação"
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
+    document.getElementById('decantar-precipitar').innerHTML = "Decantar"
     equipamento = "centrifugar"
     //centrifuga
 }
@@ -41,6 +42,8 @@ if (tabuleiro === 2) {
     maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
     refinar = "centrifugação"
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
+    document.getElementById('decantar-precipitar').innerHTML = "Decantar"
+
     equipamento = "centrifugar"
     //centrifuga
 }
@@ -55,7 +58,9 @@ if (tabuleiro === 3) {
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "do filtro"
     refinar = "filtragem"
-    filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Filtrar"
+    document.getElementById('filtrar-centrifugar').innerHTML = "Filtrar"
+    document.getElementById('decantar-precipitar').innerHTML = "Precipitar"
+
     equipamento = "filtrar"
     //filtro
 }
@@ -597,6 +602,7 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     r1 = document.getElementById('reagente01').innerHTML = `${molReagente1} ${reagente1}`;
     p1 = document.getElementById('produto01').innerHTML = `${molProduto1} ${produto1}`;
     p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
+    document.getElementById('produto2').innerHTML = produto2
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
     acdin = document.getElementById('acdin').innerHTML = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
     NivelGame = document.getElementById('nivelAtual').innerHTML = `${Faculdade}`
