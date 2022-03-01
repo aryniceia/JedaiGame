@@ -28,6 +28,8 @@ if (tabuleiro === 1) {
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
     document.getElementById('decantar-precipitar').innerHTML = "Decantar"
     equipamento = "centrifugar"
+    processosDecantarEPrecipitar = "decantação"
+    semProdutos = "decantados"
     //centrifuga
 }
 if (tabuleiro === 2) {
@@ -43,6 +45,8 @@ if (tabuleiro === 2) {
     refinar = "centrifugação"
     filtrarCentrifugar = document.getElementById('filtrar-centrifugar').innerHTML = "Centrifugar"
     document.getElementById('decantar-precipitar').innerHTML = "Decantar"
+    processosDecantarEPrecipitar = "decantação"
+    semProdutos = "decantados"
 
     equipamento = "centrifugar"
     //centrifuga
@@ -60,6 +64,8 @@ if (tabuleiro === 3) {
     refinar = "filtragem"
     document.getElementById('filtrar-centrifugar').innerHTML = "Filtrar"
     document.getElementById('decantar-precipitar').innerHTML = "Precipitar"
+    processosDecantarEPrecipitar = "precipitação"
+    semProdutos = "precipitados"
 
     equipamento = "filtrar"
     //filtro
@@ -206,24 +212,26 @@ nivelDoJogo = ``
 
 //Game Over:
 JogoNivel = localStorage.getItem('jedai/level');
-// SomaDificil/* Maior que 1*/ = Mestrado11turnos +
-//     Doutorado22turnos +
-//     TerminarJogoIC;
-// SomaDificilNegacao =
-//     ModificacaoTempPH + //Negacao
-//     NupgradeEquipamentos; //negacao
 
-// SomaFacil = Prob100 +
-//     Prob0 +
-//     NupgradePH +
-//     NupgradeReator +
-//     NupgradeTemp;
+    function trofeusBuleanos(){ 
+    SomaDificil/* Maior que 1*/ = Mestrado11turnos +
+    Doutorado22turnos +
+    TerminarJogoIC;
+SomaDificilNegacao =
+    ModificacaoTempPH + //Negacao
+    NupgradeEquipamentos; //negacao
 
-// SomaFacilNegacao =
-//     ExtracaoRapida + //negacao
-//     ModificacaoPH + //negacao
-//     ModificacaoTemp //negacao
+SomaFacil = Prob100 +
+    Prob0 +
+    NupgradePH +
+    NupgradeReator +
+    NupgradeTemp;
 
+SomaFacilNegacao =
+    ExtracaoRapida + //negacao
+    ModificacaoPH + //negacao
+    ModificacaoTemp //negacao
+}
 function variaveisIniciais() {
     //equilibrio = true // perguntando se a reação permite conversão
     molsAnteriores = 0
@@ -369,23 +377,23 @@ function variaveisIniciais() {
 
     //Game Over:
     JogoNivel = localStorage.getItem('jedai/level');
-    // SomaDificil/* Maior que 1*/ = Mestrado11turnos +
-    //     Doutorado22turnos +
-    //     TerminarJogoIC;
-    // SomaDificilNegacao =
-    //     ModificacaoTempPH + //Negacao
-    //     NupgradeEquipamentos; //negacao
+    SomaDificil/* Maior que 1*/ = Mestrado11turnos +
+        Doutorado22turnos +
+        TerminarJogoIC;
+    SomaDificilNegacao =
+        ModificacaoTempPH + //Negacao
+        NupgradeEquipamentos; //negacao
 
-    // SomaFacil = Prob100 +
-    //     Prob0 +
-    //     NupgradePH +
-    //     NupgradeReator +
-    //     NupgradeTemp;
+    SomaFacil = Prob100 +
+        Prob0 +
+        NupgradePH +
+        NupgradeReator +
+        NupgradeTemp;
 
-    // SomaFacilNegacao =
-    //     ExtracaoRapida + //negacao
-    //     ModificacaoPH + //negacao
-    //     ModificacaoTemp //negacao
+    SomaFacilNegacao =
+        ExtracaoRapida + //negacao
+        ModificacaoPH + //negacao
+        ModificacaoTemp //negacao
 
     atualizar()
 }
@@ -434,6 +442,8 @@ function AdicionarH2O() { //funcao para adicionar agua por meio do botao
         fraseLog = `Você comprou ${reagente1}`
         acaoDinheiro(costReagente1, acaoReagente1);
 
+    } else {
+        aparecerLog(`Reator cheio`, true)
     }
 }
 function AdicionarTri() {
@@ -442,6 +452,8 @@ function AdicionarTri() {
         GrupoPHRT = GrupoReagentes;
         fraseLog = `Você comprou ${reagente2}`
         acaoDinheiro(costReagente2, personagem.acaoReagente2);
+    } else {
+        aparecerLog(`Reator cheio`, true)
     }
 }
 //AÇÕES DE COMPRAR FIM-----------------
@@ -493,19 +505,19 @@ function Proximo() { //funcao para passar turno
     extracaoR4 = `${decantarR4} mols no estágio 4 |`
 
     extracaoFiltro2 = `${filtrarR2} mols no estágio 2 |`
-
-
+    
+    
     NivelJogador()
     if (dinheiro <= dinheiroMax - mesada) { dinheiro += mesada }//limite para nao ultrapassar de 30 dinheiros
     else { dinheiro = dinheiroMax }
     turno += 1 //para saber quantos turnos se tem
-
-    GameOver()
+    trofeusBuleanos()
     Trofeus()
-    
-    aparecerLog(`⭐Turno ${turno}⭐`)
+    verificacaoDeNivel()
     qualProbabilidade()
     eventosAleatorios()
+    aparecerLog(`⭐Turno ${turno}⭐`)
+    GameOver()
     atualizar()
 }
 //AÇÕES DE CONVERTER OS MOLS INÍCIO ----------------------
@@ -520,10 +532,10 @@ function Decantar() { //funcao para ir para a extracao longa
         PH = 0
         temp = parseInt(temp / 2); //a temperatura vai para a metade inteira
 
-        aparecerLog(`Entrou em processo de decantação.`)
+        aparecerLog(`Entrou em processo de ${processosDecantarEPrecipitar}.`)
         atualizar()
     } else {
-        aparecerLog(`Não há produtos para serem decantados.`, true)
+        aparecerLog(`Não há produtos para serem ${semProdutos}.`, true)
     }
 }
 function Filtro() {
@@ -637,7 +649,6 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     //eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML =
         `
-        • Objetivo: ${nivelDoJogo} <br>
         • Trofeus adquiridos: <br>
         • Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "Mestre dos 11 🥇" : "Ainda não 😥"}<br>
         • Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "Doutor dos 22 🏆" : "Ainda não 😓"}<br>
@@ -998,7 +1009,8 @@ function Trofeus() {
 
 
 function GameOver() {
-    if (turno == tempoDeJogo) { //em X turnos
+    if (turno == (tempoDeJogo + 1) || molextraidos >= objPrincipal) { //em X turnos
+        aparecerLog("O jogo acabou!")
         verificacaoDeNivel()
         jogoTerminado = true
         Trofeus()
@@ -1055,7 +1067,7 @@ function FimDeJogo() {
         ${fraseFimDeJogo}
 
         Resultados do Jogo:
-        • ⭐ Turnos: ${turno}
+        • ⭐ Turnos: ${turno - 1}
         • 🧪 Mol: ${molextraidos}
         • 💰 Dinheiro: ${dinheiro} ₵
         
@@ -1175,25 +1187,25 @@ function verificacaoDeNivel(){
     botaoEventoOnOFF = false
     botaoEvento()
     nivelDoJogo = `Fazer 18 mols em ${tempoDeJogo} turnos`
-    aparecerLog(`Fazer 18 mols em ${tempoDeJogo} turnos`)
+    //aparecerLog(`Fazer 18 mols em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 2) {
     objPrincipal = 30
     botaoEventoOnOFF = true
     nivelDoJogo = `Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`
-    aparecerLog(`Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`)
+    // aparecerLog(`Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 3) {
     objPrincipal = 39
     botaoEventoOnOFF = true
     nivelDoJogo = `Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`
-    aparecerLog(`Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`)
+    // aparecerLog(`Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 4) {
     objPrincipal = 48
     botaoEventoOnOFF = true
     nivelDoJogo = `Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`
-    aparecerLog(`Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`)
+    // aparecerLog(`Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`)
     atualizar()
 }
 }
