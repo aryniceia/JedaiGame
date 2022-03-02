@@ -70,6 +70,22 @@ if (tabuleiro === 3) {
     equipamento = "filtrar"
     //filtro
 }
+character = localStorage.getItem('jedai/personagem')
+if (character == '4'){ //miquito
+    ProbInicial = 30; //probabilidade inicial fixa
+
+}else if (character == '5') { //pintada
+    ProbInicial = 60
+}else {
+    ProbInicial = 50
+}
+if (character == '1'){
+    acao = 3
+}else {
+    acao = 2
+}
+fraseLog = ""
+ProbDinamica = ProbInicial
 fatorDeConversaoReagente1 = 3
 fatorDeConversaoReagente2 = 1
 // PH & Temperatura (olhar o PHSinal)
@@ -87,7 +103,7 @@ molProduto2 = 0;
 molMaxReator = 8; //antigo molMaxR1/R2
 molSoma = molReagente1 + molReagente2 + molProduto1 + molProduto2;
 
-let acao = 2;
+// let acao = 2;
 turno = 1;
 //Nível do jogador:
 jogoTerminado = false
@@ -262,7 +278,7 @@ function variaveisIniciais() {
     molMaxReator = 8; //antigo molMaxR1/R2
     molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
 
-    let acao = 2;
+    // let acao = 2;
     turno = 1;
     //Nível do jogador:
     NivelAtual = 0;
@@ -577,8 +593,7 @@ function probabilidade(a) { // a é a probabilidade dinamica
     }
 }
 
-let ProbInicial = 0; //probabilidade inicial fixa
-ProbDinamica = ProbInicial
+
 //TaxaDeReacao(PH,temp); //probabilidade que vai mudar sempre
 //nao consigo pensar agora algo mais inteligente que fazer o NivelAtual receber NivelIC
 NivelAtual = NivelIC;
@@ -1037,21 +1052,21 @@ function GameOver() {
         }
         if (JogoNivel == 3) {
             if (molextraidos >= objPrincipal && (SomaFacil + SomaDificil >= 3 || SomaDificilNegacao + SomaFacilNegacao <= 2)) { //fazer 40 mols com 3 trofeus
-                fraseFimDeJogo = `Você ganhou no nível difícil.`
+                fraseFimDeJogo = `Você ganhou no nível reprovação.`
                 aparecerLog(fraseFimDeJogo)
             }
             else {
-                fraseFimDeJogo = `Você perdeu no nível difícil.`
+                fraseFimDeJogo = `Você perdeu no nível reprovação.`
                 aparecerLog(fraseFimDeJogo)
             }
         }
         if (JogoNivel == 4) {
             if (molextraidos >= objPrincipal && (SomaDificil >= 2 || SomaDificilNegacao <= 3)) { //fazer 50 mols e ao menos 2 trofeus 
-                fraseFimDeJogo = `Você ganhou no nível impossível.`
+                fraseFimDeJogo = `Você ganhou no nível jubilator.`
                 aparecerLog(fraseFimDeJogo)
             }
             else {
-                fraseFimDeJogo = `Você perdeu no nível impossível.`
+                fraseFimDeJogo = `Você perdeu no nível jubilator.`
                 aparecerLog(fraseFimDeJogo)
                 
             }
@@ -1070,7 +1085,9 @@ function FimDeJogo() {
         • ⭐ Turnos: ${turno - 1}
         • 🧪 Mol: ${molextraidos}
         • 💰 Dinheiro: ${dinheiro} ₵
-        
+        • ${nivelDoJogo}
+        • ${NivelAtual}
+
         Gostou do jogo? Então avalie, sua opinião é muito importante!
     `)
     if (avaliacao == true) {
@@ -1196,13 +1213,13 @@ function verificacaoDeNivel(){
     // aparecerLog(`Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 3) {
-    objPrincipal = 39
+    objPrincipal = 40
     botaoEventoOnOFF = true
     nivelDoJogo = `Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 4) {
-    objPrincipal = 48
+    objPrincipal = 50
     botaoEventoOnOFF = true
     nivelDoJogo = `Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`)

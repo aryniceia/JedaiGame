@@ -126,7 +126,7 @@ class Capi extends PersonagemDefault {
         constructor(ProbInicial, molMestrado, molDoutorado, dinheiro, acao){
             super(molMestrado, molDoutorado, dinheiro, acao)
             this.ProbInicial = 60
-            this.mesada = 7
+            this.mesada = 8
             this.mesadaMestrado = 12
             this.mesadaDoutorado = 15
         }
