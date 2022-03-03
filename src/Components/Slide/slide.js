@@ -28,14 +28,7 @@ const items = [
           idadeMamute:'🧬 Idade: desconhecida, dizem habitar esse laboratório \n desde o plioceno.', 
           alturaMamute:'📏 Altura: 2,01m ', pesoMamute:'⚖️ Peso: 127 kg ',
           descricaoMamute:'📜 Bio: Apesar da cara sisuda, \n adora uma brincadeira e \n qualquer coisa é motivo \n para festa. Geralmente \n encontrado em seu \n habitat natural: o laboratório \n de química orgânica em \n horários não convencionais, \n quando pode realizar \n seus experimentos malucos sem \n o escrutínio des alunes.',
-          src: Mamute, colors: 'RGBA(211,141,181,0.97)'},
-
-  {id: 1, titleCapi: '🧪 Capi (ela/dela)', idadeCapi: '🧬 Idade: 28 anos', 
-          alturaCapi: '📏 Altura: 1,65 m', pesoCapi: '⚖️ Peso: 70 kg', 
-          vantagemCapi: '✅ Eficiente, faz mais \n em menos tempo.',
-          desvantagemCapi: '❎ Sem stress para se formar, mesmo que demore mais.',
-          descricaoCapi: '📜 Bio: Dona de diversos apelidos: Carpincha, \n Beque, Trombuda, Cachapu, Cunum e Cubu,\n ela está sempre comendo alguma \n coisa no laboratório, a despeito das inúme- \n -ras broncas que já tomou. Calma e \n prestativa, prefere realizar seus \n experimentos à tarde. É a veterana que já \n devia ter se formado, mas que ninguém \n quer que vá embora. Todes precisam de \n sua ajuda para alguma coisa.', 
-          src1: Capivara, colors: 'RGBA(211,141,181,0.97)'},
+          src4: Mamute, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 2, titleGuara: '🧪 Guará (elu/delu)', idadeGuara:'🧬 Idade: 20 anos', alturaGuara:'📏 Altura: 1,90 m ', 
           pesoGuara:'⚖️ Peso: 80 kg',
@@ -56,14 +49,14 @@ const items = [
           vantagemPintada:'✅ Suas reações acontecem com maior probabilidade.',
           desvantagemPintada:'❎ O valor de sua bolsa precisa ser reajustado.',
           descricaoPintada:'📜 Bio: É e mais nove alune do \n laboratório. Ainda não sabe muito \n bem o que fazer da vida, então se \n dedica a várias entidades, à \n atlética e começou recentemente \n uma IC. Com tanta coisa para fazer \n e uma graduação exigente, quase \n nunca está no laboratório, mas \n dizem que leva jeito para coisa,\n porque tudo o que toca dá certo.',
-          src: Onca, colors: 'RGBA(211,141,181,0.97)'},
+          src6: Onca, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 7, titleTuca: '🧪 Tuca (ele/dele)', idadeTuca:'🧬 Idade: 24 anos', 
           alturaTuca:'📏 Altura: 1,68 m', pesoTuca:'⚖️ Peso: 55 kg ',
-          vantagemTuca:'✅ Sem atributos...',
-          desvantagemTuca:'❎ Sem atributos...',
+          vantagemTuca:'✅❎ 5 bola é 10!',
+          /*desvantagemTuca:'❎ Sem atributos...',*/
           descricaoTuca:'📜 Bio: Figura constante no \n laboratório. Até parece que \n não dorme. Não sabe onde \n está um reagente ou equi- \n -pamento? É só perguntar \n para o Tuca, ele não só vai \n pegar para você como contar \n sobre tudo que tem acontecido \n no laboratório.',
-          src: Tucano, colors: 'RGBA(211,141,181,0.97)'},
+          src7: Tucano, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 3, titleCuca: '🧪 Cuca (ela/dela)', idadeCuca:'🧬 Idade: 23 anos', 
           alturaCuca:'📏 Altura: 1,75 m ', pesoCuca:'⚖️ Peso: 69 kg',
@@ -71,6 +64,14 @@ const items = [
           desvantagemCuca:'❎ Afobada para comprar recursos, sempre paga mais caro.',
           descricaoCuca:'📜 Bio: Sempre com um \n livro  na mão e uma curio- \n sidade científica bem \n  aleatória para compartilhar. \n  É a ela que você recorre quando \n Mestre Mamu não está \n por perto para tirar a sua dúvida. \n Não vê a hora de terminar a \n  graduação para poder passar \n  mais tempo no laboratório.',
           src3: Jacare, colors: 'RGBA(211,141,181,0.97)'},
+
+  {id: 1, titleCapi: '🧪 Capi (ela/dela)', idadeCapi: '🧬 Idade: 28 anos', 
+          alturaCapi: '📏 Altura: 1,65 m', pesoCapi: '⚖️ Peso: 70 kg', 
+          vantagemCapi: '✅ Eficiente, faz mais em menos \n tempo.',
+          desvantagemCapi: '❎ Sem stress para se formar, mesmo \n que demore mais.',
+          descricaoCapi: '📜 Bio: Dona de diversos apelidos: Carpincha, \n Beque, Trombuda, Cachapu, Cunum e Cubu,\n ela está sempre comendo alguma \n coisa no laboratório, a despeito das inúme- \n -ras broncas que já tomou. Calma e \n prestativa, prefere realizar seus \n experimentos à tarde. É a veterana que já \n devia ter se formado, mas que ninguém \n quer que vá embora. Todes precisam de \n sua ajuda para alguma coisa.',
+          src1: Capivara, colors: 'RGBA(211,141,181,0.97)'},
+
 ];
 
 function Slideshow() {
@@ -113,7 +114,10 @@ function Slideshow() {
                 <img className="imageCapi" src={backgroundColor.src1} /> {/*Foto apenas da capivara */}
                 <img className="imageGuara" src={backgroundColor.src2} /> {/*Foto apenas da lobo guará*/}
                 <img className="imageJacare" src={backgroundColor.src3} /> {/*Foto apenas do jacaré*/}
+                <img className="imageMamu" src={backgroundColor.src4} /> {/*Foto apenas do mamute*/}
                 <img className="imageMico" src={backgroundColor.src5} /> {/*Foto apenas do mico*/}
+                <img className="imagePintada" src={backgroundColor.src6} /> {/*Foto apenas do onça*/}
+                <img className="imageTuca" src={backgroundColor.src7} /> {/*Foto apenas do tucano*/}
 
                 {/*Informações específicas*/}
                   {/*Capivara*/}
