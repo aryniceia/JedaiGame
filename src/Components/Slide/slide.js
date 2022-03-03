@@ -41,7 +41,7 @@ const items = [
           alturaMiquito:'📏 Altura: 1,60 m', pesoMiquito:'⚖️ Peso: 55 kg ', 
           vantagemMiquito:'✅ Suas extrações são mais rápidas.',
           desvantagemMiquito:'❎ Suas reações acontecem com menor probabilidade.',
-          descricaoMiquito:'📜 Bio: Não se conhece alguém \n que seja mais rápido para montar \n uma coluna de separação ou limpar \n o rotaevaporador. Pena que quase \n sempre tem que recomeçar seus \n experimentos, porque esqueceu \n algum reagente ou de acertar \n algum parâmetro.',
+          descricaoMiquito:'📜 Bio: Não se conhece alguém que \n seja mais rápido para montar uma \n coluna de separação ou limpar \n o rotaevaporador. Pena que qua- \n -se sempre tem que recomeçar \n seus experimentos, porque esque- \n -ceu algum reagente ou de acertar \n algum parâmetro.',
           src5: Mico, colors: 'RGBA(211,141,181,0.97)'},  
 
   {id: 6, titlePintada: '🧪 Pintada (elu/delu)', idadePintada:'🧬 Idade: 19 anos', 
@@ -62,7 +62,7 @@ const items = [
           alturaCuca:'📏 Altura: 1,75 m ', pesoCuca:'⚖️ Peso: 69 kg',
           vantagemCuca:'✅ Talento precoce, precisa de menos tempo para se formar.',
           desvantagemCuca:'❎ Afobada para comprar recursos, sempre paga mais caro.',
-          descricaoCuca:'📜 Bio: Sempre com um \n livro  na mão e uma curio- \n sidade científica bem \n  aleatória para compartilhar. \n  É a ela que você recorre quando \n Mestre Mamu não está \n por perto para tirar a sua dúvida. \n Não vê a hora de terminar a \n  graduação para poder passar \n  mais tempo no laboratório.',
+          descricaoCuca:'📜 Bio: Sempre com um \n livro  na mão e uma curio- \n sidade científica bem \n  aleatória para compartilhar. \n  É a ela que você recorre \n quando Mestre Mamu não está \n por perto para tirar a sua dúvida. \n Não vê a hora de terminar a \n  graduação para poder passar \n  mais tempo no laboratório.',
           src3: Jacare, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 1, titleCapi: '🧪 Capi (ela/dela)', idadeCapi: '🧬 Idade: 28 anos', 
