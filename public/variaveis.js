@@ -1031,42 +1031,42 @@ function GameOver() {
         Trofeus()
         if (JogoNivel == 1) {
             if (molextraidos >= objPrincipal) { //fazer 18 mols em 20 turnos
-                fraseFimDeJogo = `Você ganhou no nível fácil.`
+                fraseFimDeJogo = `e você a concluiu com maestria no nível fácil!`
                 aparecerLog(fraseFimDeJogo)
                 //variaveisIniciais()
             } else {
-                fraseFimDeJogo = `Você perdeu no nível fácil.`
+                fraseFimDeJogo = `e ela não foi suficiente no nível fácil! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)                //variaveisIniciais()
             }
 
         }
         if (JogoNivel == 2) {
             if (molextraidos >= objPrincipal && (SomaDificil + SomaFacil || SomaDificilNegacao + SomaFacilNegacao > 0)) { // fazer ao menos 30 mols com 1 trofeu
-                fraseFimDeJogo = `Você ganhou no nível médio.`
+                fraseFimDeJogo = `e você a concluiu com maestria no nível médio.`
                 aparecerLog(fraseFimDeJogo)
             }
             else {
-                fraseFimDeJogo = `Você perdeu no nível médio.`
+                fraseFimDeJogo = `e ela não foi suficiente no nível médio! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)
             }
         }
         if (JogoNivel == 3) {
             if (molextraidos >= objPrincipal && (SomaFacil + SomaDificil >= 3 || SomaDificilNegacao + SomaFacilNegacao <= 2)) { //fazer 40 mols com 3 trofeus
-                fraseFimDeJogo = `Você ganhou no nível reprovação.`
+                fraseFimDeJogo = `e você a concluiu com maestria no nível reprovação.`
                 aparecerLog(fraseFimDeJogo)
             }
             else {
-                fraseFimDeJogo = `Você perdeu no nível reprovação.`
+                fraseFimDeJogo = `e ela não foi suficiente no nível reprovação! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)
             }
         }
         if (JogoNivel == 4) {
             if (molextraidos >= objPrincipal && (SomaDificil >= 2 || SomaDificilNegacao <= 3)) { //fazer 50 mols e ao menos 2 trofeus 
-                fraseFimDeJogo = `Você ganhou no nível jubilator.`
+                fraseFimDeJogo = `e você a concluiu com maestria no nível jubilator.`
                 aparecerLog(fraseFimDeJogo)
             }
             else {
-                fraseFimDeJogo = `Você perdeu no nível jubilator.`
+                fraseFimDeJogo = `e ela não foi suficiente no nível jubilator! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)
                 
             }
@@ -1077,17 +1077,14 @@ function GameOver() {
 
 function FimDeJogo() {
     var avaliacao = confirm(`
-        Sua pesquisa acabou ${localStorage.getItem('jedai/username')}.
-
-        ${fraseFimDeJogo}
+        Sua pesquisa acabou ${localStorage.getItem('jedai/username')} ${fraseFimDeJogo}
 
         Resultados do Jogo:
-        • ⭐ Turnos: ${turno - 1}
-        • 🧪 Mol: ${molextraidos}
-        • 💰 Dinheiro: ${dinheiro} ₵
-        • ${nivelDoJogo}
-        • ${NivelAtual}
-
+            • 🌟 Turnos: ${turno - 1}
+            • 🧪 Mol: ${molextraidos}
+            • 💰 Dinheiro: ${dinheiro} ₵
+            • 🎓 Nível: ${Faculdade}
+            • 🏆 ${nivelDoJogo}
         Gostou do jogo? Então avalie, sua opinião é muito importante!
     `)
     if (avaliacao == true) {

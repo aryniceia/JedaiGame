@@ -23,6 +23,13 @@ import Tucano from '../../img/char/tucano.png';
 
 const delay = 1000000000;
 const items = [
+
+  {id: 4, titleMamute: '🧪 Mestre Mamu', 
+          idadeMamute:'🧬 Idade: desconhecida, dizem habitar esse laboratório \n desde o plioceno.', 
+          alturaMamute:'📏 Altura: 2,01m ', pesoMamute:'⚖️ Peso: 127 kg ',
+          descricaoMamute:'📜 Bio: Apesar da cara sisuda, \n adora uma brincadeira e \n qualquer coisa é motivo \n para festa. Geralmente \n encontrado em seu \n habitat natural: o laboratório \n de química orgânica em \n horários não convencionais, \n quando pode realizar \n seus experimentos malucos sem \n o escrutínio des alunes.',
+          src: Mamute, colors: 'RGBA(211,141,181,0.97)'},
+
   {id: 1, titleCapi: '🧪 Capi (ela/dela)', idadeCapi: '🧬 Idade: 28 anos', 
           alturaCapi: '📏 Altura: 1,65 m', pesoCapi: '⚖️ Peso: 70 kg', 
           vantagemCapi: '✅ Eficiente, faz mais \n em menos tempo.',
@@ -36,12 +43,6 @@ const items = [
           desvantagemGuara :'❎ Purificar reagentes dá mais trabalho.',
           descricaoGuara:'📜 Bio: Figura excêntrica, sempre de \n casaco, capuz e fones de ouvido. \n Fica quieto na delu, curtindo o frio \n polar do ar condicionado, enquanto \n pacientemente purifica \n recursivamente todos os reagentes \n para seus experimentos. Jamais toque \n em suas vidrarias, meticulosamente \n limpas e guardadas de um jeito \n que só elu consegue.', 
           src2: Guara, colors: 'RGBA(211,141,181,0.97)'},
-
-  {id: 4, titleMamute: '🧪 Mestre Mamu', 
-          idadeMamute:'🧬 Idade: desconhecida, dizem habitar esse laboratório \n desde o plioceno.', 
-          alturaMamute:'📏 Altura: 2,01m ', pesoMamute:'⚖️ Peso: 127 kg ',
-          descricaoMamute:'📜 Bio: Apesar da cara sisuda, \n adora uma brincadeira e \n qualquer coisa é motivo \n para festa. Geralmente \n encontrado em seu \n habitat natural: o laboratório \n de química orgânica em \n horários não convencionais, \n quando pode realizar \n seus experimentos malucos sem \n o escrutínio des alunes.',
-          src: Mamute, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 5, titleMiquito: '🧪 Miquito (ele/dele)', idadeMiquito:'🧬 Idade: 21 anos', 
           alturaMiquito:'📏 Altura: 1,60 m', pesoMiquito:'⚖️ Peso: 55 kg ', 
