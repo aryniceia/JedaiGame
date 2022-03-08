@@ -50,7 +50,7 @@
       font-family: 'Chakra Petch';
       color: white;
       text-align: left;
-      font-size: 15px;
+      font-size: 14px;
       padding: 6px;
     }
     #acdin {
@@ -747,23 +747,235 @@
         }
 
 /*-----------------------------------------------------------------------------------------------*/
+/* Responsividade da  tela */
+    /*@media only screen and (min-width: 800px) { 
+    .board {
+      height: 350px;
+      margin-top: -85px ;
+    }*/
+  
+  
+    /* Responsividade dos  botões */
+    @media only screen and (min-width: 1024px) { /*Tela Principal 100% */
+      .UpPh {
+        position: absolute;
+        top: 420px;
+        left: 646px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 286px;
+        left: 493px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 368px;
+        left: 436px
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 437px;
+        left: 588px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 437px;
+        left: 557px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 438px;
+        left: 480px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 438px;
+        left: 454px;
+      }
+    }
+    @media only screen and (min-width: 1400px) { /* 90% */
+      .UpPh {
+        position: absolute;
+        top: 460px;
+        left: 722px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 400px;
+        left: 510px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 322px;
+        left: 567px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 470px;
+        left: 660px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 470px;
+        left: 630px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 470px;
+        left: 560px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 470px;
+        left: 531px;
+      }
+    }
+    @media only screen and (min-width: 1600px) { /* 80% */
+      .UpPh {
+        position: absolute;
+        top: 502px;
+        left: 812px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 372px;
+        left: 660px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 450px;
+        left: 600px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 520px;
+        left: 757px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 520px;
+        left: 726px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 520px;
+        left: 652px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 520px;
+        left: 625px;
+      }
+    }
+    @media only screen and (min-width: 1800px) { /* 75% */
+      .UpPh {
+        position: absolute;
+        top: 530px;
+        left: 868px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 396px;
+        left: 716px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 475px;
+        left: 654px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 548px;
+        left: 810px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 548px;
+        left: 780px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 548px;
+        left: 712px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 548px;
+        left: 685px;
+      }
+    }
+    @media only screen and (min-width: 2024px) { /* 67% */
+      .UpPh {
+        position: absolute;
+        top: 585px;
+        left: 982px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 450px;
+        left: 830px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 530px;
+        left: 770px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 600px;
+        left: 922px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 600px;
+        left: 894px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 600px;
+        left: 822px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 600px;
+        left: 794px;
+      }
+    }
+    @media only screen and (min-width: 2400px) { /* 50 % */
+      .UpPh {
+        position: absolute;
+        top: 750px;
+        left: 1318px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 610px;
+        left: 1167px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 690px;
+        left: 1110px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 762px;
+        left: 1262px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 762px;
+        left: 1230px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 762px;
+        left: 1160px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 762px;
+        left: 1130px;
+      }
+    }
 
-/*  Redimensionamento das Telas 
-@media only screen and (max-width: 1024px) {
-  .cabeçalho {
-    align-items: center;
-    width: 100%;
-  }
-  .board {
-    align-items: center;
-    width: 100%;
-  }
-  .barra_lateral {
-    align-items: center;
-    width: 100%;
-  }
-  .barra_inferior {
-    align-items: center;
-    width: 100%;
-  }
-}*/
