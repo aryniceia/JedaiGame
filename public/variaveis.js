@@ -501,6 +501,8 @@ function Proximo() { //funcao para passar turno
                     aparecerLog(`Reagentes não foram convertidos em produtos!`)
                 }
             }
+        }else if (molReagente1 >= fatorDeConversaoReagente1 && molReagente2 >= fatorDeConversaoReagente2 ) {
+            aparecerLog(`Reagentes não foram convertidos em produtos!`)
         }
     }
     molSoma = molReagente1 + molReagente2 + molProduto1 + molProduto2
