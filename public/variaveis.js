@@ -276,7 +276,7 @@ function variaveisIniciais() {
     molProduto1 = 0;
     molProduto2 = 0;
     molMaxReator = 8; //antigo molMaxR1/R2
-    molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
+    molSoma = molReagente1 + molReagente2 + molProduto1 + molProduto2;
 
     // let acao = 2;
     turno = 1;
@@ -502,7 +502,7 @@ function Proximo() { //funcao para passar turno
                 }
             }
         }else if (molReagente1 >= fatorDeConversaoReagente1 && molReagente2 >= fatorDeConversaoReagente2 ) {
-            aparecerLog(`Reagentes não foram convertidos em produtos!`)
+            aparecerLog(`Reagentes não foram convertidos em produtos!`, true)
         }
     }
     molSoma = molReagente1 + molReagente2 + molProduto1 + molProduto2
@@ -586,7 +586,7 @@ function Expurgo() {//funcao para esvaziar o reator
 function probabilidade(a) { // a é a probabilidade dinamica
     d100 = Math.floor(Math.random() * 100); //D100
 
-    aparecerLog(`Você rolou ${d100} no d100`)
+    aparecerLog(`Você obteve ${d100} no gerador de improbabilidade infinita.`)
     if (a >= d100) { //caso esteja dentro da probabilidade ela vai ocorrer
         resultado = 1 // resultado para afirmativo na funcao decantar
     }
@@ -621,7 +621,7 @@ function qualProbabilidade(){ //funcao para definir qual funcao de probabilidade
 
 //ainda nao sei onde colocar
 function atualizar() { //funcao para atualizar todas as informacoes de uma so vez------
-    molSoma = molReagente1 + molReagente2 + molProduto1 + molReagente2;
+    molSoma = molReagente1 + molReagente2 + molProduto1 + molProduto2;
     //mudar o nome do h1
     //variaveis que mudam de acordo com a reaçao
     //jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
