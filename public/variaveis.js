@@ -91,7 +91,7 @@ fatorDeConversaoReagente2 = 1
 // PH & Temperatura (olhar o PHSinal)
 //Manter esses valores maximos em PH e Temp
 //// Trofeus:
-objPrincipal = 100
+objPrincipalMol = 100
 //adicionar os preços aqui
 
 //fraseLog = false
@@ -210,17 +210,17 @@ termometroMax = 3;
 //trofeus e conquistas
 Mestrado11turnos = 0    //dificil        Modificacao esta em Trofeus()
 Doutorado22turnos = 0   //dificil        Modificacao esta em Trofeus()
-TerminarJogoIC = false      //dificil
-Prob100 = false        //Modificacao esta em Trofeus()
-Prob0 = false        //Modificacao esta em Trofeus()
-ExtracaoRapida = true //NEGACAO
-ModificacaoPH = true //NEGACAO
-ModificacaoTemp = true //NEGACAO
-ModificacaoTempPH = true    // NEGACAO dificil        Modificacao esta em Trofeus()
+TerminarJogoIC =0      //dificil
+Prob100 = 0        //Modificacao esta em Trofeus()
+Prob0 = 0        //Modificacao esta em Trofeus()
+ExtracaoRapida = 1 //NEGACAO
+ModificacaoPH = 1 //NEGACAO
+ModificacaoTemp = 1 //NEGACAO
+ModificacaoTempPH = 1    // NEGACAO dificil        Modificacao esta em Trofeus()
 //        Modificacao esta em Trofeus():
-NupgradePH = false
-NupgradeTemp = false
-NupgradeReator = false
+NupgradePH = 0
+NupgradeTemp = 0
+NupgradeReator = 0
 NupgradeEquipamentos = 1  //NEGACAO dificil
 //Procastinador
 trofeusAdquiridos = ``
@@ -266,7 +266,7 @@ function variaveisIniciais() {
     // PH & Temperatura (olhar o PHSinal)
     //Manter esses valores maximos em PH e Temp
     //// Trofeus:
-    objPrincipal = 100
+    objPrincipalMol = 100
     //adicionar os preços aqui
 
     //fraseLog = false
@@ -665,16 +665,16 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     trofeus = document.getElementById('trofeus').innerHTML =
         `
         • Trofeus adquiridos: <br>
-        • Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "Mestre dos 11 🥇" : "Ainda não 😥"}<br>
-        • Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "Doutor dos 22 🏆" : "Ainda não 😓"}<br>
-        • Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "Impressionante 😲" : "Esse não vai ser fácil hein 🤯"}<br>
-        • Chegar em probabilidade de 100%: ${Prob100 ? "Essa foi difícil mas conseguiu 🥳" : "Essa você consegue?"}<br>
-        • Chegar em probabilidade de 0%: ${Prob0 ? "Uhul, conseguiu 😊" : "Ainda não chegou 🤨"}<br>
-        • Não fazer nenhuma modulação do pH: ${ModificacaoPH ? "Tente não fazer essa 😜" : "Infelizmente não foi dessa vez 😐"}<br>
-        • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "Não feito por enquanto 🤔" : "Não era para ter feito 😔"}<br>
-        • Não fazer nenhuma modulação do pH e Temperatura (Dificil): ${ModificacaoTempPH ? "Não feito por enquanto 🙂" : "Fez 😵‍💫"}<br>
-        • Não usar o método de extraçao rapida: ${ExtracaoRapida ? "Não usado por enquanto 😋" : "Usou #Fail 😣"}<br>
-        • Não fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "Nenhum feito ainda 😋" : "Poxa, infelizmente você fez 😡"}<br>
+        • Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "✅" : "❌"}<br>
+        • Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "✅" : "❌"}<br>
+        • Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "✅" : "❌"}<br>
+        • Chegar em probabilidade de 100%: ${Prob100 ? "✅" : "❌"}<br>
+        • Chegar em probabilidade de 0%: ${Prob0 ? "✅" : "❌"}<br>
+        • Não fazer nenhuma modulação do pH: ${ModificacaoPH ? "✅" : "❌"}<br>
+        • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "✅" : "❌"}<br>
+        • Não fazer nenhuma modulação do pH e Temperatura (Dificil): ${ModificacaoTempPH ? "✅" : "❌"}<br>
+        • Não usar o método de extraçao rapida: ${ExtracaoRapida ? "✅" : "❌"}<br>
+        • Não fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "✅" : "❌"}<br>
         `
 }
 
@@ -1024,13 +1024,16 @@ function Trofeus() {
 
 
 function GameOver() {
-    if (turno == (tempoDeJogo + 1) || molextraidos >= objPrincipal) { //em X turnos
+    somaTrofeus = Mestrado11turnos + Doutorado22turnos + TerminarJogoIC + Prob100 + 
+    Prob0 + ExtracaoRapida + ModificacaoPH + ModificacaoTemp + ModificacaoTempPH + 
+    NupgradePH + NupgradeTemp + NupgradeEquipamentos
+    if (turno == (tempoDeJogo + 1) || (molextraidos >= objPrincipalMol && somaTrofeus >= objPrincipalTrofeus) && JogoNivel != 4) { //em X turnos
         aparecerLog("O jogo acabou!")
         verificacaoDeNivel()
         jogoTerminado = true
         Trofeus()
         if (JogoNivel == 1) {
-            if (molextraidos >= objPrincipal) { //fazer 18 mols em 20 turnos
+            if (molextraidos >= objPrincipalMol) { //fazer 18 mols em 20 turnos
                 fraseFimDeJogo = `e você a concluiu com maestria no nível fácil!`
                 aparecerLog(fraseFimDeJogo)
                 //variaveisIniciais()
@@ -1041,7 +1044,7 @@ function GameOver() {
 
         }
         if (JogoNivel == 2) {
-            if (molextraidos >= objPrincipal && (SomaDificil + SomaFacil || SomaDificilNegacao + SomaFacilNegacao > 0)) { // fazer ao menos 30 mols com 1 trofeu
+            if (molextraidos >= objPrincipalMol && (SomaFacil + SomaDificil + SomaDificilNegacao + SomaFacilNegacao >= 2)) { // fazer ao menos 30 mols com 2 trofeu
                 fraseFimDeJogo = `e você a concluiu com maestria no nível médio.`
                 aparecerLog(fraseFimDeJogo)
             }
@@ -1051,7 +1054,7 @@ function GameOver() {
             }
         }
         if (JogoNivel == 3) {
-            if (molextraidos >= objPrincipal && (SomaFacil + SomaDificil >= 3 || SomaDificilNegacao + SomaFacilNegacao <= 2)) { //fazer 40 mols com 3 trofeus
+            if (molextraidos >= objPrincipalMol && (SomaFacil + SomaDificil + SomaDificilNegacao + SomaFacilNegacao >= 4)) { //fazer 40 mols com 4 trofeus
                 fraseFimDeJogo = `e você a concluiu com maestria no nível reprovação.`
                 aparecerLog(fraseFimDeJogo)
             }
@@ -1060,22 +1063,39 @@ function GameOver() {
                 aparecerLog(fraseFimDeJogo)
             }
         }
-        if (JogoNivel == 4) {
-            if (molextraidos >= objPrincipal && (SomaDificil >= 2 || SomaDificilNegacao <= 3)) { //fazer 50 mols e ao menos 2 trofeus 
+        FimDeJogo()
+    }   else if ((JogoNivel == 4) && (turno == (tempoDeJogo + 1) || (molextraidos >= objPrincipalMol && SomaDificil + SomaDificilNegacao >= objPrincipalTrofeus))){
+     
+            if (molextraidos >= objPrincipalMol && (SomaDificil + SomaDificilNegacao >= 2)) { //fazer 50 mols e ao menos 2 trofeus dificeis
                 fraseFimDeJogo = `e você a concluiu com maestria no nível jubilator.`
                 aparecerLog(fraseFimDeJogo)
+            
             }
             else {
                 fraseFimDeJogo = `e ela não foi suficiente no nível jubilator! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)
-                
+            
             }
+            FimDeJogo()
         }
-        FimDeJogo()
-    }
 }
+    
 
 function FimDeJogo() {
+    trofeus =
+    `
+            • Trofeus adquiridos:
+            • Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "✅" : "❌"}
+            • Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "✅" : "❌"}
+            • Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "✅" : "❌"}
+            • Chegar em probabilidade de 100%: ${Prob100 ? "✅" : "❌"}
+            • Chegar em probabilidade de 0%: ${Prob0 ? "✅" : "❌"}
+            • Não fazer nenhuma modulação do pH: ${ModificacaoPH ? "✅" : "❌"}
+            • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "✅" : "❌"}
+            • Não fazer nenhuma modulação do pH e Temperatura (Dificil): ${ModificacaoTempPH ? "✅" : "❌"}
+            • Não usar o método de extraçao rapida: ${ExtracaoRapida ? "✅" : "❌"}
+            • Não fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "✅" : "❌"}
+    `
     var avaliacao = confirm(`
         Sua pesquisa acabou ${localStorage.getItem('jedai/username')} ${fraseFimDeJogo}
 
@@ -1085,6 +1105,7 @@ function FimDeJogo() {
             • 💰 Dinheiro: ${dinheiro} ₵
             • 🎓 Nível: ${Faculdade}
             • 🏆 ${nivelDoJogo}
+            ${trofeus}
         Gostou do jogo? Então avalie, sua opinião é muito importante!
     `)
     if (avaliacao == true) {
@@ -1197,27 +1218,31 @@ function confirmacao() {
 
 function verificacaoDeNivel(){
      if (JogoNivel == 1) {
-    objPrincipal = 18 //Quantidade de mols que precisa extrair
+    objPrincipalMol = 18 //Quantidade de mols que precisa extrair
     botaoEventoOnOFF = false
     botaoEvento()
+    objPrincipalTrofeus = 0
     nivelDoJogo = `Fazer 18 mols em ${tempoDeJogo} turnos`
     //aparecerLog(`Fazer 18 mols em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 2) {
-    objPrincipal = 30
+    objPrincipalMol = 30
     botaoEventoOnOFF = true
+    objPrincipalTrofeus = 2
     nivelDoJogo = `Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 3) {
-    objPrincipal = 40
+    objPrincipalMol = 40
     botaoEventoOnOFF = true
+    objPrincipalTrofeus = 4
     nivelDoJogo = `Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 4) {
-    objPrincipal = 50
+    objPrincipalMol = 50
     botaoEventoOnOFF = true
+    objPrincipalTrofeus = 2
     nivelDoJogo = `Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`)
     atualizar()
