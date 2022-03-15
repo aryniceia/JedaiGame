@@ -1086,17 +1086,17 @@ function GameOver() {
 function FimDeJogo() {
     trofeus =
     `
-            • Trofeus adquiridos:
-            • Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "✅" : "❌"}
-            • Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "✅" : "❌"}
-            • Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "✅" : "❌"}
+            • Troféus adquiridos:
+            • Mestrado em 11 turnos (Difícil): ${Mestrado11turnos ? "✅" : "❌"}
+            • Doutorado em 22 Turnos (Difícil): ${Doutorado22turnos ? "✅" : "❌"}
+            • Terminar o jogo com IC (Difícil): ${TerminarJogoIC ? "✅" : "❌"}
             • Chegar em probabilidade de 100%: ${Prob100 ? "✅" : "❌"}
             • Chegar em probabilidade de 0%: ${Prob0 ? "✅" : "❌"}
             • Não fazer nenhuma modulação do pH: ${ModificacaoPH ? "✅" : "❌"}
             • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "✅" : "❌"}
-            • Não fazer nenhuma modulação do pH e Temperatura (Dificil): ${ModificacaoTempPH ? "✅" : "❌"}
+            • Não fazer nenhuma modulação do pH e Temperatura (Difícil): ${ModificacaoTempPH ? "✅" : "❌"}
             • Não usar o método de extraçao rapida: ${ExtracaoRapida ? "✅" : "❌"}
-            • Não fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "✅" : "❌"}
+            • Não fazer nenhum upgrade de equipamento (Difícil): ${NupgradeEquipamentos ? "✅" : "❌"}
     `
     var avaliacao = confirm(`
         Sua pesquisa acabou ${localStorage.getItem('jedai/username')} ${fraseFimDeJogo}
