@@ -666,17 +666,17 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     //eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML =
         `
-        • Trofeus adquiridos: <br>
-        • Mestrado em 11 turnos (Dificil): ${Mestrado11turnos ? "✅" : "❌"}<br>
-        • Doutorado em 22 Turnos (Dificil): ${Doutorado22turnos ? "✅" : "❌"}<br>
-        • Terminar o jogo com IC (Dificil): ${TerminarJogoIC ? "✅" : "❌"}<br>
-        • Chegar em probabilidade de 100%: ${Prob100 ? "✅" : "❌"}<br>
-        • Chegar em probabilidade de 0%: ${Prob0 ? "✅" : "❌"}<br>
-        • Não fazer nenhuma modulação do pH: ${ModificacaoPH ? "✅" : "❌"}<br>
-        • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "✅" : "❌"}<br>
-        • Não fazer nenhuma modulação do pH e Temperatura (Dificil): ${ModificacaoTempPH ? "✅" : "❌"}<br>
-        • Não usar o método de extraçao rapida: ${ExtracaoRapida ? "✅" : "❌"}<br>
-        • Não fazer nenhum upgrade de equipamento (Dificil): ${NupgradeEquipamentos ? "✅" : "❌"}<br>
+            • Troféus adquiridos: <br>
+            • Mestrado em 11 turnos (Difícil): ${Mestrado11turnos ? "✅" : "❌"}<br>
+            • Doutorado em 22 Turnos (Difícil): ${Doutorado22turnos ? "✅" : "❌"}<br>
+            • Terminar o jogo com IC (Difícil): ${TerminarJogoIC ? "✅" : "❌"}<br>
+            • Chegar em probabilidade de 100%: ${Prob100 ? "✅" : "❌"}<br>
+            • Chegar em probabilidade de 0%: ${Prob0 ? "✅" : "❌"}<br>
+            • Não fazer nenhuma modulação do pH: ${ModificacaoPH ? "✅" : "❌"}<br>
+            • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "✅" : "❌"}<br>
+            • Não fazer nenhuma modulação do pH e Temperatura (Difícil): ${ModificacaoTempPH ? "✅" : "❌"}<br>
+            • Não usar o método de extração rápida: ${ExtracaoRapida ? "✅" : "❌"}<br>
+            • Não fazer nenhum upgrade de equipamento (Difícil): ${NupgradeEquipamentos ? "✅" : "❌"}<br>
         `
 }
 
@@ -1086,7 +1086,7 @@ function GameOver() {
 function FimDeJogo() {
     trofeus =
     `
-            • Troféus adquiridos:
+        ✨ Troféus adquiridos: ✨
             • Mestrado em 11 turnos (Difícil): ${Mestrado11turnos ? "✅" : "❌"}
             • Doutorado em 22 Turnos (Difícil): ${Doutorado22turnos ? "✅" : "❌"}
             • Terminar o jogo com IC (Difícil): ${TerminarJogoIC ? "✅" : "❌"}
@@ -1095,13 +1095,13 @@ function FimDeJogo() {
             • Não fazer nenhuma modulação do pH: ${ModificacaoPH ? "✅" : "❌"}
             • Não fazer nenhuma modulação da Temperatura: ${ModificacaoTemp ? "✅" : "❌"}
             • Não fazer nenhuma modulação do pH e Temperatura (Difícil): ${ModificacaoTempPH ? "✅" : "❌"}
-            • Não usar o método de extraçao rapida: ${ExtracaoRapida ? "✅" : "❌"}
+            • Não usar o método de extração rápida: ${ExtracaoRapida ? "✅" : "❌"}
             • Não fazer nenhum upgrade de equipamento (Difícil): ${NupgradeEquipamentos ? "✅" : "❌"}
     `
     var avaliacao = confirm(`
         Sua pesquisa acabou ${localStorage.getItem('jedai/username')} ${fraseFimDeJogo}
 
-        Resultados do Jogo:
+        ✨ Resultados do Jogo: ✨
             • 🌟 Turnos: ${turno - 1}
             • 🧪 Mol: ${molextraidos}
             • 💰 Dinheiro: ${dinheiro} ₵
@@ -1245,7 +1245,7 @@ function verificacaoDeNivel(){
     objPrincipalMol = 50
     botaoEventoOnOFF = true
     objPrincipalTrofeus = 2
-    nivelDoJogo = `Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`
+    nivelDoJogo = `Fazer 50 mols e 2 troféus difíceis em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 50 mols e 2 troféus dificeis em ${tempoDeJogo} turnos`)
     atualizar()
 }
