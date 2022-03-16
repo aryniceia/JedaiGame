@@ -526,8 +526,6 @@ function Proximo() { //funcao para passar turno
     
     
     NivelJogador()
-    if (dinheiro <= dinheiroMax - mesada) { dinheiro += mesada }//limite para nao ultrapassar de 30 dinheiros
-    else { dinheiro = dinheiroMax }
     turno += 1 //para saber quantos turnos se tem
     trofeusBuleanos()
     Trofeus()
@@ -536,6 +534,8 @@ function Proximo() { //funcao para passar turno
     eventosAleatorios()
     aparecerLog(`⭐Turno ${turno}⭐`)
     GameOver()
+    if (dinheiro <= dinheiroMax - mesada) { dinheiro += mesada }//limite para nao ultrapassar de 30 dinheiros
+    else { dinheiro = dinheiroMax }
     atualizar()
 }
 //AÇÕES DE CONVERTER OS MOLS INÍCIO ----------------------
@@ -1029,7 +1029,7 @@ function GameOver() {
     somaTrofeus = Mestrado11turnos + Doutorado22turnos + TerminarJogoIC + Prob100 + 
     Prob0 + ExtracaoRapida + ModificacaoPH + ModificacaoTemp + ModificacaoTempPH + 
     NupgradePH + NupgradeTemp + NupgradeEquipamentos
-    if (turno == (tempoDeJogo + 1) || (molextraidos >= objPrincipalMol && somaTrofeus >= objPrincipalTrofeus) && JogoNivel != 4) { //em X turnos
+    if ((turno == (tempoDeJogo + 1) || (molextraidos >= objPrincipalMol && somaTrofeus >= objPrincipalTrofeus)) && JogoNivel != 4) { //em X turnos
         aparecerLog("O jogo acabou!")
         verificacaoDeNivel()
         jogoTerminado = true
@@ -1038,47 +1038,53 @@ function GameOver() {
             if (molextraidos >= objPrincipalMol) { //fazer 18 mols em 20 turnos
                 fraseFimDeJogo = `e você a concluiu com maestria no nível fácil!`
                 aparecerLog(fraseFimDeJogo)
+                FimDeJogo()
                 //variaveisIniciais()
             } else {
                 fraseFimDeJogo = `e ela não foi suficiente no nível fácil! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)                //variaveisIniciais()
+                FimDeJogo()
             }
 
         }
         if (JogoNivel == 2) {
-            if (molextraidos >= objPrincipalMol && (SomaFacil + SomaDificil + SomaDificilNegacao + SomaFacilNegacao >= 2)) { // fazer ao menos 30 mols com 2 trofeu
+            if (molextraidos >= objPrincipalMol && (SomaFacil + SomaDificil + SomaDificilNegacao + SomaFacilNegacao >= 2)) { // fazer ao menos 30 mols com 2 trofeus
                 fraseFimDeJogo = `e você a concluiu com maestria no nível médio.`
                 aparecerLog(fraseFimDeJogo)
+                FimDeJogo()
             }
             else {
                 fraseFimDeJogo = `e ela não foi suficiente no nível médio! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)
+                FimDeJogo()
             }
         }
         if (JogoNivel == 3) {
             if (molextraidos >= objPrincipalMol && (SomaFacil + SomaDificil + SomaDificilNegacao + SomaFacilNegacao >= 4)) { //fazer 40 mols com 4 trofeus
                 fraseFimDeJogo = `e você a concluiu com maestria no nível reprovação.`
                 aparecerLog(fraseFimDeJogo)
+                FimDeJogo()
             }
             else {
                 fraseFimDeJogo = `e ela não foi suficiente no nível reprovação! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)
+                FimDeJogo()
             }
         }
-        FimDeJogo()
-    }   else if ((JogoNivel == 4) && (turno == (tempoDeJogo + 1) || (molextraidos >= objPrincipalMol && SomaDificil + SomaDificilNegacao >= objPrincipalTrofeus))){
+        // FimDeJogo()
+    }   else if ((JogoNivel == 4) && ((turno == (tempoDeJogo + 1) || (molextraidos >= objPrincipalMol && SomaDificil + SomaDificilNegacao >= objPrincipalTrofeus)))){
      
             if (molextraidos >= objPrincipalMol && (SomaDificil + SomaDificilNegacao >= 2)) { //fazer 50 mols e ao menos 2 trofeus dificeis
                 fraseFimDeJogo = `e você a concluiu com maestria no nível jubilator.`
                 aparecerLog(fraseFimDeJogo)
-            
+                FimDeJogo()
             }
             else {
                 fraseFimDeJogo = `e ela não foi suficiente no nível jubilator! Tente novamente!`
                 aparecerLog(fraseFimDeJogo)
+                FimDeJogo()
             
             }
-            FimDeJogo()
         }
 }
     
@@ -1231,14 +1237,14 @@ function verificacaoDeNivel(){
     objPrincipalMol = 30
     botaoEventoOnOFF = true
     objPrincipalTrofeus = 2
-    nivelDoJogo = `Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`
+    nivelDoJogo = `Fazer 30 mols com 2 troféu em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 3) {
     objPrincipalMol = 40
     botaoEventoOnOFF = true
     objPrincipalTrofeus = 4
-    nivelDoJogo = `Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`
+    nivelDoJogo = `Fazer 40 mols com 4 troféus em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 40 mols com 3 troféus em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 4) {

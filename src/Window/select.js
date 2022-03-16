@@ -92,7 +92,7 @@ function Select () {
                                 name="level" className="input" 
                                 id="level" required>
                                     <option disabled value="padrao">Selecione o nível...</option>
-                                    <option value="1">Fácil (18 mols)</option>
+                                    <option value="1">Fácil (20 mols)</option>
                                     <option value="2">Médio (30 mols e 2 troféus)</option>
                                     <option value="3">Reprovação (40 mols e 4 troféus)</option>
                                     <option value="4">Jubilator (50 mols e 2 troféus difíceis)</option>
