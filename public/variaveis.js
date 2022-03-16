@@ -422,7 +422,7 @@ function SubirPH() { //versao 2 do botao subirPH
     GrupoPHRT = GrupoPH; //definindo qual grupo pertence
     PHsinal = 1; //sinal positivo indica que o PH vai aumentar
     ModificacaoPH = 0;
-    fraseLog = `Subiu pH`
+    fraseLog = `Subiu pH.`
     acaoDinheiro(PHcost, PHAcao); // indica a funcao o custo do PH e quantas acoes ele consome
 
 }
@@ -430,7 +430,7 @@ function DiminuirPH() { //botao para diminuir ph
     GrupoPHRT = GrupoPH; //definindo qual grupo pertence
     PHsinal = -1; //sinal negativo indica que PH desce
     ModificacaoPH = 0;
-    fraseLog = `Diminuiu pH`
+    fraseLog = `Diminuiu pH.`
     acaoDinheiro(PHcost, PHAcao);
 
 }
@@ -439,7 +439,7 @@ function AumentarTemp() { //botao para aumentar a temperatura
     GrupoPHRT = GrupoTemp;
     tempSinal = 1;
     ModificacaoTemp = 0;
-    fraseLog = `Aumentou Temperatura`
+    fraseLog = `Aumentou Temperatura.`
     acaoDinheiro(tempcost, tempAcao);
 
 }
@@ -447,7 +447,7 @@ function DiminuirTemp() { //botao para diminuir a temperatura
     GrupoPHRT = GrupoTemp;
     tempSinal = -1;
     ModificacaoTemp = 0;
-    fraseLog = `Diminuiu Temperatura`
+    fraseLog = `Diminuiu Temperatura.`
     acaoDinheiro(tempcost, tempAcao);
 }
 
@@ -455,18 +455,18 @@ function AdicionarH2O() { //funcao para adicionar agua por meio do botao
     if (molSoma <= molMaxReator) { //teste de quantidade de mols no reator
         QualMol = 1;
         GrupoPHRT = GrupoReagentes;
-        fraseLog = `Você comprou ${reagente1}`
+        fraseLog = `Você comprou ${reagente1}.`
         acaoDinheiro(costReagente1, acaoReagente1);
 
     } else {
-        aparecerLog(`Reator cheio`, true)
+        aparecerLog(`Reator cheio.`, true)
     }
 }
 function AdicionarTri() {
     if (molSoma <= molMaxReator) { //teste de quantidade de mols no reator
         QualMol = 0;
         GrupoPHRT = GrupoReagentes;
-        fraseLog = `Você comprou ${reagente2}`
+        fraseLog = `Você comprou ${reagente2}.`
         acaoDinheiro(costReagente2, personagem.acaoReagente2);
     } else {
         aparecerLog(`Reator cheio`, true)
@@ -567,7 +567,7 @@ function Filtro() {
     }
     else if ((molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) && !(NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)) {
 
-        aparecerLog(`Você não tem habilidade suficiente para usar o filtro`, true)
+        aparecerLog(`Você não tem habilidade suficiente para usar o filtro.`, true)
     } else {
         aparecerLog(`Você não pode ${equipamento}.`, true)
     }
@@ -662,7 +662,7 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     document.getElementById('extracaoFiltro2').innerHTML = extracaoFiltro2
     
     
-    extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraídos`;
+    extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraídos.`;
     //eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML =
         `
@@ -731,7 +731,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
         else {
             if ((PH == PHmax && PHsinal == 1 || PH == PHmin && PHsinal == -1) || (temp == tempMax && tempSinal == 1 || temp == tempMin && tempSinal == -1)) {
 
-                aparecerLog(`Já está no seu máximo ou mínimo, não é possivel continuar`, true);
+                aparecerLog(`Já está no seu máximo ou mínimo, não é possivel continuar.`, true);
             }
             else { alert(`Erro 404! Not found`); alert(GrupoPHRT) } //nao espero que esse erro seja anunciado na tela, porem precaucao
         }
@@ -798,7 +798,7 @@ function upgrade() {
         tempMin = -4;
         molMaxReator = 12;
         Proximo();
-        aparecerLog(`Você passou de nível, agora é ${Faculdade}`);
+        aparecerLog(`Você passou de nível, agora é ${Faculdade}.`);
 
     }
     else if (NivelAtual == NivelMestrado && molextraidos >= personagem.molDoutorado) {
@@ -811,14 +811,14 @@ function upgrade() {
         molMaxReator = 16;
         Proximo();
 
-        aparecerLog(`Você passou de nível, agora é ${Faculdade}`);
+        aparecerLog(`Você passou de nível, agora é ${Faculdade}.`);
 
     }
     else if (NivelAtual == NivelDoutorado) {
-        aparecerLog(`Você já chegou ao nível máximo`, true)
+        aparecerLog(`Você já chegou ao nível máximo.`, true)
     }
     else {
-        aparecerLog(`Você não tem mols suficiente para melhorar de nível`, true)
+        aparecerLog(`Você não tem mols suficiente para melhorar de nível.`, true)
     }
 }
 function upgradeReator() {
@@ -829,12 +829,12 @@ function upgradeReator() {
         NupgradeReator = 1;
         Trofeus()
         atualizar();
-        aparecerLog(`Melhorou seu Reator`)
+        aparecerLog(`Melhorou seu Reator.`)
 
     }
     else if (molMaxReator >= 16) {
 
-        aparecerLog(`O seu reator já está no nível máximo`);
+        aparecerLog(`O seu reator já está no nível máximo.`);
     }
     else {
         //; 
@@ -854,11 +854,11 @@ function upgradePHmetro() {
         NupgradePH = 1;
         Trofeus()
         atualizar();
-        aparecerLog(`Melhorou seu pHmetro`)
+        aparecerLog(`Melhorou seu pHmetro.`)
     }
     else if (PHmetro == PHmetroMax) {
 
-        aparecerLog(`O seu pHmetro já está no nível máximo`, true);
+        aparecerLog(`O seu pHmetro já está no nível máximo.`, true);
     }
     else {
 
@@ -876,7 +876,7 @@ function upgradeTermometro() {
         NupgradeTemp = 1;
         Trofeus()
         atualizar();
-        aparecerLog(`Melhorou sua chapa térmica`)
+        aparecerLog(`Melhorou sua chapa térmica.`)
 
     }
     else if (termometro == termometroMax) {
@@ -914,13 +914,13 @@ function eventosAleatorios() {
                 GrupoPHRT = GrupoTemp
                 contagemeventos += 1
                 acaoDinheiro(0, 0)
-                aparecerLog(`Eventos aleatórios: Você perdeu temperatura e pH`)
+                aparecerLog(`Eventos aleatórios: Você perdeu temperatura e pH.`)
             }
             else {
                 dinheiro -= 5
                 acao -= 1
                 contagemeventos += 1
-                aparecerLog(`Eventos aleatórios: Você perdeu 5 ₵réditos e 1 ação`)
+                aparecerLog(`Eventos aleatórios: Você perdeu 5 ₵réditos e 1 ação.`)
             }
         }
         else if (evento >= 70) {
@@ -928,24 +928,24 @@ function eventosAleatorios() {
                 // eu sei que nada se perde e nada se cria, porem pode ser usada para retirar mols do coleguinha quando tiver interacao
                 molextraidos += 3
                 contagemeventos += 1
-                aparecerLog(`Eventos aleatórios: Você ganhou mais 3 mols`, true)
+                aparecerLog(`Eventos aleatórios: Você ganhou mais 3 mols.`, true)
             }
             else if (evento >= 85) {
                 tempSinal = 1
                 GrupoPHRT = GrupoTemp
                 contagemeventos += 1
                 acaoDinheiro(0, 0)
-                aparecerLog(`Eventos aleatórios: Sua temperatura aumentou`)
+                aparecerLog(`Eventos aleatórios: Sua temperatura aumentou.`)
             }
             else {
                 acao += 2
                 dinheiro += 10
                 contagemeventos += 1
-                aparecerLog(`Eventos aleatórios: Você recebeu mais 2 ações e 10 ₵réditos`)
+                aparecerLog(`Eventos aleatórios: Você recebeu mais 2 ações e 10 ₵réditos.`)
             }
         }
         else {
-            aparecerLog(`Eventos aleatórios: Nada ocorreu`)
+            aparecerLog(`Eventos aleatórios: Nada ocorreu.`)
         }
     }
 
@@ -1237,7 +1237,7 @@ function verificacaoDeNivel(){
     objPrincipalMol = 30
     botaoEventoOnOFF = true
     objPrincipalTrofeus = 2
-    nivelDoJogo = `Fazer 30 mols com 2 troféu em ${tempoDeJogo} turnos`
+    nivelDoJogo = `Fazer 30 mols com 2 troféus em ${tempoDeJogo} turnos`
     // aparecerLog(`Fazer 30 mols com 1 trofeu em ${tempoDeJogo} turnos`)
     atualizar()
 }else if (JogoNivel == 3) {
