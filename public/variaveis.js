@@ -885,7 +885,7 @@ function upgradeTermometro() {
     }
     else {
 
-        aparecerLog(`Você não tem ações, ₵réditos ou nível suficiente para fazer essa melhoria.`);
+        aparecerLog(`Você não tem ações, ₵réditos ou nível suficiente para fazer essa melhoria.`, true);
     }
 }
 //FUNÇÕES DE NÍVEL E UPGRADE FIM ---------------------
