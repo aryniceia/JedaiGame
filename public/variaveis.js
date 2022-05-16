@@ -524,7 +524,9 @@ function Proximo() { //funcao para passar turno
 
     extracaoFiltro2 = `${filtrarR2} mols no estágio 2 |`
     
-    
+    if ((molReagente1 < fatorDeConversaoReagente1 || molReagente2 < fatorDeConversaoReagente2) && (molProduto1 == 0)){
+        aparecerLog("Você ainda não tem reagentes em proporção estequiométrica. Consulte o seu caderno!", true)
+    }
     NivelJogador()
     turno += 1 //para saber quantos turnos se tem
     trofeusBuleanos()
@@ -731,7 +733,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
         else {
             if ((PH == PHmax && PHsinal == 1 || PH == PHmin && PHsinal == -1) || (temp == tempMax && tempSinal == 1 || temp == tempMin && tempSinal == -1)) {
 
-                aparecerLog(`Já está no seu máximo ou mínimo, não é possivel continuar.`, true);
+                aparecerLog(`O pH já está no nível máximo ou mínimo, não é possivel continuar.`, true);
             }
             else { alert(`Erro 404! Not found`); alert(GrupoPHRT) } //nao espero que esse erro seja anunciado na tela, porem precaucao
         }
@@ -834,7 +836,7 @@ function upgradeReator() {
     }
     else if (molMaxReator >= 16) {
 
-        aparecerLog(`O seu reator já está no nível máximo.`);
+        aparecerLog(`O seu reator já está no nível máximo.`, true);
     }
     else {
         //; 
@@ -881,7 +883,7 @@ function upgradeTermometro() {
     }
     else if (termometro == termometroMax) {
 
-        aparecerLog(`A sua chapa térmica já está no nível máximo.`);
+        aparecerLog(`A sua chapa térmica já está no nível máximo.`, true);
     }
     else {
 
