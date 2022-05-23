@@ -10,23 +10,7 @@ import './radio.css';
 function RadioButton ({personagem, setPersonagem}) { 
     return (
         <div className="chars">
-            <Char 
-                personagem={personagem}
-                setPersonagem={setPersonagem}
-                charProps={
-                    {
-                        id: 'char1',
-                        value: 1,
-                        charName: "Capi",
-                        img: Capivara,
-                        charDescription: 'Personagem antropomorfo de uma capivara usando roupas de laboratório.',
-                        className: {
-                            container: 'capi',
-                            image: 'foto1'
-                        }
-                    }
-                }
-            />
+
             <Char 
                 personagem={personagem}
                 setPersonagem={setPersonagem}
@@ -49,23 +33,6 @@ function RadioButton ({personagem, setPersonagem}) {
                 setPersonagem={setPersonagem}
                 charProps={
                     {
-                        id: 'char3',
-                        value: 3,
-                        charName: "Cuca",
-                        img: Jacare,
-                        charDescription: 'Personagem antropomorfo de um jacaré usando roupas de laboratório.',
-                        className: {
-                            container: 'jacare',
-                            image: 'foto3'
-                        }
-                    }
-                }
-            />
-            <Char 
-                personagem={personagem}
-                setPersonagem={setPersonagem}
-                charProps={
-                    {
                         id: 'char4',
                         value: 4,
                         charName: "Miquito",
@@ -78,7 +45,6 @@ function RadioButton ({personagem, setPersonagem}) {
                     }
                 }
             />
-
             <Char 
                 personagem={personagem}
                 setPersonagem={setPersonagem}
@@ -109,6 +75,40 @@ function RadioButton ({personagem, setPersonagem}) {
                         className: {
                             container: 'tucano',
                             image: 'foto6'
+                        }
+                    }
+                }
+            />
+            <Char 
+                personagem={personagem}
+                setPersonagem={setPersonagem}
+                charProps={
+                    {
+                        id: 'char3',
+                        value: 3,
+                        charName: "Cuca",
+                        img: Jacare,
+                        charDescription: 'Personagem antropomorfo de um jacaré usando roupas de laboratório.',
+                        className: {
+                            container: 'jacare',
+                            image: 'foto3'
+                        }
+                    }
+                }
+            />
+            <Char 
+                personagem={personagem}
+                setPersonagem={setPersonagem}
+                charProps={
+                    {
+                        id: 'char1',
+                        value: 1,
+                        charName: "Capi",
+                        img: Capivara,
+                        charDescription: 'Personagem antropomorfo de uma capivara usando roupas de laboratório.',
+                        className: {
+                            container: 'capi',
+                            image: 'foto1'
                         }
                     }
                 }
