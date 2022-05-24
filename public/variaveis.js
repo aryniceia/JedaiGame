@@ -413,7 +413,18 @@ function variaveisIniciais() {
 
     atualizar()
 }
-
+var somReacaoOcorreu = new Audio('Reacao_Ocorreu.wav')
+somReacaoOcorreu.addEventListener('canplaythrough', function() {
+    somReacaoOcorreu.play();
+});
+var somReacaoReverteu = new Audio('Reacao_Reverteu.wav')
+somReacaoReverteu.addEventListener('canplaythrough', function() {
+    somReacaoReverteu.play();
+});
+var somNaoPode = new Audio('Nao_Pode.wav')
+somNaoPode.addEventListener('canplaythrough', function() {
+    somNaoPode.play();
+});
 //DECLARAÇÃO DE VARIÁVEIS FIM -----------------------
 
 //AÇÕES DE COMPRAR INÍCIO-----------------
@@ -459,6 +470,7 @@ function AdicionarH2O() { //funcao para adicionar agua por meio do botao
         acaoDinheiro(costReagente1, acaoReagente1);
 
     } else {
+        somNaoPode.play()
         aparecerLog(`Reator cheio.`, true)
     }
 }
@@ -469,6 +481,7 @@ function AdicionarTri() {
         fraseLog = `Você comprou ${reagente2}.`
         acaoDinheiro(costReagente2, personagem.acaoReagente2);
     } else {
+        somNaoPode.play()
         aparecerLog(`Reator cheio`, true)
     }
 }
@@ -485,20 +498,23 @@ function Proximo() { //funcao para passar turno
             molProduto2 += fatorDeConversaoReagente1
             molReagente1 -= fatorDeConversaoReagente1 // Duvida se vira 0 ou nao
             molReagente2 -= fatorDeConversaoReagente2 // Idem
+            somReacaoOcorreu.play()
         }
         else if (resultado == 0 && molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) {
             if (!equilibrio) {
-                aparecerLog(`Reagentes não foram convertidos em produtos!`)
+                aparecerLog(`Reagentes não foram convertidos em produtos!`, true)
                 console.log("nao era para aparecer isso!!!!!!")
             } else if (equilibrio) {
                 if (molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) {
-                    aparecerLog(`Produtos foram convertidos em reagentes!`)
+                    somReacaoReverteu.play()
+                    aparecerLog(`Produtos foram convertidos em reagentes!`, true)
                     molProduto1 -= fatorDeConversaoReagente2
                     molProduto2 -= fatorDeConversaoReagente1
                     molReagente1 += fatorDeConversaoReagente1 // Duvida se vira 0 ou nao
                     molReagente2 += fatorDeConversaoReagente2 // Idem
+                    //botar um som de volta do produto para reagente
                 } else {
-                    aparecerLog(`Reagentes não foram convertidos em produtos!`)
+                    aparecerLog(`Reagentes não foram convertidos em produtos!`, true)
                 }
             }
         }else if (molReagente1 >= fatorDeConversaoReagente1 && molReagente2 >= fatorDeConversaoReagente2 ) {
@@ -555,6 +571,7 @@ function Decantar() { //funcao para ir para a extracao longa
         aparecerLog(`Entrou em processo de ${processosDecantarEPrecipitar}.`)
         atualizar()
     } else {
+        somNaoPode.play()
         aparecerLog(`Não há produtos para serem ${semProdutos}.`, true)
     }
 }
@@ -568,19 +585,24 @@ function Filtro() {
         Trofeus()
     }
     else if ((molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) && !(NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)) {
-
+        somNaoPode.play()
         aparecerLog(`Você não tem habilidade suficiente para usar o filtro.`, true)
     } else {
+        somNaoPode.play()
         aparecerLog(`Você não pode ${equipamento}.`, true)
     }
 
 }
 
 function Expurgo() {//funcao para esvaziar o reator
+    if (confirm("Você deseja jogar os reagentes e produtos no lixo?") == true){
     molReagente1 = molReagente2 = molProduto1 = molProduto2 = PH = temp = 0;
     qualProbabilidade()
     aparecerLog(`Você jogou fora todos os reagentes e produtos.`)
     atualizar();
+    } else{
+        aparecerLog("Você não expurgou")
+    }
 }
 //AÇÕES DE CONVERTER OS MOLS FIM ----------------------
 
@@ -732,7 +754,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
 
         else {
             if ((PH == PHmax && PHsinal == 1 || PH == PHmin && PHsinal == -1) || (temp == tempMax && tempSinal == 1 || temp == tempMin && tempSinal == -1)) {
-
+                somNaoPode.play()
                 aparecerLog(`O pH já está no nível máximo ou mínimo, não é possivel continuar.`, true);
             }
             else { alert(`Erro 404! Not found`); alert(GrupoPHRT) } //nao espero que esse erro seja anunciado na tela, porem precaucao
@@ -741,7 +763,7 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
         //aparecerLog()
     }
     else {
-
+        somNaoPode.play()
         aparecerLog(`Você não tem ações ou ₵réditos suficientes para efetuar essa compra.`, true)
     }
     qualProbabilidade()
@@ -820,6 +842,7 @@ function upgrade() {
         aparecerLog(`Você já chegou ao nível máximo.`, true)
     }
     else {
+        somNaoPode.play()
         aparecerLog(`Você não tem mols suficiente para melhorar de nível.`, true)
     }
 }
@@ -841,7 +864,7 @@ function upgradeReator() {
     else {
         //; 
         test = true
-
+        somNaoPode.play()
         aparecerLog(`Você não tem ações, ₵réditos ou nível suficiente para fazer essa melhoria.`, true);
     }
 }
@@ -859,11 +882,11 @@ function upgradePHmetro() {
         aparecerLog(`Melhorou seu pHmetro.`)
     }
     else if (PHmetro == PHmetroMax) {
-
+        somNaoPode.play()
         aparecerLog(`O seu pHmetro já está no nível máximo.`, true);
     }
     else {
-
+        somNaoPode.play()
         aparecerLog(`Você não tem ações, ₵réditos ou nível suficiente para fazer essa melhoria.`, true);
     }
 }
@@ -886,7 +909,7 @@ function upgradeTermometro() {
         aparecerLog(`A sua chapa térmica já está no nível máximo.`, true);
     }
     else {
-
+        somNaoPode.play()
         aparecerLog(`Você não tem ações, ₵réditos ou nível suficiente para fazer essa melhoria.`, true);
     }
 }
@@ -905,7 +928,7 @@ function eventosAleatorios() {
                     molextraidos -= 2
                     contagemeventos += 1
 
-                    aparecerLog(`Eventos aleatórios: Você perdeu 2 mols.`)
+                    aparecerLog(`Eventos aleatórios: Você perdeu 2 mols.`, false, true)
                 }
             }
             else if (evento <= 15) {
@@ -916,13 +939,13 @@ function eventosAleatorios() {
                 GrupoPHRT = GrupoTemp
                 contagemeventos += 1
                 acaoDinheiro(0, 0)
-                aparecerLog(`Eventos aleatórios: Você perdeu temperatura e pH.`)
+                aparecerLog(`Eventos aleatórios: Você perdeu temperatura e pH.`, false, true)
             }
             else {
                 dinheiro -= 5
                 acao -= 1
                 contagemeventos += 1
-                aparecerLog(`Eventos aleatórios: Você perdeu 5 ₵réditos e 1 ação.`)
+                aparecerLog(`Eventos aleatórios: Você perdeu 5 ₵réditos e 1 ação.`, false, true)
             }
         }
         else if (evento >= 70) {
@@ -937,17 +960,17 @@ function eventosAleatorios() {
                 GrupoPHRT = GrupoTemp
                 contagemeventos += 1
                 acaoDinheiro(0, 0)
-                aparecerLog(`Eventos aleatórios: Sua temperatura aumentou.`)
+                aparecerLog(`Eventos aleatórios: Sua temperatura aumentou.`, false, true)
             }
             else {
                 acao += 2
                 dinheiro += 10
                 contagemeventos += 1
-                aparecerLog(`Eventos aleatórios: Você recebeu mais 2 ações e 10 ₵réditos.`)
+                aparecerLog(`Eventos aleatórios: Você recebeu mais 2 ações e 10 ₵réditos.`, false, true)
             }
         }
         else {
-            aparecerLog(`Eventos aleatórios: Nada ocorreu.`)
+            aparecerLog(`Eventos aleatórios: Nada ocorreu.`, false, true)
         }
     }
 
@@ -1150,7 +1173,7 @@ TrofeusJogador = TrofeusClass()
  */
 logList = [] // apenas para aparecer no console
 
-function aparecerLog(logLine, linhaCor = false) {
+function aparecerLog(logLine, linhaCor = false, linhaCor2 = false) {
     listaLog = document.getElementById('showLog')
 
     logList.push(logLine)
@@ -1164,10 +1187,13 @@ function aparecerLog(logLine, linhaCor = false) {
     if (linhaCor) {
         document.getElementById(`logContagem${logContagem}`).style.color = '#FF7F24'
         logContagem += 1
-    } else {
+    }else if (linhaCor2) {
+        document.getElementById(`logContagem${logContagem}`).style.color = '#FFFF00'
+        logContagem += 1
+    }  else {
         logContagem = logContagem + 1
     }
-
+    
     $target = $('#showLog');
     //$target.animate({scrollTop: $target.height()});
     $target.scrollTop(9999999999999999999999999)
@@ -1303,7 +1329,7 @@ function decantarCor(decantarColorido, qualID) {
     }else{ 
         document.getElementById(`${qualID}`).style.color = 'white'
     }
-}
+}//../src/sound/clickSound.mp3
 
 
 //desligar botao eventos aletaorios no nivel facil
