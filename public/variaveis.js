@@ -86,8 +86,8 @@ if (character == '1'){
 }
 fraseLog = ""
 ProbDinamica = ProbInicial
-fatorDeConversaoReagente1 = 3
-fatorDeConversaoReagente2 = 1
+fatorDeConversaoReagente2 = 3
+fatorDeConversaoReagente1 = 1
 // PH & Temperatura (olhar o PHSinal)
 //Manter esses valores maximos em PH e Temp
 //// Trofeus:
@@ -261,8 +261,8 @@ function variaveisIniciais() {
     reagente2 = "Triglicerídeos"
     produto1 = "Glicerol"
     produto2 = "Ácido Graxo"
-    fatorDeConversaoReagente1 = 3
-    fatorDeConversaoReagente2 = 1
+    fatorDeConversaoReagente2 = 3
+    fatorDeConversaoReagente1 = 1
     // PH & Temperatura (olhar o PHSinal)
     //Manter esses valores maximos em PH e Temp
     //// Trofeus:
@@ -489,38 +489,48 @@ function AdicionarTri() {
 
 //botoes adicionais
 function Proximo() { //funcao para passar turno
-    if ((molReagente2 >= fatorDeConversaoReagente2 && molReagente1 >= fatorDeConversaoReagente1) || (molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2)) {
-        probabilidade(ProbDinamica) //ira executar a funcao para saber se a reacao ira ocorrer
-        if (resultado == 1 && molReagente2 >= fatorDeConversaoReagente2 && molReagente1 >= fatorDeConversaoReagente1) {
-
-            aparecerLog(`Reagentes foram convertidos em produtos!`)
-            molProduto1 += fatorDeConversaoReagente2
-            molProduto2 += fatorDeConversaoReagente1
-            molReagente1 -= fatorDeConversaoReagente1 // Duvida se vira 0 ou nao
-            molReagente2 -= fatorDeConversaoReagente2 // Idem
-            somReacaoOcorreu.play()
-        }
-        else if (resultado == 0 && molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) {
-            if (!equilibrio) {
+        //if tiver proporcao estequiometrica nos reagentes ou proporcao estequiometrica nos produtos
+    if ((molReagente2 >= fatorDeConversaoReagente1 && molReagente1 >= fatorDeConversaoReagente2) || (molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1)) {
+        if (equilibrio){
+            probabilidade(ProbDinamica) //ira executar a funcao para saber se a reacao ira ocorrer
+            if (resultado == 1 && molReagente2 >= fatorDeConversaoReagente1 && molReagente1 >= fatorDeConversaoReagente2) {
+    
+                aparecerLog(`Reagentes foram convertidos em produtos!`, false, true)
+                molProduto1 += fatorDeConversaoReagente1
+                molProduto2 += fatorDeConversaoReagente2
+                molReagente1 -= fatorDeConversaoReagente2 // Duvida se vira 0 ou nao
+                molReagente2 -= fatorDeConversaoReagente1 // Idem
+                somReacaoOcorreu.play()
+            }else if (resultado == 0 && molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) { //se a probabilidade deu "negativa" mas tem produtos
+                
+                somReacaoReverteu.play()
+                aparecerLog(`Produtos foram convertidos em reagentes!`, true)
+                molProduto1 -= fatorDeConversaoReagente1
+                molProduto2 -= fatorDeConversaoReagente2
+                molReagente1 += fatorDeConversaoReagente2 // Duvida se vira 0 ou nao
+                molReagente2 += fatorDeConversaoReagente1 // Idem
+            }else if (resultado == 0 && molReagente2 >= fatorDeConversaoReagente1 && molReagente1 >= fatorDeConversaoReagente2) {
                 aparecerLog(`Reagentes não foram convertidos em produtos!`, true)
-                console.log("nao era para aparecer isso!!!!!!")
-            } else if (equilibrio) {
-                if (molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) {
-                    somReacaoReverteu.play()
-                    aparecerLog(`Produtos foram convertidos em reagentes!`, true)
-                    molProduto1 -= fatorDeConversaoReagente2
-                    molProduto2 -= fatorDeConversaoReagente1
-                    molReagente1 += fatorDeConversaoReagente1 // Duvida se vira 0 ou nao
-                    molReagente2 += fatorDeConversaoReagente2 // Idem
-                    //botar um som de volta do produto para reagente
-                } else {
-                    aparecerLog(`Reagentes não foram convertidos em produtos!`, true)
-                }
             }
-        }else if (molReagente1 >= fatorDeConversaoReagente1 && molReagente2 >= fatorDeConversaoReagente2 ) {
-            aparecerLog(`Reagentes não foram convertidos em produtos!`, true)
+        
+        }else{ //reacao sem reversao
+            if ((molReagente2 >= fatorDeConversaoReagente1 && molReagente1 >= fatorDeConversaoReagente2)){
+                probabilidade(ProbDinamica) //ira executar a funcao para saber se a reacao ira ocorrer
+                if (resultado == 1) {
+    
+                    aparecerLog(`Reagentes foram convertidos em produtos!`, false, true)
+                    molProduto1 += fatorDeConversaoReagente1
+                    molProduto2 += fatorDeConversaoReagente2
+                    molReagente1 -= fatorDeConversaoReagente2 // Duvida se vira 0 ou nao
+                    molReagente2 -= fatorDeConversaoReagente1 // Idem
+                    somReacaoOcorreu.play()
+                }else{
+                    aparecerLog(`Reagentes não foram convertidos em produtos!`, true)
+                    }
+            }
         }
     }
+
     molSoma = molReagente1 + molReagente2 + molProduto1 + molProduto2
     // acao = personagem.acao
     molsAnteriores = molextraidos
@@ -540,7 +550,7 @@ function Proximo() { //funcao para passar turno
 
     extracaoFiltro2 = `${filtrarR2} mols no estágio 2 |`
     
-    if ((molReagente1 < fatorDeConversaoReagente1 || molReagente2 < fatorDeConversaoReagente2) && (molProduto1 == 0)){
+    if ((molReagente1 < fatorDeConversaoReagente2 || molReagente2 < fatorDeConversaoReagente1) && (molProduto1 == 0)){
         aparecerLog("Você ainda não tem reagentes em proporção estequiométrica. Consulte o seu caderno!", true)
     }
     NivelJogador()
@@ -558,7 +568,7 @@ function Proximo() { //funcao para passar turno
 }
 //AÇÕES DE CONVERTER OS MOLS INÍCIO ----------------------
 function Decantar() { //funcao para ir para a extracao longa
-    if (molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) {
+    if (molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) {
         decantarR1 += molProduto2
         
         molProduto2 = 0
@@ -576,7 +586,7 @@ function Decantar() { //funcao para ir para a extracao longa
     }
 }
 function Filtro() {
-    if ((molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) && (NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)) { // Leia-se: se tiver reagentes suficientes e nivel adequado
+    if ((molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) && (NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)) { // Leia-se: se tiver reagentes suficientes e nivel adequado
         GrupoPHRT = GrupoFiltro
         ExtracaoRapida = 1
         acaoDinheiro(personagem.filtrocost, personagem.filtroAcao)
@@ -584,7 +594,7 @@ function Filtro() {
         ExtracaoRapida = false
         Trofeus()
     }
-    else if ((molProduto2 >= fatorDeConversaoReagente2 && molProduto1 >= fatorDeConversaoReagente1) && !(NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)) {
+    else if ((molProduto2 >= fatorDeConversaoReagente1 && molProduto1 >= fatorDeConversaoReagente2) && !(NivelAtual == NivelMestrado || NivelAtual == NivelDoutorado)) {
         somNaoPode.play()
         aparecerLog(`Você não tem habilidade suficiente para usar o filtro.`, true)
     } else {
@@ -609,7 +619,9 @@ function Expurgo() {//funcao para esvaziar o reator
 //FUNÇÕES DE PROBABILIDADE INÍCIO ---------------------
 function probabilidade(a) { // a é a probabilidade dinamica
     d100 = Math.floor(Math.random() * 100); //D100
-
+    console.log(a)
+    console.log(d100)
+    console.log(`${a} >= ${d100}`)
     aparecerLog(`Você obteve ${d100} no gerador de improbabilidade infinita.`)
     if (a >= d100) { //caso esteja dentro da probabilidade ela vai ocorrer
         resultado = 1 // resultado para afirmativo na funcao decantar
