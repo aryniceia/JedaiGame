@@ -563,7 +563,7 @@ function Proximo() { //funcao para passar turno
     aparecerLog(`⭐Turno ${turno}⭐`)
     GameOver()
     if (dinheiro <= dinheiroMax - mesada) { dinheiro += mesada }//limite para nao ultrapassar de 30 dinheiros
-    else { dinheiro = dinheiroMax }
+    else { dinheiro = dinheiroMax; aparecerLog(`Dinheiro está no máximo.`, true) }
     atualizar()
 }
 //AÇÕES DE CONVERTER OS MOLS INÍCIO ----------------------
