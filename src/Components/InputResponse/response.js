@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import './response.css';
+//import Link from '../Components/Link/link';
 
 import Capivara from '../../img/char/icon/capivara_perfil.png';
 import Guara from '../../img/char/icon/guara_perfil.png';
@@ -190,6 +191,18 @@ function Game () {
         • Dinheiro: ${window.dinheiro}
         • Nível: ${window.NivelAtual}`)         
     }
+
+    function Cancelar () {
+        var cancelar = window.confirm (`
+            ⚠️ AVISO ⚠️
+            
+            Epa, você deseja realmente encerrar sua pesquisa?`)
+        
+        if (cancelar == true ) {
+            window.location.href='./select'
+        }   
+
+    }
     /* Sound Effect */
         /* Click button */
             /*function PlaySound(){
@@ -207,6 +220,10 @@ function Game () {
                 let teste = new Audio(HoverSound);
                 teste.play();
             }
+/* Variáveis dos reagentes R1 e R2*/
+   
+    var teste2 = window.reagente1;
+    //var reagente2 = document.getElementById('segundo-reagente')
 
     return (
         <div className="App">
@@ -223,8 +240,8 @@ function Game () {
                             <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
                             <img alt="Imagem de um filtro de laboratório" className="filtroElement" src={FiltroElement}></img>
                             
-                            <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
-                            <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
+                            <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={teste2}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
+                            <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={document.getElementById('reagente2')}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
 
                             <button className="arrowRight" title="Consulte seu caderno!" onMouseOver={hoverSound} onClick={myFunction2}>
@@ -283,7 +300,6 @@ function Game () {
                         </div>
                     </div>
                     
-
                     <div className="barra_inferior">
                         <div className="BotoesAcao">
                             <div onMouseOver={hoverSound} className="BotoesProfile">
@@ -297,6 +313,8 @@ function Game () {
                                         • ⭐ turno <br></br>
                                     </span>
                                 </button>
+                                <button className='cancel' onClick={Cancelar}>Sair</button>
+                             
                                 <button onMouseOver={hoverSound} className="botoes" onClick={upgrade}>Nível</button>
                                 <button onMouseOver={hoverSound} className="botoes" onClick={Decantar}><span id='decantar-precipitar'></span></button>
                                 <button onMouseOver={hoverSound} className="botoes" onClick={Filtro}><span id='filtrar-centrifugar'></span></button>

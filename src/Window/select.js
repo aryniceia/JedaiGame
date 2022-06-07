@@ -34,6 +34,7 @@ function Select () {
             window.location.href='/game'
         } 
     }
+  
     const delet = () => { 
         setName('')
         localStorage.removeItem('jedai/username')
@@ -134,6 +135,8 @@ function Select () {
                 <h1 className='App-subtitle'> Seleção de Personagens</h1>
 
                 <div className='bar-bot'>
+
+
                     <RadioButton personagem={personagem} setPersonagem={setPersonagem}/> {/*Nessa linha é setado do component radio */}
                     <div onMouseOver={hoverSound} className='buttons1'>
                         <Link route="/" className='return'>Voltar</Link>

@@ -560,6 +560,19 @@
         display: inline-block;
       }
 
+      .cancel {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+
+        position: absolute;
+        margin-top: 100px;
+        margin-left: -65px;
+      }
       .botoes {
         height: 35px;
         border-radius: 5px;
@@ -569,7 +582,7 @@
         font-family: 'Chakra Petch';
         color: #ffffff;
       }
-      .botoes:hover, .popup:hover, .help:hover, .agua:hover, .trigli:hover, .gameover:hover{
+      .botoes:hover, .popup:hover, .help:hover, .agua:hover, .trigli:hover, .gameover:hover, .cancel:hover{
         background-color: #663D3D;
       }
     /* Pop Up*/
@@ -979,3 +992,5 @@
       }
     }
 
+
+    

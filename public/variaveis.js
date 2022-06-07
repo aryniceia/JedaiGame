@@ -14,6 +14,7 @@ listaLog = document.getElementById('showLog')
 // logLine = `Você começou o jogo.`
 dRdP = 0
 logList = []
+
 if (tabuleiro === 1) {
     reagente1 = "Etanol"
     reagente2 = "Triacilglicerídeo"

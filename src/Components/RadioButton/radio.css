@@ -1,4 +1,40 @@
 /*Estilo personagens*/
+ /*Posição*/
+ .foto1 { /*Posição*/
+  width: 80x;
+  height: 80px;
+  transition: transform 250ms;
+}
+.foto1 .textfoto1 {
+  visibility: hidden;
+  width: 120px;
+  background: rgb(190, 77, 77);
+  font-family:'Chakra Petch';
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+} 
+.foto1 .textfoto1::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(190, 77, 77) transparent transparent transparent;
+}
+.foto1:hover .textfoto1 {
+  visibility: visible;
+}
+
   .chars {
     display: flex;
     align-items: flex-end;
@@ -9,7 +45,7 @@
     text-align: center;
     font-size: 18px;
   }
-  .foto1, .foto2, .foto3, 
+ .foto1, .foto2, .foto3, 
   .foto4, .foto5, .foto6 {
     width: 80x;
     height: 80px;

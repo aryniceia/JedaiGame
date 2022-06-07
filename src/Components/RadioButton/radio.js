@@ -10,7 +10,13 @@ import './radio.css';
 function RadioButton ({personagem, setPersonagem}) { 
     return (
         <div className="chars">
-
+            <div className="PopUpHoverChar">
+                <div className="foto1">dsf
+                    <span className="textfoto1">
+                        sahdsahdh
+                    </span> 
+                </div>
+            </div>
             <Char 
                 personagem={personagem}
                 setPersonagem={setPersonagem}
