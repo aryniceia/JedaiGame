@@ -25,51 +25,51 @@ const delay = 1000000000;
 const items = [
 
   {id: 4, titleMamute: '🧪 Mestre Mamu', 
-          idadeMamute:'🧬 Idade: desconhecida, dizem habitar esse laboratório \n desde o plioceno.', 
+          idadeMamute:'🧬 Idade: desconhecida, dizem habitar esse laboratório desde o plioceno.', 
           alturaMamute:'📏 Altura: 2,01m ', pesoMamute:'⚖️ Peso: 127 kg ',
-          descricaoMamute:'📜 Bio: Apesar da cara sisuda, \n adora uma brincadeira e \n qualquer coisa é motivo \n para festa. Geralmente \n encontrado em seu \n habitat natural: o laboratório \n de química orgânica em \n horários não convencionais, \n quando pode realizar \n seus experimentos malucos sem \n o escrutínio des alunes.',
+          descricaoMamute:'📜 Bio: Apesar da cara sisuda, \n adora uma brincadeira e \n qualquer coisa é motivo \n para festa. Geralmente \n encontrado em seu \n habitat natural: o \n laboratório de química \n orgânica em horários \n não convencionais, \n quando pode realizar \n seus experimentos malucos sem \n o escrutínio des alunes.',
           src4: Mamute, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 2, titleGuara: '🧪 Guará (elu/delu)', idadeGuara:'🧬 Idade: 20 anos', alturaGuara:'📏 Altura: 1,90 m ', 
           pesoGuara:'⚖️ Peso: 80 kg',
           vantagemGuara:'✅ Seu triacilglicerídeo é mais puro.',
           desvantagemGuara :'❎ Purificar reagentes dá mais trabalho.',
-          descricaoGuara:'📜 Bio: Figura excêntrica, sempre de \n casaco, capuz e fones de ouvido. \n Fica quieto na delu, curtindo o frio \n polar do ar condicionado, enquanto \n pacientemente purifica \n recursivamente todos os reagentes \n para seus experimentos. Jamais toque \n em suas vidrarias, meticulosamente \n limpas e guardadas de um jeito \n que só elu consegue.', 
+          descricaoGuara:'📜 Bio: Figura excêntrica, sempre de casaco, \n capuz e fones de ouvido. Fica quieto na delu, \n curtindo o frio polar do ar \n condicionado, enquanto \n pacientemente purifica \n recursivamente todos os \n reagentes para seus \n experimentos. Jamais toque \n em suas vidrarias, \n meticulosamente limpas e \n guardadas de um jeito que só \n elu consegue.', 
           src2: Guara, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 5, titleMiquito: '🧪 Miquito (ele/dele)', idadeMiquito:'🧬 Idade: 21 anos', 
           alturaMiquito:'📏 Altura: 1,60 m', pesoMiquito:'⚖️ Peso: 55 kg ', 
           vantagemMiquito:'✅ Suas extrações são mais rápidas.',
           desvantagemMiquito:'❎ Suas reações acontecem com menor probabilidade.',
-          descricaoMiquito:'📜 Bio: Não se conhece alguém que \n seja mais rápido para montar uma \n coluna de separação ou limpar \n o rotaevaporador. Pena que qua- \n -se sempre tem que recomeçar \n seus experimentos, porque esque- \n -ceu algum reagente ou de acertar \n algum parâmetro.',
+          descricaoMiquito:'📜 Bio: Não se conhece \n alguém que seja mais rá- \n -pido para montar uma \n coluna de separação ou \n limpar o rotaevaporador. \n Pena que quase sempre \n tem que recomeçar seus \n experimentos, porque \n esqueceu algum reagente \n ou de acertar algum \n parâmetro.',
           src5: Mico, colors: 'RGBA(211,141,181,0.97)'},  
 
   {id: 6, titlePintada: '🧪 Pintada (elu/delu)', idadePintada:'🧬 Idade: 19 anos', 
           alturaPintada:'📏 Altura: 1,70 m ', pesoPintada:'⚖️ Peso: 60 kg ',
           vantagemPintada:'✅ Suas reações acontecem com maior probabilidade.',
           desvantagemPintada:'❎ O valor de sua bolsa precisa ser reajustado.',
-          descricaoPintada:'📜 Bio: É e mais nove alune do \n laboratório. Ainda não sabe muito \n bem o que fazer da vida, então se \n dedica a várias entidades, à \n atlética e começou recentemente \n uma IC. Com tanta coisa para fazer \n e uma graduação exigente, quase \n nunca está no laboratório, mas \n dizem que leva jeito para coisa,\n porque tudo o que toca dá certo.',
+          descricaoPintada:'📜 Bio: É e mais nove \n alune do laboratório. \n Ainda não sabe muito bem o \n que fazer da vida, então \n se dedica a várias entidades, \n à atlética e começou \n recentemente uma IC. Com \n tanta coisa para fazer \n e uma graduação exigente, \n quase nunca está no \n laboratório, mas dizem que \n leva jeito para coisa, \n porque tudo o que toca dá \n certo.',
           src6: Onca, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 7, titleTuca: '🧪 Tuca (ele/dele)', idadeTuca:'🧬 Idade: 24 anos', 
           alturaTuca:'📏 Altura: 1,68 m', pesoTuca:'⚖️ Peso: 55 kg ',
           vantagemTuca:'✅❎ 5 bola é 10!',
           /*desvantagemTuca:'❎ Sem atributos...',*/
-          descricaoTuca:'📜 Bio: Figura constante no \n laboratório. Até parece que \n não dorme. Não sabe onde \n está um reagente ou equi- \n -pamento? É só perguntar \n para o Tuca, ele não só vai \n pegar para você como contar \n sobre tudo que tem acontecido \n no laboratório.',
+          descricaoTuca:'📜 Bio: Figura constante \n no laboratório. Até \n parece que não dorme. \n Não sabe onde está \n um reagente ou equi- \n -pamento? É só per- \n -guntar para o Tuca, ele \n não só vai pegar para \n você como contar sobre \n tudo que tem acontecido \n no laboratório.',
           src7: Tucano, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 3, titleCuca: '🧪 Cuca (ela/dela)', idadeCuca:'🧬 Idade: 23 anos', 
           alturaCuca:'📏 Altura: 1,75 m ', pesoCuca:'⚖️ Peso: 69 kg',
           vantagemCuca:'✅ Talento precoce, precisa de menos tempo para se formar.',
           desvantagemCuca:'❎ Afobada para comprar recursos, sempre paga mais caro.',
-          descricaoCuca:'📜 Bio: Sempre com um \n livro  na mão e uma curio- \n sidade científica bem \n  aleatória para compartilhar. \n  É a ela que você recorre \n quando Mestre Mamu não está \n por perto para tirar a sua dúvida. \n Não vê a hora de terminar a \n  graduação para poder passar \n  mais tempo no laboratório.',
+          descricaoCuca:'📜 Bio: Sempre com um \n livro  na mão e uma \n curiosidade cientí- \n -fica bem aleatória \n para compartilhar. \n É a ela que você \n recorre quando Mestre \n Mamu não está por perto \n para tirar a sua dúvida. \n Não vê a hora de termi- \n -nar a graduação para \n poder passar mais tempo \n no laboratório.',
           src3: Jacare, colors: 'RGBA(211,141,181,0.97)'},
 
   {id: 1, titleCapi: '🧪 Capi (ela/dela)', idadeCapi: '🧬 Idade: 28 anos', 
           alturaCapi: '📏 Altura: 1,65 m', pesoCapi: '⚖️ Peso: 70 kg', 
-          vantagemCapi: '✅ Eficiente, faz mais em menos \n tempo.',
-          desvantagemCapi: '❎ Sem stress para se formar, mesmo \n que demore mais.',
-          descricaoCapi: '📜 Bio: Dona de diversos apelidos: Carpincha, \n Beque, Trombuda, Cachapu, Cunum e Cubu,\n ela está sempre comendo alguma \n coisa no laboratório, a despeito das inúme- \n -ras broncas que já tomou. Calma e \n prestativa, prefere realizar seus \n experimentos à tarde. É a veterana que já \n devia ter se formado, mas que ninguém \n quer que vá embora. Todes precisam de \n sua ajuda para alguma coisa.',
+          vantagemCapi: '✅ Eficiente, faz mais em \n menos tempo.',
+          desvantagemCapi: '❎ Sem stress para se formar, \n mesmo que demore mais.',
+          descricaoCapi: '📜 Bio: Dona de diversos apelidos: \n Carpincha, Beque, Trombuda, Cachapu, \n Cunum e Cubu, ela está sempre \n comendo alguma coisa no laborató- \n -rio, a despeito das inúmeras \n broncas que já tomou. Calma e \n prestativa, prefere realizar seus \n experimentos à tarde. É a veterana \n que já devia ter se formado, mas \n que ninguém quer que vá embora. \n Todes precisam de sua ajuda para \n alguma coisa.',
           src1: Capivara, colors: 'RGBA(211,141,181,0.97)'},
 
 ];

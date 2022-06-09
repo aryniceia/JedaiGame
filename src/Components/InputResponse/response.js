@@ -221,8 +221,8 @@ function Game () {
                 teste.play();
             }
 /* Variáveis dos reagentes R1 e R2*/
-   
-    var teste2 = window.reagente1;
+    var teste2 = `${window.reagente1}`;
+
     //var reagente2 = document.getElementById('segundo-reagente')
 
     return (
@@ -241,7 +241,7 @@ function Game () {
                             <img alt="Imagem de um filtro de laboratório" className="filtroElement" src={FiltroElement}></img>
                             
                             <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={teste2}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
-                            <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={document.getElementById('reagente2')}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
+                            <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={window.document.getElementById('reagente2')}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
 
                             <button className="arrowRight" title="Consulte seu caderno!" onMouseOver={hoverSound} onClick={myFunction2}>

@@ -1,4 +1,6 @@
 /* Fundos */
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300&display=swap);
+
   .App {
     text-align: center;
   }
@@ -47,10 +49,10 @@
       width:150px;
     }
     .extração{
-      font-family: 'Chakra Petch';
+      font-family: 'IBM Plex Mono', monospace;
       color: white;
       text-align: left;
-      font-size: 14px;
+      font-size: 10px;
       padding: 6px;
     }
     #acdin {
@@ -255,7 +257,7 @@
           visibility: hidden;
           width: 120px;
           background: rgb(190, 77, 77);
-          font-family:'Chakra Petch';
+          font-family:'IBM Plex Mono', monospace;
           font-size: 20px;
           color: white;
           text-align: center;
@@ -298,7 +300,7 @@
           visibility: hidden;
           width: 120px;
           background: rgb(236, 214, 15);
-          font-family:'Chakra Petch';
+          font-family: 'IBM Plex Mono', monospace;
           font-size: 20px;
           color: white;
           text-align: center;
@@ -341,7 +343,7 @@
           visibility: hidden;
           width: 120px;
           background: rgb(77, 164, 190);
-          font-family:'Chakra Petch';
+          font-family: 'IBM Plex Mono', monospace;
           font-size: 20px;
           color: white;
           text-align: center;
@@ -385,7 +387,7 @@
           width: 150px;
           line-height: 20px;
           background: rgb(77, 190, 115);
-          font-family:'Chakra Petch';
+          font-family: 'IBM Plex Mono', monospace;
           font-size: 20px;
           color: white;
           text-align: center;
@@ -428,7 +430,7 @@
           visibility: hidden;
           width: 200px;
           background: rgb(241, 139, 55);
-          font-family:'Chakra Petch';
+          font-family: 'IBM Plex Mono', monospace;
           font-size: 15px;
           color: white;
           text-align: center;
@@ -532,7 +534,7 @@
       #showLog{
         overflow: auto;
         color: white;
-        font-family: 'Chakra Petch';
+        font-family: 'IBM Plex Mono', monospace;
         font-size: 15px;
         display: flex;
         flex-direction:column;
@@ -568,7 +570,6 @@
         background-color: #EA8D8D;
         font-family: 'Chakra Petch';
         color: white;
-
         position: absolute;
         margin-top: 100px;
         margin-left: -65px;

@@ -71,6 +71,7 @@ if (tabuleiro === 3) {
     equipamento = "filtrar"
     //filtro
 }
+
 character = localStorage.getItem('jedai/personagem')
 if (character == '4'){ //miquito
     ProbInicial = 30; //probabilidade inicial fixa
