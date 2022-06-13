@@ -10,13 +10,6 @@ import './radio.css';
 function RadioButton ({personagem, setPersonagem}) { 
     return (
         <div className="chars">
-            <div className="PopUpHoverChar">
-                <div className="foto1">dsf
-                    <span className="textfoto1">
-                        sahdsahdh
-                    </span> 
-                </div>
-            </div>
             <Char 
                 personagem={personagem}
                 setPersonagem={setPersonagem}
@@ -27,6 +20,7 @@ function RadioButton ({personagem, setPersonagem}) {
                         charName: "Guará",
                         img: Guara,
                         charDescription: 'Personagem antropomorfo de um lobo guará usando roupas de laboratório.',
+												popUpText: "Guará",
                         className: {
                             container: 'guara',
                             image: 'foto2'
@@ -44,6 +38,7 @@ function RadioButton ({personagem, setPersonagem}) {
                         charName: "Miquito",
                         img: Mico,
                         charDescription: 'Personagem antropomorfo de um mico usando roupas de laboratório.',
+												popUpText: "Miquito",
                         className: {
                             container: 'mico',
                             image: 'foto4'
@@ -61,6 +56,7 @@ function RadioButton ({personagem, setPersonagem}) {
                         charName: "Pintada",
                         img: Onca,
                         charDescription: 'Personagem antropomorfo de uma onça pintada usando roupas de laboratório.',
+												popUpText: "Pintada",
                         className: {
                             container: 'onca',
                             image: 'foto5'
@@ -78,6 +74,7 @@ function RadioButton ({personagem, setPersonagem}) {
                         charName: "Tuca",
                         img: Tucano,
                         charDescription: 'Personagem antropomorfo de um tucano usando roupas de laboratório.',
+												popUpText: "Tuca",
                         className: {
                             container: 'tucano',
                             image: 'foto6'
@@ -95,6 +92,7 @@ function RadioButton ({personagem, setPersonagem}) {
                         charName: "Cuca",
                         img: Jacare,
                         charDescription: 'Personagem antropomorfo de um jacaré usando roupas de laboratório.',
+												popUpText: "Cuca",
                         className: {
                             container: 'jacare',
                             image: 'foto3'
@@ -112,6 +110,7 @@ function RadioButton ({personagem, setPersonagem}) {
                         charName: "Capi",
                         img: Capivara,
                         charDescription: 'Personagem antropomorfo de uma capivara usando roupas de laboratório.',
+												popUpText: "Capi",
                         className: {
                             container: 'capi',
                             image: 'foto1'
