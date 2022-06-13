@@ -1,4 +1,3 @@
-
 /*const charProps = {
     id: '',
     charName: "",
@@ -13,14 +12,14 @@ function Char ({personagem, setPersonagem, charProps}) {
     return (
         <div className={`char-item ${charProps.className.container}`}>
             <label title={charProps.charName}>
-						<div className="PopUpHoverChar">
-							<div className="foto1">
-              	<img className={charProps.className.image} src={charProps.img} alt={`Imagem do personagem ${charProps.charName} \n${charProps.charDescription}`} />
-								<span className="textfoto1">
-									{charProps.popUpText}
-								</span> 
-							</div>
-            </div>
+				<div className="PopUpHoverChar">
+				    <div className="foto1">
+              	        <img className={charProps.className.image} src={charProps.img} alt={`Imagem do personagem ${charProps.charName} \n${charProps.charDescription}`} />
+						<span className="textfoto1">
+							{charProps.popUpText}
+						</span> 
+					</div>
+                </div>
                 <p>{charProps.charName}</p>
             </label>
             
