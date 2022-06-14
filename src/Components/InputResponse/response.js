@@ -222,7 +222,7 @@ function Game () {
             }
 /* Variáveis dos reagentes R1 e R2*/
     var teste2 = `${window.reagente1}`;
-
+    var reagente1 = 'Água teste'
     //var reagente2 = document.getElementById('segundo-reagente')
 
     return (
@@ -240,8 +240,8 @@ function Game () {
                             <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
                             <img alt="Imagem de um filtro de laboratório" className="filtroElement" src={FiltroElement}></img>
                             
-                            <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={teste2}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
-                            <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={window.document.getElementById('reagente2')}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
+                            <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={'Custo: 2 Créditos'}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
+                            <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={'Custo: 5 Créditos'}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
                             {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
 
                             <button className="arrowRight" title="Consulte seu caderno!" onMouseOver={hoverSound} onClick={myFunction2}>
@@ -297,6 +297,7 @@ function Game () {
                             <p id="extracaoFiltro1"></p>
                             <p id="extracaoFiltro2"></p>
                             <p id="totalextraido"></p>
+                            <p id="infoDeCusto"></p>
                         </div>
                     </div>
                     
@@ -326,9 +327,9 @@ function Game () {
                                 </span>
                             </button>
                             <div onMouseOver={hoverSound} className="melhorias">
-                                <button className="UpReator" onClick={upgradeReator} title="Melhoria do reator">+</button>
-                                <button className="UpPh" onClick={upgradePHmetro} title="Melhoria do pHmetro">+</button>
-                                <button className="UpChapa" onClick={upgradeTermometro} title="Melhoria da chapa">+</button>
+                                <button className="UpReator" onClick={upgradeReator} title="Melhoria do reator. Custo: 10 Créditos.">+</button>
+                                <button className="UpPh" onClick={upgradePHmetro} title="Melhoria do pHmetro. Custo: 3 Créditos.">+</button>
+                                <button className="UpChapa" onClick={upgradeTermometro} title="Melhoria da chapa térmica. Custo: 3 Créditos.">+</button>
                                 <button className="MaisPh" onClick={SubirPH} title="Aumentar pH">+</button>
                                 <button className="MenosPh" onClick={DiminuirPH} title="Diminuir pH">-</button>
                                 <button className="MaisTemp" id="temp+" onClick={AumentarTemp} title="Aumentar temperatura">+</button>

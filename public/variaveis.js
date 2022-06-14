@@ -16,6 +16,7 @@ dRdP = 0
 logList = []
 
 if (tabuleiro === 1) {
+    document.reagente1 = "Etanol"
     reagente1 = "Etanol"
     reagente2 = "Triacilglicerídeo"
     produto1 = "Glicerol"
@@ -701,6 +702,13 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     
     
     extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraídos.`;
+    infoDeCusto = document.getElementById('infoDeCusto').innerHTML = 
+    `Custo de aumentar ou diminuir pH: ${personagem.PHmetroCost}<br><br>
+    Custo para aumentar ou diminuir a temperatura: ${personagem.termometroCost}<br><br>
+    Custo para passar de nível: <br>
+    Mestrado: ${personagem.molMestrado} mols<br>
+    Doutorado: ${personagem.molDoutorado} mols
+    `
     //eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML =
         `
