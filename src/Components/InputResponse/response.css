@@ -560,7 +560,6 @@
         color: white;
         display: inline-block;
       }
-
       .cancel {
         width: 55px;
         height: 55px;
@@ -662,8 +661,8 @@
       /*Fundo pop up info */
         .help .helptext {
           visibility: hidden;
-          width: 85px;
-          height: 85px;
+          width: 320px;
+          height: 400px;
           background-color: #ea8d8d;
           color: #fff;
           font-size: 15px;
@@ -673,8 +672,8 @@
           z-index: 1;
           bottom: 72%;
           left: 50px;
-          padding: 20px;
-          line-height: 22px;
+          padding: 12px;
+          line-height: 16px;
         }
       /* Popup arrow */
         .help .helptext::after {
@@ -989,6 +988,40 @@
         left: 1130px;
       }
     }
-
-
-    
+    /* @media only screen and (min-width: 2600px)  33 % 
+      .UpPh {
+        position: absolute;
+        top: 985px;
+        left: 1374px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 1018px;
+        left: 1190px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 690px;
+        left: 1110px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 1078px;
+        left: 1342px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 1078px;
+        left: 1306px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 762px;
+        left: 1160px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 762px;
+        left: 1130px;
+      }
+    }*/
