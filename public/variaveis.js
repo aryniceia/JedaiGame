@@ -14,7 +14,6 @@ listaLog = document.getElementById('showLog')
 // logLine = `Você começou o jogo.`
 dRdP = 0
 logList = []
-
 if (tabuleiro === 1) {
     document.reagente1 = "Etanol"
     reagente1 = "Etanol"
@@ -22,7 +21,7 @@ if (tabuleiro === 1) {
     produto1 = "Glicerol"
     produto2 = "Biodiesel"
     equilibrio = 0
-    reversivel = document.getElementById('reversivel').innerHTML = `→`
+    reversivel = document.getElementById('reversivel').innerHTML = `</br>→`
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
@@ -33,6 +32,8 @@ if (tabuleiro === 1) {
     processosDecantarEPrecipitar = "decantação"
     semProdutos = "decantados"
     //centrifuga
+    // atualizar()
+
 }
 if (tabuleiro === 2) {
     reagente1 = "Água"
@@ -40,7 +41,7 @@ if (tabuleiro === 2) {
     produto1 = "Glicerol"
     produto2 = "Ácido Graxo"
     equilibrio = 1
-    reversivel = document.getElementById('reversivel').innerHTML = `⇌`
+    reversivel = document.getElementById('reversivel').innerHTML = `</br>⇌`
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
@@ -52,6 +53,8 @@ if (tabuleiro === 2) {
 
     equipamento = "centrifugar"
     //centrifuga
+    // atualizar()
+
 }
 if (tabuleiro === 3) {
     reagente1 = "Hidróxido de Sódio"
@@ -59,7 +62,7 @@ if (tabuleiro === 3) {
     produto1 = "Glicerol"
     produto2 = "Sal de Ácido Graxo"
     equilibrio = 0
-    reversivel = document.getElementById('reversivel').innerHTML = `→`
+    reversivel = document.getElementById('reversivel').innerHTML = `</br>→`
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "do filtro"
@@ -70,6 +73,7 @@ if (tabuleiro === 3) {
     semProdutos = "precipitados"
 
     equipamento = "filtrar"
+    // atualizar()
     //filtro
 }
 
@@ -702,13 +706,7 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     
     
     extraido = document.getElementById('totalextraido').innerHTML = `Total ${molextraidos} de mols de ${produto2} extraídos.`;
-    infoDeCusto = document.getElementById('infoDeCusto').innerHTML = 
-    `Custo de aumentar ou diminuir pH: ${personagem.PHmetroCost}<br><br>
-    Custo para aumentar ou diminuir a temperatura: ${personagem.termometroCost}<br><br>
-    Custo para passar de nível: <br>
-    Mestrado: ${personagem.molMestrado} mols<br>
-    Doutorado: ${personagem.molDoutorado} mols
-    `
+    
     //eventosprobabilisticos = document.getElementById('eventos').innerHTML = `${evento}/d100 ${contagemeventos} Botao eventos: ${botaoEventoOnOFF}`
     trofeus = document.getElementById('trofeus').innerHTML =
         `
@@ -724,8 +722,26 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
             • Não usar o método de extração rápida: ${ExtracaoRapida ? "✅" : "❌"}<br>
             • Não fazer nenhum upgrade de equipamento (Difícil): ${NupgradeEquipamentos ? "✅" : "❌"}<br>
         `
-}
+        document.getElementById("helpPopup").innerHTML = `
+        <p>
+        <p>• Custos:</p>
+        <blockquote>- pH: ${PHAcao}☕ | ${PHcost}₵</blockquote>
+         <blockquote>- : ${personagem.filtroAcao}☕ | ${personagem.filtrocost}₵ </blockquote>
+        <blockquote>- Chapa térmica: ${tempAcao}☕ | ${tempcost}₵</blockquote>
+        <blockquote>-Reagente 1 (${reagente1}): ${acaoReagente1}☕ | ${costReagente1}₵</blockquote>
+        <blockquote>-Reagente 2 (${reagente2}): ${acaoReagente2}☕ | ${costReagente2}₵</blockquote>
+        <p>• Upgrades:</p>
+        <blockquote>- pHmetro:  ${PHmetroAcao}☕ | ${PHmetroCost}₵</blockquote>
+        <blockquote>- Chapa térmica:  ${termometroAcao}☕ | ${personagem.termometroCost}₵</blockquote>
+        <blockquote>- Reator: 1☕ | 10₵</blockquote>
+        <blockquote>- Nível mestrado: ${personagem.molMestrado}🧪</blockquote>
+        <blockquote>- Nïvel doutorado: ${personagem.molDoutorado}🧪 </blockquote>
+        <div id="obs">* Obs: os custos e melhorias se referem aos dados sem a ação dos personagens!</div>
+        </p>
+        `
 
+    
+} 
 
 function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo das acoes e dinheiro (nao funcionando ainda)
 

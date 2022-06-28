@@ -32,6 +32,7 @@ function Select () {
             localStorage.setItem('jedai/tabuleiro', tabuleiro)
             localStorage.setItem('jedai/personagem', personagem)
             window.location.href='/game'
+            
         } 
     }
   

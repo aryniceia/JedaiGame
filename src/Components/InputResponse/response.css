@@ -1025,3 +1025,10 @@
         left: 1130px;
       }
     }*/
+.helptext blockquote, p{
+  font-size: 14px;
+  /* background-color: #1a460e; */
+}
+.helptext div{
+  font-size: 14px;
+}

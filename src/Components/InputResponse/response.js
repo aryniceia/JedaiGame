@@ -150,10 +150,12 @@ function Game () {
     function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
+        
     };
     function myFunction1() {
         var popup = document.getElementById("helpPopup");
         popup.classList.toggle("show");
+        window.atualizar()
     };
     function myFunction2() {
         var popup = document.getElementById("cadernoPopup");
@@ -308,22 +310,7 @@ function Game () {
                                 <button className="botoes" onClick={Expurgo}>Expugar</button>
                                 <button className="help" onClick={myFunction1}>Ajuda
                                     <p className="helptext" id="helpPopup">
-                                        {/* • 💰 dinheiro<br></br>
-                                        • ☕ ação <br></br>
-                                        • 🧪 mol <br></br>
-                                        • ⭐ turno <br></br> */}
-                                        <p>• Custos:</p>
-                                            <blockquote>- pH: 1 ação | 4 ₵réditos</blockquote>
-                                            <blockquote>- Era pra ter o maquinário aqui <span id="maquinario"></span></blockquote>
-                                            <blockquote>- Chapa térmica: 1 ação | 4 ₵réditos </blockquote>
-                                            <blockquote>- Reagente 1: 1 ação | 2 ₵réditos <span id="reagente1"></span></blockquote>
-                                            <blockquote>- Reagente 2: 1 ação | 5 ₵réditos <span id="reagente2"></span></blockquote>
-                                        <p>• Upgrades:</p>
-                                            <blockquote>- pHmetro:  1 ação | 3 ₵réditos</blockquote>
-                                            <blockquote>- Chapa térmica:  1 ação | 3 ₵réditos</blockquote>
-                                            <blockquote>- Reator: 1 ação | 10 ₵réditos </blockquote>
-                                        <br></br>
-                                        <p >* Obs: os custos e melhorias se referem aos dados sem a ação dos personagens!</p>
+                                        
                                     </p>
                                 </button>
                                 <button className='cancel' onClick={Cancelar}>Sair</button>                               
