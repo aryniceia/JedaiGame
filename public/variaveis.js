@@ -1,9 +1,5 @@
 //DECLARAÇÃO DE VARIAVEIS INÍCIO -----------------
-//import { func } from 'assert-plus';
-//import React from 'react';
-//import ReactDOM from 'react-dom';
-//NomeJogador = localStorage.getItem('jedai/username')
-//jogadorName = document.getElementById('nomeJogador').innerHTML = localStorage.getItem('jedai/username')
+// import Bequer3 from '../src/img/Lab_Bequer/Lab_Bequer1.png'
 tabuleiro = parseInt(localStorage.getItem('jedai/tabuleiro'))
 tempoDeJogo = parseInt(localStorage.getItem('jedai/time'))
 //equilibrio = true // perguntando se a reação permite conversão
@@ -169,13 +165,13 @@ decantarR4 = 0;
 filtrarR1 = 0;
 filtrarR2 = 0;
 
-extracaoR1 = `${decantarR1} mols no estágio 1 | `
-extracaoR2 = `${decantarR2} mols no estágio 2 | `
-extracaoR3 = `${decantarR3} mols no estágio 3 | `
-extracaoR4 = `${decantarR4} mols no estágio 4 |`
+extracaoR1 = `${decantarR1} mols no estágio 1`
+extracaoR2 = `${decantarR2} mols no estágio 2`
+extracaoR3 = `${decantarR3} mols no estágio 3`
+extracaoR4 = `${decantarR4} mols no estágio 4`
 
-extracaoFiltro1 = `${filtrarR1} mols no estágio 1 | `
-extracaoFiltro2 = `${filtrarR2} mols no estágio 2 |`
+extracaoFiltro1 = `${filtrarR1} mols no estágio 1`
+extracaoFiltro2 = `${filtrarR2} mols no estágio 2`
 
 
 molextraidos = 0;
@@ -480,6 +476,7 @@ function AdicionarH2O() { //funcao para adicionar agua por meio do botao
         somNaoPode.play()
         aparecerLog(`Reator cheio.`, true)
     }
+    document.getElementById('filtroElement').src = '../img/Lab_Bequer/Lab_Béquer_vazio.png'
 }
 function AdicionarTri() {
     if (molSoma <= molMaxReator) { //teste de quantidade de mols no reator
@@ -551,11 +548,11 @@ function Proximo() { //funcao para passar turno
     // filtrarR1 = 0
     
     
-    extracaoR2 = `${decantarR2} mols no estágio 2 | `
-    extracaoR3 = `${decantarR3} mols no estágio 3 | `
-    extracaoR4 = `${decantarR4} mols no estágio 4 |`
+    extracaoR2 = `${decantarR2} mols no estágio 2`
+    extracaoR3 = `${decantarR3} mols no estágio 3`
+    extracaoR4 = `${decantarR4} mols no estágio 4`
 
-    extracaoFiltro2 = `${filtrarR2} mols no estágio 2 |`
+    extracaoFiltro2 = `${filtrarR2} mols no estágio 2`
     
     if ((molReagente1 < fatorDeConversaoReagente2 || molReagente2 < fatorDeConversaoReagente1) && (molProduto1 == 0)){
         aparecerLog("Você ainda não tem reagentes em proporção estequiométrica. Consulte o seu caderno!", true)
@@ -678,8 +675,8 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
     acdin = document.getElementById('acdin').innerHTML = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
     NivelGame = document.getElementById('nivelAtual').innerHTML = `${Faculdade}`
-    extracaoR1 = `${decantarR1} mols no estágio 1 | `
-    extracaoFiltro1 = `${filtrarR1} mols no estágio 1 | `
+    extracaoR1 = `${decantarR1} mols no estágio 1 `
+    extracaoFiltro1 = `${filtrarR1} mols no estágio 1 `
     decantarCor(decantarR1, 'extracaoR1')
     decantarCor(decantarR2, 'extracaoR2')
     decantarCor(decantarR3, 'extracaoR3')
@@ -725,19 +722,19 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
         document.getElementById("helpPopup").innerHTML = `
         <p>
         <p>• Custos:</p>
-        <blockquote>- pH: ${PHAcao}☕ | ${PHcost}₵</blockquote>
-         <blockquote>- : ${personagem.filtroAcao}☕ | ${personagem.filtrocost}₵ </blockquote>
-        <blockquote>- Chapa térmica: ${tempAcao}☕ | ${tempcost}₵</blockquote>
-        <blockquote>-Reagente 1 (${reagente1}): ${acaoReagente1}☕ | ${costReagente1}₵</blockquote>
-        <blockquote>-Reagente 2 (${reagente2}): ${acaoReagente2}☕ | ${costReagente2}₵</blockquote>
+        <blockquote>- Variar pH: 💰 ${PHcost}₵ | ☕ ${PHAcao}</blockquote>
+        <blockquote>- Variar temperatura: ${tempAcao}☕ | ${tempcost}💰</blockquote>
+        <blockquote>- Reagente 1 (${reagente1}): ${acaoReagente1}☕ | ${costReagente1}💰</blockquote>
+        <blockquote>- Reagente 2 (${reagente2}): ${acaoReagente2}☕ | ${costReagente2}💰</blockquote>
+        <blockquote>- Decantar: Sem custos</blockquote>
+        <blockquote>- ${filtrarCentrifugar} : ${personagem.filtroAcao}☕ | ${personagem.filtrocost}💰 </blockquote>
         <p>• Upgrades:</p>
-        <blockquote>- pHmetro:  ${PHmetroAcao}☕ | ${PHmetroCost}₵</blockquote>
-        <blockquote>- Chapa térmica:  ${termometroAcao}☕ | ${personagem.termometroCost}₵</blockquote>
-        <blockquote>- Reator: 1☕ | 10₵</blockquote>
+        <blockquote>- pHmetro:  ${PHmetroAcao}☕ | ${PHmetroCost}💰</blockquote>
+        <blockquote>- Chapa térmica:  ${termometroAcao}☕ | ${personagem.termometroCost}💰</blockquote>
+        <blockquote>- Reator: 1☕ | 10💰</blockquote>
         <blockquote>- Nível mestrado: ${personagem.molMestrado}🧪</blockquote>
         <blockquote>- Nïvel doutorado: ${personagem.molDoutorado}🧪 </blockquote>
-        <div id="obs">* Obs: os custos e melhorias se referem aos dados sem a ação dos personagens!</div>
-        </p>
+         </p>
         `
 
     

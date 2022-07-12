@@ -26,6 +26,11 @@ import Bio from '../../img/biodiesel_caderno.png';
 import Sound from '../../sound/clickSound.mp3';
 import HoverSound from '../../sound/buttonHover.mp3';
 
+import Bequer1 from '../../img/Lab_Bequer/Lab_Bequer1.png';
+import Bequer2 from '../../img/Lab_Bequer/Lab_Bequer2.png';
+import Bequer3 from '../../img/Lab_Bequer/Lab_Bequer3.png';
+
+
 // Variáveis das inputs //
     /*const levels = {
         0: "Fácil",
@@ -240,7 +245,7 @@ function Game () {
                         <div className="border">
                             <img className="profile-charBody" alt="inserir o nome do personagem" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
                             <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
-                            <img alt="Imagem de um filtro de laboratório" className="filtroElement" src={FiltroElement}></img>
+                            <img alt="Imagem de um filtro de laboratório" className="filtroElement" id='filtroElement'src={FiltroElement}></img>
                             
                             <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={'Custo: 2 Créditos'}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
                             <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={'Custo: 5 Créditos'}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
@@ -290,7 +295,7 @@ function Game () {
                     <div className="barra_lateral">
                         <div className="extração">
                             <p id="probabilidade"></p>
-                            <p>• Extração do <span id="produto2"></span> (4 rodadas):</p>
+                            <p>• Extração do <span id="produto2"></span> (<span id='rodadas'></span> rodadas):</p>
                             <p id="extracaoR1"></p>
                             <p id="extracaoR2"></p>
                             <p id="extracaoR3"></p>
@@ -360,6 +365,7 @@ function Game () {
                 </div>
             </header>
         </div>    
+        
     );
 }
 
