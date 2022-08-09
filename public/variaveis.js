@@ -17,7 +17,7 @@ if (tabuleiro === 1) {
     produto1 = "Glicerol"
     produto2 = "Biodiesel"
     equilibrio = 0
-    reversivel = document.getElementById('reversivel').innerHTML = `</br>→`
+    // reversivel = document.getElementById('reversivel').innerHTML = `</br>→`
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
@@ -673,7 +673,7 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
     p2 = document.getElementById('produto02').innerHTML = `${molProduto2} ${produto2}`;
     document.getElementById('produto2').innerHTML = produto2
     r2 = document.getElementById('reagente02').innerHTML = `${molReagente2} ${reagente2}`;
-    acdin = document.getElementById('acdin').innerHTML = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
+    acdin = document.getElementById('acdin').innerText = `💰 ${dinheiro} ₵ ☕ ${acao} 🧪 ${molextraidos} mols ⭐ ${turno} turnos`; // acdin = açao/dinheiro
     NivelGame = document.getElementById('nivelAtual').innerHTML = `${Faculdade}`
     extracaoR1 = `${decantarR1} mols no estágio 1 `
     extracaoFiltro1 = `${filtrarR1} mols no estágio 1 `
