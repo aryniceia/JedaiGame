@@ -758,15 +758,143 @@
 
 /*-----------------------------------------------------------------------------------------------*/
 /* Responsividade da  tela */
-    /*@media only screen and (min-width: 800px) { 
-    .board {
-      height: 350px;
-      margin-top: -85px ;
-    }*/
-  
-  
-    /* Responsividade dos  botões */
-    @media only screen and (min-width: 1024px) { /*Tela Principal 100% */
+ 
+    @media only screen and (min-width: 1000px) { 
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 329px;
+        width: 470px;
+        margin-top: -96px;
+        margin-left: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .border {
+      border: 6px solid;
+      border-color: #231F20;
+      height: 342px;
+      width: 530px;
+      margin-top: -8px;
+      margin-left: -40px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 257px;
+        margin-top: 9px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 120px;
+        position: relative;
+        top: -206px;
+        left: -3px;
+        transition: transform 250ms;
+      }
+      .filtroElement {
+        width: 150px;
+        position: relative;
+        top: -210px;
+        left: -8px;
+        transition: transform 250ms;
+      }  
+      .UpPh {
+        font-family: 'Chakra Petch';
+        font-size: 25px;
+        color: white;
+        line-height: 12.5px;
+        background-color: #5ce039;
+        border: none;
+        border-radius: 4px;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        top: -161px;
+        left: 254px;
+      }
+      .UpReator {
+        font-family: 'Chakra Petch';
+        font-size: 25px;
+        color: white;
+        line-height: 12.5px;
+        background-color: #5ce039;
+        border: none;
+        border-radius: 4px;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        top: -278px;
+        left: 151px;
+      }
+      .UpChapa {
+        font-family: 'Chakra Petch';
+        font-size: 25px;
+        color: white;
+        line-height: 12.5px;
+        background-color: #5ce039;
+        border: none;
+        border-radius: 4px;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        top: -201px;
+        left: 53px;
+      }
+      .MaisPh {
+        position: relative;
+        top: -140px;
+        left: 158px;
+      }
+      .MenosPh {
+        position: relative;
+        top: -140px;
+        left: 109px;
+      }
+    }
+    
+    @media only screen and (min-width: 1280px) { /*Tela Principal 100% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 387px;
+        width: 537px;
+        margin-left: 0px;
+        margin-top: -105px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 387px;
+        width: 532px;
+        margin-top: -6px;
+        margin-left: -1px;
+      }
+      .profile-charBody {
+        width: 253px;
+        margin-left: 281px;
+        margin-top: 9px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 140px;
+        position: relative;
+        top: -238px;
+        left: -18px;
+        transition: transform 250ms;
+      }
+      .filtroElement {
+        width: 205px;
+        position: relative;
+        top: -228px;
+        left: -57px;
+        transition: transform 250ms;
+      }  
       .UpPh {
         position: absolute;
         top: 420px;
@@ -802,6 +930,7 @@
         top: 438px;
         left: 454px;
       }
+      
     }
     @media only screen and (min-width: 1400px) { /* 90% */
       .UpPh {
