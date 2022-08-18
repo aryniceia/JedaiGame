@@ -476,7 +476,7 @@ function AdicionarH2O() { //funcao para adicionar agua por meio do botao
         somNaoPode.play()
         aparecerLog(`Reator cheio.`, true)
     }
-    document.getElementById('filtroElement').src = '../img/Lab_Bequer/Lab_Béquer_vazio.png'
+    // document.getElementById('filtroElement').src = '../img/Lab_Bequer/Lab_Béquer_vazio.png'
 }
 function AdicionarTri() {
     if (molSoma <= molMaxReator) { //teste de quantidade de mols no reator
@@ -736,7 +736,7 @@ function atualizar() { //funcao para atualizar todas as informacoes de uma so ve
         <blockquote>- Nïvel doutorado: ${personagem.molDoutorado}🧪 </blockquote>
          </p>
         `
-
+    mudandoCorBequer()
     
 } 
 
@@ -1366,6 +1366,31 @@ function decantarCor(decantarColorido, qualID) {
     }
 }//../src/sound/clickSound.mp3
 
+function mudandoCorBequer() {
+    //condicoes para mudanca de cor do bequer:
+    
+    //bequer vazio 
+        if (molReagente1 == 0 && molReagente2 == 0 && molProduto1 == 0 && molProduto2 == 0){
+            document.getElementById('bequer1').src = '../img/Lab_Bequer/Bequervazio.png'
+        } 
+    //bequer apenas com reagentes
+        else if ((molReagente1 != 0 || molReagente2 != 0) && molProduto1 == 0) {
+            document.getElementById('bequer1').src = '../img/Lab_Bequer/Lab_Bequer_reagentes.png'
+        }
+
+        
+    //bequer apenas com produtos
+
+        else if ((molReagente1 == 0 && molReagente2 == 0) && molProduto1 != 0){
+            document.getElementById('bequer1').src = '../img/Lab_Bequer/Lab_Bequer_produtos.png'
+        }
+
+    //bequer com produtos e reagentes
+
+        else{
+            document.getElementById('bequer1').src = '../img/Lab_Bequer/Bequervazio.png'
+        }
+}
 
 //desligar botao eventos aletaorios no nivel facil
 //localStorage.getItem('jedai/level') nivel do jogo

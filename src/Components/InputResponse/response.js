@@ -247,7 +247,7 @@ function Game () {
                             <img className="profile-charBody" alt="inserir o nome do personagem" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
                             <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
                             <img alt="Imagem de um filtro de laboratório" className="filtroElement" id='filtroElement'src={FiltroElement}></img>
-                            <img alt="Imagem de um béquer" className="bequer1" src={bequervazio}></img>
+                            <img alt="Imagem de um béquer" id='bequer1' className="bequer1" src={bequervazio}></img>
                             
                             <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={'Custo: 2 Créditos'}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
                             <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={'Custo: 5 Créditos'}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
