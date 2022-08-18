@@ -95,6 +95,12 @@
       left: -57px;
       transition: transform 250ms;
     }
+    .bequer1 {
+      width: 120px;
+      position: relative;
+      top: -107px;
+      left: -241px;
+    }
     .centrifuga:hover, .filtroElement:hover {
       transform: translateY(-10px);
     }
@@ -110,7 +116,7 @@
         height: 20px;
         position: relative;
         top: -79px;
-        left: -362px;
+        left: -465px;
       }
       .trigli { /*Reagente 2*/
         font-family: 'Chakra Petch';
@@ -122,8 +128,8 @@
         width: 40px;
         height: 20px;
         position: relative;
-        top: -79px;
-        left: -352px;
+        top: -101px;
+        left: -159px;
       }
       /*PH*/
         .MaisPh {
@@ -708,8 +714,8 @@
           border-radius: 15px;
           background-size: contain;
           position: relative;
-          top: -65px;
-          left: -2px;
+          top: -97px;
+          left: 199px;
           transition: all .5s; /*animação do hover*/
         }
       /*Fundo pop up info */
@@ -759,7 +765,7 @@
 /*-----------------------------------------------------------------------------------------------*/
 /* Responsividade da  tela */
  
-    @media only screen and (min-width: 1000px) { 
+    @media only screen and (min-width: 1100px) { 
       .board {
         grid-column-start: 1;
         grid-column-end: 2;
@@ -800,6 +806,7 @@
         left: -8px;
         transition: transform 250ms;
       }  
+
       .UpPh {
         font-family: 'Chakra Petch';
         font-size: 25px;
@@ -882,19 +889,19 @@
         transition: transform 250ms;
       }
       .centrifuga {
-        width: 140px;
+        width: 137px;
         position: relative;
-        top: -238px;
-        left: -18px;
+        top: -236px;
+        left: 0px;
         transition: transform 250ms;
       }
       .filtroElement {
         width: 205px;
         position: relative;
         top: -228px;
-        left: -57px;
+        left: -26px;
         transition: transform 250ms;
-      }  
+      } 
       .UpPh {
         position: absolute;
         top: 420px;
@@ -930,7 +937,7 @@
         top: 438px;
         left: 454px;
       }
-      
+
     }
     @media only screen and (min-width: 1400px) { /* 90% */
       .UpPh {

@@ -18,6 +18,7 @@ import TucanoBody from'../../img/char/body/tucano.png';
 
 import Centrifuga from '../../img/elements/centrifuga.png';
 import FiltroElement from '../../img/elements/filtro.png';
+import bequervazio from '../../img/Lab_Bequer/bequer1.png';
 
 import Acido from '../../img/graxo_caderno.png';
 import Sabao from '../../img/sabao_caderno.png';
@@ -246,6 +247,7 @@ function Game () {
                             <img className="profile-charBody" alt="inserir o nome do personagem" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
                             <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
                             <img alt="Imagem de um filtro de laboratório" className="filtroElement" id='filtroElement'src={FiltroElement}></img>
+                            <img alt="Imagem de um béquer" className="bequer1" src={bequervazio}></img>
                             
                             <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={'Custo: 2 Créditos'}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
                             <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={'Custo: 5 Créditos'}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
@@ -256,6 +258,8 @@ function Game () {
                                     <img alt="Imagem do cardeno com instruções das repectivas extrações" id="caderno" src={Caderno[localStorage.getItem('jedai/tabuleiro')].url}/>
                                 </span>
                             </button>
+
+
                         
                             <div className="PopupHover" onMouseOver={hoverSound}>
                                 <div className="PH">!
