@@ -96,10 +96,10 @@
       transition: transform 250ms;
     }
     .bequer1 {
-      width: 120px;
+      width: 76px;
       position: relative;
-      top: -107px;
-      left: -241px;
+      top: -100px;
+      left: -218px;
     }
     .centrifuga:hover, .filtroElement:hover {
       transform: translateY(-10px);
@@ -116,7 +116,7 @@
         height: 20px;
         position: relative;
         top: -79px;
-        left: -465px;
+        left: -424px;
       }
       .trigli { /*Reagente 2*/
         font-family: 'Chakra Petch';
@@ -128,8 +128,8 @@
         width: 40px;
         height: 20px;
         position: relative;
-        top: -101px;
-        left: -159px;
+        top: -79px;
+        left: -418px;
       }
       /*PH*/
         .MaisPh {
