@@ -101,9 +101,9 @@
       top: -100px;
       left: -218px;
     }
-    .centrifuga:hover, .filtroElement:hover {
+    /*.centrifuga:hover, .filtroElement:hover {
       transform: translateY(-10px);
-    }
+    }*/
     /*Botões*/
       .agua { /*Reagente 1*/
         font-family: 'Chakra Petch';
@@ -797,16 +797,15 @@
         position: relative;
         top: -206px;
         left: -3px;
-        transition: transform 250ms;
+        /*transition: transform 250ms;*/
       }
       .filtroElement {
         width: 150px;
         position: relative;
         top: -210px;
         left: -8px;
-        transition: transform 250ms;
+        /*transition: transform 250ms;*/
       }  
-
       .UpPh {
         font-family: 'Chakra Petch';
         font-size: 25px;
@@ -860,7 +859,6 @@
         left: 109px;
       }
     }
-    
     @media only screen and (min-width: 1280px) { /*Tela Principal 100% */
       .board {
         grid-column-start: 1;
