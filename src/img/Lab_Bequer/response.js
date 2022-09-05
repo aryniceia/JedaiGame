@@ -223,10 +223,10 @@ function Game () {
                 }, 1000) 
             }*/
          /* Hover Sound Effect */
-            function hoverSound  () {
+            /*function hoverSound  () {
                 let teste = new Audio(HoverSound);
                 teste.play();
-            }
+            }*/
 /* Variáveis dos reagentes R1 e R2*/
     var teste2 = `${window.reagente1}`;
     var reagente1 = 'Água teste'

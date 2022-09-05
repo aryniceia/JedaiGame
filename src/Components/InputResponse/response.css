@@ -764,365 +764,1504 @@
 
 /*-----------------------------------------------------------------------------------------------*/
 /* Responsividade da  tela */
- 
-    @media only screen and (min-width: 1100px) { 
+  
+    @media only screen and (min-width: 768px) { 
       .board {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 70;
-        height: 329px;
-        width: 470px;
-        margin-top: -96px;
-        margin-left: 40px;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      .border {
-      border: 6px solid;
-      border-color: #231F20;
-      height: 342px;
-      width: 530px;
-      margin-top: -8px;
-      margin-left: -40px;
-      }
-      .profile-charBody {
-        width: 216px;
-        margin-left: 257px;
-        margin-top: 9px;
-        transition: transform 250ms;
-      }
-      .centrifuga {
-        width: 120px;
-        position: relative;
-        top: -206px;
-        left: -3px;
-        /*transition: transform 250ms;*/
-      }
-      .filtroElement {
-        width: 150px;
-        position: relative;
-        top: -210px;
-        left: -8px;
-        /*transition: transform 250ms;*/
-      }  
-      .UpPh {
-        font-family: 'Chakra Petch';
-        font-size: 25px;
-        color: white;
-        line-height: 12.5px;
-        background-color: #5ce039;
-        border: none;
-        border-radius: 4px;
-        width: 25px;
-        height: 25px;
-        position: relative;
-        top: -161px;
-        left: 254px;
-      }
-      .UpReator {
-        font-family: 'Chakra Petch';
-        font-size: 25px;
-        color: white;
-        line-height: 12.5px;
-        background-color: #5ce039;
-        border: none;
-        border-radius: 4px;
-        width: 25px;
-        height: 25px;
-        position: relative;
-        top: -278px;
-        left: 151px;
-      }
-      .UpChapa {
-        font-family: 'Chakra Petch';
-        font-size: 25px;
-        color: white;
-        line-height: 12.5px;
-        background-color: #5ce039;
-        border: none;
-        border-radius: 4px;
-        width: 25px;
-        height: 25px;
-        position: relative;
-        top: -201px;
-        left: 53px;
-      }
-      .MaisPh {
-        position: relative;
-        top: -140px;
-        left: 158px;
-      }
-      .MenosPh {
-        position: relative;
-        top: -140px;
-        left: 109px;
-      }
-    }
-    @media only screen and (min-width: 1280px) { /*Tela Principal 100% */
-      .board {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 70;
-        height: 387px;
-        width: 537px;
-        margin-left: 0px;
-        margin-top: -105px;
+        height: 324px;
+        width: 465px;
+        margin-left: 36px;
+        margin-top: -82px;
         background-size: cover;
         background-repeat: no-repeat;
       }
       .border {
         border: 6px solid;
         border-color: #231F20;
-        height: 387px;
+        height: 325px;
         width: 532px;
         margin-top: -6px;
-        margin-left: -1px;
+        margin-left: -37px;
       }
       .profile-charBody {
-        width: 253px;
-        margin-left: 281px;
-        margin-top: 9px;
+        width: 188px;
+        margin-left: 272px;
+        margin-top: 33px;
         transition: transform 250ms;
       }
       .centrifuga {
-        width: 137px;
+        width: 117px;
         position: relative;
-        top: -236px;
-        left: 0px;
-        transition: transform 250ms;
+        top: -200px;
+        left: 35px;
       }
       .filtroElement {
-        width: 205px;
+        width: 187px;
         position: relative;
-        top: -228px;
-        left: -26px;
-        transition: transform 250ms;
+        top: -200px;
+        left: 16px;
       } 
+      .bequer1 {
+        width: 57px;
+        position: relative;
+        top: -100px;
+        left: -163px;    
+      }
+      .arrowRight {
+        top: -54px;
+        left: -56px;
+        transition: all .5s;
+      }
       .UpPh {
         position: absolute;
-        top: 420px;
-        left: 646px;
+        top: 371px;
+        left: 338px;
+      }
+      .REATOR {
+        position: relative;
+        top: -351px;
+        left: 175px;
       }
       .UpReator {
         position: absolute;
-        top: 286px;
-        left: 493px;
+        top: 234px;
+        left: 214px;
       }
       .UpChapa{
         position: absolute;
-        top: 368px;
-        left: 436px
+        top: 318px;
+        left: 160px;
+      }
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 232px;
       }
       .MaisPh  {
         position: absolute;
-        top: 437px;
-        left: 588px;
+        top: 378px;
+        left: 290px;
       }
       .MenosPh {
         position: absolute;
-        top: 437px;
-        left: 557px;
+        top: 378px;
+        left: 262px;       
+      }
+      .TEMP {
+        position: relative;
+        top: -130px;
+        left: 168px;
       }
       .MaisTemp{
         position: absolute;
-        top: 438px;
+        top: 378px;
+        left: 190px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 378px;
+        left: 162px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -280px;
+        left: 91px;
+      }
+      .trigli {
+        position: relative;
+        top: -76px;
+        left: -342px;
+      }
+      .AGUA {
+        position: relative;
+        top: -274px;
+        left: 51px;
+      }
+      .agua {
+        position: relative;
+        top: -76px;
+        left: -338px;
+      }
+      .usernameLevel {
+        font-size: 12px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .help {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        margin: 4px;
+        position: absolute;
+        margin-top: 83px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .cancel {
+      width: 55px;
+      height: 55px;
+      border-radius: 30px;
+      border: 0.01px solid #6d486f;
+      background-color: #EA8D8D;
+      font-family: 'Chakra Petch';
+      color: white;
+      position: absolute;
+      margin-top: 83px;
+      margin-left: -65px;
+      }
+      .popup {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        background-size: contain;
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -3px;
+        margin-left: -92px;
+      }
+    } 
+    @media only screen and (min-width: 900px) { 
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 241px;
+        width: 350px;
+        margin-left: 95px;
+        margin-top: -43px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 236px;
+        width: 534px;
+        margin-top: -6px;
+        margin-left: -97px;
+      }
+      .profile-charBody {
+        width: 133px;
+        margin-left: 286px;
+        margin-top: 33px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 86px;
+        position: relative;
+        top: -42px;
+        left: -324px;
+      }
+      .filtroElement {
+        width: 149px;
+        position: relative;
+        top: -145px;
+        left: 94px;
+      } 
+      .bequer1 {
+        width: 46px;
+        position: relative;
+        top: -66px;
+        left: -68px;
+      }
+      .arrowRight {
+        top: -50px;
+        left: -10px;
+        transition: all .5s;
+      }
+      .UpPh {
+        position: absolute;
+        top: 289px;
+        left: 390px;
+      }
+      .REATOR {
+        position: relative;
+        top: -298px;
+        left: 192px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 196px;
+        left: 296px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 258px;
+        left: 260px;
+      }
+      .PH {
+        position: relative;
+        top: -116px;
+        left: 240px;
+      }
+      .MaisPh {
+        position: absolute;
+        top: 289px;
+        left: 356px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 289px;
+        left: 330px;
+      }
+      .TEMP {
+        position: relative;
+        top: -126px;
+        left: 190px;
+      }
+      .MaisTemp {
+        position: absolute;
+        top: 289px;
+        left: 292px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 289px;
+        left: 265px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -232px;
+        left: 132px;
+      }
+      .trigli {
+        position: relative;
+        top: -51px;
+        left: -225px;
+      }
+      .AGUA {
+        position: relative;
+        top: -222px;
+        left: 102px;
+      }
+      .agua {
+        position: relative;
+        top: -51px;
+        left: -221px;
+      }
+      .usernameLevel {
+        font-size: 12px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .help {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        margin: 4px;
+        position: absolute;
+        margin-top: 83px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .cancel {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        position: absolute;
+        margin-top: 83px;
+        margin-left: -65px;
+      }
+      .popup {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        background-size: contain;
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -3px;
+        margin-left: -92px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 80px;
+        width: 237px;
+    }
+    } 
+    @media only screen and (min-width: 1024px) { /*Tela Principal 100%*/
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 324px;
+        width: 465px;
+        margin-left: 36px;
+        margin-top: -82px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 325px;
+        width: 532px;
+        margin-top: -6px;
+        margin-left: -37px;
+      }
+      .profile-charBody {
+        width: 188px;
+        margin-left: 272px;
+        margin-top: 33px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 117px;
+        position: relative;
+        top: -200px;
+        left: 35px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -200px;
+        left: 16px;
+      } 
+      .bequer1 {
+        width: 57px;
+        position: relative;
+        top: -100px;
+        left: -163px;    
+      }
+      .arrowRight {
+        top: -54px;
+        left: -56px;
+        transition: all .5s;
+      }
+      .UpPh {
+        position: absolute;
+        top: 372px;
+        left: 467px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 234px;
+        left: 340px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 318px;
+        left: 288px;
+      }
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 232px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 378px;
+        left: 418px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 378px;
+        left: 390px;    
+      }
+      .TEMP {
+        position: relative;
+        top: -130px;
+        left: 168px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 378px;
+        left: 318px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 378px;
+        left: 290px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -280px;
+        left: 91px;
+      }
+      .trigli {
+        position: relative;
+        top: -76px;
+        left: -362px;
+      }
+      .AGUA {
+        position: relative;
+        top: -274px;
+        left: 51px;
+      }
+      .agua {
+        position: relative;
+        top: -76px;
+        left: -362px;
+      }
+      .usernameLevel {
+        font-size: 12px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .help {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        margin: 4px;
+        position: absolute;
+        margin-top: 83px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .cancel {
+      width: 55px;
+      height: 55px;
+      border-radius: 30px;
+      border: 0.01px solid #6d486f;
+      background-color: #EA8D8D;
+      font-family: 'Chakra Petch';
+      color: white;
+      position: absolute;
+      margin-top: 83px;
+      margin-left: -65px;
+      }
+      .popup {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        background-size: contain;
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -3px;
+        margin-left: -92px;
+      }
+    }  
+    @media only screen and (min-width: 1070px) { 
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 300px;
+        width: 453px;
+        margin-top: -65px;
+        margin-left: 51px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 297px;
+        width: 532px;
+        margin-top: -7px;
+        margin-left: -51px;
+      }
+      .profile-charBody {
+        width: 182px;
+        margin-left: 241px;
+        margin-top: 21px;
+      }
+      .centrifuga {
+        width: 110px;
+        position: relative;
+        top: -190px;
+        left: 22px;
+      }
+      .filtroElement {
+        width: 161px;
+        position: relative;
+        top: -186px;
+        left: 20px;
+      } 
+      .bequer1 {
+        width: 49px;
+        position: relative;
+        top: -92px;
+        left: -148px;
+      }
+      .agua {
+        position: relative;
+        top: -66px;
+        left: -306px;
+      }
+      .trigli {
+        position: relative;
+        top: -66px;
+        left: -307px;
+      }
+      .UpPh {
+        position: relative;
+        top: -130px;
+        left: 216px;
+      }
+      .UpReator {
+        position: relative;
+        top: -255px;
+        left: 130px;
+      }
+      .UpChapa {
+        position: relative;
+        top: -178px;
+        left: 34px;
+      }
+      .MaisPh {
+        position: relative;
+        top: -126px;
+        left: 126px;
+      }
+      .MenosPh {
+        position: relative;
+        top: -126px;
+        left: 76px;
+      }
+      .MaisTemp {
+        position: absolute;
+        top: 349px;
+        left: 352px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 349px;
+        left: 326px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 20px;
+        align-items: center;
+      }
+    }
+    @media only screen and (min-width: 1220px) {
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 344px;
+        width: 499px;
+        margin-left: 20px;
+        margin-top: -89px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 342px;
+        width: 533px;
+        margin-top: -5px;
+        margin-left: -22px;
+      }
+      .profile-charBody {
+        width: 188px;
+        margin-left: 308px;
+        margin-top: 49px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 117px;
+        position: relative;
+        top: -203px;
+        left: 26px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -200px;
+        left: 16px;
+      } 
+      .bequer1 {
+        width: 57px;
+        position: relative;
+        top: -100px;
+        left: -163px;    
+      }
+      .arrowRight {
+        top: -54px;
+        left: -41px;
+        transition: all .5s;
+      }
+      .UpPh {
+        position: absolute;
+        top: 389px;
+        left: 570px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 250px;
+        left: 442px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 336px;
+        left: 380px;
+      }
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 232px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 396px;
+        left: 518px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 396px;
+        left: 491px;   
+      }
+      .TEMP {
+        position: relative;
+        top: -130px;
+        left: 168px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 396px;
+        left: 414px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 396px;
+        left: 387px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -280px;
+        left: 84px;
+      }
+      .trigli {
+        position: relative;
+        top: -76px;
+        left: -346px;
+      }
+      .AGUA {
+        position: relative;
+        top: -274px;
+        left: 42px;
+      }
+      .agua {
+        position: relative;
+        top: -76px;
+        left: -344px;
+      }
+      .usernameLevel {
+        font-size: 15px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 37px;
+        display: flex;
+        align-items: cente
+      }
+      .help {
+        position: absolute;
+        margin-top: 98px;
+        margin-left: 0px;
+      }
+      .cancel {
+        position: absolute;
+        margin-top: 98px;
+        margin-left: -65px;
+      }
+      .popup {
+        position: absolute;
+        margin-top: 14px;
+        margin-left: -92px;
+      }
+    }  
+    @media only screen and (min-width: 1366px) { 
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 343px;
+        width: 488px;
+        margin-left: 26px;
+        margin-top: -98px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 388px;
+        width: 533px;
+        margin-top: -32px;
+        margin-left: -27px;
+      }
+      .profile-charBody {
+        width: 188px;
+        margin-left: 297px;
+        margin-top: 71px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 117px;
+        position: relative;
+        top: -203px;
+        left: 26px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -200px;
+        left: 16px;
+      } 
+      .bequer1 {
+        width: 57px;
+        position: relative;
+        top: -100px;
+        left: -163px;    
+      }
+      .arrowRight {
+        top: -54px;
+        left: -41px;
+        transition: all .5s;
+      }
+      .UpPh {
+        position: absolute;
+        top: 409px;
+        left: 628px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 264px;
+        left: 504px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 358px;
+        left: 446px;
+      }
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 232px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 435px;
+        left: 582px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 435px;
+        left: 554px;    
+      }
+      .TEMP {
+        position: relative;
+        top: -130px;
+        left: 168px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 435px;
         left: 480px;
       }
       .MenosTemp {
         position: absolute;
-        top: 438px;
-        left: 454px;
+        top: 435px;
+        left: 453px;
       }
-
-    }
+      .TRIGLI {
+        position: relative;
+        top: -280px;
+        left: 84px;
+      }
+      .trigli {
+        position: relative;
+        top: -76px;
+        left: -346px;
+      }
+      .AGUA {
+        position: relative;
+        top: -274px;
+        left: 42px;
+      }
+      .agua {
+        position: relative;
+        top: -76px;
+        left: -344px;
+      }
+      .usernameLevel {
+        font-size: 15px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+      }
+      .help {
+        position: absolute;
+        margin-top: 98px;
+        margin-left: 0px;
+      }
+      .cancel {
+        position: absolute;
+        margin-top: 98px;
+        margin-left: -65px;
+      }
+      .popup {
+        position: absolute;
+        margin-top: 14px;
+        margin-left: -92px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 129px;
+        width: 237px;
+      }
+    }  
     @media only screen and (min-width: 1400px) { /* 90% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 368px;
+        width: 536px;
+        margin-top: -98px;
+        margin-left: 1px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -7px;
+        margin-left: -1px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 314px;
+        margin-top: 40px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 126px;
+        position: relative;
+        top: -216px;
+        left: -4px;
+      }
+      .bequer1 {
+        width: 66px;
+        position: relative;
+        top: -98px;
+        left: -190px;
+      }
+      .barra_lateral {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        border-radius: 10px;
+        border: 6px solid;
+        border-color: #231F20;
+        height: 438px;
+        width: 153px;
+        background-size: contain;
+      }
+      .barra_inferior {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border-radius: 10px;
+        border: 6px solid;
+        border-color: #231F20;
+        height: 26vh;
+        width: 690px;
+        display: flex;
+      }
+      .PH {
+        position: relative;
+        top: -166px;
+        left: 283px;
+      }
       .UpPh {
         position: absolute;
-        top: 460px;
-        left: 722px;
+        top: 415px;
+        left: 676px;
+      }
+      .REATOR {
+        position: relative;
+        top: -356px;
+        left: 159px;
       }
       .UpReator {
         position: absolute;
-        top: 400px;
-        left: 510px;
+        top: 280px;
+        left: 532px;
       }
       .UpChapa{
         position: absolute;
-        top: 322px;
-        left: 567px;
+        top: 363px;
+        left: 470px;
       }
       .MaisPh  {
         position: absolute;
-        top: 470px;
-        left: 660px;
+        top: 424px;
+        left: 627px;
       }
       .MenosPh {
         position: absolute;
-        top: 470px;
-        left: 630px;
+        top: 424px;
+        left: 593px;
+      }
+      .TEMP {
+        position: relative;
+        top: -132px;
+        left: 155px;
       }
       .MaisTemp{
         position: absolute;
-        top: 470px;
-        left: 560px;
+        top: 422px;
+        left: 517px;
       }
       .MenosTemp {
         position: absolute;
-        top: 470px;
-        left: 531px;
+        top: 422px;
+        left: 489px;
+      }
+      .trigli {
+        position: relative;
+        top: -79px;
+        left: -381px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -287px;
+        left: 67px;
+      }
+      .agua {
+        position: relative;
+        top: -79px;
+        left: -383px;
+      }
+      .AGUA {
+        position: relative;
+        top: -284px;
+        left: 20px;
+      }
+      .arrowRight {
+        position: relative;
+        top: -56px;
+        left: -36px;
       }
     }
-    @media only screen and (min-width: 1600px) { /* 80% */
+    @media only screen and (min-width: 1500px) {  /*80% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 374px;
+        width: 536px;
+        margin-top: -189px;
+        margin-left: 1px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -6px;
+        margin-left: -1px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 66px;
+        position: relative;
+        top: -94px;
+        left: -180px;
+      }
       .UpPh {
         position: absolute;
-        top: 502px;
-        left: 812px;
+        top: 416px;
+        left: 708px;
       }
       .UpReator {
         position: absolute;
-        top: 372px;
-        left: 660px;
+        top: 271px;
+        left: 564px;
       }
-      .UpChapa{
+      .UpChapa {
         position: absolute;
-        top: 450px;
-        left: 600px;
+        top: 362px;
+        left: 502px;
       }
-      .MaisPh  {
+      .MaisPh {
         position: absolute;
-        top: 520px;
-        left: 757px;
+        top: 426px;
+        left: 653px;
       }
       .MenosPh {
         position: absolute;
-        top: 520px;
-        left: 726px;
+        top: 426px;
+        left: 624px;
       }
-      .MaisTemp{
+      .MaisTemp {
         position: absolute;
-        top: 520px;
-        left: 652px;
+        top: 426px;
+        left: 540px;
       }
       .MenosTemp {
         position: absolute;
-        top: 520px;
-        left: 625px;
+        top: 426PX;
+        left: 513px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
       }
     }
-    @media only screen and (min-width: 1800px) { /* 75% */
+    @media only screen and (min-width: 1600px) {  /*80% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 378px;
+        width: 536px;
+        margin-top: -277px;
+        margin-left: 1px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -4px;
+        margin-left: -2px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 66px;
+        position: relative;
+        top: -94px;
+        left: -180px;
+      }
       .UpPh {
         position: absolute;
-        top: 530px;
-        left: 868px;
+        top: 416px;
+        left: 798px;
       }
       .UpReator {
         position: absolute;
-        top: 396px;
-        left: 716px;
+        top: 271px;
+        left: 657px;
       }
-      .UpChapa{
+      .UpChapa {
         position: absolute;
-        top: 475px;
-        left: 654px;
+        top: 362px;
+        left: 598px;
       }
-      .MaisPh  {
+      .MaisPh {
         position: absolute;
-        top: 548px;
-        left: 810px;
+        top: 426px;
+        left: 746px;
       }
       .MenosPh {
         position: absolute;
-        top: 548px;
-        left: 780px;
+        top: 426px;
+        left: 718px;
       }
-      .MaisTemp{
-        position: absolute;
-        top: 548px;
-        left: 712px;
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 228px;
       }
+      .MaisTemp {
+      position: absolute;
+      top: 426px;
+      left: 632px;
+      } 
       .MenosTemp {
         position: absolute;
-        top: 548px;
-        left: 685px;
+        top: 426PX;
+        left: 608px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
       }
     }
-    @media only screen and (min-width: 2024px) { /* 67% */
+    @media only screen and (min-width: 1700px) {  /*80% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 378px;
+        width: 536px;
+        margin-top: -275px;
+        margin-left: 1px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -5px;
+        margin-left: -2px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 66px;
+        position: relative;
+        top: -94px;
+        left: -180px;
+      }
       .UpPh {
         position: absolute;
-        top: 585px;
-        left: 982px;
+        top: 416px;
+        left: 798px;
       }
       .UpReator {
         position: absolute;
-        top: 450px;
-        left: 830px;
+        top: 271px;
+        left: 657px;
       }
-      .UpChapa{
+      .UpChapa {
         position: absolute;
-        top: 530px;
-        left: 770px;
+        top: 362px;
+        left: 598px;
       }
-      .MaisPh  {
+      .MaisPh {
         position: absolute;
-        top: 600px;
-        left: 922px;
+        top: 426px;
+        left: 746px;
       }
       .MenosPh {
         position: absolute;
-        top: 600px;
-        left: 894px;
+        top: 426px;
+        left: 718px;
       }
-      .MaisTemp{
-        position: absolute;
-        top: 600px;
-        left: 822px;
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 228px;
       }
+      .MaisTemp {
+      position: absolute;
+      top: 426px;
+      left: 632px;
+      } 
       .MenosTemp {
         position: absolute;
-        top: 600px;
-        left: 794px;
+        top: 426PX;
+        left: 608px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
       }
     }
-    @media only screen and (min-width: 2400px) { /* 50 % */
+    @media only screen and (min-width: 1800px) {  /*80% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 378px;
+        width: 536px;
+        margin-top: -330px;
+        margin-left: 1px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -4px;
+        margin-left: -2px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 66px;
+        position: relative;
+        top: -94px;
+        left: -180px;
+      }
       .UpPh {
         position: absolute;
-        top: 750px;
-        left: 1318px;
+        top: 420px;
+        left: 856px;
       }
       .UpReator {
         position: absolute;
-        top: 610px;
-        left: 1167px;
+        top: 278px;
+        left: 714px;
       }
-      .UpChapa{
+      .UpChapa {
         position: absolute;
-        top: 690px;
-        left: 1110px;
+        top: 362px;
+        left: 658px;
       }
-      .MaisPh  {
+      .MaisPh {
         position: absolute;
-        top: 762px;
-        left: 1262px;
+        top: 426px;
+        left: 802px;
       }
       .MenosPh {
         position: absolute;
-        top: 762px;
-        left: 1230px;
+        top: 426px;
+        left: 772px;
       }
-      .MaisTemp{
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 228px;
+      }
+      .MaisTemp {
         position: absolute;
-        top: 762px;
-        left: 1160px;
+        top: 426px;
+        left: 692px;
       }
       .MenosTemp {
         position: absolute;
-        top: 762px;
-        left: 1130px;
+        top: 426px;
+        left: 665px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
       }
     }
-    /* @media only screen and (min-width: 2600px)  33 % 
+    @media only screen and (min-width: 2560px) { /* 50 % */
+      .board {      
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 368px;
+        width: 536px;
+        margin-top: -593px;
+        margin-left: 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -7px;
+        margin-left: -1px;
+      }
+      .bequer1 {
+        width: 66px;
+        position: relative;
+        top: -95px;
+        left: -182px;
+      }
+      .UpPh {
+        position: absolute;
+        top: 413px;
+        left: 1238px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 278px;
+        left: 1093px;
+      }
+      .UpChapa {
+        position: absolute;
+        top: 361px;
+        left: 1033px;
+      }
+      .MaisPh {
+        position: absolute;
+        top: 425px;
+        left: 1183px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 425px;
+        left: 1154px;
+      }
+      .MaisTemp {
+        position: absolute;
+        top: 425px;
+        left: 1070px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 425px;
+        left: 1042px;
+      }
+    }
+    @media only screen and (min-width: 2682px) { /*33 % */ 
       .UpPh {
         position: absolute;
         top: 985px;
@@ -1158,7 +2297,7 @@
         top: 762px;
         left: 1130px;
       }
-    }*/
+    }
 .helptext blockquote, p{
   font-size: 12px;
   /* background-color: #1a460e; */

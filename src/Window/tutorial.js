@@ -4,13 +4,13 @@ import './Styles/tutorial.css';
 import Link from '../Components/Link/link';
 import Arrow from '../img/elements/arrowL.png';
 
-import testHover from '../sound/buttonHover.mp3';
+/*import testHover from '../sound/buttonHover.mp3';*/
 /* Hover Sound Effect */
-    function hoverSound  (){
+    /*function hoverSound  (){
         let teste = new Audio(testHover);
         //teste.src = 'https://www.soundjay.com/buttons/sounds/button-20.mp3';
         teste.play();
-    }
+    }*/
 
 function Tutorial () {
     return (
@@ -26,13 +26,13 @@ function Tutorial () {
                     allowfullscreen>
                 </iframe>  
 
-                <div onMouseOver={hoverSound}>
+                <div /*onMouseOver={hoverSound}*/>
                     <Link route="/" className='volta'>
                         <img alt="Botão de seta para voltar" className="leftTuto" title="Voltar" src={Arrow}></img>
                     </Link>
                 </div>
                 
-                <div onMouseOver={hoverSound} className="LetsPlay">
+                <div /*onMouseOver={hoverSound}*/ className="LetsPlay">
                     <Link route="/select">Bora Jogar?</Link>
                 </div>   
             </div>            
