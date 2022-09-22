@@ -23,13 +23,8 @@ import Acido from '../../img/graxo_caderno.png';
 import Sabao from '../../img/sabao_caderno.png';
 import Bio from '../../img/biodiesel_caderno.png';
 
-import Sound from '../../sound/clickSound.mp3';
-import HoverSound from '../../sound/buttonHover.mp3';
-
-import Bequer1 from '../../../public/img/Lab_Bequer/Lab_Bequer1.png';
-import Bequer2 from '../../img/Lab_Bequer/Lab_Bequer2.png';
-import Bequer3 from '../../img/Lab_Bequer/Lab_Bequer3.png';
-
+/*import Sound from '../../sound/clickSound.mp3';
+import HoverSound from '../../sound/buttonHover.mp3';*/
 
 // Variáveis das inputs //
     /*const levels = {
@@ -149,9 +144,6 @@ function Game () {
     function Filtro(){
         window.Filtro()
     };
-    /*function confirmacao(){
-        window.confirmacao()
-    };*/
     function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
@@ -186,18 +178,6 @@ function Game () {
           document.removeEventListener("keydown", escFunction, false);
         };
       }, []);
-
-    /* function GameOver() {
-        window.GameOver
-    }*/
-    
-    function alertar () {
-        alert (`Estatísticas finais 📊
-        • Mol: ${window.molextraidos}
-        • Turno: ${window.turno} ${document.turno}
-        • Dinheiro: ${window.dinheiro}
-        • Nível: ${window.NivelAtual}`)         
-    }
 
     function Cancelar () {
         var cancelar = window.confirm (`

@@ -707,12 +707,13 @@
 
       /* Pop Up Caderno */
         .arrowRight {
-          width: 48px;
-          height: 18px;
+          width: 40px;
+          height: 40px;
           background: rgba(211, 141, 181, 0.97);
+          background-image: url('../../img/elements/icone_caderno.png');
           border: solid 1px #231F20;
-          border-radius: 15px;
-          background-size: contain;
+          border-radius: 37px;
+          background-size: cover;
           position: relative;
           top: -97px;
           left: 199px;
@@ -805,10 +806,10 @@
         left: 16px;
       } 
       .bequer1 {
-        width: 57px;
+        width: 75px;
         position: relative;
         top: -100px;
-        left: -163px;    
+        left: -165px;
       }
       .arrowRight {
         top: -54px;
@@ -1168,10 +1169,10 @@
         left: 16px;
       } 
       .bequer1 {
-        width: 57px;
+        width: 74px;
         position: relative;
-        top: -100px;
-        left: -163px;    
+        top: -93px;
+        left: -167px;
       }
       .arrowRight {
         top: -54px;
@@ -1182,6 +1183,11 @@
         position: absolute;
         top: 372px;
         left: 467px;
+      }
+      .REATOR {
+        position: relative;
+        top: -298px;
+        left: 174px;
       }
       .UpReator {
         position: absolute;
@@ -1338,7 +1344,7 @@
         left: 20px;
       } 
       .bequer1 {
-        width: 49px;
+        width: 62px;
         position: relative;
         top: -92px;
         left: -148px;
@@ -1435,10 +1441,10 @@
         left: 16px;
       } 
       .bequer1 {
-        width: 57px;
+        width: 87px;
         position: relative;
-        top: -100px;
-        left: -163px;    
+        top: -94px;
+        left: -170px;
       }
       .arrowRight {
         top: -54px;
@@ -1450,9 +1456,14 @@
         top: 389px;
         left: 570px;
       }
+      .REATOR {
+        position: relative;
+        top: -326px;
+        left: 175px;
+      }
       .UpReator {
         position: absolute;
-        top: 250px;
+        top: 225px;
         left: 442px;
       }
       .UpChapa{
@@ -1498,7 +1509,7 @@
       .trigli {
         position: relative;
         top: -76px;
-        left: -346px;
+        left: -368px;
       }
       .AGUA {
         position: relative;
@@ -1508,7 +1519,7 @@
       .agua {
         position: relative;
         top: -76px;
-        left: -344px;
+        left: -368px;
       }
       .usernameLevel {
         font-size: 15px;
@@ -1580,14 +1591,14 @@
         left: 16px;
       } 
       .bequer1 {
-        width: 57px;
+        width: 93px;
         position: relative;
-        top: -100px;
-        left: -163px;    
+        top: -90px;
+        left: -171px;
       }
       .arrowRight {
-        top: -54px;
-        left: -41px;
+        top: -47px;
+        left: -61px;
         transition: all .5s;
       }
       .UpPh {
@@ -1595,10 +1606,15 @@
         top: 409px;
         left: 628px;
       }
+      .REATOR {
+        position: relative;
+        top: -340px;
+        left: 172px;
+      }
       .UpReator {
         position: absolute;
-        top: 264px;
-        left: 504px;
+        top: 240px;
+        left: 502px;
       }
       .UpChapa{
         position: absolute;
@@ -1607,7 +1623,7 @@
       }
       .PH {
         position: relative;
-        top: -142px;
+        top: -160px;
         left: 232px;
       }
       .MaisPh  {
@@ -1637,23 +1653,23 @@
       }
       .TRIGLI {
         position: relative;
-        top: -280px;
-        left: 84px;
+        top: -300px;
+        left: 85px;
       }
       .trigli {
         position: relative;
-        top: -76px;
-        left: -346px;
+        top: -70px;
+        left: -370px;
       }
       .AGUA {
         position: relative;
-        top: -274px;
+        top: -290px;
         left: 42px;
       }
       .agua {
         position: relative;
-        top: -76px;
-        left: -344px;
+        top: -70px;
+        left: -370px;
       }
       .usernameLevel {
         font-size: 15px;
@@ -1730,10 +1746,10 @@
         left: -4px;
       }
       .bequer1 {
-        width: 66px;
+        width: 85px;
         position: relative;
         top: -98px;
-        left: -190px;
+        left: -181px;
       }
       .barra_lateral {
         grid-column-start: 3;
@@ -1874,10 +1890,10 @@
         left: 16px;
       }
       .bequer1 {
-        width: 66px;
+        width: 92px;
         position: relative;
-        top: -94px;
-        left: -180px;
+        top: -98px;
+        left: -208px;
       }
       .UpPh {
         position: absolute;
@@ -1886,13 +1902,18 @@
       }
       .UpReator {
         position: absolute;
-        top: 271px;
+        top: 247px;
         left: 564px;
       }
       .UpChapa {
         position: absolute;
         top: 362px;
         left: 502px;
+      }
+      .PH {
+        position: relative;
+        top: -200px;
+        left: 283px;
       }
       .MaisPh {
         position: absolute;
@@ -1904,6 +1925,11 @@
         top: 426px;
         left: 624px;
       }
+      .TEMP {
+        position: relative;
+        top: -162px;
+        left: 155px;
+      }
       .MaisTemp {
         position: absolute;
         top: 426px;
@@ -1914,12 +1940,37 @@
         top: 426PX;
         left: 513px;
       }
+      .TRIGLI {
+        position: relative;
+        top: -316px;
+        left: 66px;
+      }
+      .trigli {
+        position: relative;
+        top: -79px;
+        left: -410px;
+      }
+      .AGUA {
+        position: relative;
+        top: -314px;
+        left: 20px;
+      }
+      .agua {
+        position: relative;
+        top: -79px;
+        left: -415px;
+      }
       .bar {
         background: rgba(0, 0, 0, 0.456);
         border-radius: 20px;
         height: 69px;
         display: flex;
         align-items: center;
+      }
+      .arrowRight {
+        position: relative;
+        top: -85px;
+        left: 200px;
       }
     }
     @media only screen and (min-width: 1600px) {  /*80% */
@@ -2053,10 +2104,10 @@
         left: 16px;
       }
       .bequer1 {
-        width: 66px;
+        width: 93px;
         position: relative;
-        top: -94px;
-        left: -180px;
+        top: -95px;
+        left: -206px;
       }
       .UpPh {
         position: absolute;
@@ -2065,7 +2116,7 @@
       }
       .UpReator {
         position: absolute;
-        top: 271px;
+        top: 250px;
         left: 657px;
       }
       .UpChapa {
@@ -2085,7 +2136,7 @@
       }
       .PH {
         position: relative;
-        top: -142px;
+        top: -174px;
         left: 228px;
       }
       .MaisTemp {
@@ -2145,10 +2196,10 @@
         left: 16px;
       }
       .bequer1 {
-        width: 66px;
+        width: 94px;
         position: relative;
-        top: -94px;
-        left: -180px;
+        top: -97px;
+        left: -205px;
       }
       .UpPh {
         position: absolute;
@@ -2157,8 +2208,8 @@
       }
       .UpReator {
         position: absolute;
-        top: 278px;
-        left: 714px;
+        top: 250px;
+        left: 713px;
       }
       .UpChapa {
         position: absolute;
@@ -2177,7 +2228,7 @@
       }
       .PH {
         position: relative;
-        top: -142px;
+        top: -174px;
         left: 228px;
       }
       .MaisTemp {
@@ -2220,10 +2271,10 @@
         margin-left: -1px;
       }
       .bequer1 {
-        width: 66px;
+        width: 92px;
         position: relative;
-        top: -95px;
-        left: -182px;
+        top: -96px;
+        left: -200px;
       }
       .UpPh {
         position: absolute;
@@ -2232,7 +2283,7 @@
       }
       .UpReator {
         position: absolute;
-        top: 278px;
+        top: 252px;
         left: 1093px;
       }
       .UpChapa {

@@ -1377,18 +1377,15 @@ function mudandoCorBequer() {
         else if ((molReagente1 != 0 || molReagente2 != 0) && molProduto1 == 0) {
             document.getElementById('bequer1').src = '../img/Lab_Bequer/Lab_Bequer_reagentes.png'
         }
-
         
     //bequer apenas com produtos
-
         else if ((molReagente1 == 0 && molReagente2 == 0) && molProduto1 != 0){
             document.getElementById('bequer1').src = '../img/Lab_Bequer/Lab_Bequer_produtos.png'
         }
 
     //bequer com produtos e reagentes
-
         else{
-            document.getElementById('bequer1').src = '../img/Lab_Bequer/Bequervazio.png'
+            document.getElementById('bequer1').src = '../img/Lab_Bequer/Lab_Bequer_marrom.png'
         }
 }
 

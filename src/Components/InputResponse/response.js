@@ -18,7 +18,7 @@ import TucanoBody from'../../img/char/body/tucano.png';
 
 import Centrifuga from '../../img/elements/centrifuga.png';
 import FiltroElement from '../../img/elements/filtro.png';
-import bequervazio from '../../img/Lab_Bequer/bequer1.png';
+import bequervazio from '../../img/Lab_Bequer/Bequervazio.png';
 
 import Acido from '../../img/graxo_caderno.png';
 import Sabao from '../../img/sabao_caderno.png';
@@ -26,11 +26,6 @@ import Bio from '../../img/biodiesel_caderno.png';
 
 //import Sound from '../../sound/clickSound.mp3';
 //import HoverSound from '../../sound/buttonHover.mp3';
-
-import Bequer1 from '../../img/Lab_Bequer/Lab_Bequer1.png';
-import Bequer2 from '../../img/Lab_Bequer/Lab_Bequer2.png';
-import Bequer3 from '../../img/Lab_Bequer/Lab_Bequer3.png';
-
 
 // Variáveis das inputs //
     /*const levels = {
