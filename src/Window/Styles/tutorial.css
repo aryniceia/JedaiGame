@@ -1,39 +1,60 @@
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap);
 
+.Tutorial {
+	display: flex;
+	flex-direction: column;
+
+}
+
 .App-title {
-    font-family: 'Chakra Petch';
-    color: white;
-    text-shadow: 0.1em 0.1em #2B7735;
-    font-size: 30px;
-    transition: transform 250ms;
+	font-family: 'Chakra Petch';
+	color: white;
+	text-shadow: 0.1em 0.1em #2B7735;
+	font-size: 30px;
+	transition: transform 250ms;
 }
 .App-title:hover, .leftTuto:hover, .LetsPlay:hover {
-    transform: translateY(-10px);
+	transform: translateY(-10px);
 }
 .leftTuto {
-    width: 60px;
-    margin-top: 457px;
-    margin-left: -556px;
-    transition: transform 250ms;
+	width: 60px;
+	transition: transform 250ms;
 }
 .LetsPlay {
-    font-family: 'Chakra Petch';
-    font-size: 25px;
-    color: white;
-    background: #8c428f;
-    border-radius: 20px;
-    border: none;
-    text-decoration: none;
-    text-align: center;
-    margin-top: -40px;
-    width: 168px;
-    height: 36px;
-    line-height: 34px;
-    transition: transform 250ms
+	display: flex;
+	height: 40%;
+	font-family: 'Chakra Petch';
+	font-size: 25px;
+	color: white;
+	background: #8c428f;
+	border-radius: 20px;
+	align-items: center;
+	border: none;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	line-height: 34px;
+	transition: transform 250ms
 }
 
 .TutoVideo {
-    position: absolute;
-    margin-top: 13px;
-    margin-left: -226px;
+	display: flex;
+	width: 26vw;
+	height: 50vh;
+	align-self: center;
+	justify-self: center;
+	margin-bottom: 1rem;
+}
+
+.button-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@media(max-width: 540px) {
+	.TutoVideo {
+		width: 120%;
+		height: 40vh;
+	}
 }

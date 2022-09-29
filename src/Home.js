@@ -21,9 +21,7 @@ import './Home.css';
       }, 1000) 
     }*/
   /* Hover Sound Effect */
-    /*function hoverSound  (){
-      let teste = new Audio(testHover);
-      //teste.src = 'https://www.soundjay.com/buttons/sounds/button-20.mp3';
+    /*function hoverSound  (){eja jogar os reagentes e produtos no lix.com/buttons/sounds/button-20.mp3';
       teste.play();
     }*/
   /* Som de fundo */
@@ -38,6 +36,7 @@ function Home() {
          { /*<button>teste</button>*/}
           < Link route='/select' className='play buttons'>Play</Link>
           < Link route='/tutorial' className='tuto buttons'> Tutorial</Link>
+          {/* < Link route='/jogo' className='jogo buttons'> JOGO</Link> */}
           {/*< Link route='/config' className='config buttons'> 
             Configuração
           </Link> EM BREVE :)*/}

@@ -353,7 +353,6 @@ function Game () {
                         </div>
 
                         {/*<button className="gameover" type="button" onClick={alertar}>Teste</button>*/}
-                       
                     </div>
                 </div>
             </header>

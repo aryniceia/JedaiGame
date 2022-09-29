@@ -3,6 +3,7 @@ import Page from '../../src/Components/Pages/page';
 import './Styles/tutorial.css';
 import Link from '../Components/Link/link';
 import Arrow from '../img/elements/arrowL.png';
+import { FiArrowLeft } from "react-icons/fi";
 
 /*import testHover from '../sound/buttonHover.mp3';*/
 /* Hover Sound Effect */
@@ -17,24 +18,25 @@ function Tutorial () {
         <Page>
             <div className='Tutorial'>
                 <h1 className='App-title'>Tutorial</h1>
-                <iframe className="TutoVideo"
-                    width="440" 
-                    height="440" 
+                <iframe
+										className="TutoVideo"
                     src="https://www.youtube.com/embed/B7PNq2v1p-E" 
-                    title="YouTube video player" frameborder="0" 
+                    title="YouTube video player"
+										frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
-                </iframe>  
+                </iframe>
 
-                <div /*onMouseOver={hoverSound}*/>
-                    <Link route="/" className='volta'>
-                        <img alt="Botão de seta para voltar" className="leftTuto" title="Voltar" src={Arrow}></img>
-                    </Link>
-                </div>
+								<span className='button-wrapper'>
+									<Link route="/">
+										<FiArrowLeft size={50} color={"#3C183D"} />
+									</Link>
+
+									<Link route="/select" className="LetsPlay">Bora Jogar?</Link>
+								</span>
                 
-                <div /*onMouseOver={hoverSound}*/ className="LetsPlay">
-                    <Link route="/select">Bora Jogar?</Link>
-                </div>   
+                {/* <div className="LetsPlay"> */}
+                {/* </div>    */}
             </div>            
         </Page>
     );
