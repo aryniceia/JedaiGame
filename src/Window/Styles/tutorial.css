@@ -3,10 +3,8 @@
 .Tutorial {
 	display: flex;
 	flex-direction: column;
-
 }
-
-.App-title {
+.Ap-title {
 	font-family: 'Chakra Petch';
 	color: white;
 	text-shadow: 0.1em 0.1em #2B7735;
@@ -17,6 +15,10 @@
 	transform: translateY(-10px);
 }
 .leftTuto {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 	width: 60px;
 	transition: transform 250ms;
 }
@@ -35,7 +37,6 @@
 	line-height: 34px;
 	transition: transform 250ms
 }
-
 .TutoVideo {
 	display: flex;
 	width: 26vw;
@@ -44,7 +45,6 @@
 	justify-self: center;
 	margin-bottom: 1rem;
 }
-
 .button-wrapper {
 	display: flex;
 	flex-direction: row;

@@ -21,7 +21,6 @@ export default function Routes() {
       <Route path="/game" component={Game}/>
       <Route path="/detail" component={Detail}/>
 			<Route path="/JOGO" component={JOGO} />
-      {/*<Route path="/gameover" component={Over}/>*/}
     </Router>
   );
 }

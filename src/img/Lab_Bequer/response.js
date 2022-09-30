@@ -26,13 +26,6 @@ import Bio from '../../img/biodiesel_caderno.png';
 /*import Sound from '../../sound/clickSound.mp3';
 import HoverSound from '../../sound/buttonHover.mp3';*/
 
-// Variáveis das inputs //
-    /*const levels = {
-        0: "Fácil",
-        1: "Médio",
-        2: "Difícil",
-        3: "Jubilator"
-    }*/
     const Personagens = {
         1: {
             name: "Capivara",
@@ -229,8 +222,6 @@ function Game () {
                             
                             <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={'Custo: 2 Créditos'}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
                             <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={'Custo: 5 Créditos'}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
-                            {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
-
                             <button className="arrowRight" title="Consulte seu caderno!" onMouseOver={hoverSound} onClick={myFunction2}>
                                 <span className="cadernotext" id="cadernoPopup">
                                     <img alt="Imagem do cardeno com instruções das repectivas extrações" id="caderno" src={Caderno[localStorage.getItem('jedai/tabuleiro')].url}/>
@@ -325,7 +316,6 @@ function Game () {
                                 <ul id="showLog">
                                     <li>⭐Turno 1⭐</li>
                                 </ul>
-                                {/*<div className="barLog"></div>*/}
                             </div>
                         </div>
 
@@ -338,9 +328,6 @@ function Game () {
                                 </div>
                             </div>
                         </div>
-
-                        {/*<button className="gameover" type="button" onClick={alertar}>Teste</button>*/}
-                       
                     </div>
                 </div>
             </header>

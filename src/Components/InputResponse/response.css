@@ -2067,13 +2067,9 @@
     }
     @media only screen and (min-width: 1700px) {  /*80% */
       .board {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 70;
         height: 378px;
         width: 536px;
-        margin-top: -275px;
+        margin-top: -277px;
         margin-left: 1px;
         background-size: cover;
       }
@@ -2240,6 +2236,94 @@
         position: absolute;
         top: 426px;
         left: 665px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    @media only screen and (min-width: 1900px) {  /*80% */
+      .board {
+        height: 379px;
+        width: 536px;
+        margin-top: -435px;
+        margin-left: 1.55px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -4px;
+        margin-left: -2px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 94px;
+        position: relative;
+        top: -97px;
+        left: -205px;
+      }
+      .UpPh {
+        position: absolute;
+        top: 420px;
+        left: 856px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 254px;
+        left: 826px;
+      }
+      .UpChapa {
+        position: absolute;
+        top: 362px;
+        left: 770px;
+      }
+      .MaisPh {
+        position: absolute;
+        top: 426px;
+        left: 914px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 426px;
+        left: 886px;
+      }
+      .PH {
+        position: relative;
+        top: -174px;
+        left: 228px;
+      }
+      .MaisTemp {
+        position: absolute;
+        top: 426px;
+        left: 800px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 426px;
+        left: 772px;
       }
       .bar {
         background: rgba(0, 0, 0, 0.456);
