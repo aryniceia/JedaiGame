@@ -941,6 +941,17 @@
         margin-top: -3px;
         margin-left: -92px;
       }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 116px;
+        width: 237px;
+      }
     } 
     @media only screen and (min-width: 900px) { 
       .board {
@@ -1186,12 +1197,12 @@
       }
       .REATOR {
         position: relative;
-        top: -298px;
+        top: -332px;
         left: 174px;
       }
       .UpReator {
         position: absolute;
-        top: 234px;
+        top: 266px;
         left: 340px;
       }
       .UpChapa{
@@ -1303,6 +1314,17 @@
         position: absolute;
         margin-top: -3px;
         margin-left: -92px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 114px;
+        width: 237px;
       }
     }  
     @media only screen and (min-width: 1070px) { 
@@ -1880,7 +1902,7 @@
         display: flex;
         flex-direction: column;
         margin-top: 80px;
-        height: 154px;
+        height: 130px;
         width: 237px;
       }
     }
@@ -1945,8 +1967,8 @@
       }
       .PH {
         position: relative;
-        top: -200px;
-        left: 283px;
+        top: -177px;
+        left: 230px;
       }
       .MaisPh {
         position: absolute;
@@ -2365,7 +2387,7 @@
       .UpPh {
         position: absolute;
         top: 420px;
-        left: 856px;
+        left: 970px;
       }
       .UpReator {
         position: absolute;
@@ -2482,6 +2504,17 @@
         position: absolute;
         top: 425px;
         left: 1042px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        height: 250px;
+        width: 237px;
       }
     }
     @media only screen and (min-width: 2682px) { /*33 % */ 
