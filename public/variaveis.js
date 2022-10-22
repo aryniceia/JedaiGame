@@ -1,15 +1,16 @@
 //DECLARAÇÃO DE VARIAVEIS INÍCIO -----------------
 // import Bequer3 from '../src/img/Lab_Bequer/Lab_Bequer1.png'
-tabuleiro = parseInt(localStorage.getItem('jedai/tabuleiro'))
-tempoDeJogo = parseInt(localStorage.getItem('jedai/time'))
+let tabuleiro = parseInt(localStorage.getItem('jedai/tabuleiro'))
+let tempoDeJogo = parseInt(localStorage.getItem('jedai/time'))
 //equilibrio = true // perguntando se a reação permite conversão
-molsAnteriores = 0
-logContagem = 2
-logStatus = false
-listaLog = document.getElementById('showLog')
+let molsAnteriores = 0
+let logContagem = 2
+let logStatus = false
+let filtrarCentrifugar;
+let listaLog = document.getElementById('showLog')
 // logLine = `Você começou o jogo.`
-dRdP = 0
-logList = []
+let dRdP = 0
+let logList = []
 if (tabuleiro === 1) {
     document.reagente1 = "Etanol"
     reagente1 = "Etanol"
