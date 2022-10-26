@@ -789,9 +789,11 @@ function acaoDinheiro(ValorRecebido, AcaoRecebida) { // para generalizar o custo
         }
 
         else {
-            if ((PH == PHmax && PHsinal == 1 || PH == PHmin && PHsinal == -1) || (temp == tempMax && tempSinal == 1 || temp == tempMin && tempSinal == -1)) {
+            if ((PH == PHmax && PHsinal == 1 || PH == PHmin && PHsinal == -1)) {
                 somNaoPode.play()
                 aparecerLog(`O pH já está no nível máximo ou mínimo, não é possivel continuar.`, true);
+            } else if ((temp == tempMax && tempSinal == 1 || temp == tempMin && tempSinal == -1)){
+                aparecerLog(`A temperatura já está no nível máximo ou mínimo, não é possivel continuar.`, true);
             }
             else { alert(`Erro 404! Not found`); alert(GrupoPHRT) } //nao espero que esse erro seja anunciado na tela, porem precaucao
         }
