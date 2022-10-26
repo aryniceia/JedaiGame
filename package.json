@@ -1,7 +1,22 @@
 {
   "name": "jedai-game-react",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.x"
+  },
   "private": true,
+  "author": {
+    "name": "JEDAI",
+    "url": "https://bio.site/CEiphe"
+  },
+  "contributors": [{
+    "name": "Aryane Nicéia - Dev. Front End",
+    "name": "Vitalson Lorran - Dev. Back End",
+    "name": "Pedro Rabis - Dev. Voluntário",
+    "name": "Profa. Dra. Gabrielle Weber - Orientadora",
+    "name": "Profa. Dra. Rebeca Bacani - Orientadora"
+    }
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
@@ -20,6 +35,7 @@
     "web-vitals": "^1.1.1",
     "yarn": "^1.22.19"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
