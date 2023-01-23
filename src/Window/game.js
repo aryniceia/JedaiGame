@@ -89,7 +89,7 @@ function Game () {
                         <p id="eventos"></p>*/}
                     
                         <div>
-                           {/*<p id="equacao">
+													{/*<p id="equacao">
                                 <span id="reagente01"></span> 
                                 <span id="reagente02"></span> ⇌
                                 <span id="produto01"></span>
@@ -137,10 +137,10 @@ function Game () {
                             <button onclick={Medio}>Médio</button>
                             <button onclick={Dificil}>Difícil</button>
                             <button onclick={Impossivel}>Impossível</button>
-                         </p>*/}
+												</p>*/}
                     </div>
                 </div>
-             {/*No momento vai ser colocado aqui em baixo para não atrapalhar <3*/}
+						{/*No momento vai ser colocado aqui em baixo para não atrapalhar <3*/}
         </Tela>
     );   
 }

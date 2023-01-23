@@ -10,58 +10,58 @@
                 transition: transform 250ms;
             }
             .titleCapi {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;  
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 position: absolute;
                 top: 24px;
             }
             .ageCapi {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 position: absolute;
                 top: 54px;
             }
             .heighCapi {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 position: absolute;
                 top: 84px;
             }
             .weightCapi {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 position: absolute;
                 top: 114px;
             }
             .advantageCapi {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
                 white-space: pre-wrap;
-                font-size: 18px;
+                font-size: 16px;
                 text-align: initial;
                 position: relative;
                 top: 6px;
-                left: 182px;
+                left: 220px;
             }
             .disadvantageCapi {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 white-space: pre-wrap;
                 text-align: initial;
                 position: relative;
                 top: -18px;
-                left: 182px;
+                left: 220px;
             }
             .bioCapi {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
                 font-size: 14.6px;
                 white-space: pre-wrap;
@@ -79,55 +79,57 @@
                 transition: transform 250ms;
             }
             .titleGuara {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;  
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
-                margin-top: -86px;
+                margin-top: -80px;
+                margin-left: 18px;
             }
             .ageGuara {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
-                margin-top: -56px;
+                margin-top: -50px;
+                margin-left: 18px;
             }
             .heighGuara {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
-                text-align: initial;
-                margin-top: -26px;
+                font-size: 17px;
+                margin-top: -20px;
+                margin-left: -286px;
             }
             .weightGuara {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
-                text-align: initial;
+                font-size: 17px;
                 margin-top: -10px;
+                margin-left: -308px;
             }
             .advantageGuara {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
                 white-space: pre-wrap;
-                font-size: 18px;
+                font-size: 16px;
                 text-align: initial;
                 margin-top: -133px;
-                margin-left: 173px;
+                margin-left: 218px;
             } 
             .disadvantageGuara {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-top: -90px;
-                margin-left: 173px;
+                margin-top: -70px;
+                margin-left: 218px;
             }
             .bioGuara {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 15px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-left: 20px;
@@ -142,38 +144,42 @@
                 transition: transform 250ms;
             }
             .titleMamute {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;  
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
-                margin-top: -116px;
+                margin-top: -100px;
+                margin-left: 18px;
             }
             .ageMamute {
-                font-family: 'Chakra Petch';
-                color: white;
-                font-size: 18px;
-                white-space: pre-wrap;
-                text-align: initial;
-                margin-top: -86px;
-            }
-            .heighMamute {
-                font-family: 'Chakra Petch';
-                color: white;
-                font-size: 18px;
-                text-align: initial;
-                margin-top: -36px;
-            }
-            .weightMamute {
-                font-family: 'Chakra Petch';
-                color: white;
-                font-size: 18px;
-                text-align: initial;
-                margin-top: -16px;
-            }
-            .bioMamute {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
                 font-size: 17px;
+                white-space: pre-wrap;
+                text-align: initial;
+                margin-top: -70px;
+                margin-left: 18px;
+            }
+            .heighMamute {
+                font-family: 'IBM Plex Mono', monospace;
+                color: white;
+                font-size: 17px;
+                text-align: initial;
+                margin-top: -20px;
+                margin-left: 18px;
+            }
+            .weightMamute {
+                font-family: 'IBM Plex Mono', monospace;
+                color: white;
+                font-size: 17px;
+                text-align: initial;
+                margin-top: -12px;
+                margin-left: 18px;
+            }
+            .bioMamute {
+                font-family: 'IBM Plex Mono', monospace;
+                color: white;
+                font-size: 16px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-left: 20px;
@@ -188,60 +194,61 @@
                 transition: transform 250ms;
             }
             .titleMiquito {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -121px;
             }
             .ageMiquito {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-top: -88px;
             }
             .heighMiquito {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -55px;
             }
             .weightMiquito {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -23px;
             }
             .advantageMiquito {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
                 white-space: pre-wrap;
-                font-size: 18px;
+                font-size: 16px;
                 text-align: initial;
                 margin-top: -142px;
-                margin-left: 198px;
+                margin-left: 246px;
             } 
             .disadvantageMiquito {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-top: -90px;
-                margin-left: 198px;
+                margin-top: -86px;
+                margin-left: 246px;
             }
-            .bioMiquito{
-                font-family: 'Chakra Petch';
+            .bioMiquito {
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 15px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-left: 20px;
-                margin-top: 13px;
+                position: relative;
+                margin-left: 30px;
+                margin-top: 6px;
             }
         /* Pintada */
             .imagePintada {
@@ -252,59 +259,59 @@
                 transition: transform 250ms;
             }
             .titlePintada {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -156px;
             }
             .agePintada {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -123px;
             }
             .heighPintada {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -90px;
             }
             .weightPintada {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -56px;
             }
             .advantagePintada {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
                 white-space: pre-wrap;
-                font-size: 18px;
+                font-size: 16px;
                 text-align: initial;
                 margin-top: -155px;
-                margin-left: 198px;
+                margin-left: 250px;
             } 
             .disadvantagePintada {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-top: -90px;
-                margin-left: 198px;
+                margin-top: -82px;
+                margin-left: 250px;
             }
             .bioPintada{
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-left: 20px;
-                margin-top: 13px;
+                margin-top: -20px;
             }
         /* Tuca */
             .imageTuca {
@@ -315,59 +322,59 @@
                 transition: transform 250ms;
             }
             .titleTuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -186px;
             }
             .ageTuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -156px;
             }
             .heighTuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -126px;
             }
             .weightTuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -96px;
             }
             .advantageTuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
                 white-space: pre-wrap;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
                 margin-top: -146px;
                 margin-left: 246px;
             } 
             /*.disadvantageTuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-top: -140px;
                 margin-left: 246px;
             }*/
             .bioTuca{
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-left: 20px;
-                margin-top: -3px;
+                margin-top: -68px;
             }
         /* Cuca */
             .imageJacare {
@@ -378,59 +385,59 @@
                 transition: transform 250ms;
             }
             .titleCuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
-                margin-top: -170px;
+                margin-top: -154px;
             }
             .ageCuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
-                margin-top: -140px;
+                margin-top: -124px;
             }
             .heighCuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
-                margin-top: -110px;
+                margin-top: -94px;
             }
             .weightCuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 text-align: initial;
-                margin-top: -80px;
+                margin-top: -64px;
             }
             .advantageCuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
                 white-space: pre-wrap;
-                font-size: 18px;
+                font-size: 16px;
                 text-align: initial;
-                margin-top: -170px;
-                margin-left: 198px;
+                margin-top: -154px;
+                margin-left: 230px;
             } 
             .disadvantageCuca {
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 white-space: pre-wrap;
                 text-align: initial;
-                margin-top: -100px;
-                margin-left: 198px;
+                margin-top: -88px;
+                margin-left: 230px;
             }
             .bioCuca{
-                font-family: 'Chakra Petch';
+                font-family: 'IBM Plex Mono', monospace;
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 white-space: pre-wrap;
                 text-align: initial;
                 margin-left: 20px;
-                margin-top: -26px;
+                margin-top: -20px;
             }
     /* Hover das imagens */
         .image-char:hover, .imageCapi:hover, .imageGuara:hover, .imageMico:hover, .imageJacare:hover, .left-one:hover {

@@ -18,22 +18,14 @@ import TucanoBody from'../../img/char/body/tucano.png';
 
 import Centrifuga from '../../img/elements/centrifuga.png';
 import FiltroElement from '../../img/elements/filtro.png';
-import bequervazio from '../../img/Lab_Bequer/Bequervazio.png';
 
 import Acido from '../../img/graxo_caderno.png';
 import Sabao from '../../img/sabao_caderno.png';
 import Bio from '../../img/biodiesel_caderno.png';
 
-//import Sound from '../../sound/clickSound.mp3';
-//import HoverSound from '../../sound/buttonHover.mp3';
+/*import Sound from '../../sound/clickSound.mp3';
+import HoverSound from '../../sound/buttonHover.mp3';*/
 
-// Variáveis das inputs //
-    /*const levels = {
-        0: "Fácil",
-        1: "Médio",
-        2: "Difícil",
-        3: "Jubilator"
-    }*/
     const Personagens = {
         1: {
             name: "Capivara",
@@ -103,7 +95,6 @@ import Bio from '../../img/biodiesel_caderno.png';
     }
 
 function Game () {
-    const tabuleiro = localStorage.getItem('jedai/tabuleiro')
     function Proximo(){
         window.Proximo()
     };
@@ -146,9 +137,6 @@ function Game () {
     function Filtro(){
         window.Filtro()
     };
-    /*function confirmacao(){
-        window.confirmacao()
-    };*/
     function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
@@ -183,16 +171,7 @@ function Game () {
           document.removeEventListener("keydown", escFunction, false);
         };
       }, []);
-    /* function GameOver() {
-        window.GameOver
-    }*/
-    function alertar () {
-        alert (`Estatísticas finais 📊
-        • Mol: ${window.molextraidos}
-        • Turno: ${window.turno} ${document.turno}
-        • Dinheiro: ${window.dinheiro}
-        • Nível: ${window.NivelAtual}`)         
-    }
+
     function Cancelar () {
         var cancelar = window.confirm (`
             ⚠️ AVISO ⚠️
@@ -216,7 +195,7 @@ function Game () {
                 //window.location.href='/select'
                 }, 1000) 
             }*/
-        /* Hover Sound Effect */
+         /* Hover Sound Effect */
             /*function hoverSound  () {
                 let teste = new Audio(HoverSound);
                 teste.play();
@@ -225,6 +204,7 @@ function Game () {
     var teste2 = `${window.reagente1}`;
     var reagente1 = 'Água teste'
     //var reagente2 = document.getElementById('segundo-reagente')
+
     return (
         <div className="App">
             <header className="App-header">
@@ -239,19 +219,16 @@ function Game () {
                             <img className="profile-charBody" alt="inserir o nome do personagem" src={PersonagensBody[localStorage.getItem('jedai/personagem')].url}/>
                             <img alt="Imagem de uma centrífuga de laboratório" className="centrifuga" src={Centrifuga}></img>
                             <img alt="Imagem de um filtro de laboratório" className="filtroElement" id='filtroElement'src={FiltroElement}></img>
-                            <img alt="Imagem de um béquer" id='bequer1' className="bequer1" src={bequervazio}></img>
                             
-                            <button className="agua" /*onMouseOver={hoverSound}*/ onClick={AdicionarH2O} title={'Custo: 2 Créditos'}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
-                            <button className="trigli" /*onMouseOver={hoverSound}*/ onClick={AdicionarTri} title={'Custo: 5 Créditos'}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
-                            {/*<button className="arrowLeft"><img id="arrowL" src={ArrowL}/></button>*/}
-
-                            <button className="arrowRight" title="Consulte seu caderno!" /*onMouseOver={hoverSound}*/ onClick={myFunction2}>
+                            <button className="agua" onMouseOver={hoverSound} onClick={AdicionarH2O} title={'Custo: 2 Créditos'}><span id="primeiro-reagente"></span></button> {/*A classe é agua porém é o reagente 1*/}
+                            <button className="trigli" onMouseOver={hoverSound} onClick={AdicionarTri} title={'Custo: 5 Créditos'}><span id="segundo-reagente"></span></button> {/*A classe é trigli porém é o reagente 2*/}
+                            <button className="arrowRight" title="Consulte seu caderno!" onMouseOver={hoverSound} onClick={myFunction2}>
                                 <span className="cadernotext" id="cadernoPopup">
                                     <img alt="Imagem do cardeno com instruções das repectivas extrações" id="caderno" src={Caderno[localStorage.getItem('jedai/tabuleiro')].url}/>
                                 </span>
                             </button>
-
-                            <div className="PopupHover" /*onMouseOver={hoverSound}*/>
+                        
+                            <div className="PopupHover" onMouseOver={hoverSound}>
                                 <div className="PH">!
                                     <span className="textPH">
                                         <p id="phtotal"></p> 
@@ -277,8 +254,7 @@ function Game () {
                                     <span className="textREATOR">
                                         <p id="equacao">
                                             <span id="reagente01"></span><br></br>
-                                    <span id="reagente02"></span><span id="reversivel"></span><br></br><span id="produto01"></span><br></br>
-
+                                            <span id="reagente02"></span><span id="reversivel"></span><br></br><span id="produto01"></span><br></br>
                                             <span id="produto02"></span> 
                                         </p>
                                     </span>
@@ -305,7 +281,7 @@ function Game () {
                     
                     <div className="barra_inferior">
                         <div className="BotoesAcao">
-                            <div /*onMouseOver={hoverSound}*/ className="BotoesProfile">
+                            <div onMouseOver={hoverSound} className="BotoesProfile">
                                 <button className="botoes" onClick={Proximo}>Turno</button>
                                 <button className="botoes" onClick={Expurgo}>Expugar</button>
                                 <button className="help" onClick={myFunction1}>Ajuda
@@ -314,17 +290,17 @@ function Game () {
                                     </p>
                                 </button>
                                 <button className='cancel' onClick={Cancelar}>Sair</button>                               
-                                <button /*onMouseOver={hoverSound}*/ className="botoes" onClick={upgrade}>Nível</button>
-                                <button /*onMouseOver={hoverSound}*/ className="botoes" onClick={Decantar}><span id='decantar-precipitar'></span></button>
-                                <button /*onMouseOver={hoverSound}*/ className="botoes" onClick={Filtro}><span id='filtrar-centrifugar'></span></button>
+                                <button onMouseOver={hoverSound} className="botoes" onClick={upgrade}>Nível</button>
+                                <button onMouseOver={hoverSound} className="botoes" onClick={Decantar}><span id='decantar-precipitar'></span></button>
+                                <button onMouseOver={hoverSound} className="botoes" onClick={Filtro}><span id='filtrar-centrifugar'></span></button>
                             </div>
 
-                            <button className="popup" title="Troféu" /*onMouseOver={hoverSound}*/ onClick={myFunction}>
+                            <button className="popup" title="Troféu" onMouseOver={hoverSound} onClick={myFunction}>
                                 <span className="popuptext" id="myPopup">
                                     <p id="trofeus"></p>
                                 </span>
                             </button>
-                            <div /*onMouseOver={hoverSound}*/ className="melhorias">
+                            <div onMouseOver={hoverSound} className="melhorias">
                                 <button className="UpReator" onClick={upgradeReator} title="Melhoria do reator. Custo: 10 Créditos.">+</button>
                                 <button className="UpPh" onClick={upgradePHmetro} title="Melhoria do pHmetro. Custo: 3 Créditos.">+</button>
                                 <button className="UpChapa" onClick={upgradeTermometro} title="Melhoria da chapa térmica. Custo: 3 Créditos.">+</button>
@@ -340,7 +316,6 @@ function Game () {
                                 <ul id="showLog">
                                     <li>⭐Turno 1⭐</li>
                                 </ul>
-                                {/*<div className="barLog"></div>*/}
                             </div>
                         </div>
 
@@ -353,8 +328,6 @@ function Game () {
                                 </div>
                             </div>
                         </div>
-
-                        {/*<button className="gameover" type="button" onClick={alertar}>Teste</button>*/}
                     </div>
                 </div>
             </header>

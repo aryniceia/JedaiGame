@@ -7,13 +7,13 @@ import Jedai from '../img/logos/jedai.png';
 import Mamute from '../img/logos/mamute.png';
 import Arrow from '../img/elements/arrowL.png';
 
-import testHover from '../sound/buttonHover.mp3';
+/*import testHover from '../sound/buttonHover.mp3';
 /* Hover Sound Effect */
-    function hoverSound  (){
+    /*function hoverSound  (){
         let teste = new Audio(testHover);
         //teste.src = 'https://www.soundjay.com/buttons/sounds/button-20.mp3';
         teste.play();
-    }
+    }*/
 
 function Credit () {
     return (
@@ -47,7 +47,7 @@ function Credit () {
                         </div>   
                     </div>
                 </marquee>
-                <div onMouseOver={hoverSound}>
+                <div /*onMouseOver={hoverSound}*/>
                     <Link route="/" className='volta'>
                         <img alt="Botão de seta para voltar" className="left" title="Voltar" src={Arrow}></img>
                     </Link>

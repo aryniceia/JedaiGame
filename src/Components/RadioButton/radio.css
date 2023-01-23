@@ -1,3 +1,38 @@
+/* Pop Up Personagens do select */
+  /*Posição*/
+  .foto1 .textfoto1 {
+    visibility: hidden;
+    font-family:'Chakra Petch';
+    font-size: 15px;
+    color: white;
+    text-align: left;
+    white-space: pre-wrap;
+    width: 200px;
+    border: solid 1px #231F20;
+    background-color: rgba(211, 141, 181, 0.97);
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  } 
+  .foto1 .textfoto1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    border-width: 6px;
+    border-style: solid;
+    /*border: solid 1px #231F20;*/
+    border-color: #231F20 transparent transparent transparent;
+  }
+  .foto1:hover .textfoto1 {
+    visibility: visible;
+  }
+
 /*Estilo personagens*/
   .chars {
     display: flex;
@@ -9,7 +44,7 @@
     text-align: center;
     font-size: 18px;
   }
-  .foto1, .foto2, .foto3, 
+ .foto1, .foto2, .foto3, 
   .foto4, .foto5, .foto6 {
     width: 80x;
     height: 80px;

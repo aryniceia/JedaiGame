@@ -65,6 +65,7 @@ class PersonagemDefault {
         this.termometroCost = 3
         this.filtrocost = 15
         this.filtroAcao = 2
+        document.getElementById('rodadas').innerHTML = `4`
     }
     decantarPersonagem() {
         molextraidos += decantarR4 + filtrarR2
@@ -110,6 +111,7 @@ class Capi extends PersonagemDefault {
             this.decantarR2 = 0;
             this.decantarR3 = 0;
             this.ProbInicial = 30
+            document.getElementById('rodadas').innerHTML = `3`
         }
         decantarPersonagem(){
             molextraidos += decantarR3 + filtrarR2
@@ -119,6 +121,7 @@ class Capi extends PersonagemDefault {
             filtrarR2 = filtrarR1
             filtrarR1 = 0
             console.log("decantarMiquito")
+
             console.log(this.decantarR1, this.decantarR2, this.decantarR3, this.decantarR4)
         }
     }

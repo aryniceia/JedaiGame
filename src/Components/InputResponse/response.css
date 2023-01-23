@@ -1,4 +1,6 @@
 /* Fundos */
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300&display=swap);
+
   .App {
     text-align: center;
   }
@@ -47,11 +49,11 @@
       width:150px;
     }
     .extração{
-      font-family: 'Chakra Petch';
+      font-family: 'IBM Plex Mono', monospace;
       color: white;
       text-align: left;
-      font-size: 14px;
-      padding: 6px;
+      font-size: 11px;
+      padding: 5px;
     }
     #acdin {
       font-family: 'Chakra Petch';
@@ -83,7 +85,7 @@
       width: 140px;
       position: relative;
       top: -238px;
-      left: -28px;
+      left: -18px;
       transition: transform 250ms;
     }
     .filtroElement {
@@ -93,11 +95,17 @@
       left: -57px;
       transition: transform 250ms;
     }
-    .centrifuga:hover, .filtroElement:hover {
-      transform: translateY(-10px);
+    .bequer1 {
+      width: 76px;
+      position: relative;
+      top: -100px;
+      left: -218px;
     }
+    /*.centrifuga:hover, .filtroElement:hover {
+      transform: translateY(-10px);
+    }*/
     /*Botões*/
-      .agua{
+      .agua { /*Reagente 1*/
         font-family: 'Chakra Petch';
         font-size: 13px;
         color: white;
@@ -108,9 +116,9 @@
         height: 20px;
         position: relative;
         top: -79px;
-        left: -370px;
+        left: -424px;
       }
-      .trigli {
+      .trigli { /*Reagente 2*/
         font-family: 'Chakra Petch';
         font-size: 13px;
         color: white;
@@ -121,7 +129,7 @@
         height: 20px;
         position: relative;
         top: -79px;
-        left: -360px;
+        left: -418px;
       }
       /*PH*/
         .MaisPh {
@@ -189,7 +197,7 @@
           line-height: 12.5px;
           background-color: #5ce039;
           border: none;
-          border-radius: 15px;
+          border-radius: 4px;
           width: 25px;
           height: 25px;
           position: relative;
@@ -203,7 +211,7 @@
           line-height: 12.5px;
           background-color: #5ce039;
           border: none;
-          border-radius: 15px;
+          border-radius: 4px;
           width: 25px;
           height: 25px;
           position: relative;
@@ -217,7 +225,7 @@
           line-height: 12.5px;
           background-color: #5ce039;
           border: none;
-          border-radius: 15px;
+          border-radius: 4px;
           width: 25px;
           height: 25px;
           position: relative;
@@ -255,7 +263,7 @@
           visibility: hidden;
           width: 120px;
           background: rgb(190, 77, 77);
-          font-family:'Chakra Petch';
+          font-family:'IBM Plex Mono', monospace;
           font-size: 20px;
           color: white;
           text-align: center;
@@ -298,7 +306,7 @@
           visibility: hidden;
           width: 120px;
           background: rgb(236, 214, 15);
-          font-family:'Chakra Petch';
+          font-family: 'IBM Plex Mono', monospace;
           font-size: 20px;
           color: white;
           text-align: center;
@@ -341,7 +349,7 @@
           visibility: hidden;
           width: 120px;
           background: rgb(77, 164, 190);
-          font-family:'Chakra Petch';
+          font-family: 'IBM Plex Mono', monospace;
           font-size: 20px;
           color: white;
           text-align: center;
@@ -384,9 +392,9 @@
           visibility: hidden;
           width: 150px;
           line-height: 20px;
-          background: rgb(77, 190, 115);
-          font-family:'Chakra Petch';
-          font-size: 20px;
+          background: rgba(77, 190, 115);
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 15px;
           color: white;
           text-align: center;
           border-radius: 6px;
@@ -428,7 +436,7 @@
           visibility: hidden;
           width: 200px;
           background: rgb(241, 139, 55);
-          font-family:'Chakra Petch';
+          font-family: 'IBM Plex Mono', monospace;
           font-size: 15px;
           color: white;
           text-align: center;
@@ -440,7 +448,7 @@
           left: 50%;
           margin-left: -60px;
         }  
-        .REATOR .REATOR::after {
+        .REATOR .textREATOR::after {
           content: "";
           position: absolute;
           top: 100%;
@@ -453,7 +461,6 @@
         .REATOR:hover .textREATOR {
           visibility: visible;
         }
-        
         .PH:hover, .TEMP:hover, .AGUA:hover, .TRIGLI:hover, .REATOR:hover {
           background: #9a5cf7;
         }
@@ -532,7 +539,7 @@
       #showLog{
         overflow: auto;
         color: white;
-        font-family: 'Chakra Petch';
+        font-family: 'IBM Plex Mono', monospace;
         font-size: 15px;
         display: flex;
         flex-direction:column;
@@ -559,7 +566,18 @@
         color: white;
         display: inline-block;
       }
-
+      .cancel {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        position: absolute;
+        margin-top: 100px;
+        margin-left: -65px;
+      }
       .botoes {
         height: 35px;
         border-radius: 5px;
@@ -569,7 +587,7 @@
         font-family: 'Chakra Petch';
         color: #ffffff;
       }
-      .botoes:hover, .popup:hover, .help:hover, .agua:hover, .trigli:hover, .gameover:hover{
+      .botoes:hover, .popup:hover, .help:hover, .agua:hover, .trigli:hover, .gameover:hover, .cancel:hover{
         background-color: #663D3D;
       }
     /* Pop Up*/
@@ -649,8 +667,8 @@
       /*Fundo pop up info */
         .help .helptext {
           visibility: hidden;
-          width: 85px;
-          height: 85px;
+          width: 320px;
+          height: 400px;
           background-color: #ea8d8d;
           color: #fff;
           font-size: 15px;
@@ -660,8 +678,8 @@
           z-index: 1;
           bottom: 72%;
           left: 50px;
-          padding: 20px;
-          line-height: 22px;
+          padding: 12px;
+          line-height: 16px;
         }
       /* Popup arrow */
         .help .helptext::after {
@@ -691,15 +709,14 @@
         .arrowRight {
           width: 40px;
           height: 40px;
-          border: none;
-          background: none;
-          background-image: url('../../img/elements/arrowR.png');
-          background-size: contain;
-          display: inline-block;
-          cursor: pointer;
+          background: rgba(211, 141, 181, 0.97);
+          background-image: url('../../img/elements/icone_caderno.png');
+          border: solid 1px #231F20;
+          border-radius: 37px;
+          background-size: cover;
           position: relative;
-          top: -61px;
-          left: -3px;
+          top: -97px;
+          left: 199px;
           transition: all .5s; /*animação do hover*/
         }
       /*Fundo pop up info */
@@ -733,8 +750,8 @@
           animation: fadeIn 1s
         }  
         .arrowRight:hover {
-          border: 5px solid #6d486f;
-          border-radius: 50%;
+          background-color: #e7d2e4;
+          border-radius: 100%;
         }
       /* Add animation (fade in the popup) */
         @-webkit-keyframes fadeIn {
@@ -748,209 +765,1768 @@
 
 /*-----------------------------------------------------------------------------------------------*/
 /* Responsividade da  tela */
-    /*@media only screen and (min-width: 800px) { 
-    .board {
-      height: 350px;
-      margin-top: -85px ;
-    }*/
   
-  
-    /* Responsividade dos  botões */
-    @media only screen and (min-width: 1024px) { /*Tela Principal 100% */
+    @media only screen and (min-width: 768px) { 
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 324px;
+        width: 465px;
+        margin-left: 36px;
+        margin-top: -82px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 325px;
+        width: 532px;
+        margin-top: -6px;
+        margin-left: -37px;
+      }
+      .profile-charBody {
+        width: 188px;
+        margin-left: 272px;
+        margin-top: 33px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 117px;
+        position: relative;
+        top: -200px;
+        left: 35px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -200px;
+        left: 16px;
+      } 
+      .bequer1 {
+        width: 75px;
+        position: relative;
+        top: -100px;
+        left: -165px;
+      }
+      .arrowRight {
+        top: -54px;
+        left: -56px;
+        transition: all .5s;
+      }
       .UpPh {
         position: absolute;
-        top: 420px;
-        left: 646px;
+        top: 371px;
+        left: 338px;
+      }
+      .REATOR {
+        position: relative;
+        top: -351px;
+        left: 175px;
       }
       .UpReator {
         position: absolute;
-        top: 286px;
-        left: 493px;
+        top: 234px;
+        left: 214px;
       }
       .UpChapa{
         position: absolute;
-        top: 368px;
-        left: 436px
+        top: 318px;
+        left: 160px;
+      }
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 232px;
       }
       .MaisPh  {
         position: absolute;
-        top: 437px;
-        left: 588px;
+        top: 378px;
+        left: 290px;
       }
       .MenosPh {
         position: absolute;
-        top: 437px;
-        left: 557px;
+        top: 378px;
+        left: 262px;       
+      }
+      .TEMP {
+        position: relative;
+        top: -130px;
+        left: 168px;
       }
       .MaisTemp{
         position: absolute;
-        top: 438px;
+        top: 378px;
+        left: 190px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 378px;
+        left: 162px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -280px;
+        left: 91px;
+      }
+      .trigli {
+        position: relative;
+        top: -76px;
+        left: -342px;
+      }
+      .AGUA {
+        position: relative;
+        top: -274px;
+        left: 51px;
+      }
+      .agua {
+        position: relative;
+        top: -76px;
+        left: -338px;
+      }
+      .usernameLevel {
+        font-size: 12px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .help {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        margin: 4px;
+        position: absolute;
+        margin-top: 83px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .cancel {
+      width: 55px;
+      height: 55px;
+      border-radius: 30px;
+      border: 0.01px solid #6d486f;
+      background-color: #EA8D8D;
+      font-family: 'Chakra Petch';
+      color: white;
+      position: absolute;
+      margin-top: 83px;
+      margin-left: -65px;
+      }
+      .popup {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        background-size: contain;
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -3px;
+        margin-left: -92px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 116px;
+        width: 237px;
+      }
+    } 
+    @media only screen and (min-width: 900px) { 
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 241px;
+        width: 350px;
+        margin-left: 95px;
+        margin-top: -43px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 236px;
+        width: 534px;
+        margin-top: -6px;
+        margin-left: -97px;
+      }
+      .profile-charBody {
+        width: 133px;
+        margin-left: 286px;
+        margin-top: 33px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 86px;
+        position: relative;
+        top: -42px;
+        left: -324px;
+      }
+      .filtroElement {
+        width: 149px;
+        position: relative;
+        top: -145px;
+        left: 94px;
+      } 
+      .bequer1 {
+        width: 46px;
+        position: relative;
+        top: -66px;
+        left: -68px;
+      }
+      .arrowRight {
+        top: -50px;
+        left: -10px;
+        transition: all .5s;
+      }
+      .UpPh {
+        position: absolute;
+        top: 289px;
+        left: 390px;
+      }
+      .REATOR {
+        position: relative;
+        top: -298px;
+        left: 192px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 196px;
+        left: 296px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 258px;
+        left: 260px;
+      }
+      .PH {
+        position: relative;
+        top: -116px;
+        left: 240px;
+      }
+      .MaisPh {
+        position: absolute;
+        top: 289px;
+        left: 356px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 289px;
+        left: 330px;
+      }
+      .TEMP {
+        position: relative;
+        top: -126px;
+        left: 190px;
+      }
+      .MaisTemp {
+        position: absolute;
+        top: 289px;
+        left: 292px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 289px;
+        left: 265px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -232px;
+        left: 132px;
+      }
+      .trigli {
+        position: relative;
+        top: -51px;
+        left: -225px;
+      }
+      .AGUA {
+        position: relative;
+        top: -222px;
+        left: 102px;
+      }
+      .agua {
+        position: relative;
+        top: -51px;
+        left: -221px;
+      }
+      .usernameLevel {
+        font-size: 12px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .help {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        margin: 4px;
+        position: absolute;
+        margin-top: 83px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .cancel {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        position: absolute;
+        margin-top: 83px;
+        margin-left: -65px;
+      }
+      .popup {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        background-size: contain;
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -3px;
+        margin-left: -92px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 80px;
+        width: 237px;
+    }
+    } 
+    @media only screen and (min-width: 1024px) { /*Tela Principal 100%*/
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 324px;
+        width: 465px;
+        margin-left: 36px;
+        margin-top: -82px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 325px;
+        width: 532px;
+        margin-top: -6px;
+        margin-left: -37px;
+      }
+      .profile-charBody {
+        width: 188px;
+        margin-left: 272px;
+        margin-top: 33px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 117px;
+        position: relative;
+        top: -200px;
+        left: 35px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -200px;
+        left: 16px;
+      } 
+      .bequer1 {
+        width: 74px;
+        position: relative;
+        top: -93px;
+        left: -167px;
+      }
+      .arrowRight {
+        top: -54px;
+        left: -56px;
+        transition: all .5s;
+      }
+      .UpPh {
+        position: absolute;
+        top: 372px;
+        left: 467px;
+      }
+      .REATOR {
+        position: relative;
+        top: -332px;
+        left: 174px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 266px;
+        left: 340px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 318px;
+        left: 288px;
+      }
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 232px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 378px;
+        left: 418px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 378px;
+        left: 390px;    
+      }
+      .TEMP {
+        position: relative;
+        top: -130px;
+        left: 168px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 378px;
+        left: 318px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 378px;
+        left: 290px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -280px;
+        left: 91px;
+      }
+      .trigli {
+        position: relative;
+        top: -76px;
+        left: -362px;
+      }
+      .AGUA {
+        position: relative;
+        top: -274px;
+        left: 51px;
+      }
+      .agua {
+        position: relative;
+        top: -76px;
+        left: -362px;
+      }
+      .usernameLevel {
+        font-size: 12px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .help {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        margin: 4px;
+        position: absolute;
+        margin-top: 83px;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .cancel {
+      width: 55px;
+      height: 55px;
+      border-radius: 30px;
+      border: 0.01px solid #6d486f;
+      background-color: #EA8D8D;
+      font-family: 'Chakra Petch';
+      color: white;
+      position: absolute;
+      margin-top: 83px;
+      margin-left: -65px;
+      }
+      .popup {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+        border: 0.01px solid #6d486f;
+        background-color: #EA8D8D;
+        font-family: 'Chakra Petch';
+        color: white;
+        background-size: contain;
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -3px;
+        margin-left: -92px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 114px;
+        width: 237px;
+      }
+    }  
+    @media only screen and (min-width: 1070px) { 
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 300px;
+        width: 453px;
+        margin-top: -65px;
+        margin-left: 51px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 297px;
+        width: 532px;
+        margin-top: -7px;
+        margin-left: -51px;
+      }
+      .profile-charBody {
+        width: 182px;
+        margin-left: 241px;
+        margin-top: 21px;
+      }
+      .centrifuga {
+        width: 110px;
+        position: relative;
+        top: -190px;
+        left: 22px;
+      }
+      .filtroElement {
+        width: 161px;
+        position: relative;
+        top: -186px;
+        left: 20px;
+      } 
+      .bequer1 {
+        width: 62px;
+        position: relative;
+        top: -92px;
+        left: -148px;
+      }
+      .agua {
+        position: relative;
+        top: -66px;
+        left: -306px;
+      }
+      .trigli {
+        position: relative;
+        top: -66px;
+        left: -307px;
+      }
+      .UpPh {
+        position: relative;
+        top: -130px;
+        left: 216px;
+      }
+      .UpReator {
+        position: relative;
+        top: -255px;
+        left: 130px;
+      }
+      .UpChapa {
+        position: relative;
+        top: -178px;
+        left: 34px;
+      }
+      .MaisPh {
+        position: relative;
+        top: -126px;
+        left: 126px;
+      }
+      .MenosPh {
+        position: relative;
+        top: -126px;
+        left: 76px;
+      }
+      .MaisTemp {
+        position: absolute;
+        top: 349px;
+        left: 352px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 349px;
+        left: 326px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 20px;
+        align-items: center;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 104px;
+        width: 237px;
+      }
+    }
+    @media only screen and (min-width: 1220px) {
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 344px;
+        width: 499px;
+        margin-left: 20px;
+        margin-top: -89px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 342px;
+        width: 533px;
+        margin-top: -5px;
+        margin-left: -22px;
+      }
+      .profile-charBody {
+        width: 188px;
+        margin-left: 308px;
+        margin-top: 49px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 117px;
+        position: relative;
+        top: -203px;
+        left: 26px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -200px;
+        left: 16px;
+      } 
+      .bequer1 {
+        width: 87px;
+        position: relative;
+        top: -94px;
+        left: -170px;
+      }
+      .arrowRight {
+        top: -54px;
+        left: -41px;
+        transition: all .5s;
+      }
+      .UpPh {
+        position: absolute;
+        top: 389px;
+        left: 570px;
+      }
+      .REATOR {
+        position: relative;
+        top: -326px;
+        left: 175px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 225px;
+        left: 442px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 336px;
+        left: 380px;
+      }
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 232px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 396px;
+        left: 518px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 396px;
+        left: 491px;   
+      }
+      .TEMP {
+        position: relative;
+        top: -130px;
+        left: 168px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 396px;
+        left: 414px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 396px;
+        left: 387px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -280px;
+        left: 84px;
+      }
+      .trigli {
+        position: relative;
+        top: -76px;
+        left: -368px;
+      }
+      .AGUA {
+        position: relative;
+        top: -274px;
+        left: 42px;
+      }
+      .agua {
+        position: relative;
+        top: -76px;
+        left: -368px;
+      }
+      .usernameLevel {
+        font-size: 15px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 37px;
+        display: flex;
+        align-items: cente
+      }
+      .help {
+        position: absolute;
+        margin-top: 98px;
+        margin-left: 0px;
+      }
+      .cancel {
+        position: absolute;
+        margin-top: 98px;
+        margin-left: -65px;
+      }
+      .popup {
+        position: absolute;
+        margin-top: 14px;
+        margin-left: -92px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 120px;
+        width: 237px;
+      }
+    }  
+    @media only screen and (min-width: 1366px) { 
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 343px;
+        width: 488px;
+        margin-left: 26px;
+        margin-top: -98px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 388px;
+        width: 533px;
+        margin-top: -32px;
+        margin-left: -27px;
+      }
+      .profile-charBody {
+        width: 188px;
+        margin-left: 297px;
+        margin-top: 71px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 117px;
+        position: relative;
+        top: -203px;
+        left: 26px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -200px;
+        left: 16px;
+      } 
+      .bequer1 {
+        width: 93px;
+        position: relative;
+        top: -90px;
+        left: -171px;
+      }
+      .arrowRight {
+        top: -47px;
+        left: -61px;
+        transition: all .5s;
+      }
+      .UpPh {
+        position: absolute;
+        top: 409px;
+        left: 628px;
+      }
+      .REATOR {
+        position: relative;
+        top: -330px;
+        left: 172px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 240px;
+        left: 502px;
+      }
+      .UpChapa{
+        position: absolute;
+        top: 358px;
+        left: 446px;
+      }
+      .PH {
+        position: relative;
+        top: -160px;
+        left: 232px;
+      }
+      .MaisPh  {
+        position: absolute;
+        top: 435px;
+        left: 582px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 435px;
+        left: 554px;    
+      }
+      .TEMP {
+        position: relative;
+        top: -130px;
+        left: 168px;
+      }
+      .MaisTemp{
+        position: absolute;
+        top: 435px;
         left: 480px;
       }
       .MenosTemp {
         position: absolute;
-        top: 438px;
-        left: 454px;
+        top: 435px;
+        left: 453px;
       }
-    }
+      .TRIGLI {
+        position: relative;
+        top: -300px;
+        left: 85px;
+      }
+      .trigli {
+        position: relative;
+        top: -70px;
+        left: -370px;
+      }
+      .AGUA {
+        position: relative;
+        top: -290px;
+        left: 42px;
+      }
+      .agua {
+        position: relative;
+        top: -70px;
+        left: -370px;
+      }
+      .usernameLevel {
+        font-size: 15px;
+        color: white;
+        font-family: 'Chakra Petch';
+        margin-left: 18px;
+        text-align: left;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+      }
+      .help {
+        position: absolute;
+        margin-top: 98px;
+        margin-left: 0px;
+      }
+      .cancel {
+        position: absolute;
+        margin-top: 98px;
+        margin-left: -65px;
+      }
+      .popup {
+        position: absolute;
+        margin-top: 14px;
+        margin-left: -92px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        height: 129px;
+        width: 237px;
+      }
+    }  
     @media only screen and (min-width: 1400px) { /* 90% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 368px;
+        width: 536px;
+        margin-top: -98px;
+        margin-left: 1px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -7px;
+        margin-left: -1px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 314px;
+        margin-top: 40px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 126px;
+        position: relative;
+        top: -216px;
+        left: -4px;
+      }
+      .bequer1 {
+        width: 85px;
+        position: relative;
+        top: -98px;
+        left: -181px;
+      }
+      .barra_lateral {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        border-radius: 10px;
+        border: 6px solid;
+        border-color: #231F20;
+        height: 438px;
+        width: 153px;
+        background-size: contain;
+      }
+      .barra_inferior {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border-radius: 10px;
+        border: 6px solid;
+        border-color: #231F20;
+        height: 26vh;
+        width: 690px;
+        display: flex;
+      }
+      .PH {
+        position: relative;
+        top: -166px;
+        left: 283px;
+      }
       .UpPh {
         position: absolute;
-        top: 460px;
-        left: 722px;
+        top: 415px;
+        left: 676px;
+      }
+      .REATOR {
+        position: relative;
+        top: -356px;
+        left: 159px;
       }
       .UpReator {
         position: absolute;
-        top: 400px;
-        left: 510px;
+        top: 280px;
+        left: 532px;
       }
       .UpChapa{
         position: absolute;
-        top: 322px;
-        left: 567px;
+        top: 363px;
+        left: 470px;
       }
       .MaisPh  {
         position: absolute;
-        top: 470px;
-        left: 660px;
+        top: 424px;
+        left: 627px;
       }
       .MenosPh {
         position: absolute;
-        top: 470px;
-        left: 630px;
+        top: 424px;
+        left: 593px;
+      }
+      .TEMP {
+        position: relative;
+        top: -132px;
+        left: 155px;
       }
       .MaisTemp{
         position: absolute;
-        top: 470px;
-        left: 560px;
+        top: 422px;
+        left: 517px;
       }
       .MenosTemp {
         position: absolute;
-        top: 470px;
-        left: 531px;
+        top: 422px;
+        left: 489px;
+      }
+      .trigli {
+        position: relative;
+        top: -79px;
+        left: -381px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -287px;
+        left: 67px;
+      }
+      .agua {
+        position: relative;
+        top: -79px;
+        left: -383px;
+      }
+      .AGUA {
+        position: relative;
+        top: -284px;
+        left: 20px;
+      }
+      .arrowRight {
+        position: relative;
+        top: -56px;
+        left: -36px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        height: 130px;
+        width: 237px;
       }
     }
-    @media only screen and (min-width: 1600px) { /* 80% */
+    @media only screen and (min-width: 1500px) {  /*80% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 374px;
+        width: 536px;
+        margin-top: -189px;
+        margin-left: 1px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -6px;
+        margin-left: -1px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 92px;
+        position: relative;
+        top: -98px;
+        left: -208px;
+      }
       .UpPh {
         position: absolute;
-        top: 502px;
-        left: 812px;
+        top: 416px;
+        left: 708px;
       }
       .UpReator {
         position: absolute;
-        top: 372px;
-        left: 660px;
+        top: 247px;
+        left: 564px;
       }
-      .UpChapa{
+      .UpChapa {
         position: absolute;
-        top: 450px;
-        left: 600px;
+        top: 362px;
+        left: 502px;
       }
-      .MaisPh  {
+      .PH {
+        position: relative;
+        top: -177px;
+        left: 230px;
+      }
+      .MaisPh {
         position: absolute;
-        top: 520px;
-        left: 757px;
+        top: 426px;
+        left: 653px;
       }
       .MenosPh {
         position: absolute;
-        top: 520px;
-        left: 726px;
+        top: 426px;
+        left: 624px;
       }
-      .MaisTemp{
+      .TEMP {
+        position: relative;
+        top: -162px;
+        left: 155px;
+      }
+      .MaisTemp {
         position: absolute;
-        top: 520px;
-        left: 652px;
+        top: 426px;
+        left: 540px;
       }
       .MenosTemp {
         position: absolute;
-        top: 520px;
-        left: 625px;
+        top: 426PX;
+        left: 513px;
+      }
+      .TRIGLI {
+        position: relative;
+        top: -316px;
+        left: 66px;
+      }
+      .trigli {
+        position: relative;
+        top: -79px;
+        left: -410px;
+      }
+      .AGUA {
+        position: relative;
+        top: -314px;
+        left: 20px;
+      }
+      .agua {
+        position: relative;
+        top: -79px;
+        left: -415px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
+      }
+      .arrowRight {
+        position: relative;
+        top: -85px;
+        left: 200px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        height: 154px;
+        width: 237px;
       }
     }
-    @media only screen and (min-width: 1800px) { /* 75% */
+    @media only screen and (min-width: 1600px) {  /*80% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 378px;
+        width: 536px;
+        margin-top: -277px;
+        margin-left: 1px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -4px;
+        margin-left: -2px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 66px;
+        position: relative;
+        top: -94px;
+        left: -180px;
+      }
       .UpPh {
         position: absolute;
-        top: 530px;
-        left: 868px;
+        top: 416px;
+        left: 798px;
       }
       .UpReator {
         position: absolute;
-        top: 396px;
-        left: 716px;
+        top: 271px;
+        left: 657px;
       }
-      .UpChapa{
+      .UpChapa {
         position: absolute;
-        top: 475px;
-        left: 654px;
+        top: 362px;
+        left: 598px;
       }
-      .MaisPh  {
+      .MaisPh {
         position: absolute;
-        top: 548px;
-        left: 810px;
+        top: 426px;
+        left: 746px;
       }
       .MenosPh {
         position: absolute;
-        top: 548px;
-        left: 780px;
+        top: 426px;
+        left: 718px;
       }
-      .MaisTemp{
-        position: absolute;
-        top: 548px;
-        left: 712px;
+      .PH {
+        position: relative;
+        top: -142px;
+        left: 228px;
       }
+      .MaisTemp {
+      position: absolute;
+      top: 426px;
+      left: 632px;
+      } 
       .MenosTemp {
         position: absolute;
-        top: 548px;
-        left: 685px;
+        top: 426PX;
+        left: 608px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        height: 184px;
+        width: 237px;
       }
     }
-    @media only screen and (min-width: 2024px) { /* 67% */
+    @media only screen and (min-width: 1700px) {  /*80% */
+      .board {
+        height: 378px;
+        width: 536px;
+        margin-top: -277px;
+        margin-left: 1px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -5px;
+        margin-left: -2px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 93px;
+        position: relative;
+        top: -95px;
+        left: -206px;
+      }
       .UpPh {
         position: absolute;
-        top: 585px;
-        left: 982px;
+        top: 416px;
+        left: 798px;
       }
       .UpReator {
         position: absolute;
-        top: 450px;
-        left: 830px;
+        top: 250px;
+        left: 657px;
       }
-      .UpChapa{
+      .UpChapa {
         position: absolute;
-        top: 530px;
+        top: 362px;
+        left: 598px;
+      }
+      .MaisPh {
+        position: absolute;
+        top: 426px;
+        left: 746px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 426px;
+        left: 718px;
+      }
+      .PH {
+        position: relative;
+        top: -174px;
+        left: 228px;
+      }
+      .MaisTemp {
+      position: absolute;
+      top: 426px;
+      left: 632px;
+      } 
+      .MenosTemp {
+        position: absolute;
+        top: 426PX;
+        left: 608px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        height: 174px;
+        width: 237px;
+      }
+    }
+    @media only screen and (min-width: 1800px) {  /*80% */
+      .board {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 378px;
+        width: 536px;
+        margin-top: -330px;
+        margin-left: 1px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -4px;
+        margin-left: -2px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 94px;
+        position: relative;
+        top: -97px;
+        left: -205px;
+      }
+      .UpPh {
+        position: absolute;
+        top: 420px;
+        left: 856px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 250px;
+        left: 713px;
+      }
+      .UpChapa {
+        position: absolute;
+        top: 362px;
+        left: 658px;
+      }
+      .MaisPh {
+        position: absolute;
+        top: 426px;
+        left: 802px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 426px;
+        left: 772px;
+      }
+      .PH {
+        position: relative;
+        top: -174px;
+        left: 228px;
+      }
+      .MaisTemp {
+        position: absolute;
+        top: 426px;
+        left: 692px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 426px;
+        left: 665px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        height: 184px;
+        width: 237px;
+      }
+    }
+    @media only screen and (min-width: 1900px) {  /*80% */
+      .board {
+        height: 379px;
+        width: 536px;
+        margin-top: -435px;
+        margin-left: 1.55px;
+        background-size: cover;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -4px;
+        margin-left: -2px;
+      }
+      .profile-charBody {
+        width: 216px;
+        margin-left: 315px;
+        margin-top: 39px;
+        transition: transform 250ms;
+      }
+      .centrifuga {
+        width: 125px;
+        position: relative;
+        top: -218px;
+        left: 20px;
+      }
+      .filtroElement {
+        width: 187px;
+        position: relative;
+        top: -214px;
+        left: 16px;
+      }
+      .bequer1 {
+        width: 94px;
+        position: relative;
+        top: -97px;
+        left: -205px;
+      }
+      .UpPh {
+        position: absolute;
+        top: 420px;
+        left: 970px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 254px;
+        left: 826px;
+      }
+      .UpChapa {
+        position: absolute;
+        top: 362px;
         left: 770px;
       }
-      .MaisPh  {
+      .MaisPh {
         position: absolute;
-        top: 600px;
-        left: 922px;
+        top: 426px;
+        left: 914px;
       }
       .MenosPh {
         position: absolute;
-        top: 600px;
-        left: 894px;
+        top: 426px;
+        left: 886px;
       }
-      .MaisTemp{
+      .PH {
+        position: relative;
+        top: -174px;
+        left: 228px;
+      }
+      .MaisTemp {
         position: absolute;
-        top: 600px;
-        left: 822px;
+        top: 426px;
+        left: 800px;
       }
       .MenosTemp {
         position: absolute;
-        top: 600px;
-        left: 794px;
+        top: 426px;
+        left: 772px;
+      }
+      .bar {
+        background: rgba(0, 0, 0, 0.456);
+        border-radius: 20px;
+        height: 69px;
+        display: flex;
+        align-items: center;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        height: 210px;
+        width: 237px;
       }
     }
-    @media only screen and (min-width: 2400px) { /* 50 % */
+    @media only screen and (min-width: 2560px) { /* 50 % */
+      .board {      
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 70;
+        height: 368px;
+        width: 536px;
+        margin-top: -593px;
+        margin-left: 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .border {
+        border: 6px solid;
+        border-color: #231F20;
+        height: 372px;
+        width: 531px;
+        margin-top: -7px;
+        margin-left: -1px;
+      }
+      .bequer1 {
+        width: 92px;
+        position: relative;
+        top: -96px;
+        left: -200px;
+      }
       .UpPh {
         position: absolute;
-        top: 750px;
-        left: 1318px;
+        top: 413px;
+        left: 1238px;
       }
       .UpReator {
         position: absolute;
-        top: 610px;
-        left: 1167px;
+        top: 252px;
+        left: 1093px;
+      }
+      .UpChapa {
+        position: absolute;
+        top: 361px;
+        left: 1033px;
+      }
+      .MaisPh {
+        position: absolute;
+        top: 425px;
+        left: 1183px;
+      }
+      .MenosPh {
+        position: absolute;
+        top: 425px;
+        left: 1154px;
+      }
+      .MaisTemp {
+        position: absolute;
+        top: 425px;
+        left: 1070px;
+      }
+      .MenosTemp {
+        position: absolute;
+        top: 425px;
+        left: 1042px;
+      }
+      #showLog {
+        overflow: auto;
+        color: white;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        height: 250px;
+        width: 237px;
+      }
+    }
+    @media only screen and (min-width: 2682px) { /*33 % */ 
+      .UpPh {
+        position: absolute;
+        top: 985px;
+        left: 1374px;
+      }
+      .UpReator {
+        position: absolute;
+        top: 1018px;
+        left: 1190px;
       }
       .UpChapa{
         position: absolute;
@@ -959,13 +2535,13 @@
       }
       .MaisPh  {
         position: absolute;
-        top: 762px;
-        left: 1262px;
+        top: 1078px;
+        left: 1342px;
       }
       .MenosPh {
         position: absolute;
-        top: 762px;
-        left: 1230px;
+        top: 1078px;
+        left: 1306px;
       }
       .MaisTemp{
         position: absolute;
@@ -979,3 +2555,10 @@
       }
     }
 
+.helptext blockquote, p{
+  font-size: 12px;
+  /* background-color: #1a460e; */
+}
+.helptext div{
+  font-size: 14px;
+}
