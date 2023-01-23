@@ -103,6 +103,7 @@ import Bio from '../../img/biodiesel_caderno.png';
     }
 
 function Game () {
+    const tabuleiro = localStorage.getItem('jedai/tabuleiro')
     function Proximo(){
         window.Proximo()
     };
@@ -276,7 +277,8 @@ function Game () {
                                     <span className="textREATOR">
                                         <p id="equacao">
                                             <span id="reagente01"></span><br></br>
-                                            <span id="reagente02"></span><span id="reversivel"></span><br></br><span id="produto01"></span><br></br>
+                                    <span id="reagente02"></span><span id="reversivel"></span><br></br><span id="produto01"></span><br></br>
+
                                             <span id="produto02"></span> 
                                         </p>
                                     </span>
