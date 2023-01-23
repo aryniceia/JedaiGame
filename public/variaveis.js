@@ -17,10 +17,8 @@ if (tabuleiro === 1) {
     reagente2 = "Triacilglicerídeo"
     produto1 = "Glicerol"
     produto2 = "Biodiesel"
-    equilibrio = 0 
-    
-    reversivel = document.getElementById('reversivel').innerHTML = `</br>→`
-
+    equilibrio = 0
+    // reversivel = document.getElementById('reversivel').innerHTML = `</br>→`
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
@@ -40,9 +38,7 @@ if (tabuleiro === 2) {
     produto1 = "Glicerol"
     produto2 = "Ácido Graxo"
     equilibrio = 1
-
     reversivel = document.getElementById('reversivel').innerHTML = `</br>⇌`
-
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "da centrífuga"
@@ -63,9 +59,7 @@ if (tabuleiro === 3) {
     produto1 = "Glicerol"
     produto2 = "Sal de Ácido Graxo"
     equilibrio = 0
-
     reversivel = document.getElementById('reversivel').innerHTML = `</br>→`
-
     nomeReagente1 = document.getElementById('primeiro-reagente').innerHTML = "+ R1"
     nomeReagente2 = document.getElementById('segundo-reagente').innerHTML = "+ R2"
     maquinario = document.getElementById('maquinario').innerHTML = "do filtro"
