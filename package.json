@@ -9,18 +9,20 @@
     "name": "JEDAI",
     "url": "https://bio.site/CEiphe"
   },
-  "contributors": [{
-    "name": "Aryane Nicéia - Dev. Front End",
-    "name": "Vitalson Lorran - Dev. Back End",
-    "name": "Pedro Rabis - Dev. Voluntário",
-    "name": "Profa. Dra. Gabrielle Weber - Orientadora",
-    "name": "Profa. Dra. Rebeca Bacani - Orientadora"
+  "contributors": [
+    {
+      "name": "Aryane Nicéia - Dev. Front End",
+      "name": "Vitalson Lorran - Dev. Back End",
+      "name": "Pedro Rabis - Dev. Voluntário",
+      "name": "Profa. Dra. Gabrielle Weber - Orientadora",
+      "name": "Profa. Dra. Rebeca Bacani - Orientadora"
     }
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "gh-pages": "^5.0.0",
     "global": "^4.4.0",
     "immer": "^9.0.6",
     "nth-check": "^2.0.1",
@@ -35,9 +37,10 @@
     "web-vitals": "^1.1.1",
     "yarn": "^1.22.19"
   },
-  
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
