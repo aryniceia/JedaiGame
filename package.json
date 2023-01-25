@@ -6,14 +6,17 @@
     "name": "JEDAI",
     "url": "https://bio.site/CEiphe"
   },
+
+  "engines": {
+    "node": "16.13.2"
+  },
+
   "contributors": [
-    {
-      "name": "Aryane Nicéia - Dev. Front End",
-      "name": "Vitalson Lorran - Dev. Back End",
-      "name": "Pedro Rabis - Dev. Voluntário",
-      "name": "Profa. Dra. Gabrielle Weber - Orientadora",
-      "name": "Profa. Dra. Rebeca Bacani - Orientadora"
-    }
+    {"name": "Aryane Nicéia - Dev. Front End"},
+    {"name": "Vitalson Lorran - Dev. Back End"},
+    {"name": "Pedro Rabis - Dev. Voluntário"},
+    {"name": "Profa. Dra. Gabrielle Weber - Orientadora"},
+    {"name": "Profa. Dra. Rebeca Bacani - Orientadora"}
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
