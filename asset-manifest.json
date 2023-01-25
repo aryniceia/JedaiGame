@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/JedaiGame/static/css/main.a69426f5.chunk.css",
-    "main.js": "/JedaiGame/static/js/main.b63f3b41.chunk.js",
-    "main.js.map": "/JedaiGame/static/js/main.b63f3b41.chunk.js.map",
+    "main.js": "/JedaiGame/static/js/main.2b082a5e.chunk.js",
+    "main.js.map": "/JedaiGame/static/js/main.2b082a5e.chunk.js.map",
     "runtime-main.js": "/JedaiGame/static/js/runtime-main.7355b029.js",
     "runtime-main.js.map": "/JedaiGame/static/js/runtime-main.7355b029.js.map",
-    "static/js/2.d84166a9.chunk.js": "/JedaiGame/static/js/2.d84166a9.chunk.js",
-    "static/js/2.d84166a9.chunk.js.map": "/JedaiGame/static/js/2.d84166a9.chunk.js.map",
+    "static/js/2.ce83edd4.chunk.js": "/JedaiGame/static/js/2.ce83edd4.chunk.js",
+    "static/js/2.ce83edd4.chunk.js.map": "/JedaiGame/static/js/2.ce83edd4.chunk.js.map",
     "static/js/3.3fc43cd9.chunk.js": "/JedaiGame/static/js/3.3fc43cd9.chunk.js",
     "static/js/3.3fc43cd9.chunk.js.map": "/JedaiGame/static/js/3.3fc43cd9.chunk.js.map",
     "index.html": "/JedaiGame/index.html",
     "static/css/main.a69426f5.chunk.css.map": "/JedaiGame/static/css/main.a69426f5.chunk.css.map",
-    "static/js/2.d84166a9.chunk.js.LICENSE.txt": "/JedaiGame/static/js/2.d84166a9.chunk.js.LICENSE.txt",
+    "static/js/2.ce83edd4.chunk.js.LICENSE.txt": "/JedaiGame/static/js/2.ce83edd4.chunk.js.LICENSE.txt",
     "static/media/Bequervazio.e8c4ac71.png": "/JedaiGame/static/media/Bequervazio.e8c4ac71.png",
     "static/media/response.css": "/JedaiGame/static/media/trofeu.05b368a3.png",
     "static/media/arrowL.2d0ad8cb.png": "/JedaiGame/static/media/arrowL.2d0ad8cb.png",
@@ -48,8 +48,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7355b029.js",
-    "static/js/2.d84166a9.chunk.js",
+    "static/js/2.ce83edd4.chunk.js",
     "static/css/main.a69426f5.chunk.css",
-    "static/js/main.b63f3b41.chunk.js"
+    "static/js/main.2b082a5e.chunk.js"
   ]
 }
