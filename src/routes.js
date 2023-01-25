@@ -13,8 +13,7 @@ import JOGO from './Window/JOGO';
 export default function Routes() {
   return (
     
-    <Router>
-      <Router basename={process.env.PUBLIC_URL}></ Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Route exact path="/" component={App} /> 
       <Route path="/select" component={Select} />
       <Route path="/tutorial" component={Tutorial}/>
