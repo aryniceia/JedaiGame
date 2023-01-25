@@ -1,9 +1,6 @@
 {
   "name": "jedai-game-react",
   "version": "0.1.0",
-  "engines": {
-    "node": "14.x"
-  },
   "private": true,
   "author": {
     "name": "JEDAI",
