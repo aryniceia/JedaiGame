@@ -3,6 +3,7 @@ import Page from '../../src/Components/Pages/page';
 import RadioButton from '../Components/RadioButton/radio';
 import Link from '../Components/Link/link';
 import './Styles/select.css';
+import mainTheme from '../sound/Quimica_Animal_3.mp3';
 /*import testHover from '../sound/buttonHover.mp3';*/
 
 /* Hover Sound Effect */
@@ -13,6 +14,8 @@ import './Styles/select.css';
     }*/
 
 function Select () {
+    const [hasMuted, setHasMuted] = useState(false) //controle de som
+
     const [name, setName] = useState(localStorage.getItem('jedai/username') || '')
     const [level, setLevel] = useState(localStorage.getItem('jedai/level') || 'padrao') //useState é uma função que manipula estados :3
     const [time, setTime] = useState(localStorage.getItem('jedai/time') || 'padrao')
@@ -32,7 +35,6 @@ function Select () {
             localStorage.setItem('jedai/tabuleiro', tabuleiro)
             localStorage.setItem('jedai/personagem', personagem)
             window.location.href='/game'
-            
         } 
     }
   
@@ -69,7 +71,7 @@ function Select () {
 
     return (
         <Page>
-            <form >
+            <form>
                 <h1 className='App-title'>Login</h1>
 
                 <div className='bar-top'>
@@ -137,7 +139,6 @@ function Select () {
 
                 <div className='bar-bot'>
 
-
                     <RadioButton personagem={personagem} setPersonagem={setPersonagem}/> {/*Nessa linha é setado do component radio */}
                     <div /*onMouseOver={hoverSound}*/ className='buttons1'>
                         <Link route="/" className='return'>Voltar</Link>
@@ -148,6 +149,10 @@ function Select () {
                     </div>
                 </div>
             </form> 
+            <div className="soundControler">
+                <audio src={mainTheme} autoPlay loop muted={hasMuted}></audio>
+                <button className='muted1' onClick={() => setHasMuted(!hasMuted)}></button>
+            </div>
         </Page>
     );
 }

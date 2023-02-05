@@ -66,6 +66,21 @@
   background-size: cover;
   margin-top: auto;
 }
+.muted {
+  position: absolute;
+  left: 911px;
+  top: 550px;
+  background-image: url('./sound/volume.png');
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  background-size: cover;
+  width: 34px;
+  height: 32px;
+  border-radius: 40px;
+}
+.muted:hover {
+  background-image: url('./sound/volumeoff.png');
+}
 
 @media only screen and (max-width: 1024px) {
   .background {

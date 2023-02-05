@@ -1,39 +1,34 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './response.css';
-//import Link from '../Components/Link/link';
 
-import Capivara from '../../img/char/icon/capivara_perfil.png';
-import Guara from '../../img/char/icon/guara_perfil.png';
-import Jacare from '../../img/char/icon/jacare_perfil.png';
-import Mico from '../../img/char/icon/mico_perfil.png';
-import Onca from'../../img/char/icon/onca_perfil.png';
-import Tucano from'../../img/char/icon/tucano_perfil.png';
+/* Import de imagens */
+    /* Imagem icon bichos */
+        import Capivara from '../../img/char/icon/capivara_perfil.png';
+        import Guara from '../../img/char/icon/guara_perfil.png';
+        import Jacare from '../../img/char/icon/jacare_perfil.png';
+        import Mico from '../../img/char/icon/mico_perfil.png';
+        import Onca from'../../img/char/icon/onca_perfil.png';
+        import Tucano from'../../img/char/icon/tucano_perfil.png';
 
-import CapivaraBody from '../../img/char/body/capivara.png';
-import GuaraBody from '../../img/char/body/guara.png';
-import JacareBody from '../../img/char/body/jacare.png';
-import MicoBody from '../../img/char/body/mico.png';
-import OncaBody from'../../img/char/body/onca.png';
-import TucanoBody from'../../img/char/body/tucano.png';
+    /* Imagerm corpo bichos */
+        import CapivaraBody from '../../img/char/body/capivara.png';
+        import GuaraBody from '../../img/char/body/guara.png';
+        import JacareBody from '../../img/char/body/jacare.png';
+        import MicoBody from '../../img/char/body/mico.png';
+        import OncaBody from'../../img/char/body/onca.png';
+        import TucanoBody from'../../img/char/body/tucano.png';
 
-import Centrifuga from '../../img/elements/centrifuga.png';
-import FiltroElement from '../../img/elements/filtro.png';
-import bequervazio from '../../img/Lab_Bequer/Bequervazio.png';
+    /* Elementos do lab */
+        import Centrifuga from '../../img/elements/centrifuga.png';
+        import FiltroElement from '../../img/elements/filtro.png';
+        import bequervazio from '../../img/Lab_Bequer/Bequervazio.png';
+        import Acido from '../../img/graxo_caderno.png'; //caderno
+        import Sabao from '../../img/sabao_caderno.png'; //caderno
+        import Bio from '../../img/biodiesel_caderno.png'; //caderno
 
-import Acido from '../../img/graxo_caderno.png';
-import Sabao from '../../img/sabao_caderno.png';
-import Bio from '../../img/biodiesel_caderno.png';
+/* Import de som */
+    import gameSound from '../../sound/Quimica_Animal_2.mp3';
 
-//import Sound from '../../sound/clickSound.mp3';
-//import HoverSound from '../../sound/buttonHover.mp3';
-
-// Variáveis das inputs //
-    /*const levels = {
-        0: "Fácil",
-        1: "Médio",
-        2: "Difícil",
-        3: "Jubilator"
-    }*/
     const Personagens = {
         1: {
             name: "Capivara",
@@ -102,7 +97,11 @@ import Bio from '../../img/biodiesel_caderno.png';
         },
     }
 
+   
+
 function Game () {
+    const [hasMuted, setHasMuted] = useState(false) //música de fundo
+
     function Proximo(){
         window.Proximo()
     };
@@ -145,9 +144,6 @@ function Game () {
     function Filtro(){
         window.Filtro()
     };
-    /*function confirmacao(){
-        window.confirmacao()
-    };*/
     function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
@@ -203,23 +199,7 @@ function Game () {
         }   
 
     }
-    /* Sound Effect */
-        /* Click button */
-            /*function PlaySound(){
-                let audio = new Audio(Sound);
-                audio.play();
-            }
-            function iniciar () {
-                PlaySound();
-                setInterval(function(){ //add um intervalo de tempo para o som poder tocar
-                //window.location.href='/select'
-                }, 1000) 
-            }*/
-        /* Hover Sound Effect */
-            /*function hoverSound  () {
-                let teste = new Audio(HoverSound);
-                teste.play();
-            }*/
+    
 /* Variáveis dos reagentes R1 e R2*/
     var teste2 = `${window.reagente1}`;
     var reagente1 = 'Água teste'
@@ -352,7 +332,13 @@ function Game () {
                             </div>
                         </div>
 
+                        <div className="soundControler">
+                            <audio src={gameSound} autoPlay loop muted={hasMuted}></audio>
+                            <button className='muted2' onClick={() => setHasMuted(!hasMuted)}></button>
+                        </div>
+
                         {/*<button className="gameover" type="button" onClick={alertar}>Teste</button>*/}
+                    
                     </div>
                 </div>
             </header>
