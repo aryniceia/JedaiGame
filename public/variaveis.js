@@ -419,14 +419,17 @@ function variaveisIniciais() {
 }
 var somReacaoOcorreu = new Audio('Reacao_Ocorreu.wav')
 somReacaoOcorreu.addEventListener('canplaythrough', function() {
+    somReacaoOcorreu.volume = 0.2;
     somReacaoOcorreu.play();
 });
 var somReacaoReverteu = new Audio('Reacao_Reverteu.wav')
 somReacaoReverteu.addEventListener('canplaythrough', function() {
+    somReacaoReverteu.volume = 0.2;
     somReacaoReverteu.play();
 });
 var somNaoPode = new Audio('Nao_Pode.wav')
 somNaoPode.addEventListener('canplaythrough', function() {
+    somNaoPode.volume = 0.2;
     somNaoPode.play();
 });
 //DECLARAÇÃO DE VARIÁVEIS FIM -----------------------
