@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from './Components/Link/link';
 import Page from './Components/Pages/page';
 import './Home.css';
@@ -7,6 +7,12 @@ import volume from './sound/volume.png';
 
 function Home() {
   const [hasMuted, setHasMuted] = useState(false)
+ 
+  useEffect(() => {
+    const audio = document.getElementById("myaudio");
+    audio.volume = 0.2;
+  }, []);
+
 
   return (
     <Page>   
@@ -25,9 +31,11 @@ function Home() {
       </div>
 
       <div className="soundControler">
-        <audio src={mainTheme} autoPlay loop muted={hasMuted}></audio>
+        <audio src={mainTheme} autoPlay loop muted={hasMuted} id='myaudio'></audio>
         <button className='muted' src={volume} onClick={() => setHasMuted(!hasMuted)}></button>
       </div>
+
+      
     </Page>          
   );
 }

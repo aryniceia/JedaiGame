@@ -69,6 +69,11 @@ function Select () {
         }*/
     }, [name, level, time, tabuleiro, personagem])
 
+    useEffect(() => {
+        const audio = document.getElementById("myaudio");
+        audio.volume = 0.2;
+      }, []);
+
     return (
         <Page>
             <form>
@@ -150,7 +155,7 @@ function Select () {
                 </div>
             </form> 
             <div className="soundControler">
-                <audio src={mainTheme} autoPlay loop muted={hasMuted}></audio>
+                <audio src={mainTheme} autoPlay loop muted={hasMuted} id='myaudio'></audio>
                 <button className='muted1' onClick={() => setHasMuted(!hasMuted)}></button>
             </div>
         </Page>

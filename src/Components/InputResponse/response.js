@@ -101,6 +101,10 @@ import './response.css';
 
 function Game () {
     const [hasMuted, setHasMuted] = useState(false) //música de fundo
+    useEffect(() => {
+        const audio = document.getElementById("myaudio");
+        audio.volume = 0.2;
+      }, []);
 
     function Proximo(){
         window.Proximo()
@@ -333,7 +337,7 @@ function Game () {
                         </div>
 
                         <div className="soundControler">
-                            <audio src={gameSound} autoPlay loop muted={hasMuted}></audio>
+                            <audio src={gameSound} autoPlay loop muted={hasMuted} id='myaudio'></audio>
                             <button className='muted2' onClick={() => setHasMuted(!hasMuted)}></button>
                         </div>
 
